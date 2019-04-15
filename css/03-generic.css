@@ -1,3 +1,5 @@
+
+
 /* Full width content area */
 .entry .entry-content > *, .entry .entry-summary > * {
 	max-width: 100%;
@@ -28,25 +30,12 @@ a:hover, a:active, .main-navigation .main-menu > li > a:hover, .main-navigation 
 	background-color: rgba(228, 226, 218, 0.50);
 }
 
-
-/* C4AA Utilities – these need to move to their own file that is also enqueued for previewing in the editor */
-
-.c4aa-image--newspaper {
-	filter: grayscale(1) contrast(1.5);
-	position: relative;
-	width: 300px;
+.main-navigation .main-menu > li > a,
+.main-navigation .main-menu > li .svg-icon {
+	color: var( --color-brandRed );
 }
 
-.c4aa-image--newspaper::after {
-		position: absolute;
-		content: '';
-		top: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-	
-		/* TODO: move this file to c4aa server */
-		background-image: url( 'https://notlaura.com/wp-content/uploads/2019/03/halftone.jpg' );
-		opacity: 0.4;
-		filter: blur(1px);
+.main-navigation .sub-menu > li > a:hover,
+input[type="submit"]:hover {
+	background-color: var( --color-brandGrey );
 }

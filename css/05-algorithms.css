@@ -29,16 +29,3 @@
 	transform: rotate(11.25deg);
 	z-index: 1;
 }
-
-
-/* Utils */
-
-.row-of-pictures {
-  display: grid;
-  grid-template-columns: repeat( 4, minmax( 200px, 400px ) );
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
