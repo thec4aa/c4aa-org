@@ -20,3 +20,27 @@ if ( 'development' === WP_ENV ) {
 	});
 }
 
+
+/**
+ * ACF Body Class Options
+ *
+ * Add a body_class according to ACF options to 
+ * provide hooks for CSS.
+ */ 
+
+function c4aa_add_body_class_from_acf_options( $classes ) {
+
+	$image_filter = get_field( 'c4aa_image_filter' );
+	$title_effect = get_field( 'c4aa_title_effect' );
+
+	if ( ! empty( $title_effect ) ) {
+		$classes[] = "c4aa-titleEffect($title_effect)";
+	}
+
+	if ( ! empty( $image_filter ) ) {
+		$classes[] = "c4aa-imageFilter($image_filter)";
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options' );
