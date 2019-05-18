@@ -3,7 +3,7 @@
  *
  * Each filter should target two selectors: 
  * 1. <filter> .post-thumbnail - for when it is added as a body_class via ACF.
- * 2. <filter.wp-block-image - so that it can be added as a CSS class to a block.
+ * 2. <filter>.wp-block-image - so that it can be added as a CSS class to a block.
  *
  * Naming should follow the this convention:
  * .c4aa-imageFilter(<ACF option name>)
