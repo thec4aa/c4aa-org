@@ -12,3 +12,11 @@ function c4aa_enqueue_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
+
+if ( 'development' === WP_ENV ) {
+
+	add_filter('pre_option_upload_url_path', function ($upload_url_path) {
+		return 'http://backtobasics.c4aa.org/wp-content/uploads';
+	});
+}
+
