@@ -111,3 +111,7 @@ input[type="submit"]:hover {
 .site-header.featured-image .site-branding .site-title, .site-header.featured-image .main-navigation a::after, .site-header.featured-image .main-navigation .main-menu > li.menu-item-has-children::after, .site-header.featured-image .main-navigation li, .site-header.featured-image .social-navigation li, .site-header.featured-image .entry-meta {
 	color: var( --color-brandRed );
 }
+
+.site-logo .custom-logo-link {
+    border-radius: 0%
+}
