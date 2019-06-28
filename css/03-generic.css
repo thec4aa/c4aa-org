@@ -108,3 +108,7 @@ input[type="submit"]:hover {
 .site-logo .custom-logo-link {
 	border-radius: 0%;
 }
+
+.wp-block-pullquote .alignwide, .wp-block-pullquote .alignfull,  {
+     hyphens: manual;
+}
