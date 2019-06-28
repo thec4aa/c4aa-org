@@ -119,3 +119,7 @@ input[type="submit"]:hover {
 .wp-block-pullquote .alignwide, .wp-block-pullquote .alignfull,  {
      hyphens: manual;
 }
+
+.site-header.featured-image .custom-logo-link {
+    background: none;
+}
