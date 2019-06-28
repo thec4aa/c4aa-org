@@ -115,3 +115,45 @@ input[type="submit"]:hover {
 .site-logo .custom-logo-link {
     border-radius: 0%
 }
+
+/* Block Color Palette Colors */
+
+.has-c4aa-red-background-color {
+    background-color: var( --color-brandRed);
+}
+
+.has-c4aa-red-color {
+    color: var( --color-brandRed);
+}
+
+.has-c4aa-beige-background-color {
+    background-color: var( --color-brandBeige);
+}
+
+.has-c4aa-beige-color {
+    color: var( --color-brandBeige);
+}
+
+.has-c4aa-grey-background-color {
+    background-color: var( --color-brandGrey);
+}
+
+.has-c4aa-grey-color {
+    color: var( --color-brandGrey);
+}
+
+.has-c4aa-yellow-background-color {
+    background-color: var( --color-brandYellow);
+}
+
+.has-c4aa-yellow-color {
+    color: var( --color-brandYellow);
+}
+
+.has-c4aa-blue-background-color {
+    background-color: var( --color-brandBlue);
+}
+
+.has-c4aa-blue-color {
+    color: var( --color-brandBlue);
+}

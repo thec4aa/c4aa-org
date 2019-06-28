@@ -48,3 +48,39 @@ function c4aa_add_body_class_from_acf_options( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options' );
+
+
+/** 
+ * Block Color Palette
+ * 
+ * via: https://kinsta.com/blog/twenty-nineteen-theme/#block-color-palettes
+ * also added in css
+ */
+
+add_theme_support( 'editor-color-palette', array(
+    array(
+        'name' => __( 'C4AA Beige', 'themeLangDomain' ),
+        'slug' => 'c4aa-beige',
+        'color' => '#e8e6df',
+    ),
+    array(
+        'name' => __( 'C4AA Red', 'themeLangDomain' ),
+        'slug' => 'c4aa-red',
+        'color' => '#ef3340',
+    ),
+    array(
+        'name' => __( 'C4AA Grey', 'themeLangDomain' ),
+        'slug' => 'c4aa-grey',
+        'color' => '#968c83',
+    ),
+    array(
+        'name' => __( 'C4AA Yellow', 'themeLangDomain' ),
+        'slug' => 'c4aa-yellow',
+        'color' => '#e1cd00',
+    ),
+    array(
+        'name' => __( 'C4AA Blue', 'themeLangDomain' ),
+        'slug' => 'c4aa-blue',
+        'color' => '#005eb8',
+    ),
+) );
