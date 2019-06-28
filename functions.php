@@ -87,3 +87,4 @@ function c4aa_setup_theme_supported_features() {
     ); // end add_theme_support
 } // end c4aa_setup_theme_supported_features
 
+add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features' );
