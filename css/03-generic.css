@@ -76,6 +76,10 @@ input[type="submit"]:hover {
 	height: 0;
 }
 
+.site-header.featured-image {
+	min-height: 70vh;
+}
+
 .featured-image .site-description {
 	color: white;
 }
