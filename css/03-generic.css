@@ -116,6 +116,10 @@ input[type="submit"]:hover {
     border-radius: 0%
 }
 
+.wp-block-pullquote .alignwide, .wp-block-pullquote .alignfull,  {
+     hyphens: manual;
+}
+
 /* Block Color Palette Colors */
 
 .has-c4aa-red-background-color {
