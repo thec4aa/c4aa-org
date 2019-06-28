@@ -1,15 +1,4 @@
 
-
-/* Full width content area */
-.entry .entry-content > *, .entry .entry-summary > * {
-	/* max-width: 100%; */
-}
-
-/* Why are there vws everywhere in this theme... */
-.entry .entry-content .wp-block-image .aligncenter {
-	/* width: 100%; */
-}
-
 .page-title {
 	font-family: inherit;
 }
@@ -48,6 +37,9 @@ a:hover, a:active, .main-navigation .main-menu > li > a:hover, .main-navigation 
 	background-color: rgba(228, 226, 218, 0.50);
 }
 
+
+/* Navigation */
+
 .main-navigation .main-menu > li > a,
 .main-navigation .main-menu > li .svg-icon {
 	color: var( --color-brandRed );
@@ -65,6 +57,9 @@ a:hover, a:active, .main-navigation .main-menu > li > a:hover, .main-navigation 
 input[type="submit"]:hover {
 	background-color: var( --color-brandGrey );
 }
+
+
+/* Featured Image */
 
 .site-header.featured-image {
 	margin-bottom: 0;
@@ -84,17 +79,15 @@ input[type="submit"]:hover {
 	color: white;
 }
 
-/* Image Filter Tests */
+
+/* Image Filter Setup */
 
 .site-header.featured-image::before, 
 .site-header.featured-image::after, 
 .entry .post-thumbnail::before, 
 .entry .post-thumbnail::after {
-	/* background-color: initial; */
 	all: unset;
 }
-
-
 
 .site-header.featured-image .site-featured-image .entry-header {
 	position: relative;
