@@ -1,4 +1,3 @@
-
 .page-title {
 	font-family: inherit;
 }
@@ -12,6 +11,7 @@
 }
 
 /* Override main color */
+
 .site-header.featured-image .site-featured-image::before, .site-header.featured-image .site-featured-image::after, .entry .post-thumbnail::before, .entry .post-thumbnail::after, .main-navigation .sub-menu, .sticky-post, .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background), .entry .button, button, input[type="button"], input[type="reset"], input[type="submit"], .entry .entry-content > .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].has-primary-background-color, .entry .entry-content > [class^="wp-block-"] .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color.has-primary-background-color, .entry .entry-content .wp-block-file .wp-block-file__button,
 .button, button, input[type="button"], input[type="reset"], input[type="submit"],
 .entry .entry-title::before,
@@ -106,5 +106,5 @@ input[type="submit"]:hover {
 }
 
 .site-logo .custom-logo-link {
-    border-radius: 0%
+	border-radius: 0%;
 }
