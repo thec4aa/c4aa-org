@@ -105,10 +105,22 @@ input[type="submit"]:hover {
 	color: var( --color-brandRed );
 }
 
+/* squares circular logo in header */
 .site-logo .custom-logo-link {
 	border-radius: 0%;
 }
 
+/* de-hyphenate large pullquotes */
 .wp-block-pullquote .alignwide, .wp-block-pullquote .alignfull {
 	hyphens: manual;
+}
+
+/* remove background from logo in header */
+.site-header.featured-image .custom-logo-link {
+	background: none;
+}
+
+/* remove margin under featured image (so we can put the first block right under) */
+.site-header.featured-image {
+	margin-bottom: 0rem;
 }
