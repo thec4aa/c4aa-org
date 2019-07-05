@@ -50,6 +50,34 @@ function c4aa_add_body_class_from_acf_options( $classes ) {
 }
 add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options' );
 
+/**
+ * Add Dashboard Widget
+ * 
+ * A place for specific reference info & instructions about the theme 
+ * for users of the site.
+ * 
+ */ 
+
+
+add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
+  
+function c4aa_custom_dashboard_widgets() {
+global $wp_meta_boxes;
+ 
+wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'custom_dashboard_help');
+}
+ 
+function custom_dashboard_help() {
+echo '<p>Welcome to the new C4AA theme!<p>
+	<p>Good ideas:</p>
+		<ul>
+		<li>upload images at 1400px wide where possible</li>
+		<li>use colors from the color picker</li>
+		<li>If you have questions, ask Steve Lambert.</li>
+		</ul>
+	'; // end echo
+}
+
 
 /** 
  * Block Color Palette
