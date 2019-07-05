@@ -22,23 +22,18 @@
 	--duotone-spacing:           1%;
 }
 
-/* Should be applied to the direct parent of the image */
-.c4aa-duotone {
+/* The selectors accommodate the difference in markup when images are either aligned or full width. */
+[class*="align"].c4aa-duotone,
+.c4aa-duotone > figure[class*="align"] {
 	background-color:    var(--duotone-base);
-	/* display:             flex;
-	flex:                1 1 100%;
-	height:              100%; */
 	overflow:            hidden;
 	padding:             var(--duotone-spacing);
 	position:            relative;
 	transition: all 250ms ease;
 }
-
-.c4aa-duotone img {
+.c4aa-duotone[class*="align"] > img,
+.c4aa-duotone > figure[class*="align"] img {
 	filter:              grayscale(100%) contrast(1) blur(var(--duotone-blur));
-	/* flex:                1 0 100%;
-	height:              100%;
-	max-width:           100%; */
 	mix-blend-mode:      var(--duotone-bg-blend);
 	object-fit:          cover;
 	opacity:             var(--duotone-opacity);
@@ -47,7 +42,7 @@
 	transition: all 250ms ease;
 }
 
-.c4aa-duotone::before {
+.c4aa-duotone > figure[class*="align"]::before {
 	background-color:    var(--duotone-foreground);
 	bottom:              0;
 	content:             '';
@@ -63,13 +58,15 @@
 
 /* Remove Duotone on Hover */
 
-.c4aa-duotone:hover {
+.c4aa-duotone[class*="align"]:hover,
+.c4aa-duotone > figure[class*="align"]:hover {
 	background-color: initial;
 	opacity: 1;
 	position: static;
 }
 
-.c4aa-duotone:hover img {
+.c4aa-duotone[class*="align"]:hover > img,
+.c4aa-duotone > figure[class*="align"]:hover img {
 	filter: none;
 	mix-blend-mode: normal;
 	opacity: 1;
