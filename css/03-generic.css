@@ -126,3 +126,7 @@ input[type="submit"]:hover {
 .wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
      hyphens: manual;
 }
+
+.entry-content .wp-block-separator.is-style-wide, .entry-content hr.is-style-wide {
+	clear: both;
+}
