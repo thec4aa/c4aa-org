@@ -40,4 +40,5 @@ Minimize use of plugins, javascript, and other dependencies.
 - Lara S
 - Steve Lambert
 - [CSS Duotone](https://cssduotone.com/)
-
+- [Zilla Slab Font](https://github.com/mozilla/zilla-slab) from Mozilla
+- [Raleway Font](https://www.theleagueofmoveabletype.com/raleway) from the League of Moveable Type
