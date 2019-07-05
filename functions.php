@@ -43,7 +43,7 @@ function c4aa_add_body_class_from_acf_options( $classes ) {
 	}
 
 	if ( ! empty( $image_filter ) ) {
-		$classes[] = "c4aa-imageFilter($image_filter)";
+		$classes[] = "c4aa-duotone $image_filter";
 	}
 
 	return $classes;

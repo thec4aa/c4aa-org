@@ -22,26 +22,43 @@
 	--duotone-spacing:           1%;
 }
 
-/* The selectors accommodate the difference in markup when images are either aligned or full width. */
+/*
+Selectors are as follows:
+
+Image block:
+- .c4aa-duotone[class*="align"] - full width
+- .c4aa-duotone > figure[class*="align"] - aligned left/right
+
+Single header and archive thumbnails (not yet implemented):
+- body.c4aa-duotone .post-thumbnail,
+
+Single header:
+- .single.c4aa-duotone .post-thumbnail
+*/
+
+body.c4aa-duotone .post-thumbnail,
 [class*="align"].c4aa-duotone,
 .c4aa-duotone > figure[class*="align"] {
 	background-color:    var(--duotone-base);
 	overflow:            hidden;
 	padding:             var(--duotone-spacing);
 	position:            relative;
-	transition: all 250ms ease;
+	transition:          background-color 250ms ease;
 }
+
+body.c4aa-duotone .post-thumbnail img,
 .c4aa-duotone[class*="align"] > img,
-.c4aa-duotone > figure[class*="align"] img {
+.c4aa-duotone > figure[class*="align"] > img {
 	filter:              grayscale(100%) contrast(1) blur(var(--duotone-blur));
 	mix-blend-mode:      var(--duotone-bg-blend);
 	object-fit:          cover;
 	opacity:             var(--duotone-opacity);
 	position:            relative;
 	width:               100%;
-	transition: all 250ms ease;
+	transition:          mix-blend-mode filter opacity 250ms ease-in-out;
 }
-
+body.c4aa-duotone .post-thumbnail::before,
+.c4aa-duotone[class*="align"]::before,
 .c4aa-duotone > figure[class*="align"]::before {
 	background-color:    var(--duotone-foreground);
 	bottom:              0;
@@ -66,11 +83,12 @@
 }
 
 .c4aa-duotone[class*="align"]:hover > img,
-.c4aa-duotone > figure[class*="align"]:hover img {
+.c4aa-duotone > figure[class*="align"]:hover > img {
 	filter: none;
 	mix-blend-mode: normal;
 	opacity: 1;
 }
+
 
 /* 
  * Duotone Themes
@@ -120,4 +138,17 @@
 	--duotone-bg-blend:          color-burn;
 	--duotone-fg-blend:          screen;
 	--duotone-opacity:           0.69;
+}
+
+
+/********************************/
+/* Case by case box adjustments */
+/********************************/
+
+/* Fill container on single post header images */
+.single.c4aa-duotone .site-featured-image .post-thumbnail {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: absolute;
 }

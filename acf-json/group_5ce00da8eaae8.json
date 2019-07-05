@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5ce00db2dcfae",
-            "label": "Featured Image Filter",
+            "label": "Featured Image Duotone Filter",
             "name": "c4aa_image_filter",
             "type": "radio",
             "instructions": "",
@@ -16,9 +16,11 @@
                 "id": ""
             },
             "choices": {
-                "grayscale": "Grayscale",
-                "halftone": "Halftone",
-                "duotone": "Duotone"
+                "red-and-black": "red-and-black",
+                "beige-and-black": "beige-and-black",
+                "beige-and-red": "beige-and-red",
+                "beige-and-grey": "beige-and-grey",
+                "beige-and-grey-vintage": "beige-and-grey-vintage"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -76,5 +78,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558194604
+    "modified": 1562336520
 }
