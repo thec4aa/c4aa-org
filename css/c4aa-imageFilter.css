@@ -33,7 +33,11 @@ Single header and archive thumbnails (not yet implemented):
 - body.c4aa-duotone .post-thumbnail,
 
 Single header:
-- .single.c4aa-duotone .post-thumbnail
+- .single.c4aa-duotone .site-featured-image .post-thumbnail
+
+Paeg header:
+.page.c4aa-duotone .site-featured-image .post-thumbnail
+
 */
 
 body.c4aa-duotone .post-thumbnail,
@@ -90,6 +94,19 @@ body.c4aa-duotone .post-thumbnail::before,
 }
 
 
+/********************************/
+/* Case by case box adjustments */
+/********************************/
+
+/* Fill container on single post header images */
+.single.c4aa-duotone .site-featured-image .post-thumbnail,
+.page.c4aa-duotone .site-featured-image .post-thumbnail {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: absolute;
+}
+
 /* 
  * Duotone Themes
  *
@@ -138,17 +155,4 @@ body.c4aa-duotone .post-thumbnail::before,
 	--duotone-bg-blend:          color-burn;
 	--duotone-fg-blend:          screen;
 	--duotone-opacity:           0.69;
-}
-
-
-/********************************/
-/* Case by case box adjustments */
-/********************************/
-
-/* Fill container on single post header images */
-.single.c4aa-duotone .site-featured-image .post-thumbnail {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	position: absolute;
 }
