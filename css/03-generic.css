@@ -123,7 +123,7 @@ input[type="submit"]:hover {
 }
 
 /* de-hyphenate large pullquotes */
-.wp-block-pullquote .alignwide, .wp-block-pullquote .alignfull,  {
+.wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
      hyphens: manual;
 }
 
