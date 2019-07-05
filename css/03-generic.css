@@ -126,8 +126,3 @@ input[type="submit"]:hover {
 .wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
      hyphens: manual;
 }
-
-/* remove margin under featured image (so we can put the first block right under) */
-.site-header.featured-image {
-  margin-bottom: 0rem;
-}
