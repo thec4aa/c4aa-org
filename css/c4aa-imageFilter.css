@@ -1,49 +1,160 @@
 /* 
  * Image Filters
- *
- * Each filter should target two selectors: 
- * 1. <filter> .post-thumbnail - for when it is added as a body_class via ACF.
- * 2. <filter>.wp-block-image - so that it can be added as a CSS class to a block.
- *
- * Naming should follow the this convention:
- * .c4aa-imageFilter(<ACF option name>)
  */
 
-.c4aa-imageFilter\(grayscale\) .post-thumbnail img,
-.c4aa-imageFilter\(grayscale\).wp-block-image img {
-	opacity: 0.5;
-	filter: contrast(1.25) brightness(1.4) grayscale(100%) sepia(50%);
-	transform: translateZ(0); /* Hardware acceleration */
+/*******************/
+/* Duotone Filters */
+/*******************/
+
+/* Duotone Defaults */
+:root {
+	/* Default Colors */
+	--duotone-default-base: var( --color-brandBeige );
+	--duotone-default-foreground: var( --color-brandBlack );
+
+	/* Default Image Treatment */
+	--duotone-base:              var( --duotone-default-base );
+	--duotone-bg-blend:          multiply;
+	--duotone-blur:              0px;
+	--duotone-fg-blend:          screen;
+	--duotone-foreground:        var( --duotone-default-foreground );
+	--duotone-opacity:           1;
+	--duotone-spacing:           1%;
+}
+
+/*
+Selectors are as follows:
+
+Image block:
+- .c4aa-duotone[class*="align"] - full width
+- .c4aa-duotone > figure[class*="align"] - aligned left/right
+
+Single header and archive thumbnails (not yet implemented):
+- body.c4aa-duotone .post-thumbnail,
+
+Single header:
+- .single.c4aa-duotone .site-featured-image .post-thumbnail
+
+Page header:
+.page.c4aa-duotone .site-featured-image .post-thumbnail
+
+Ex
+
+*/
+
+body.c4aa-duotone .post-thumbnail,
+[class*="align"].c4aa-duotone,
+.c4aa-duotone > figure[class*="align"] {
+	background-color:    var(--duotone-base);
+	overflow:            hidden;
+	padding:             var(--duotone-spacing);
+	position:            relative;
+	transition:          background-color 250ms ease;
+}
+
+body.c4aa-duotone .post-thumbnail img,
+.c4aa-duotone[class*="align"] > img,
+.c4aa-duotone > figure[class*="align"] > img {
+	filter:              grayscale(100%) contrast(1) blur(var(--duotone-blur));
+	mix-blend-mode:      var(--duotone-bg-blend);
+	object-fit:          cover;
+	opacity:             var(--duotone-opacity);
+	position:            relative;
+	width:               100%;
+	transition:          mix-blend-mode filter opacity 250ms ease-in-out;
+}
+body.c4aa-duotone .post-thumbnail::before,
+.c4aa-duotone[class*="align"]::before,
+.c4aa-duotone > figure[class*="align"]::before {
+	background-color:    var(--duotone-foreground);
+	bottom:              0;
+	content:             '';
+	height:              100%;
+	left:                0;
+	mix-blend-mode:      var(--duotone-fg-blend);
+	position:            absolute;
+	right:               0;
+	top:                 0;
+	width:               100%;
+	z-index:             1;
+}
+
+/* Remove Duotone on Hover */
+
+.c4aa-duotone[class*="align"]:hover,
+.c4aa-duotone > figure[class*="align"]:hover {
+	background-color: initial;
+	opacity: 1;
+	position: static;
+}
+
+.c4aa-duotone[class*="align"]:hover > img,
+.c4aa-duotone > figure[class*="align"]:hover > img {
+	filter: none;
+	mix-blend-mode: normal;
+	opacity: 1;
 }
 
 
-/* Holding this stuff for later */
+/********************************/
+/* Case by case box adjustments */
+/********************************/
 
-.halftone-container {
-	background-color: white;
-	position: relative;
-	filter: contrast(1000%);
-	overflow: hidden;
-	transform: translateZ(0); /* force a HW accelerated layer */
-}
-
-.halftone-image {
-	filter: brightness(0.5) grayscale(100%);
-/*     animation: 10s animation-filter infinite alternate; */
-}
-
-.halftone-container::after {
-	content: '';
+/* Fill container on single post header images */
+.single.c4aa-duotone .site-featured-image .post-thumbnail,
+.page.c4aa-duotone .site-featured-image .post-thumbnail {
+	height: 100%;
+	width: 100%;
+	top: 0;
 	position: absolute;
-	top: -100%;
-	left: -100%;
-	right: -100%;
-	bottom: -100%;
-	background-blend-mode: multiply;
-	background-image: radial-gradient(4px 4px, black, white);
-	background-size: 3px 3px;
-	background-position: 0 -5px;
-	mix-blend-mode: screen;
-	transform: rotate(11.25deg);
-	z-index: 1;
+}
+
+/* 
+ * Duotone Themes
+ *
+ * The variables that change from the defaults are overridden here.
+ * These must match 1 to 1 with ACF settings.
+ * 
+ * The first color in the class name is base, the second is the foreground.
+ */
+
+.red-and-black {
+	--duotone-base:              var( --color-brandRed );
+	--duotone-foreground:        var( --color-brandBlack );
+	--duotone-bg-blend:          multiply;
+	--duotone-fg-blend:          screen;
+	--duotone-opacity:           0.96;
+	--duotone-spacing:           20px;
+}
+
+.beige-and-black {
+	--duotone-base:              var( --color-brandBeige );
+	--duotone-foreground:        var( --color-brandBlack );
+	--duotone-bg-blend:          multiply;
+	--duotone-fg-blend:          lighten;
+	--duotone-opacity:           1;
+}
+
+.beige-and-red {
+	--duotone-base:              var( --color-brandBeige );
+	--duotone-foreground:        var( --color-brandRed );
+	--duotone-bg-blend:          multiply;
+	--duotone-fg-blend:          screen;
+	--duotone-opacity:           1;
+}
+
+.beige-and-grey {
+	--duotone-base:              var( --color-brandBeige );
+	--duotone-foreground:        var( --color-brandGrey );
+	--duotone-bg-blend:          multiply;
+	--duotone-fg-blend:          screen;
+	--duotone-opacity:           1;
+}
+
+.beige-and-grey-vintage {
+	--duotone-base:              var( --color-brandBeige );
+	--duotone-foreground:        var( --color-brandBlack );
+	--duotone-bg-blend:          color-burn;
+	--duotone-fg-blend:          screen;
+	--duotone-opacity:           0.69;
 }

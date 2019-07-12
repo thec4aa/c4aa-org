@@ -110,12 +110,21 @@ input[type="submit"]:hover {
 	border-radius: 0%;
 }
 
-/* remove background from logo in header */
-.site-header.featured-image .custom-logo-link {
-    background: none;
+/* de-hyphenate large pullquotes */
+.wp-block-pullquote .alignwide, .wp-block-pullquote .alignfull {
+	hyphens: manual;
 }
 
+/* remove background from logo in header */
+.site-header.featured-image .custom-logo-link {
+	background: none;
+}
+
+/* remove margin under featured image (so we can put the first block right under) */
+.site-header.featured-image {
+	margin-bottom: 0rem;
+}
 /* de-hyphenate large pullquotes */
 .wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
-     hyphens: manual;
+	hyphens: manual;
 }

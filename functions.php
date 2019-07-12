@@ -33,22 +33,50 @@ if ( 'development' === WP_ENV ) {
  * provide hooks for CSS.
  */ 
 
-function c4aa_add_body_class_from_acf_options( $classes ) {
+function c4aa_add_single_body_class_from_acf_options( $classes ) {
 
 	$image_filter = get_field( 'c4aa_image_filter' );
-	$title_effect = get_field( 'c4aa_title_effect' );
+	// $title_effect = get_field( 'c4aa_title_effect' );
 
-	if ( ! empty( $title_effect ) ) {
-		$classes[] = "c4aa-titleEffect($title_effect)";
-	}
+	// if ( ! empty( $title_effect ) ) {
+	// 	$classes[] = "c4aa-titleEffect($title_effect)";
+	// }
 
-	if ( ! empty( $image_filter ) ) {
-		$classes[] = "c4aa-imageFilter($image_filter)";
+	if ( is_single() ) {
+		if ( ! empty( $image_filter ) ) {
+			$classes[] = "c4aa-duotone $image_filter";
+		}
 	}
 
 	return $classes;
 }
-add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options' );
+add_filter( 'body_class', 'c4aa_add_single_body_class_from_acf_options' );
+
+
+// Initialize Duotone on all post-thumbnails on archives. The specific color
+// scheme is set by filtering the post class below, and overriding the 
+// defaults via the cascade.
+function c4aa_add_archive_body_class( $classes ) {
+
+	if ( is_archive() || is_search() ) {
+		$classes[] = "c4aa-duotone";
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'c4aa_add_archive_body_class' );
+
+function c4aa_add_post_class_from_acf_options( $classes ) {
+
+	$image_filter = get_field( 'c4aa_image_filter', get_the_ID() );
+
+	if ( ! empty( $image_filter ) ) {
+		$classes[] = $image_filter;
+	}
+
+	return $classes;
+}
+add_filter( 'post_class', 'c4aa_add_post_class_from_acf_options' );
 
 
 /** 
