@@ -10,7 +10,7 @@
 :root {
 	/* Default Colors */
 	--duotone-default-base: var( --color-brandBeige );
-	--duotone-default-foreground: var( --color-brandGrey );
+	--duotone-default-foreground: var( --color-brandBlack );
 
 	/* Default Image Treatment */
 	--duotone-base:              var( --duotone-default-base );
@@ -35,8 +35,10 @@ Single header and archive thumbnails (not yet implemented):
 Single header:
 - .single.c4aa-duotone .site-featured-image .post-thumbnail
 
-Paeg header:
+Page header:
 .page.c4aa-duotone .site-featured-image .post-thumbnail
+
+Ex
 
 */
 
@@ -118,7 +120,7 @@ body.c4aa-duotone .post-thumbnail::before,
 
 .red-and-black {
 	--duotone-base:              var( --color-brandRed );
-	--duotone-foreground:        #000000;
+	--duotone-foreground:        var( --color-brandBlack );
 	--duotone-bg-blend:          multiply;
 	--duotone-fg-blend:          screen;
 	--duotone-opacity:           0.96;
@@ -127,7 +129,7 @@ body.c4aa-duotone .post-thumbnail::before,
 
 .beige-and-black {
 	--duotone-base:              var( --color-brandBeige );
-	--duotone-foreground:        #000000;
+	--duotone-foreground:        var( --color-brandBlack );
 	--duotone-bg-blend:          multiply;
 	--duotone-fg-blend:          lighten;
 	--duotone-opacity:           1;
@@ -151,7 +153,7 @@ body.c4aa-duotone .post-thumbnail::before,
 
 .beige-and-grey-vintage {
 	--duotone-base:              var( --color-brandBeige );
-	--duotone-foreground:        #000000;
+	--duotone-foreground:        var( --color-brandBlack );
 	--duotone-bg-blend:          color-burn;
 	--duotone-fg-blend:          screen;
 	--duotone-opacity:           0.69;
