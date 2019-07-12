@@ -1,6 +1,8 @@
 
 /* Cover media image */
-
+/* 
+Commenting this out in case it needs to come back. 
+If still here by 8/10/2019, remove this code.
 .wp-block-media-text__media {
 	height: 100%;
 }
@@ -9,4 +11,4 @@
 	height: 100%;
 	object-fit: cover;
 	object-position: center center;
-}
+} */
