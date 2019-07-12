@@ -14,6 +14,27 @@ function c4aa_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
 
 
+function c4aa_async_webfontloader_inline_script() {
+	$font_css_path = get_stylesheet_directory_uri() . "/fonts/webfonts.css";
+
+	echo "<script>
+
+	WebFontConfig = {
+		custom: {
+			families: ['ralewayblack', 'ralewaymedium', 'zilla_slab_boldbold'],
+			urls: [ '$font_css_path' ]
+		}
+	};
+
+	(function(d) {
+		var wf = d.createElement('script'), s = d.scripts[0];
+		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+		wf.async = true;
+		s.parentNode.insertBefore(wf, s);
+	 })(document);</script>\n";
+}
+add_action( 'wp_head', 'c4aa_async_webfontloader_inline_script', 0 );
+
 /**
  * Point uploads path to the staging server for local development.
  */
@@ -33,8 +54,7 @@ if ( 'development' === WP_ENV ) {
  * provide hooks for CSS.
  */ 
 
-function c4aa_add_single_body_class_from_acf_options( $classes ) {
-
+function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
 	$image_filter = get_field( 'c4aa_image_filter' );
 	// $title_effect = get_field( 'c4aa_title_effect' );
 
@@ -42,7 +62,7 @@ function c4aa_add_single_body_class_from_acf_options( $classes ) {
 	// 	$classes[] = "c4aa-titleEffect($title_effect)";
 	// }
 
-	if ( is_single() ) {
+	if ( is_single() || is_page() ) {
 		if ( ! empty( $image_filter ) ) {
 			$classes[] = "c4aa-duotone $image_filter";
 		}
@@ -50,7 +70,7 @@ function c4aa_add_single_body_class_from_acf_options( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'c4aa_add_single_body_class_from_acf_options' );
+add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_page' );
 
 
 // Initialize Duotone on all post-thumbnails on archives. The specific color
