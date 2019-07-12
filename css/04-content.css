@@ -17,3 +17,65 @@ If still here by 8/10/2019, remove this code.
 } */
 
 
+/***********/
+/* Archive */
+/***********/
+
+@media( min-width: 768px ) {
+
+	@supports ( display: grid ) {
+		.entry {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: minmax(100px, min-content) 1fr;
+			grid-gap: 1rem;
+	
+			max-width: 1100px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1rem;
+			padding-top: 1rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		.hfeed .entry .entry-header,
+		.entry .entry-footer,
+		.entry .entry-content,
+		.entry .post-thumbnail {
+			margin: 0;
+			padding: 0;
+		}
+
+		.entry-header {
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+		}
+
+		.entry-header {
+			grid-column: 1;
+		}
+
+		.entry .entry-content {
+			grid-column: 1;
+			max-width: none;
+		}
+
+		.entry .post-thumbnail {
+			grid-row: 1 / -1;
+			grid-column: 2;
+		}
+
+		.entry .post-thumbnail .post-thumbnail-inner {
+			display: flex;
+			height: 100%;
+		}
+
+		.entry .entry-footer {
+			grid-column: 1 / -1;
+			max-width: none;
+		}
+	}
+
+}
