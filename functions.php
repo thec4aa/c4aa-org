@@ -54,8 +54,7 @@ if ( 'development' === WP_ENV ) {
  * provide hooks for CSS.
  */ 
 
-function c4aa_add_single_body_class_from_acf_options( $classes ) {
-
+function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
 	$image_filter = get_field( 'c4aa_image_filter' );
 	// $title_effect = get_field( 'c4aa_title_effect' );
 
@@ -63,7 +62,7 @@ function c4aa_add_single_body_class_from_acf_options( $classes ) {
 	// 	$classes[] = "c4aa-titleEffect($title_effect)";
 	// }
 
-	if ( is_single() ) {
+	if ( is_single() || is_page() ) {
 		if ( ! empty( $image_filter ) ) {
 			$classes[] = "c4aa-duotone $image_filter";
 		}
@@ -71,7 +70,7 @@ function c4aa_add_single_body_class_from_acf_options( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'c4aa_add_single_body_class_from_acf_options' );
+add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_page' );
 
 
 // Initialize Duotone on all post-thumbnails on archives. The specific color
