@@ -8,44 +8,49 @@
 	--color-brandBlue: #005eb8;
 }
 
-/* Block Color Palette Colors */
+/* 
+ * Block Color Palette Colors
+ *
+ * Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
+ * adds a hypen in front of the 4 in CSS classes, and it is cleaner to omit it.
+ */
 
-.has-c4aa-red-background-color {
+.has-caa-red-background-color {
 	background-color: var( --color-brandRed);
 }
 
-.has-c4aa-red-color {
+.has-caa-red-color {
 	color: var( --color-brandRed);
 }
 
-.has-c4aa-beige-background-color {
+.has-caa-beige-background-color {
 	background-color: var( --color-brandBeige);
 }
 
-.has-c4aa-beige-color {
+.has-caa-beige-color {
 	color: var( --color-brandBeige);
 }
 
-.has-c4aa-grey-background-color {
+.has-caa-grey-background-color {
 	background-color: var( --color-brandGrey);
 }
 
-.has-c4aa-grey-color {
+.has-caa-grey-color {
 	color: var( --color-brandGrey);
 }
 
-.has-c4aa-yellow-background-color {
+.has-caa-yellow-background-color {
 	background-color: var( --color-brandYellow);
 }
 
-.has-c4aa-yellow-color {
+.has-caa-yellow-color {
 	color: var( --color-brandYellow);
 }
 
-.has-c4aa-blue-background-color {
+.has-caa-blue-background-color {
 	background-color: var( --color-brandBlue);
 }
 
-.has-c4aa-blue-color {
+.has-caa-blue-color {
 	color: var( --color-brandBlue);
 }
