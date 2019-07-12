@@ -14,6 +14,27 @@ function c4aa_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
 
 
+function c4aa_async_webfontloader_inline_script() {
+	$font_css_path = get_stylesheet_directory_uri() . "/fonts/webfonts.css";
+
+	echo "<script>
+
+	WebFontConfig = {
+		custom: {
+			families: ['ralewayblack', 'ralewaymedium', 'zilla_slab_boldbold'],
+			urls: [ '$font_css_path' ]
+		}
+	};
+
+	(function(d) {
+		var wf = d.createElement('script'), s = d.scripts[0];
+		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+		wf.async = true;
+		s.parentNode.insertBefore(wf, s);
+	 })(document);</script>\n";
+}
+add_action( 'wp_head', 'c4aa_async_webfontloader_inline_script', 0 );
+
 /**
  * Point uploads path to the staging server for local development.
  */
