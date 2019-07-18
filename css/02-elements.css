@@ -12,7 +12,7 @@ button, input, select, optgroup, textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 'Arial Black', Gadget, sans-serif;
 }
 
 /* Webfonts */
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active select, 
 .wf-active optgroup, 
 .wf-active textarea {
-	font-family: 'ralewaymedium', sans-serif;
+	font-family: 'zilla_slab_regularregular', Georgia, sans-serif;
 }
 
 .wf-active h1, 
@@ -31,6 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active h4, 
 .wf-active h5, 
 .wf-active h6 {
-	font-family: 'zilla_slab_boldbold', Georgia, sans-serif;
+	font-family: 'ralewayextrabold', sans-serif;
 	font-weight: normal;
 }
