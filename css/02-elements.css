@@ -33,4 +33,6 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active h6 {
 	font-family: 'ralewayextrabold', sans-serif;
 	font-weight: normal;
+	letter-spacing: .14em;
+	text-transform: uppercase;
 }
