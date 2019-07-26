@@ -23,8 +23,24 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active input, 
 .wf-active select, 
 .wf-active optgroup, 
-.wf-active textarea {
-	font-family: 'aleoregular', Georgia, sans-serif;
+.wf-active textarea,
+.wf-active blockquote cite,
+.wf-active .entry .entry-content figcaption {
+	font-family: 'roboto_slablight', Georgia, sans-serif;
+}
+
+.wf-active figure.wp-block-pullquote,
+.wf-active body strong {
+	font-family: 'roboto_slabregular', Georgia, sans-serif;
+}
+
+.wf-active .site-branding {
+	font-family: 'ralewayregular', sans-serif;
+}
+
+.wf-active .site-branding .main-navigation ul li a {
+	font-family: 'ralewaymedium', sans-serif;
+	text-transform: uppercase;
 }
 
 .wf-active h1, 
