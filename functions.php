@@ -67,7 +67,7 @@ global $wp_meta_boxes;
 wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'custom_dashboard_help');
 }
  
-function custom_dashboard_help() {
+function c4aa_custom_dashboard_help() {
 echo '<p>Welcome to the new C4AA theme!<p>
 	<p>Good ideas:</p>
 		<ul>
