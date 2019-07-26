@@ -24,7 +24,7 @@ If still here by 8/10/2019, remove this code.
 @media( min-width: 768px ) {
 
 	@supports ( display: grid ) {
-		.entry {
+		.c4aa-excerpt-grid .entry {
 			display: grid;
 			grid-template-columns: 2fr 1fr;
 			grid-template-rows: minmax(100px, min-content) 1fr;
@@ -39,40 +39,40 @@ If still here by 8/10/2019, remove this code.
 			padding-right: 1rem;
 		}
 
-		.hfeed .entry .entry-header,
-		.entry .entry-footer,
-		.entry .entry-content,
-		.entry .post-thumbnail {
+		.c4aa-excerpt-grid .entry .entry-header,
+		.c4aa-excerpt-grid .entry .entry-footer,
+		.c4aa-excerpt-grid .entry .entry-content,
+		.c4aa-excerpt-grid .entry .post-thumbnail {
 			margin: 0;
 			padding: 0;
 		}
 
-		.entry-header {
+		.c4aa-excerpt-grid .entry-header {
 			display: flex;
 			flex-direction: column;
 			justify-content: end;
 		}
 
-		.entry-header {
+		.c4aa-excerpt-grid .entry-header {
 			grid-column: 1;
 		}
 
-		.entry .entry-content {
+		.c4aa-excerpt-grid .entry .entry-content {
 			grid-column: 1;
 			max-width: none;
 		}
 
-		.entry .post-thumbnail {
+		.c4aa-excerpt-grid .entry .post-thumbnail {
 			grid-row: 1 / -1;
 			grid-column: 2;
 		}
 
-		.entry .post-thumbnail .post-thumbnail-inner {
+		.c4aa-excerpt-grid .entry .post-thumbnail .post-thumbnail-inner {
 			display: flex;
 			height: 100%;
 		}
 
-		.entry .entry-footer {
+		.c4aa-excerpt-grid .entry .entry-footer {
 			grid-column: 1 / -1;
 			max-width: none;
 		}
