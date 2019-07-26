@@ -1,16 +1,24 @@
-
-
-/* Full width content area */
-.entry .entry-content > *, .entry .entry-summary > * {
-	/* max-width: 100%; */
-}
-
-/* Why are there vws everywhere in this theme... */
-.entry .entry-content .wp-block-image .aligncenter {
-	/* width: 100%; */
-}
-
-.page-title {
+/* Large chunk copied from theme. */
+.author-description .author-link,
+.comment-metadata,
+.comment-reply-link,
+.comments-title,
+.comment-author .fn,
+.discussion-meta-info,
+.entry-meta,
+.entry-footer,
+.main-navigation,
+.no-comments,
+.not-found .page-title,
+.error-404 .page-title,
+.post-navigation .post-title,
+.page-links,
+.page-description,
+.pagination .nav-links,
+.sticky-post,
+.site-title,
+.site-info,
+#cancel-comment-reply-link {
 	font-family: inherit;
 }
 
@@ -23,6 +31,7 @@
 }
 
 /* Override main color */
+
 .site-header.featured-image .site-featured-image::before, .site-header.featured-image .site-featured-image::after, .entry .post-thumbnail::before, .entry .post-thumbnail::after, .main-navigation .sub-menu, .sticky-post, .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background), .entry .button, button, input[type="button"], input[type="reset"], input[type="submit"], .entry .entry-content > .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].has-primary-background-color, .entry .entry-content > [class^="wp-block-"] .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color.has-primary-background-color, .entry .entry-content .wp-block-file .wp-block-file__button,
 .button, button, input[type="button"], input[type="reset"], input[type="submit"],
 .entry .entry-title::before,
@@ -48,6 +57,9 @@ a:hover, a:active, .main-navigation .main-menu > li > a:hover, .main-navigation 
 	background-color: rgba(228, 226, 218, 0.50);
 }
 
+
+/* Navigation */
+
 .main-navigation .main-menu > li > a,
 .main-navigation .main-menu > li .svg-icon {
 	color: var( --color-brandRed );
@@ -65,6 +77,9 @@ a:hover, a:active, .main-navigation .main-menu > li > a:hover, .main-navigation 
 input[type="submit"]:hover {
 	background-color: var( --color-brandGrey );
 }
+
+
+/* Featured Image */
 
 .site-header.featured-image {
 	margin-bottom: 0;
@@ -84,17 +99,15 @@ input[type="submit"]:hover {
 	color: white;
 }
 
-/* Image Filter Tests */
+
+/* Image Filter Setup */
 
 .site-header.featured-image::before, 
 .site-header.featured-image::after, 
 .entry .post-thumbnail::before, 
 .entry .post-thumbnail::after {
-	/* background-color: initial; */
 	all: unset;
 }
-
-
 
 .site-header.featured-image .site-featured-image .entry-header {
 	position: relative;
@@ -114,12 +127,7 @@ input[type="submit"]:hover {
 
 /* squares circular logo in header */
 .site-logo .custom-logo-link {
-    border-radius: 0%
-}
-
-/* remove background from logo in header */
-.site-header.featured-image .custom-logo-link {
-    background: none;
+	border-radius: 0%;
 }
 
 /* de-hyphenate large pullquotes */
@@ -127,8 +135,18 @@ input[type="submit"]:hover {
      hyphens: manual;
 }
 
+/* wide block separators and hr clear both */
 .entry-content .wp-block-separator.is-style-wide, .entry-content hr.is-style-wide {
 	clear: both;
+
+/* remove background from logo in header */
+.site-header.featured-image .custom-logo-link {
+	background: none;
+}
+
+/* remove margin under featured image (so we can put the first block right under) */
+.site-header.featured-image {
+	margin-bottom: 0rem;
 }
 
 .entry-content .wp-block-image img {
