@@ -80,6 +80,7 @@ function c4aa_add_archive_body_class( $classes ) {
 
 	if ( is_archive() || is_search() ) {
 		$classes[] = "c4aa-duotone";
+		$classes[] = "c4aa-excerpt-grid";
 	}
 
 	return $classes;
