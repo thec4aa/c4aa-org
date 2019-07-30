@@ -135,10 +135,6 @@ input[type="submit"]:hover {
      hyphens: manual;
 }
 
-/* wide block separators and hr clear both */
-.entry-content .wp-block-separator.is-style-wide, .entry-content hr.is-style-wide {
-	clear: both;
-
 /* remove background from logo in header */
 .site-header.featured-image .custom-logo-link {
 	background: none;
