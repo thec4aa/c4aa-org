@@ -12,7 +12,7 @@ button, input, select, optgroup, textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Arial', Gadget, sans-serif;
+	font-family: 'Arial', sans-serif;
 	letter-spacing: .14em;
 	text-transform: uppercase;
 }
@@ -26,12 +26,12 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active textarea,
 .wf-active blockquote cite,
 .wf-active .entry .entry-content figcaption {
-	font-family: 'roboto_slablight', Georgia, sans-serif;
+	font-family: 'roboto_slablight', Georgia, serif;
 }
 
 .wf-active figure.wp-block-pullquote,
 .wf-active body strong {
-	font-family: 'roboto_slabregular', Georgia, sans-serif;
+	font-family: 'roboto_slabregular', Georgia, serif;
 }
 
 .wf-active .site-branding {
