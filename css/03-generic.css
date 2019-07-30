@@ -139,12 +139,3 @@ input[type="submit"]:hover {
 .site-header.featured-image .custom-logo-link {
 	background: none;
 }
-
-/* remove margin under featured image (so we can put the first block right under) */
-.site-header.featured-image {
-	margin-bottom: 0rem;
-}
-
-.entry-content .wp-block-image img {
-	margin-bottom: 2rem;
-	}
