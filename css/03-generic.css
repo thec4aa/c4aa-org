@@ -148,3 +148,8 @@ input[type="submit"]:hover {
 .wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
 	hyphens: manual;
 }
+
+/* remove space between blog quotes and featured image */
+.entry-content .wp-block-pullquote:first-child {
+	margin-top: 0;
+}
