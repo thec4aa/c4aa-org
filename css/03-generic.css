@@ -159,6 +159,10 @@ input[type="submit"]:hover {
 	padding-bottom: 0;
 }
 
+.site-header.featured-image .entry-title {
+	padding-bottom: 3rem;
+}
+
 .site-header.featured-image .entry-meta {
 	background-color: var(--duotone-foreground); 
 	color: white;
