@@ -148,3 +148,28 @@ input[type="submit"]:hover {
 .wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
 	hyphens: manual;
 }
+
+/* Post Meta Data */
+.site-header.featured-image .site-featured-image .entry-header {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.site-header.featured-image  {
+	padding-bottom: 0;
+}
+
+.site-header.featured-image .entry-meta {
+	background-color: var(--duotone-foreground); 
+	border-top: white 1px solid;
+	color: white;
+	font-family: 'Arial Black', Gadget, sans-serif;
+	font-size: 0.75rem; 
+	margin-top: auto;
+	padding: 0.75rem;
+	width: 100%;
+}
+
+.site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
+	display: none;
+}
