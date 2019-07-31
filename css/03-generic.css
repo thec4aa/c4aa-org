@@ -161,7 +161,6 @@ input[type="submit"]:hover {
 
 .site-header.featured-image .entry-meta {
 	background-color: var(--duotone-foreground); 
-	border-top: white 1px solid;
 	color: white;
 	font-family: 'Arial Black', Gadget, sans-serif;
 	font-size: 0.75rem; 
