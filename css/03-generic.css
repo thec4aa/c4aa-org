@@ -88,7 +88,7 @@ h2 {
 	transform: rotate(-1.5deg);
 }
 
-h2:before {
+h2:before, .entry .entry-title:before {
 	content: none;
 }
 
