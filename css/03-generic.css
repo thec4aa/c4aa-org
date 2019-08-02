@@ -78,6 +78,49 @@ input[type="submit"]:hover {
 	background-color: var( --color-brandGrey );
 }
 
+/* Headers */
+ 
+h2 {
+	background: var( --color-brandGrey );
+	color: var( --color-brandBeige );
+	padding: 1rem;
+	position: relative;
+	transform: rotate(-1.5deg);
+}
+
+h2:before {
+	content: none;
+}
+
+.entry .entry-content > h2 {
+	margin-left: -1rem;
+	max-width: none;
+}
+
+h3 {
+	background: var( --color-brandRed ); 
+	color: var( --color-brandBeige );
+	padding: 1rem;
+	transform: rotate(1deg);
+}
+
+.entry .entry-content > h3 {
+	max-width: 50%;
+}
+
+h4 {
+	background: var( --color-brandBlack );
+	color: var( --color-brandBeige );
+	display: inline-block;
+	margin-left: -1rem;
+	padding: 1rem;
+	transform: rotate(-2deg);
+}
+
+.has-dark-gray-background-color h4  {
+	background: var( --color-brandBeige );
+	color: var( --color-brandBlack );
+}
 
 /* Featured Image */
 
