@@ -98,7 +98,7 @@ h2:before {
 }
 
 h3 {
-	background: var( --color-brandRed ); 
+	background: var( --color-brandBlack );
 	color: var( --color-brandBeige );
 	padding: 1rem;
 	transform: rotate(1deg);
@@ -109,17 +109,12 @@ h3 {
 }
 
 h4 {
-	background: var( --color-brandBlack );
+	background: var( --color-brandRed ); 
 	color: var( --color-brandBeige );
 	display: inline-block;
 	margin-left: -1rem;
 	padding: 1rem;
 	transform: rotate(-2deg);
-}
-
-.has-dark-gray-background-color h4  {
-	background: var( --color-brandBeige );
-	color: var( --color-brandBlack );
 }
 
 /* Featured Image */
