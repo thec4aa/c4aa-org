@@ -12,7 +12,9 @@ button, input, select, optgroup, textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Arial Black', Gadget, sans-serif;
+	font-family: 'Arial', sans-serif;
+	letter-spacing: .14em;
+	text-transform: uppercase;
 }
 
 /* Webfonts */
@@ -21,18 +23,39 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active input, 
 .wf-active select, 
 .wf-active optgroup, 
-.wf-active textarea {
-	font-family: 'aleoregular', Georgia, sans-serif;
+.wf-active textarea,
+.wf-active blockquote cite,
+.wf-active .entry .entry-content figcaption {
+	font-family: 'roboto_slablight', Georgia, serif;
+}
+
+.wf-active figure.wp-block-pullquote,
+.wf-active body strong {
+	font-family: 'roboto_slabregular', Georgia, serif;
+}
+
+.wf-active .site-branding {
+	font-family: 'ralewayregular', sans-serif;
+}
+
+.wf-active .site-branding .main-navigation ul li a {
+	font-family: 'ralewaymedium', sans-serif;
+	text-transform: uppercase;
 }
 
 .wf-active h1, 
 .wf-active h2, 
-.wf-active h3, 
-.wf-active h4, 
-.wf-active h5, 
-.wf-active h6 {
+.wf-active h3 {
 	font-family: 'ralewayextrabold', sans-serif;
 	font-weight: normal;
 	letter-spacing: .14em;
 	text-transform: uppercase;
 }
+
+.wf-active h4, 
+.wf-active h5, 
+.wf-active h6 {
+	font-family: 'roboto_slabbold', Georgia, sans-serif;
+	font-weight: normal;
+	letter-spacing: .14em;
+	text-transform: uppercase;
