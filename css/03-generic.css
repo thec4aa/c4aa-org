@@ -104,8 +104,10 @@ h3 {
 	transform: rotate(1deg);
 }
 
-.entry .entry-content > h3 {
-	max-width: 50%;
+@media only screen and (min-width: 768px) {
+	.entry .entry-content > h3 {
+		max-width: 50%;
+
 }
 
 h4 {
