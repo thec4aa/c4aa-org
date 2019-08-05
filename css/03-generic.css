@@ -121,7 +121,7 @@ input[type="submit"]:hover {
 	all: unset;
 }
 
-.site-header.featured-image .site-branding .site-title, .site-header.featured-image .main-navigation a::after, .site-header.featured-image .main-navigation .main-menu > li.menu-item-has-children::after, .site-header.featured-image .main-navigation li, .site-header.featured-image .social-navigation li, .site-header.featured-image .entry-meta {
+.site-header.featured-image .site-branding .site-title, .site-header.featured-image .main-navigation a::after, .site-header.featured-image .main-navigation .main-menu > li.menu-item-has-children::after, .site-header.featured-image .main-navigation li, .site-header.featured-image .social-navigation li {
 	color: var( --color-brandRed );
 }
 
@@ -138,4 +138,46 @@ input[type="submit"]:hover {
 /* remove background from logo in header */
 .site-header.featured-image .custom-logo-link {
 	background: none;
+}
+
+/* remove margin under featured image (so we can put the first block right under) */
+.site-header.featured-image {
+	margin-bottom: 0rem;
+}
+/* de-hyphenate large pullquotes */
+.wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
+	hyphens: manual;
+}
+
+/* Post Meta Data */
+.site-header.featured-image .site-featured-image .entry-header {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.site-header.featured-image  {
+	padding-bottom: 0;
+}
+
+.site-header.featured-image .entry-title {
+	padding-bottom: 3rem;
+}
+
+.site-header.featured-image .entry-meta {
+	background-color: var( --duotone-foreground ); 
+	color: white;
+	font-family: 'Arial Black', Gadget, sans-serif;
+	font-size: 0.75rem; 
+	margin-top: auto;
+	padding: 0.75rem;
+	width: 100%;
+}
+
+.site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
+	display: none;
+}
+
+/* remove space between blog quotes and featured image */
+.entry-content .wp-block-pullquote:first-child {
+	margin-top: 0;
 }
