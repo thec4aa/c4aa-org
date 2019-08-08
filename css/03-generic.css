@@ -221,3 +221,12 @@ h4 {
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
 }
+
+/* Link Colors */
+a, 
+a:visited,
+a:hover,
+a:active,
+.entry .entry-footer a:hover {
+	color: var( --color-brandRed );
+}
