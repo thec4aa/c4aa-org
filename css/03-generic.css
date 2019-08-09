@@ -228,3 +228,12 @@ h4 {
 	clear: both;
 	display: table;
 }
+
+/* Link Colors */
+a, 
+a:visited,
+a:hover,
+a:active,
+.entry .entry-footer a:hover {
+	color: var( --color-brandRed );
+}
