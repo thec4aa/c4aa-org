@@ -39,6 +39,7 @@ Minimize use of plugins, javascript, and other dependencies. Avoid front-end plu
 
 - Lara S
 - Steve Lambert
+- Zoraida @zoracreates
 - [CSS Duotone](https://cssduotone.com/)
-- [Zilla Slab Font](https://github.com/mozilla/zilla-slab) from Mozilla
+- [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab)
 - [Raleway Font](https://www.theleagueofmoveabletype.com/raleway) from the League of Moveable Type
