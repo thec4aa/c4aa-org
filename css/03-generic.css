@@ -80,7 +80,7 @@ input[type="submit"]:hover {
 
 /* Headers */
 
-h1.entry-title {
+header.featured-image h1.entry-title {
 	margin-left: .5em;
 	margin-right: .5em;
 }
