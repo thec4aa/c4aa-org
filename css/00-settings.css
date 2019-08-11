@@ -1,5 +1,6 @@
 :root {
 	/* Brand Colors */
+	--color-brandWhite: #ffffff;
 	--color-brandBeige: #e8e6df;
 	--color-brandBlack: #000000;
 	--color-brandRed: #ef3340;
@@ -14,6 +15,14 @@
  * Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
  * adds a hypen in front of the 4 in CSS classes, and it is cleaner to omit it.
  */
+
+.has-caa-white-background-color {
+	background-color: var( --color-brandWhite);
+}
+
+.has-caa-white-color {
+	color: var( --color-brandWhite);
+}
 
 .has-caa-red-background-color {
 	background-color: var( --color-brandRed);
@@ -37,6 +46,14 @@
 
 .has-caa-grey-color {
 	color: var( --color-brandGrey);
+}
+
+.has-caa-black-background-color {
+	background-color: var( --color-brandBlack);
+}
+
+.has-caa-black-color {
+	color: var( --color-brandBlack);
 }
 
 .has-caa-yellow-background-color {
