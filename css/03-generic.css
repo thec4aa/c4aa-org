@@ -221,3 +221,27 @@ h4 {
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
 }
+
+/* Blockquotes */
+
+blockquote.wp-block-quote {
+	background: var( --color-brandRed );
+	margin: -1.25em;
+	padding: 1.5em !important;
+	border: none;
+	transform: rotate(-.5deg);
+	mix-blend-mode: multiply;
+}
+
+blockquote.wp-block-quote.is-style-large {
+	color: var( --color-brandWhite );
+}
+
+blockquote.wp-block-quote cite {
+	color: var( --color-brandBeige );
+	font-weight: 600;
+}
+
+blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
+	color: var( --color-brandBeige );
+}
