@@ -93,8 +93,16 @@ h2:before, .entry .entry-title:before {
 }
 
 .entry .entry-content > h2 {
-	margin-left: -1rem;
+	margin-left: -2rem;
+	margin-top: 64px;
+	margin-bottom: 48px;
 	max-width: none;
+}
+
+h2.widget-title {
+	font-size: 1.6875em;
+	color: var( --color-brandWhite );
+	margin-left: -1rem;
 }
 
 h3 {
