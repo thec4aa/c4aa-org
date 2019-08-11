@@ -155,6 +155,11 @@ function c4aa_setup_theme_supported_features() {
 			'color' => '#968c83',
 		),
 		array(
+			'name' => __( 'C4AA Black', 'themeLangDomain' ),
+			'slug' => 'caa-black',
+			'color' => '#000000',
+		),
+		array(
 			'name' => __( 'C4AA Yellow', 'themeLangDomain' ),
 			'slug' => 'caa-yellow',
 			'color' => '#e1cd00',
