@@ -119,6 +119,12 @@ h4 {
 	transform: rotate(-2deg);
 }
 
+/* Remove H1 from home */
+
+body.home header.entry-header {
+	display: none;
+}
+
 /* Featured Image */
 
 .site-header.featured-image {
