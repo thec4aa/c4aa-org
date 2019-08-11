@@ -3,14 +3,14 @@ h2, h3, h4 {
 	padding: var(--topPadding) var(--rightPadding) var(--bottomPadding) var(--leftPadding);
 	position: relative;
 	clip-path: polygon( 
-		calc( var( --topLeftX ) * 1rem ) 
-		calc( var( --topLeftY ) * 1rem ), 
-		calc( 100% - ( var( --topRightX ) * 1rem ) ) 
-		calc( var( --topRightY ) * 1rem ), 
-		calc( 100% - ( var( --bottomRightX ) * 1rem ) ) 
-		calc( 100% - ( var( --bottomRightY ) * 1rem ) ), 
-		calc( var( --bottomLeftX ) * 1rem ) 
-		calc( 100% - ( var( --bottomLeftY ) * 1rem ) )
+		calc( var( --topLeftX ) * 1px ) 
+		calc( var( --topLeftY ) * 1px ), 
+		calc( 100% - ( var( --topRightX ) * 1px ) ) 
+		calc( var( --topRightY ) * 1px ), 
+		calc( 100% - ( var( --bottomRightX ) * 1px ) ) 
+		calc( 100% - ( var( --bottomRightY ) * 1px ) ), 
+		calc( var( --bottomLeftX ) * 1px ) 
+		calc( 100% - ( var( --bottomLeftY ) * 1px ) )
 	);
 	transform: rotate( calc( var( --rotate) * 1deg ) );
 }
