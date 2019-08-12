@@ -94,8 +94,8 @@ h2:before, .entry .entry-title:before {
 
 .entry .entry-content > h2 {
 	margin-left: -2rem;
-	margin-top: 64px;
-	margin-bottom: 48px;
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
 	max-width: none;
 }
 
