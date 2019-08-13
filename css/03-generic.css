@@ -79,7 +79,12 @@ input[type="submit"]:hover {
 }
 
 /* Headers */
- 
+
+header.featured-image h1.entry-title {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
 h2 {
 	background: var( --color-brandGrey );
 	color: var( --color-brandBeige );
@@ -152,7 +157,7 @@ h4 {
 .site-header.featured-image .site-featured-image .entry-header {
 	position: relative;
 	z-index: 9;
-	font-size: calc( 3vw + 20px );
+	font-size: calc( 1.5vw + 20px );
 	text-transform: uppercase;
 	text-align: center;
 }
