@@ -122,7 +122,12 @@ h4 {
 /* Remove H1 from home */
 
 body.home header.entry-header {
-	display: none;
+	position:absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 /* Featured Image */
