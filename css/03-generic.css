@@ -124,6 +124,17 @@ h4 {
 	transform: rotate(-2deg);
 }
 
+/* Remove H1 from home */
+
+body.home header.entry-header {
+	position:absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
 /* Featured Image */
 
 .site-header.featured-image {
