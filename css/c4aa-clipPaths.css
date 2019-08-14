@@ -1,0 +1,51 @@
+h2, h3, h4 {
+    color: var( --color-brandBeige );
+	padding: var(--topPadding) var(--rightPadding) var(--bottomPadding) var(--leftPadding);
+	position: relative;
+	clip-path: polygon( 
+		calc( var( --topLeftX ) * 1px ) 
+		calc( var( --topLeftY ) * 1px ), 
+		calc( 100% - ( var( --topRightX ) * 1px ) ) 
+		calc( var( --topRightY ) * 1px ), 
+		calc( 100% - ( var( --bottomRightX ) * 1px ) ) 
+		calc( 100% - ( var( --bottomRightY ) * 1px ) ), 
+		calc( var( --bottomLeftX ) * 1px ) 
+		calc( 100% - ( var( --bottomLeftY ) * 1px ) )
+	);
+	transform: rotate( calc( var( --rotate) * 1deg ) );
+}
+
+/* Headers */
+ 
+h2 {
+	background: var( --color-brandGrey );
+}
+
+h2:before, .entry .entry-title:before {
+	content: none;
+}
+
+.entry .entry-content > h2 {
+	max-width: none;
+}
+
+h3 {
+	background: var( --color-brandBlack );
+}
+
+@media only screen and (min-width: 768px) {
+	.entry .entry-content > h2 {
+		margin-left: -1rem;
+		--leftPadding: 2rem;
+		--rightPadding: 2rem;
+	}
+
+	.entry .entry-content > h3 {
+		max-width: 50%;
+	}
+}
+
+h4 {
+	background: var( --color-brandRed ); 
+	display: inline-block;
+}
