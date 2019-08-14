@@ -237,3 +237,10 @@ body.home header.entry-header {
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
 }
+
+/* Block Image and Paragraph Clearfix */
+.wp-block-image + p::after {
+	content: "";
+	clear: both;
+	display: table;
+}
