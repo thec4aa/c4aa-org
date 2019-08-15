@@ -93,10 +93,9 @@ h2:before, .entry .entry-title:before {
 }
 
 .entry .entry-content > h2 {
-	margin-left: -2rem;
-	margin-top: 3rem;
-	margin-bottom: 1.5rem;
-	max-width: none;
+	margin-left: -1.5rem;
+	margin-top: calc( 5vw + 30px );
+	margin-bottom: calc( 3vw + 30px );
 }
 
 h2.widget-title {
