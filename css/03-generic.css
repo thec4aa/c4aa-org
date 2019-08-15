@@ -48,7 +48,7 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 }
 
 .featured-image .site-branding-container {
-	background: black;
+	background-color: var( --color-brandBlack );
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
@@ -81,7 +81,7 @@ input[type="submit"]:hover {
 /* Headers */
  
 h2 {
-	background: var( --color-brandGrey );
+	background-color: var( --color-brandGrey );
 	color: var( --color-brandBeige );
 	padding: 1rem;
 	position: relative;
@@ -98,7 +98,7 @@ h2:before, .entry .entry-title:before {
 }
 
 h3 {
-	background: var( --color-brandBlack );
+	background-color: var( --color-brandBlack );
 	color: var( --color-brandBeige );
 	padding: 1rem;
 	transform: rotate(1deg);
@@ -111,7 +111,7 @@ h3 {
 }
 
 h4 {
-	background: var( --color-brandRed ); 
+	background-color: var( --color-brandRed ); 
 	color: var( --color-brandBeige );
 	display: inline-block;
 	margin-left: -1rem;
@@ -225,7 +225,7 @@ h4 {
 /* Blockquotes */
 
 blockquote.wp-block-quote {
-	background: var( --color-brandRed );
+	background-color: var( --color-brandRed );
 	margin: -1.25em;
 	padding: 1.5em !important;
 	border: none;
