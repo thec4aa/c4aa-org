@@ -79,13 +79,14 @@ input[type="submit"]:hover {
 }
 
 /* Headers */
- 
+
+header.featured-image h1.entry-title {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
 h2 {
-	background-color: var( --color-brandGrey );
-	color: var( --color-brandBeige );
-	padding: 1rem;
-	position: relative;
-	transform: rotate(-1.5deg);
+	background: var( --color-brandGrey );
 }
 
 h2:before, .entry .entry-title:before {
@@ -93,30 +94,40 @@ h2:before, .entry .entry-title:before {
 }
 
 .entry .entry-content > h2 {
-	margin-left: -1rem;
 	max-width: none;
 }
 
 h3 {
-	background-color: var( --color-brandBlack );
-	color: var( --color-brandBeige );
-	padding: 1rem;
-	transform: rotate(1deg);
+	background: var( --color-brandBlack );
+
 }
 
 @media only screen and (min-width: 768px) {
+	.entry .entry-content > h2 {
+		margin-left: -1rem;
+		--leftPadding: 2rem;
+		--rightPadding: 2rem;
+	}
+
 	.entry .entry-content > h3 {
 		max-width: 50%;
 	}
 }
 
 h4 {
-	background-color: var( --color-brandRed ); 
-	color: var( --color-brandBeige );
+	background: var( --color-brandRed ); 
 	display: inline-block;
-	margin-left: -1rem;
-	padding: 1rem;
-	transform: rotate(-2deg);
+}
+
+/* Remove H1 from home */
+
+body.home header.entry-header {
+	position:absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 /* Featured Image */
@@ -152,7 +163,7 @@ h4 {
 .site-header.featured-image .site-featured-image .entry-header {
 	position: relative;
 	z-index: 9;
-	font-size: calc( 3vw + 20px );
+	font-size: calc( 1.5vw + 20px );
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -244,4 +255,10 @@ blockquote.wp-block-quote cite {
 
 blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 	color: var( --color-brandBeige );
+
+/* Block Image and Paragraph Clearfix */
+.wp-block-image + p::after {
+	content: "";
+	clear: both;
+	display: table;
 }
