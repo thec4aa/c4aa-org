@@ -249,12 +249,12 @@ blockquote.wp-block-quote.is-style-large {
 }
 
 blockquote.wp-block-quote cite {
-	color: var( --color-brandBeige );
+	color: var( --color-brandWhite );
 	font-weight: 600;
 }
 
 blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
-	color: var( --color-brandBeige );
+	color: var( --color-brandWhite );
 
 /* Block Image and Paragraph Clearfix */
 .wp-block-image + p::after {
