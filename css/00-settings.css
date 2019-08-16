@@ -31,13 +31,7 @@
  * adds a hypen in front of the 4 in CSS classes, and it is cleaner to omit it.
  */
 
-.has-caa-red-background-color {
-	background-color: var( --color-brandRed);
-}
-
-.has-caa-red-color {
-	color: var( --color-brandRed);
-}
+/* Beige */
 
 .has-caa-beige-background-color {
 	background-color: var( --color-brandBeige);
@@ -47,6 +41,28 @@
 	color: var( --color-brandBeige);
 }
 
+/* Black */
+
+.has-caa-black-background-color {
+	background-color: var( --color-brandBlack);
+}
+
+.has-caa-black-color {
+	color: var( --color-brandBlack);
+}
+
+/* Blue */
+
+.has-caa-blue-background-color {
+	background-color: var( --color-brandBlue);
+}
+
+.has-caa-blue-color {
+	color: var( --color-brandBlue);
+}
+
+/* Grey */
+
 .has-caa-grey-background-color {
 	background-color: var( --color-brandGrey);
 }
@@ -55,18 +71,33 @@
 	color: var( --color-brandGrey);
 }
 
+/* Red */
+
+.has-caa-red-background-color {
+	background-color: var( --color-brandRed);
+}
+
+.has-caa-red-color {
+	color: var( --color-brandRed);
+}
+
+/* White */
+
+.has-caa-white-background-color {
+	background-color: var( --color-brandWhite);
+}
+
+.has-caa-white-color {
+	color: var( --color-brandWhite);
+}
+
+
+/* Yellow */
+
 .has-caa-yellow-background-color {
 	background-color: var( --color-brandYellow);
 }
 
 .has-caa-yellow-color {
 	color: var( --color-brandYellow);
-}
-
-.has-caa-blue-background-color {
-	background-color: var( --color-brandBlue);
-}
-
-.has-caa-blue-color {
-	color: var( --color-brandBlue);
 }
