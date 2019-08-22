@@ -17,10 +17,10 @@
 	--bottomLeftX: 0;
 	--bottomLeftY: 0;
 	--rotate: 0;
-	--topPadding: 1rem;
-	--bottomPadding: 1rem;
-	--leftPadding:1rem;
-	--rightPadding: 1rem;
+	--topPadding: 2rem;
+	--bottomPadding: 2rem;
+	--leftPadding: 2rem;
+	--rightPadding: 2rem;
 }
 
 /* 

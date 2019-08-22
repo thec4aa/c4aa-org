@@ -33,19 +33,28 @@ h3 {
 	background: var( --color-brandBlack );
 }
 
-@media only screen and (min-width: 768px) {
-	.entry .entry-content > h2 {
-		margin-left: -1rem;
-		--leftPadding: 2rem;
-		--rightPadding: 2rem;
-	}
-
-	.entry .entry-content > h3 {
-		max-width: 50%;
-	}
-}
-
 h4 {
 	background: var( --color-brandRed ); 
 	display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
+	.entry .entry-content > h2,
+	.entry .entry-content > h3,
+	.entry h2.entry-title,
+	h2,
+	h3 {
+		margin-left: -2rem;
+	}
+
+	.entry .entry-content > h3,
+	h3 {
+		max-width: 50%;
+	}
+
+	.entry .entry-content > h4,
+	h4 {
+		margin-left: -4rem;
+		--leftPadding: 4rem;
+	}
 }
