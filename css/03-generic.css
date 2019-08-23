@@ -94,6 +94,15 @@ h2:before, .entry .entry-title:before {
 }
 
 .entry .entry-content > h2 {
+	margin-left: -1.5rem;
+	margin-top: calc( 5vw + 30px );
+	margin-bottom: calc( 3vw + 30px );
+}
+
+h2.widget-title {
+	font-size: 1.6875em;
+	color: var( --color-brandWhite );
+	margin-left: -1rem;
 	max-width: none;
 }
 
@@ -216,17 +225,18 @@ body.home header.entry-header {
 
 .site-header.featured-image .entry-meta {
 	background-color: var( --duotone-foreground ); 
-	color: white;
-	font-family: 'Arial Black', Gadget, sans-serif;
+	color: var( --color-brandBeige);
 	font-size: 0.75rem; 
+	font-weight: 400;
 	margin-top: auto;
 	padding: 0.75rem;
 	width: 100%;
 }
 
-.site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
+/* Removes icons from entry-meta - keeping them for now */
+/* .site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
 	display: none;
-}
+}*/
 
 /* remove space between blog quotes and featured image */
 .entry-content .wp-block-pullquote:first-child {
