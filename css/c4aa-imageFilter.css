@@ -63,6 +63,7 @@ body.c4aa-duotone .post-thumbnail img,
 	width:               100%;
 	transition:          mix-blend-mode filter opacity 250ms ease-in-out;
 }
+
 body.c4aa-duotone .post-thumbnail::before,
 .c4aa-duotone[class*="align"]::before,
 .c4aa-duotone > figure[class*="align"]::before {
@@ -85,7 +86,10 @@ body.c4aa-duotone .post-thumbnail::before,
 .c4aa-duotone > figure[class*="align"]:hover {
 	background-color: initial;
 	opacity: 1;
-	position: static;
+}
+
+.c4aa-duotone > figure[class*="align"]:hover::before {
+	display: none;
 }
 
 .c4aa-duotone[class*="align"]:hover > img,
