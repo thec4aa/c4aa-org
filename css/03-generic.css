@@ -50,6 +50,8 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 	background-color: var( --color-brandBlack );
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 .site-content {
@@ -151,6 +153,7 @@ body.home header.entry-header {
 
 .site-header.featured-image {
 	min-height: 70vh;
+	padding: 0;
 }
 
 .featured-image .site-description {
