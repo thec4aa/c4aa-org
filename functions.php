@@ -115,7 +115,7 @@ add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
 function c4aa_custom_dashboard_widgets() {
 global $wp_meta_boxes;
  
-wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'custom_dashboard_help');
+wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'c4aa_custom_dashboard_help');
 }
  
 function c4aa_custom_dashboard_help() {
