@@ -48,7 +48,7 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 }
 
 .featured-image .site-branding-container {
-	background: black;
+	background-color: var( --color-brandBlack );
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
@@ -99,6 +99,7 @@ h2:before, .entry .entry-title:before {
 
 h3 {
 	background: var( --color-brandBlack );
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -231,6 +232,29 @@ body.home header.entry-header {
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
 }
+
+/* Blockquotes */
+
+blockquote.wp-block-quote {
+	background-color: var( --color-brandRed );
+	margin: -1.25em;
+	padding: 1.5em !important;
+	border: none;
+	transform: rotate(-.5deg);
+	mix-blend-mode: multiply;
+}
+
+blockquote.wp-block-quote.is-style-large {
+	color: var( --color-brandWhite );
+}
+
+blockquote.wp-block-quote cite {
+	color: var( --color-brandWhite );
+	font-weight: 600;
+}
+
+blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
+	color: var( --color-brandWhite );
 
 /* Block Image and Paragraph Clearfix */
 .wp-block-image + p::after {
