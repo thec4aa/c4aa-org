@@ -48,7 +48,7 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 }
 
 .featured-image .site-branding-container {
-	background: black;
+	background-color: var( --color-brandBlack );
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
@@ -79,13 +79,14 @@ input[type="submit"]:hover {
 }
 
 /* Headers */
- 
+
+header.featured-image h1.entry-title {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
 h2 {
 	background: var( --color-brandGrey );
-	color: var( --color-brandBeige );
-	padding: 1rem;
-	position: relative;
-	transform: rotate(-1.5deg);
 }
 
 h2:before, .entry .entry-title:before {
@@ -102,16 +103,21 @@ h2.widget-title {
 	font-size: 1.6875em;
 	color: var( --color-brandWhite );
 	margin-left: -1rem;
+	max-width: none;
 }
 
 h3 {
 	background: var( --color-brandBlack );
-	color: var( --color-brandBeige );
-	padding: 1rem;
-	transform: rotate(1deg);
+
 }
 
 @media only screen and (min-width: 768px) {
+	.entry .entry-content > h2 {
+		margin-left: -1rem;
+		--leftPadding: 2rem;
+		--rightPadding: 2rem;
+	}
+
 	.entry .entry-content > h3 {
 		max-width: 50%;
 	}
@@ -119,11 +125,18 @@ h3 {
 
 h4 {
 	background: var( --color-brandRed ); 
-	color: var( --color-brandBeige );
 	display: inline-block;
-	margin-left: -1rem;
-	padding: 1rem;
-	transform: rotate(-2deg);
+}
+
+/* Remove H1 from home */
+
+body.home header.entry-header {
+	position:absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 /* Featured Image */
@@ -159,7 +172,7 @@ h4 {
 .site-header.featured-image .site-featured-image .entry-header {
 	position: relative;
 	z-index: 9;
-	font-size: calc( 3vw + 20px );
+	font-size: calc( 1.5vw + 20px );
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -228,4 +241,34 @@ h4 {
 /* remove space between blog quotes and featured image */
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
+}
+
+/* Blockquotes */
+
+blockquote.wp-block-quote {
+	background-color: var( --color-brandRed );
+	margin: -1.25em;
+	padding: 1.5em !important;
+	border: none;
+	transform: rotate(-.5deg);
+	mix-blend-mode: multiply;
+}
+
+blockquote.wp-block-quote.is-style-large {
+	color: var( --color-brandWhite );
+}
+
+blockquote.wp-block-quote cite {
+	color: var( --color-brandWhite );
+	font-weight: 600;
+}
+
+blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
+	color: var( --color-brandWhite );
+
+/* Block Image and Paragraph Clearfix */
+.wp-block-image + p::after {
+	content: "";
+	clear: both;
+	display: table;
 }

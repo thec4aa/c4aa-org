@@ -2,11 +2,27 @@
 	/* Brand Colors */
 	--color-brandWhite: #ffffff;
 	--color-brandBeige: #e8e6df;
-	--color-brandBlack: #000000;
-	--color-brandRed: #ef3340;
-	--color-brandGrey: #968c83;
-	--color-brandYellow: #e1cd00;
+	--color-brandBlack: #292724;
 	--color-brandBlue: #005eb8;
+	--color-brandGrey: #7B736c;
+	--color-brandRed: #da2f3b;
+	--color-brandWhite: #fafaf9;
+	--color-brandYellow: #e1cd00;
+
+	/* Clip Path Varaibles */
+	--topLeftX: 0;
+	--topLeftY: 0;
+	--topRightX: 0;
+	--topRightY: 0;
+	--bottomRightX: 0;
+	--bottomRightY: 0;
+	--bottomLeftX: 0;
+	--bottomLeftY: 0;
+	--rotate: 0;
+	--topPadding: 2rem;
+	--bottomPadding: 2rem;
+	--leftPadding: 2rem;
+	--rightPadding: 2rem;
 }
 
 /* 
@@ -16,21 +32,7 @@
  * adds a hypen in front of the 4 in CSS classes, and it is cleaner to omit it.
  */
 
-.has-caa-white-background-color {
-	background-color: var( --color-brandWhite);
-}
-
-.has-caa-white-color {
-	color: var( --color-brandWhite);
-}
-
-.has-caa-red-background-color {
-	background-color: var( --color-brandRed);
-}
-
-.has-caa-red-color {
-	color: var( --color-brandRed);
-}
+/* Beige */
 
 .has-caa-beige-background-color {
 	background-color: var( --color-brandBeige);
@@ -40,13 +42,7 @@
 	color: var( --color-brandBeige);
 }
 
-.has-caa-grey-background-color {
-	background-color: var( --color-brandGrey);
-}
-
-.has-caa-grey-color {
-	color: var( --color-brandGrey);
-}
+/* Black */
 
 .has-caa-black-background-color {
 	background-color: var( --color-brandBlack);
@@ -56,13 +52,7 @@
 	color: var( --color-brandBlack);
 }
 
-.has-caa-yellow-background-color {
-	background-color: var( --color-brandYellow);
-}
-
-.has-caa-yellow-color {
-	color: var( --color-brandYellow);
-}
+/* Blue */
 
 .has-caa-blue-background-color {
 	background-color: var( --color-brandBlue);
@@ -70,4 +60,44 @@
 
 .has-caa-blue-color {
 	color: var( --color-brandBlue);
+}
+
+/* Grey */
+
+.has-caa-grey-background-color {
+	background-color: var( --color-brandGrey);
+}
+
+.has-caa-grey-color {
+	color: var( --color-brandGrey);
+}
+
+/* Red */
+
+.has-caa-red-background-color {
+	background-color: var( --color-brandRed);
+}
+
+.has-caa-red-color {
+	color: var( --color-brandRed);
+}
+
+/* White */
+
+.has-caa-white-background-color {
+	background-color: var( --color-brandWhite);
+}
+
+.has-caa-white-color {
+	color: var( --color-brandWhite);
+}
+
+/* Yellow */
+
+.has-caa-yellow-background-color {
+	background-color: var( --color-brandYellow);
+}
+
+.has-caa-yellow-color {
+	color: var( --color-brandYellow);
 }
