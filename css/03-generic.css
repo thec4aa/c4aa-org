@@ -205,10 +205,6 @@ body.home header.entry-header {
 .site-header.featured-image {
 	margin-bottom: 0rem;
 }
-/* de-hyphenate large pullquotes */
-.wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
-	hyphens: manual;
-}
 
 /* Post Meta Data */
 .site-header.featured-image .site-featured-image .entry-header {
