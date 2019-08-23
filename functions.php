@@ -142,27 +142,32 @@ echo '<p>Welcome to the new C4AA theme!<p>
 function c4aa_setup_theme_supported_features() {
 	add_theme_support( 'editor-color-palette', array(
 		array(
-			'name' => __( 'C4AA Beige', 'themeLangDomain' ),
+			'name' => __( 'C4AA Beige', 'c4aa' ),
 			'slug' => 'caa-beige',
 			'color' => '#e8e6df',
 		),
 		array(
-			'name' => __( 'C4AA Red', 'themeLangDomain' ),
+			'name' => __( 'C4AA Red', 'c4aa' ),
 			'slug' => 'caa-red',
 			'color' => '#ef3340',
 		),
 		array(
-			'name' => __( 'C4AA Grey', 'themeLangDomain' ),
+			'name' => __( 'C4AA Grey', 'c4aa' ),
 			'slug' => 'caa-grey',
 			'color' => '#968c83',
 		),
 		array(
-			'name' => __( 'C4AA Yellow', 'themeLangDomain' ),
+			'name' => __( 'C4AA Black', 'c4aa' ),
+			'slug' => 'caa-black',
+			'color' => '#000000',
+		),
+		array(
+			'name' => __( 'C4AA Yellow', 'c4aa' ),
 			'slug' => 'caa-yellow',
 			'color' => '#e1cd00',
 		),
 		array(
-			'name' => __( 'C4AA Blue', 'themeLangDomain' ),
+			'name' => __( 'C4AA Blue', 'c4aa' ),
 			'slug' => 'caa-blue',
 			'color' => '#005eb8',
 		),

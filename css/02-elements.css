@@ -45,7 +45,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .wf-active h1, 
 .wf-active h2, 
-.wf-active h3 {
+.wf-active h3,
+.site-header.featured-image .entry-meta {
 	font-family: 'ralewayextrabold', sans-serif;
 	font-weight: normal;
 	letter-spacing: .14em;
