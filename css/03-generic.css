@@ -192,7 +192,7 @@ body.home header.entry-header {
 }
 
 /* de-hyphenate large pullquotes */
-.wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
+.wp-block-pullquote.alignwide *, .wp-block-pullquote.alignfull * {
      hyphens: manual;
 }
 
