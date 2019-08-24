@@ -171,6 +171,11 @@ function c4aa_setup_theme_supported_features() {
 			'slug' => 'caa-blue',
 			'color' => '#005eb8',
 		),
+		array(
+			'name' => __( 'C4AA White', 'c4aa' ),
+			'slug' => 'caa-white',
+			'color' => '#fafaf9',
+		),
 	) 
 	); // end add_theme_support
 } // end c4aa_setup_theme_supported_features
