@@ -291,7 +291,8 @@ input[type="submit"] {
 	transition: all 150ms ease-in-out;
 	background-color: var( --color-brandRed );
 	border-radius: 0;
-	font-family: 'roboto_slablight', Georgia, serif;	
+	font-family: 'roboto_slablight', Georgia, serif;
+	color: var(--color-brandWhite);
 }
 
 button:hover,
