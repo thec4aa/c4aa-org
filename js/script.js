@@ -30,13 +30,13 @@ defaultButtons.forEach( ( button ) => {
 
 	// create container for dropshadow
 	let wrapShadow = document.createElement('div');
-	wrapShadow.setAttribute('class', 'c4aa-default-button-wrapper' );
+	wrapShadow.setAttribute( 'class', 'c4aa-default-button-wrapper' );
 
 	// insert container before button in the DOM tree
-	button.parentNode.insertBefore(wrapShadow, button);
+	button.parentNode.insertBefore( wrapShadow, button );
 
 	// move button into container
-	wrapShadow.appendChild(button);
+	wrapShadow.appendChild( button );
 
 	// add clip path css properties
 	clipProperties.forEach( ( property ) => {
@@ -48,7 +48,7 @@ defaultButtons.forEach( ( button ) => {
 // add outline and shadow
 outlineButtons.forEach( ( button ) => {
 
-	button.classList.add('c4aa-outline-button-wrapper');
+	button.classList.add( 'c4aa-outline-button-wrapper' );
 
 });
 
@@ -65,8 +65,9 @@ outlineButtonsLink.forEach( ( link) => {
 /* Helper Function 
 
 	if no fixedPoint is set, then this function will generate an integer
-	
+
 */
+
 function getRandomNum( min, max, fixedPoint = 0 ) {
   min = Math.ceil( min );
   max = Math.floor( max );
