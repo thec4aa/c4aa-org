@@ -301,6 +301,7 @@ button:hover,
 input[type="button"]:hover, 
 input[type="reset"]:hover, 
 input[type="submit"]:hover{
+	background-color: var( --color-brandRed );
 	filter: brightness(80%);
 }
 
