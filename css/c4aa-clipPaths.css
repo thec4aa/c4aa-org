@@ -89,7 +89,6 @@ input[type="submit"] {
 	--rightPadding: 1.5rem;
 }
 
-
 .c4aa-default-button-wrapper {
 	filter: drop-shadow(5px 5px 0px var( --color-brandGrey ));
 	height: fit-content;

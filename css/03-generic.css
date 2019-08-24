@@ -277,7 +277,7 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 
 /* Buttons */
 
-/* all buttons overrides */
+/* default buttons overrides */
 
 button, 
 .button, 
@@ -288,9 +288,20 @@ button,
 input[type="button"], 
 input[type="reset"], 
 input[type="submit"] {
+	transition: all 150ms ease-in-out;
 	background-color: var( --color-brandRed );
 	border-radius: 0;
 	font-family: 'roboto_slablight', Georgia, serif;	
+}
+
+button:hover,
+.button:hover, 
+.wp-block-file__button:hover,
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
+input[type="button"]:hover, 
+input[type="reset"]:hover, 
+input[type="submit"]:hover{
+	filter: brightness(80%);
 }
 
 /* outline buttons overrides
