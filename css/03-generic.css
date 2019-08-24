@@ -290,34 +290,21 @@ input[type="reset"],
 input[type="submit"] {
 	background-color: var( --color-brandRed );
 	border-radius: 0;
-	box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
 	font-family: 'roboto_slablight', Georgia, serif;	
 }
 
-button:hover, 
-.button:hover, 
-.entry .button:hover, 
-.entry .entry-content .wp-block-file .wp-block-file__button:hover,
-.entry .entry-content .wp-block-button .wp-block-button__link:hover,
-input[type="button"]:hover, 
-input[type="reset"]:hover, 
-input[type="submit"]:hover {
-	background-color: var( --color-brandGrey );
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-	box-shadow: none;
-}
+/* outline buttons overrides
 
-/* outline buttons overrides */
+	border will be applied on the parent element to avoid it being cut by clip-paths
+	background inserted to hide filterr: dropshadow property inside the button
+
+ */
 
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):hover {
-	border-color: var( --color-brandRed );
-	color: var( --color-brandRed )
-}
-
-.entry .entry-content .wp-block-button:not(.is-style-squared) .wp-block-button__link {
-	border-radius: 0;
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):hover,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):focus,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):visited {
+	border: none;
+	color: var( --color-brandRed );
+	background-color: var( --color-brandBeige );
 }
