@@ -301,7 +301,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover, 
 input[type="submit"]:hover{
 	background-color: var( --color-brandRed );
-	filter: brightness(80%);
+	filter: brightness(87%);
 }
 
 /* outline buttons overrides
