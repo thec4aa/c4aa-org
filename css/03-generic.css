@@ -114,8 +114,6 @@ h3 {
 @media only screen and (min-width: 768px) {
 	.entry .entry-content > h2 {
 		margin-left: -1rem;
-		--leftPadding: 2rem;
-		--rightPadding: 2rem;
 	}
 
 	.entry .entry-content > h3 {
@@ -308,8 +306,8 @@ input[type="submit"]:hover{
 
 /* outline buttons overrides
 
+	initial border serves as a fall-back style
 	border will be applied on the parent element to avoid it being cut by clip-paths
-	background inserted to hide filterr: dropshadow property inside the button
 
  */
 
@@ -317,7 +315,7 @@ input[type="submit"]:hover{
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):hover,
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):focus,
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):visited {
-	border: none;
+	border-color: var(--color-brandRed);
 	color: var( --color-brandRed );
 	background-color: var( --color-brandBeige );
 }
