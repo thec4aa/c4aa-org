@@ -35,11 +35,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wf-active .site-branding {
-	font-family: 'ralewayregular', sans-serif;
+	font-family: 'metropolisregular', sans-serif;
 }
 
 .wf-active .site-branding .main-navigation ul li a {
-	font-family: 'ralewaymedium', sans-serif;
+	font-family: 'metropolissemi_bold', sans-serif;
 	text-transform: uppercase;
 }
 
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active h2, 
 .wf-active h3,
 .site-header.featured-image .entry-meta {
-	font-family: 'ralewayextrabold', sans-serif;
+	font-family: 'metropolisextra_bold', sans-serif;
 	font-weight: normal;
 	letter-spacing: .14em;
 	text-transform: uppercase;
