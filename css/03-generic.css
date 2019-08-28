@@ -290,6 +290,8 @@ input[type="submit"] {
 	background-color: var( --color-brandRed );
 	border-radius: 0;
 	box-shadow: 5px 5px 0px var( --color-brandGrey );
+		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
+		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
 	font-family: 'roboto_slablight', Georgia, serif;
 	color: var(--color-brandWhite);
 }
