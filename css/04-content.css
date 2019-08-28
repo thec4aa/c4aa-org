@@ -79,3 +79,32 @@ If still here by 8/10/2019, remove this code.
 	}
 
 }
+
+/****************/
+/* Donate Form */
+/***************/
+
+/* hide all except the donation amount buttons */
+#give-payment-mode-select,
+#give_purchase_form_wrap {
+	display: none;
+}
+
+/* show form fields when modal opens */
+.give-modal-open #give-payment-mode-select,
+.give-modal-open #give_purchase_form_wrap {
+	display: block;
+}
+
+.give-donation-levels-wrap {
+	display: flex;
+}
+.give-donation-levels-wrap li {
+	list-style: none;
+	padding-right: 1.5rem;
+
+}
+
+.give-donation-level-btn {
+	background: var(--color-brandBlack);
+}
