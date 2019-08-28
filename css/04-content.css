@@ -114,8 +114,10 @@ If still here by 8/10/2019, remove this code.
 }
 
 .mfp-close {
+	padding: 1rem;
 	float: right;
-	margin: .5rem;
+	margin-right: 1rem;
+	line-height: 0;
 }
 
 .give-modal-open .give-form::after {

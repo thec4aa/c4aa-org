@@ -289,8 +289,13 @@ input[type="submit"] {
 	transition: all 150ms ease-in-out;
 	background-color: var( --color-brandRed );
 	border-radius: 0;
+	box-shadow: 5px 5px 0px var( --color-brandGrey );
 	font-family: 'roboto_slablight', Georgia, serif;
 	color: var(--color-brandWhite);
+}
+
+button.main-menu-more-toggle {
+	box-shadow: none;
 }
 
 button:hover,
@@ -301,6 +306,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover, 
 input[type="submit"]:hover{
 	background-color: var( --color-brandRed );
+	box-shadow: none;
 	filter: brightness(87%);
 }
 

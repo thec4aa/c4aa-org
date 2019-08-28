@@ -1,7 +1,7 @@
 h2, 
 h3, 
 h4,
-button:not(.main-menu-more-toggle),
+button:not(.main-menu-more-toggle):not(.mfp-close),
 .button, 
 .wp-block-file__button,
 .wp-block-button:not(.is-style-outline),

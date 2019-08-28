@@ -1,5 +1,5 @@
 const headings = document.querySelectorAll( 'h2, h3, h4, legend' );
-const defaultButtons = document.querySelectorAll( 'button, .button, .wp-block-file__button, .wp-block-button:not(.is-style-outline), input[type="button"], input[type="reset"], input[type="submit"]' );
+const defaultButtons = document.querySelectorAll( 'button:not(.main-menu-more-toggle), .button, .wp-block-file__button, .wp-block-button:not(.is-style-outline), input[type="button"], input[type="reset"], input[type="submit"]' );
 const outlineButtons =   document.querySelectorAll( '.wp-block-button.is-style-outline');
 const outlineButtonsLink = document.querySelectorAll( '.wp-block-button.is-style-outline .wp-block-button__link');
 const clipProperties = ['--topLeftX', '--topLeftY', '--topRightX', '--topRightY', '--bottomLeftX', '--bottomLeftY', '--bottomRightX', '--bottomRightY' ];
