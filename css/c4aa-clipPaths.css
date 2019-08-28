@@ -9,7 +9,9 @@ button:not(.main-menu-more-toggle),
 .wp-block-button__link,
 input[type="button"], 
 input[type="reset"], 
-input[type="submit"] {
+input[type="submit"],
+legend {
+    color: var( --color-brandBeige );
 	padding: var(--topPadding) var(--rightPadding) var(--bottomPadding) var(--leftPadding);
 	clip-path: polygon( 
 		calc( var( --topLeftX ) * 1px ) 
