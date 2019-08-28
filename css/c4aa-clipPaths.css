@@ -1,4 +1,4 @@
-h2, h3, h4 {
+h2, h3, h4, legend {
     color: var( --color-brandBeige );
 	padding: var(--topPadding) var(--rightPadding) var(--bottomPadding) var(--leftPadding);
 	position: relative;

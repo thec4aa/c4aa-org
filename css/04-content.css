@@ -84,27 +84,66 @@ If still here by 8/10/2019, remove this code.
 /* Donate Form */
 /***************/
 
-/* hide all except the donation amount buttons */
+/* closed modal */
+
 #give-payment-mode-select,
-#give_purchase_form_wrap {
+#give_purchase_form_wrap,
+.mfp-preloader {
 	display: none;
 }
 
-/* show form fields when modal opens */
+.give-form {
+	background-color: var( --color-brandBeige );
+	border: 2px solid var( --color-brandGrey );
+	padding: 1.5rem;
+}
+
+/* open modal */
+
+.give-modal-open .give-form {
+	background-color: rgba(228, 226, 218, 0.50);
+	border: none;
+	height: 100vh;
+	overflow: auto;
+	padding: 0;
+} 
+
 .give-modal-open #give-payment-mode-select,
 .give-modal-open #give_purchase_form_wrap {
 	display: block;
 }
 
-.give-donation-levels-wrap {
+.mfp-close {
+	float: right;
+	margin: .5rem;
+}
+
+.give-modal-open .give-form::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+/* general styles */ 
+.give-donation-levels-wrap,
+#give-gateway-radio-list {
 	display: flex;
+	flex-wrap: wrap;
 }
-.give-donation-levels-wrap li {
+
+#give-gateway-radio-list {
+	padding-left: 0;
+}
+
+.give-donation-levels-wrap li,
+#give-gateway-radio-list li {
 	list-style: none;
+	padding-bottom: 1.5rem;
 	padding-right: 1.5rem;
-
 }
 
-.give-donation-level-btn {
-	background: var(--color-brandBlack);
+
+[for="give-amount"],
+.give-currency-symbol {
+	font-weight: bold;
 }

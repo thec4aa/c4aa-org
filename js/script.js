@@ -1,4 +1,4 @@
-const headings = document.querySelectorAll( 'h2, h3, h4' );
+const headings = document.querySelectorAll( 'h2, h3, h4, legend' );
 
 let clipProperties = ['--topLeftX', '--topLeftY', '--topRightX', '--topRightY', '--bottomLeftX', '--bottomLeftY', '--bottomRightX', '--bottomRightY' ];
 
