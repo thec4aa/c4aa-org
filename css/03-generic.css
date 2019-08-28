@@ -339,17 +339,16 @@ input[type="password"],
 input[type="search"], 
 input[type="number"], 
 input[type="tel"], 
-input[type="range"], 
 input[type="date"], 
 input[type="month"], 
 input[type="week"], 
 input[type="time"], 
 input[type="datetime"], 
 input[type="datetime-local"], 
-input[type="color"], 
 textarea {
 	background-color:  var( --color-brandWhite );
 	border-color: var( --color-brandGrey );
+	max-width: 100%;
 }
 
 /* field sets */

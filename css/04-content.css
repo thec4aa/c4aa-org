@@ -103,7 +103,7 @@ If still here by 8/10/2019, remove this code.
 .give-modal-open .give-form {
 	background-color: rgba(228, 226, 218, 0.50);
 	border: none;
-	height: 100vh;
+	min-height: 100vh;
 	overflow: auto;
 	padding: 0;
 } 
