@@ -248,11 +248,17 @@ body.home header.entry-header {
 
 blockquote.wp-block-quote {
 	background-color: var( --color-brandRed );
+	color: var( --color-brandBeige );
+	font-family: 'roboto_slabbold', Georgia, serif;
 	margin: -1.25em;
 	padding: 1.5em !important;
 	border: none;
 	transform: rotate(-.5deg);
 	mix-blend-mode: multiply;
+}
+
+.entry .entry-content .wp-block-quote p {
+	font-style: italic;
 }
 
 blockquote.wp-block-quote.is-style-large {
