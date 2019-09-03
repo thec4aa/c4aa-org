@@ -226,7 +226,7 @@ body.home header.entry-header {
 	background-color: var( --duotone-foreground ); 
 	color: var( --color-brandBeige);
 	font-size: 0.75rem; 
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: auto;
 	padding: 0.75rem;
 	width: 100%;
@@ -265,7 +265,7 @@ blockquote.wp-block-quote.is-style-large {
 
 blockquote.wp-block-quote cite {
 	color: var( --color-brandWhite );
-	font-weight: 600;
+	font-weight: 700;
 }
 
 blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
