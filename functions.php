@@ -23,7 +23,7 @@ function c4aa_async_webfontloader_inline_script() {
 
 	WebFontConfig = {
 		custom: {
-			families: ['ralewayblack', 'ralewaymedium', 'zilla_slab_boldbold'],
+			families: ['metropolisregular', 'metropolissemi_bold', 'metropolisextra_bold', 'roboto_slablight', 'roboto_slabregular', 'roboto_slabbold'],
 			urls: [ '$font_css_path' ]
 		}
 	};
