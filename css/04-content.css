@@ -79,3 +79,73 @@ If still here by 8/10/2019, remove this code.
 	}
 
 }
+
+/****************/
+/* Donate Form */
+/***************/
+
+/* closed modal */
+
+#give-payment-mode-select,
+#give_purchase_form_wrap,
+.mfp-preloader {
+	display: none;
+}
+
+.give-form {
+	background-color: var( --color-brandBeige );
+	border: 2px solid var( --color-brandGrey );
+	padding: 1.5rem;
+}
+
+/* open modal */
+
+.give-modal-open .give-form {
+	background-color: rgba(228, 226, 218, 0.50);
+	border: none;
+	min-height: 100vh;
+	overflow: auto;
+	padding: 0;
+} 
+
+.give-modal-open #give-payment-mode-select,
+.give-modal-open #give_purchase_form_wrap {
+	display: block;
+}
+
+.mfp-close {
+	padding: 1rem;
+	float: right;
+	margin-right: 1rem;
+	line-height: 0;
+}
+
+.give-modal-open .give-form::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+/* general styles */ 
+.give-donation-levels-wrap,
+#give-gateway-radio-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#give-gateway-radio-list {
+	padding-left: 0;
+}
+
+.give-donation-levels-wrap li,
+#give-gateway-radio-list li {
+	list-style: none;
+	padding-bottom: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+
+[for="give-amount"],
+.give-currency-symbol {
+	font-weight: bold;
+}
