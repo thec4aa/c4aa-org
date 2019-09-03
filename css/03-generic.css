@@ -190,7 +190,11 @@ body.home header.entry-header {
 }
 
 /* de-hyphenate large pullquotes */
-.wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
+.wp-block-pullquote.alignwide *, .wp-block-pullquote.alignfull * {
+     hyphens: manual;
+}
+
+.no-hyphens *{
      hyphens: manual;
 }
 
@@ -202,10 +206,6 @@ body.home header.entry-header {
 /* remove margin under featured image (so we can put the first block right under) */
 .site-header.featured-image {
 	margin-bottom: 0rem;
-}
-/* de-hyphenate large pullquotes */
-.wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
-	hyphens: manual;
 }
 
 /* Post Meta Data */
