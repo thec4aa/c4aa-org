@@ -1,7 +1,7 @@
 /* Roboto Slab */
 
 
-@font-face {
+/*@font-face {
     font-family: 'roboto_slabthin';
     src: url('RobotoSlab-Thin-webfont.eot');
     src: url('RobotoSlab-Thin-webfont.eot?#iefix') format('embedded-opentype'),
@@ -13,7 +13,7 @@
     font-style: normal;
 
 }
-
+*/
 
 @font-face {
     font-family: 'roboto_slablight';
@@ -59,7 +59,7 @@
 
 /* Metropolis */
 
-@font-face {
+/*@font-face {
     font-family: 'metropolisblack';
     src: url('metropolis-black-webfont.woff2') format('woff2'),
          url('metropolis-black-webfont.woff') format('woff');
@@ -77,7 +77,7 @@
     font-style: normal;
 
 }
-
+*/
 
 @font-face {
     font-family: 'metropolisextra_bold';
@@ -99,7 +99,7 @@
 }
 
 
-@font-face {
+/*@font-face {
     font-family: 'metropolisbold';
     src: url('metropolis-bold-webfont.woff2') format('woff2'),
          url('metropolis-bold-webfont.woff') format('woff');
@@ -117,7 +117,7 @@
     font-style: normal;
 
 }
-
+*/
 
 @font-face {
     font-family: 'metropolissemi_bold';
@@ -138,7 +138,7 @@
 
 }
 
-
+/*
 @font-face {
     font-family: 'metropolismedium';
     src: url('metropolis-medium-webfont.woff2') format('woff2'),
@@ -157,7 +157,7 @@
     font-style: normal;
 
 }
-
+*/
 
 @font-face {
     font-family: 'metropolisregular';
@@ -179,7 +179,7 @@
 }
 
 
-@font-face {
+/*@font-face {
     font-family: 'metropolislight';
     src: url('metropolis-light-webfont.woff2') format('woff2'),
          url('metropolis-light-webfont.woff') format('woff');
@@ -236,4 +236,4 @@
     font-weight: normal;
     font-style: normal;
 
-}
+}*/
