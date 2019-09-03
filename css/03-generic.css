@@ -247,7 +247,8 @@ body.home header.entry-header {
 blockquote.wp-block-quote {
 	background-color: var( --color-brandRed );
 	color: var( --color-brandBeige );
-	font-family: 'roboto_slabbold', Georgia, serif;
+	font-family: 'roboto', Georgia, serif;
+	font-weight: 900;
 	margin: -1.25em;
 	padding: 1.5em !important;
 	border: none;
@@ -298,7 +299,7 @@ input[type="submit"] {
 	box-shadow: 5px 5px 0px var( --color-brandGrey );
 		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
 		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-	font-family: 'roboto_slablight', Georgia, serif;
+	font-family: 'roboto', Georgia, serif;
 	color: var(--color-brandWhite);
 }
 
