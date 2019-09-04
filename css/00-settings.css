@@ -4,6 +4,7 @@
 	--color-brandBlack: #292724; /* Fallback */
 	--color-brandBlack: hsla(36, 6%, 5%, 0.9);
 	--color-brandBlue: #005eb8; /* Fallback */
+	--color-brandBlue: hsla(209, 100%, 34%, 0.9);
 	--color-brandGrey: #7B736c; /* Fallback */
 	--color-brandGrey: hsla(28, 6%, 42%, 0.9);
 	--color-brandRed: #da2f3b; /* Fallback */
