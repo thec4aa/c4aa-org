@@ -1,0 +1,19 @@
+.u-width-50 {
+	width: 50px;
+}
+
+.u-width-100p {
+	width: 100%;
+}
+
+.u-display-inline-block {
+	display: inline-block;
+}
+
+.u-flex {
+	display: flex;
+}
+
+.u-align-items-center {
+	align-items: center;
+}
