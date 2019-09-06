@@ -26,20 +26,22 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active textarea,
 .wf-active blockquote cite,
 .wf-active .entry .entry-content figcaption {
-	font-family: 'roboto_slablight', Georgia, serif;
+	font-family: 'roboto', Georgia, serif;
 }
 
 .wf-active figure.wp-block-pullquote,
 .wf-active body strong {
-	font-family: 'roboto_slabregular', Georgia, serif;
+	font-family: 'roboto', Georgia, serif;
+	font-weight: 700;
 }
 
 .wf-active .site-branding {
-	font-family: 'ralewayregular', sans-serif;
+	font-family: 'metropolis', sans-serif;
 }
 
 .wf-active .site-branding .main-navigation ul li a {
-	font-family: 'ralewaymedium', sans-serif;
+	font-family: 'metropolis', sans-serif;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
@@ -47,8 +49,8 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active h2, 
 .wf-active h3,
 .site-header.featured-image .entry-meta {
-	font-family: 'ralewayextrabold', sans-serif;
-	font-weight: normal;
+	font-family: 'metropolis', sans-serif;
+	font-weight: 900;
 	letter-spacing: .14em;
 	text-transform: uppercase;
 }
@@ -56,8 +58,8 @@ h1, h2, h3, h4, h5, h6 {
 .wf-active h4, 
 .wf-active h5, 
 .wf-active h6 {
-	font-family: 'roboto_slabbold', Georgia, sans-serif;
-	font-weight: normal;
+	font-family: 'roboto', Georgia, sans-serif;
+	font-weight: 900;
 	letter-spacing: .14em;
 	text-transform: uppercase;
 }

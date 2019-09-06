@@ -114,8 +114,6 @@ h3 {
 @media only screen and (min-width: 768px) {
 	.entry .entry-content > h2 {
 		margin-left: -1rem;
-		--leftPadding: 2rem;
-		--rightPadding: 2rem;
 	}
 
 	.entry .entry-content > h3 {
@@ -192,7 +190,11 @@ body.home header.entry-header, .imprint {
 }
 
 /* de-hyphenate large pullquotes */
-.wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
+.wp-block-pullquote.alignwide *, .wp-block-pullquote.alignfull * {
+     hyphens: manual;
+}
+
+.no-hyphens * {
      hyphens: manual;
 }
 
@@ -204,10 +206,6 @@ body.home header.entry-header, .imprint {
 /* remove margin under featured image (so we can put the first block right under) */
 .site-header.featured-image {
 	margin-bottom: 0rem;
-}
-/* de-hyphenate large pullquotes */
-.wp-block-pullquote .alignwide, .wp-block-pullquote .alignwide blockquote, .wp-block-pullquote .alignfull, .wp-block-pullquote .alignfull blockquote {
-	hyphens: manual;
 }
 
 /* Post Meta Data */
@@ -228,7 +226,7 @@ body.home header.entry-header, .imprint {
 	background-color: var( --duotone-foreground ); 
 	color: var( --color-brandBeige);
 	font-size: 0.75rem; 
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: auto;
 	padding: 0.75rem;
 	width: 100%;
@@ -248,11 +246,18 @@ body.home header.entry-header, .imprint {
 
 blockquote.wp-block-quote {
 	background-color: var( --color-brandRed );
+	color: var( --color-brandBeige );
+	font-family: 'roboto', Georgia, serif;
+	font-weight: 900;
 	margin: -1.25em;
 	padding: 1.5em !important;
 	border: none;
 	transform: rotate(-.5deg);
 	mix-blend-mode: multiply;
+}
+
+.entry .entry-content .wp-block-quote p {
+	font-style: italic;
 }
 
 blockquote.wp-block-quote.is-style-large {
@@ -261,7 +266,7 @@ blockquote.wp-block-quote.is-style-large {
 
 blockquote.wp-block-quote cite {
 	color: var( --color-brandWhite );
-	font-weight: 600;
+	font-weight: 700;
 }
 
 blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
@@ -277,7 +282,7 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 
 /* Buttons */
 
-/* all buttons overrides */
+/* default buttons overrides */
 
 button, 
 .button, 
@@ -288,36 +293,107 @@ button,
 input[type="button"], 
 input[type="reset"], 
 input[type="submit"] {
+	transition: all 150ms ease-in-out;
 	background-color: var( --color-brandRed );
 	border-radius: 0;
-	box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
+	box-shadow: 5px 5px 0px var( --color-brandGrey );
 		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
 		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-	font-family: 'roboto_slablight', Georgia, serif;	
+	font-family: 'roboto', Georgia, serif;
+	color: var(--color-brandWhite);
 }
 
-button:hover, 
-.button:hover, 
-.entry .button:hover, 
-.entry .entry-content .wp-block-file .wp-block-file__button:hover,
-.entry .entry-content .wp-block-button .wp-block-button__link:hover,
-input[type="button"]:hover, 
-input[type="reset"]:hover, 
-input[type="submit"]:hover {
-	background-color: var( --color-brandGrey );
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
+button.main-menu-more-toggle {
 	box-shadow: none;
 }
 
-/* outline buttons overrides */
-
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):hover {
-	border-color: var( --color-brandRed );
-	color: var( --color-brandRed )
+button:hover,
+.button:hover, 
+.wp-block-file__button:hover,
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
+input[type="button"]:hover, 
+input[type="reset"]:hover, 
+input[type="submit"]:hover{
+	background-color: var( --color-brandRed );
+	box-shadow: none;
+	filter: brightness(87%);
 }
 
-.entry .entry-content .wp-block-button:not(.is-style-squared) .wp-block-button__link {
-	border-radius: 0;
+/* outline buttons overrides
+
+	initial border serves as a fall-back style
+	border will be applied on the parent element to avoid it being cut by clip-paths
+
+ */
+
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):hover,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):focus,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):visited {
+	border-color: var(--color-brandRed);
+	color: var( --color-brandRed );
+	background-color: var( --color-brandBeige );
+}
+
+/* Form Fields */
+
+/* text based inputs */
+
+input[type="text"], 
+input[type="email"], 
+input[type="url"], 
+input[type="password"], 
+input[type="search"], 
+input[type="number"], 
+input[type="tel"], 
+input[type="date"], 
+input[type="month"], 
+input[type="week"], 
+input[type="time"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+textarea {
+	background-color:  var( --color-brandWhite );
+	border-color: var( --color-brandGrey );
+	max-width: 100%;
+}
+
+/* field sets */
+
+fieldset {
+	border: none;
+}
+
+legend {
+	background-color: var( --color-brandBlack );
+	font-weight: bold;
+	margin-left: -2rem;
+	text-transform: uppercase;
+}
+
+/* radio buttons */
+
+input[type="radio"] {
+	height: 0;
+	opacity: 0;
+	width: 0;
+}
+
+input[type="radio"] + label {
+	margin-top: -1rem;
+}
+
+input[type="radio"] + label::before {
+	content: ' ';
+	background-color: transparent;
+	border: 2px solid var( --color-brandBlack );
+	border-radius: 1000px;
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+}
+
+input[type="radio"]:checked + label::before {
+	background-color: var( --color-brandWhite );
+	border: 6px solid var( --color-brandRed );
 }
