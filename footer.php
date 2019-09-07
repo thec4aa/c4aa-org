@@ -19,8 +19,8 @@
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 		<div class="site-info u-flex u-align-items-center wp-block-columns has-3-columns">
 
-			<div class="wp-block-column" style="flex-basis:42.5%">
-				<p>
+			<div class="wp-block-column contact-info-column" style="flex-basis:42.5%">
+				
 					<div class="u-display-inline-block">
 						<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
 					</div>
@@ -30,11 +30,11 @@
 					<?php endif; ?>
 					<br />
 					New York, USA  &nbsp;• &nbsp;+1 (646) 832-2454
-				</p>
+				
 
 			</div>
 				
-			<div class="wp-block-column has-text-align-center" style="flex-basis:15%">
+			<div class="wp-block-column c4aa-magic-hand has-text-align-center" style="flex-basis:15%">
 
 				<div class="u-width-100 u-display-inline-block">
 					<?php echo file_get_contents( get_stylesheet_directory() . '/svg/c4aa.magic.hand.svg' ); ?>
@@ -42,7 +42,7 @@
 
 			</div>
 
-			<div class="wp-block-column has-text-align-right" style="flex-basis:42.5%">
+			<div class="wp-block-column footer-menu-column has-text-align-right" style="flex-basis:42.5%">
 
 				<?php
 				if ( function_exists( 'the_privacy_policy_link' ) ) {
