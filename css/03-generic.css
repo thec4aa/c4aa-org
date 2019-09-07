@@ -402,5 +402,13 @@ input[type="radio"]:checked + label::before {
 
 .cc-logo {
 	width: .66rem;
-	margin-right: .3rem;
+	margin-right: .2rem;
+}
+
+#colophon .site-info {
+	color: var( --color-brandBlack ) ;
+	text-transform: uppercase;
+	font-family: 'metropolis', sans-serif;
+	font-weight: 400;
+	letter-spacing: .14em;
 }
