@@ -397,3 +397,10 @@ input[type="radio"]:checked + label::before {
 	background-color: var( --color-brandWhite );
 	border: 6px solid var( --color-brandRed );
 }
+
+/* Footer */
+
+.cc-logo {
+	width: .66rem;
+	margin-right: .3rem;
+}
