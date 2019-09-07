@@ -20,14 +20,17 @@
 		<div class="site-info u-flex u-align-items-center wp-block-columns has-3-columns">
 
 			<div class="wp-block-column" style="flex-basis:42.5%">
-
-				<div class="u-display-inline-block">
-					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
-				</div>
-				<?php $blog_info = get_bloginfo( 'name' ); ?>
-				<?php if ( ! empty( $blog_info ) ) : ?>
-					<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				<?php endif; ?>
+				<p>
+					<div class="u-display-inline-block">
+						<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
+					</div>
+					<?php $blog_info = get_bloginfo( 'name' ); ?>
+					<?php if ( ! empty( $blog_info ) ) : ?>
+						<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<?php endif; ?>
+					<br />
+					New York, USA  &nbsp;• &nbsp;+1 (646) 832-2454
+				</p>
 
 			</div>
 				
