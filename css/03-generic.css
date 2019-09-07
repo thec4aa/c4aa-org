@@ -55,7 +55,7 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 }
 
 .site-content {
-	background-color: rgba(228, 226, 218, 0.50);
+	background-color: var( --color-brandBeige);
 }
 
 

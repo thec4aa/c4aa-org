@@ -1,6 +1,7 @@
 :root {
 	/* Brand Colors */
-	--color-brandBeige: #e8e6df;
+	--color-brandBeige: #F2F1ED; /* Fallback */
+	--color-brandBeige: hsla(48, 16%, 94%, 1);
 	--color-brandBlack: #292724; /* Fallback */
 	--color-brandBlack: hsla(36, 6%, 5%, 0.9);
 	--color-brandBlue: #005eb8; /* Fallback */
