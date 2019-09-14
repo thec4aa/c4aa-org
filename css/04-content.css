@@ -149,3 +149,57 @@ If still here by 8/10/2019, remove this code.
 .give-currency-symbol {
 	font-weight: bold;
 }
+
+
+/****************************************/
+/* Main Menu / Branding Container */
+/****************************************/
+
+/* set branding container to the top and add color*/
+.featured-image .site-branding-container,
+.site-header:not(.featured-image) {
+	z-index: 10;
+	background-color:  var(	--color-brandBeige );
+	
+}
+
+/* recenter featured image */
+.site-header.featured-image .site-featured-image .post-thumbnail img {
+	top: 7rem;
+}
+
+/* style text */
+.site-title a:link, .site-title a:visited,
+.site-header.featured-image .site-title a,
+.site-header.featured-image .site-title a:hover,
+.site-header.featured-image .main-navigation a, 
+.site-header.featured-image .main-navigation a + svg, 
+.site-header.featured-image .social-navigation a, 
+.site-header.featured-image .site-featured-image a,
+.main-navigation .main-menu > li > a, 
+.main-navigation .main-menu > li .svg-icon  {
+	color:  var( --color-brandBlack );
+
+}
+
+.site-header.featured-image .main-navigation a:hover, 
+.site-header.featured-image .main-navigation a:active, 
+.site-header.featured-image .main-navigation a + svg:hover, 
+.site-header.featured-image .main-navigation a + svg:active, 
+.site-header.featured-image .social-navigation a:hover, 
+.site-header.featured-image .social-navigation a:active, 
+.site-header.featured-image .site-featured-image a:hover 
+.site-header.featured-image .site-featured-image a:active {
+	color:  var( --color-brandRed );
+	opacity: 1;
+}
+
+.site-logo .custom-logo-link:hover, 
+.site-logo .custom-logo-link:active, 
+.site-logo .custom-logo-link:focus,
+.site-header.featured-image .custom-logo-link:hover,
+.site-header.featured-image .custom-logo-link:active,
+.site-header.featured-image .custom-logo-link:focus {
+	box-shadow: none;
+	opacity: 0.6;
+}
