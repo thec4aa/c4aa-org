@@ -329,7 +329,8 @@ If still here by 8/10/2019, remove this code.
 			left: 80%;
 			top: 30%;
 		transform: rotate( -70deg );
-		width: 70px;
+		width: 66px;
+		margin-top: 10px;
 	}
 
 	.featured-image .site-title,
