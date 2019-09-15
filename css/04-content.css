@@ -158,9 +158,8 @@ If still here by 8/10/2019, remove this code.
 /* set branding container to the top and add color*/
 .featured-image .site-branding-container,
 .site-header:not(.featured-image) {
-	z-index: 10;
 	background-color:  var(	--color-brandBeige );
-	
+	z-index: 10;
 }
 
 /* recenter featured image */
@@ -168,14 +167,12 @@ If still here by 8/10/2019, remove this code.
 	top: 5rem;
 }
 
-
 /*remove default button shadows */
 .main-navigation .main-menu > li.menu-item-has-children .c4aa-default-button-wrapper {
 	filter: none;
 }
 
-
-/* style logo */
+/* style logo hover */
 .site-logo .custom-logo-link:hover, 
 .site-logo .custom-logo-link:active, 
 .site-logo .custom-logo-link:focus,
@@ -187,12 +184,11 @@ If still here by 8/10/2019, remove this code.
 }
 
 /* style text */
-
 .site-title {
 	font-family: 'roboto', Georgia, serif;
 	font-weight: bold;
-	text-transform: uppercase;
 	margin: 0;
+	text-transform: uppercase;
 }
 
 .site-title a:link, .site-title a:visited,
@@ -224,16 +220,32 @@ If still here by 8/10/2019, remove this code.
 	font-size: 1rem;
 }
 
+/*  position elements 
+
+	containers: 
+		.site-branding
+		.featured-image .site-branding-container,
+		.site-header
+
+	logo: 
+		.site-logo
+		.site-logo img
+
+	title:
+		.site-title
+
+	nav links:
+			#site-navigation
+			#menu-2019menu
+			#site-navigation ul li 
+
+
+*/
 
 .site-branding::after {
+	clear: both;
 	content: "";
 	display: table;
-	clear: both;
-
-}
-
-.site-logo {
-	float: left;
 }
 
 .featured-image .site-branding-container,
@@ -241,44 +253,45 @@ If still here by 8/10/2019, remove this code.
 	padding: 1rem 1rem;
 }
 
+.site-logo {
+	float: left;
+}
+
 @media( min-width: 768px )  {
-
-
 	.site-branding {
 		overflow: hidden;
 	}
 
-	.site-logo img {
-		max-width: 70%;
-		margin-top: .5rem;
+	.site-title,
+	.featured-image .site-title {
+		float: left;
+		margin-top: 1rem;
+		max-width: 50%;
 	}
 
 	#site-navigation ul li {
 		overflow-wrap: initial;
 	}
 
-	.site-title,
-	.featured-image .site-title {
-		margin-top: 1rem;
-		max-width: 50%;
-		float: left;
-	}
-	
 	.site-logo {
-		position: static;
 		float: right;
+		position: static;
+	}
+
+	.site-logo img {
+		margin-top: .5rem;
+		max-width: 70%;
 	}
 }
 
 @media( min-width: 1000px )  {
-	.featured-image .site-branding-container,
-	.site-header {
-		padding: .3rem 0;
-	}
-
-
 	.site-branding {
 		min-height: 5rem;
+	}
+
+	.site-header,
+	.featured-image .site-branding-container {
+		padding: .3rem 0;
 	}
 
 	.site-title {
@@ -286,20 +299,20 @@ If still here by 8/10/2019, remove this code.
 	}
 
 	.site-title::after {
-		position: absolute;
-		left: 85.7%;
-		top: 30%;
-		content: ' ';
-		width: 55px;
-		height: 5px;
 		background-color: var( --color-brandRed );
-		transform: rotate(-70deg)
+		content: ' ';
+		height: 5px;
+		position: absolute;
+			left: 85.7%;
+			top: 30%;
+		transform: rotate(-70deg);
+		width: 55px;
 	}
 
-	.site-title,
-	.featured-image .site-title {
-		max-width: 20%;
+	.featured-image .site-title,
+	.site-title {
 		font-size: .925rem;
+		max-width: 20%;
 	}
 
 	#site-navigation {
@@ -308,8 +321,7 @@ If still here by 8/10/2019, remove this code.
 
 	#menu-2019menu {
 		float: left;
-		padding-top: 25px;
 		padding-left: 5px;
+		padding-top: 25px;
 	}
 }
-
