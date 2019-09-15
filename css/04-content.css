@@ -189,6 +189,17 @@ If still here by 8/10/2019, remove this code.
 	font-weight: bold;
 	margin: 0;
 	text-transform: uppercase;
+	margin-top: 10px;
+	
+}
+
+.site-title span::after {
+	content: '\25CF';
+	font-size: .7rem;
+	margin-bottom: .5rem;
+	vertical-align: top;
+	color: var( --color-brandBlack );
+	width: 1rem;
 }
 
 .site-title a:link, .site-title a:visited,
@@ -250,11 +261,24 @@ If still here by 8/10/2019, remove this code.
 
 .featured-image .site-branding-container,
 .site-header {
-	padding: 1rem 1rem;
+	padding: 1rem;
 }
 
 .site-logo {
 	float: left;
+	margin-top: .5rem;
+}
+
+.site-title {
+	font-size: .875rem;
+	float: left;
+	max-width: 70%;
+}
+
+#site-navigation {
+	float: left;
+	padding-left: none;
+	width: 100%;
 }
 
 @media( min-width: 768px )  {
@@ -269,6 +293,10 @@ If still here by 8/10/2019, remove this code.
 		max-width: 50%;
 	}
 
+	#site-navigation {
+		float: none;
+	}
+
 	#site-navigation ul li {
 		overflow-wrap: initial;
 	}
@@ -276,11 +304,6 @@ If still here by 8/10/2019, remove this code.
 	.site-logo {
 		float: right;
 		position: static;
-	}
-
-	.site-logo img {
-		margin-top: .5rem;
-		max-width: 70%;
 	}
 }
 
@@ -303,15 +326,14 @@ If still here by 8/10/2019, remove this code.
 		content: ' ';
 		height: 5px;
 		position: absolute;
-			left: 85.7%;
+			left: 80%;
 			top: 30%;
-		transform: rotate(-70deg);
-		width: 55px;
+		transform: rotate( -70deg );
+		width: 70px;
 	}
 
 	.featured-image .site-title,
 	.site-title {
-		font-size: .925rem;
 		max-width: 20%;
 	}
 
@@ -321,7 +343,7 @@ If still here by 8/10/2019, remove this code.
 
 	#menu-2019menu {
 		float: left;
-		padding-left: 5px;
+		padding-left: 7px;
 		padding-top: 25px;
 	}
 }
