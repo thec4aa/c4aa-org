@@ -165,10 +165,36 @@ If still here by 8/10/2019, remove this code.
 
 /* recenter featured image */
 .site-header.featured-image .site-featured-image .post-thumbnail img {
-	top: 7rem;
+	top: 5rem;
+}
+
+
+/*remove default button shadows */
+.main-navigation .main-menu > li.menu-item-has-children .c4aa-default-button-wrapper {
+	filter: none;
+}
+
+
+/* style logo */
+.site-logo .custom-logo-link:hover, 
+.site-logo .custom-logo-link:active, 
+.site-logo .custom-logo-link:focus,
+.site-header.featured-image .custom-logo-link:hover,
+.site-header.featured-image .custom-logo-link:active,
+.site-header.featured-image .custom-logo-link:focus {
+	box-shadow: none;
+	opacity: 0.6;
 }
 
 /* style text */
+
+.site-title {
+	font-family: 'roboto', Georgia, serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+}
+
 .site-title a:link, .site-title a:visited,
 .site-header.featured-image .site-title a,
 .site-header.featured-image .site-title a:hover,
@@ -194,12 +220,96 @@ If still here by 8/10/2019, remove this code.
 	opacity: 1;
 }
 
-.site-logo .custom-logo-link:hover, 
-.site-logo .custom-logo-link:active, 
-.site-logo .custom-logo-link:focus,
-.site-header.featured-image .custom-logo-link:hover,
-.site-header.featured-image .custom-logo-link:active,
-.site-header.featured-image .custom-logo-link:focus {
-	box-shadow: none;
-	opacity: 0.6;
+.main-menu li {
+	font-size: 1rem;
 }
+
+
+.site-branding::after {
+	content: "";
+	display: table;
+	clear: both;
+
+}
+
+.site-logo {
+	float: left;
+}
+
+.featured-image .site-branding-container,
+.site-header {
+	padding: 1rem 1rem;
+}
+
+@media( min-width: 768px )  {
+
+
+	.site-branding {
+		overflow: hidden;
+	}
+
+	.site-logo img {
+		max-width: 70%;
+		margin-top: .5rem;
+	}
+
+	#site-navigation ul li {
+		overflow-wrap: initial;
+	}
+
+	.site-title,
+	.featured-image .site-title {
+		margin-top: 1rem;
+		max-width: 50%;
+		float: left;
+	}
+	
+	.site-logo {
+		position: static;
+		float: right;
+	}
+}
+
+@media( min-width: 1000px )  {
+	.featured-image .site-branding-container,
+	.site-header {
+		padding: .3rem 0;
+	}
+
+
+	.site-branding {
+		min-height: 5rem;
+	}
+
+	.site-title {
+		position: relative;
+	}
+
+	.site-title::after {
+		position: absolute;
+		left: 85.7%;
+		top: 30%;
+		content: ' ';
+		width: 55px;
+		height: 5px;
+		background-color: var( --color-brandRed );
+		transform: rotate(-70deg)
+	}
+
+	.site-title,
+	.featured-image .site-title {
+		max-width: 20%;
+		font-size: .925rem;
+	}
+
+	#site-navigation {
+		margin-top: 0;
+	}
+
+	#menu-2019menu {
+		float: left;
+		padding-top: 25px;
+		padding-left: 5px;
+	}
+}
+
