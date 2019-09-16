@@ -23,7 +23,7 @@ function c4aa_async_webfontloader_inline_script() {
 
 	WebFontConfig = {
 		custom: {
-			families: ['ralewayblack', 'ralewaymedium', 'zilla_slab_boldbold'],
+			families: ['metropolis', 'roboto'],
 			urls: [ '$font_css_path' ]
 		}
 	};
@@ -181,6 +181,11 @@ function c4aa_setup_theme_supported_features() {
 			'name' => __( 'C4AA Blue', 'c4aa' ),
 			'slug' => 'caa-blue',
 			'color' => '#005eb8',
+		),
+		array(
+			'name' => __( 'C4AA White', 'c4aa' ),
+			'slug' => 'caa-white',
+			'color' => '#fafaf9',
 		),
 	) 
 	); // end add_theme_support

@@ -1,23 +1,28 @@
 :root {
 	/* Brand Colors */
-	--color-brandWhite: #ffffff;
 	--color-brandBeige: #e8e6df;
-	--color-brandBlack: #292724;
-	--color-brandBlue: #005eb8;
-	--color-brandGrey: #7B736c;
-	--color-brandRed: #da2f3b;
-	--color-brandWhite: #fafaf9;
-	--color-brandYellow: #e1cd00;
+	--color-brandBlack: #292724; /* Fallback */
+	--color-brandBlack: hsla(36, 6%, 5%, 0.9);
+	--color-brandBlue: #005eb8; /* Fallback */
+	--color-brandBlue: hsla(209, 100%, 34%, 0.9);
+	--color-brandGrey: #7B736c; /* Fallback */
+	--color-brandGrey: hsla(28, 6%, 42%, 0.9);
+	--color-brandRed: #da2f3b; /* Fallback */
+	--color-brandRed: hsla(356, 80%, 45%, 0.9);
+	--color-brandWhite: #fafaf9; /* Fallback */
+	--color-brandWhite: hsla(60, 9%, 98%, 0.9);
+	--color-brandYellow: #e1cd00; /* Fallback */
+	--color-brandYellow: hsla(55, 100%, 46%, 0.9)
 
 	/* Clip Path Varaibles */
-	--topLeftX: 0;
-	--topLeftY: 0;
-	--topRightX: 0;
-	--topRightY: 0;
-	--bottomRightX: 0;
-	--bottomRightY: 0;
-	--bottomLeftX: 0;
-	--bottomLeftY: 0;
+	--topLeftX: 10;
+	--topLeftY: 11;
+	--topRightX: 12;
+	--topRightY: 7;
+	--bottomRightX: 6;
+	--bottomRightY: 5;
+	--bottomLeftX: 4;
+	--bottomLeftY: 10;
 	--rotate: 0;
 	--topPadding: 2rem;
 	--bottomPadding: 2rem;
