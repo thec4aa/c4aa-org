@@ -128,7 +128,7 @@ h4 {
 
 /* Remove H1 from home */
 
-body.home header.entry-header {
+body.home .entry-title {
 	position:absolute;
 	left: -10000px;
 	top: auto;
