@@ -106,3 +106,19 @@
 .has-caa-yellow-color {
 	color: var( --color-brandYellow);
 }
+
+/* 
+ * Accessibility Labels
+ *
+ * Hide text from the screen while still providing label for screen reader
+ * 
+ */
+
+.c4aa-sr-only {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}

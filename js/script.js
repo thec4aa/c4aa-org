@@ -7,12 +7,18 @@ const clipProperties = ['--topLeftX', '--topLeftY', '--topRightX', '--topRightY'
 
 /************** 
   Site Title 
-
-  	remove text to replace with image
+	  remove text to replace with image
+	  make the text screen reader text
  **************/
 
 let siteTitle = document.querySelector('.site-title a');
+let logoText = siteTitle.innerHTML;
+let screenReaderText = document.createElement('span');
+
 siteTitle.innerHTML = '';
+screenReaderText.innerHTML = logoText;
+screenReaderText.classList.add('c4aa-sr-only');
+siteTitle.appendChild(screenReaderText);
 
 
 /************** 
