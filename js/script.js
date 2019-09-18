@@ -4,11 +4,20 @@ const outlineButtons =   document.querySelectorAll( '.wp-block-button.is-style-o
 const outlineButtonsLink = document.querySelectorAll( '.wp-block-button.is-style-outline .wp-block-button__link');
 const clipProperties = ['--topLeftX', '--topLeftY', '--topRightX', '--topRightY', '--bottomLeftX', '--bottomLeftY', '--bottomRightX', '--bottomRightY' ];
 
+
+/************** 
+  Site Title 
+
+  	remove text to replace with image
+ **************/
+
 let siteTitle = document.querySelector('.site-title a');
+siteTitle.innerHTML = '';
 
-siteTitle.innerHTML = "The <span></span> Center <span></span> for <span></span> artistic <span></span> activism";
 
-
+/************** 
+  Clip Paths
+ **************/
 /* Heading Clip Paths */
 
 headings.forEach( ( heading ) => {
