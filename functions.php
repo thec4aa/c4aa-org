@@ -15,6 +15,24 @@ function c4aa_enqueue_assets() {
 
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
 
+/**
+ * Gutenberg scripts and styles
+ * link https://www.billerickson.net/block-styles-in-gutenberg/
+ */
+
+function be_gutenberg_scripts() {
+	wp_enqueue_script(
+		'be-editor', 
+		get_stylesheet_directory_uri() . '/js/editor.js', 
+		array( 'wp-blocks', 'wp-dom' ), 
+		filemtime( get_stylesheet_directory() . '/js/editor.js' ),
+		true
+	);
+
+	
+}
+add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
+
 
 function c4aa_async_webfontloader_inline_script() {
 	$font_css_path = get_stylesheet_directory_uri() . "/fonts/webfonts.css";

@@ -1,18 +1,15 @@
-h2, 
-h3, 
-h4,
-button:not(.main-menu-more-toggle):not(.mfp-close),
-.button, 
-.wp-block-file__button,
-.wp-block-button:not(.is-style-outline),
-.entry .entry-content .wp-block-button .wp-block-button__link,
-.wp-block-button__link,
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"],
-legend {
-    color: var( --color-brandBeige );
-	padding: var(--topPadding) var(--rightPadding) var(--bottomPadding) var(--leftPadding);
+.is-style-c4aa-clipPath-heading,
+.archive h2.entry-title,
+header:not(.featured-image) h1.entry-title,
+.widget-title,
+.give-form legend,
+.give-form button,
+.give-form input[type="submit"],
+.wpcf7-form input[type="submit"],
+#mc-embedded-subscribe,
+.is-style-c4aa-clipPath-button a,
+.is-style-c4aa-clipPath-button-outline a {
+	padding: 2rem;
 	clip-path: polygon( 
 		calc( var( --topLeftX ) * 1px ) 
 		calc( var( --topLeftY ) * 1px ), 
@@ -39,82 +36,93 @@ legend {
 
 /* Headers */
 
-h2, h3, h4 {
+header:not(.featured-image) h1.entry-title,
+h2.is-style-c4aa-clipPath,
+h3.is-style-c4aa-clipPath,
+h4.is-style-c4aa-clipPath {
 	color: var( --color-brandBeige );
 }
- 
-h2 {
+
+header:not(.featured-image) h1.entry-title {
+	background: var( --color-brandBlack );
+	font-size: 3rem;
+}
+
+h2.is-style-c4aa-clipPath {
 	background: var( --color-brandGrey );
 }
 
-h2:before, .entry .entry-title:before {
+h2:before.is-style-c4aa-clipPath, 
+.entry .entry-title:before.is-style-c4aa-clipPath {
 	content: none;
 }
 
-.entry .entry-content > h2 {
+.entry .entry-content > h2.is-style-c4aa-clipPath {
 	max-width: none;
 }
 
-h3 {
+h3.is-style-c4aa-clipPath {
 	background: var( --color-brandBlack );
 }
 
-h4 {
+h4.is-style-c4aa-clipPath {
 	background: var( --color-brandRed ); 
 	display: inline-block;
 }
 
 @media only screen and (min-width: 768px) {
-	.entry .entry-content > h2,
-	.entry .entry-content > h3,
-	.entry h2.entry-title,
-	h2,
-	h3 {
+	.entry .entry-content > h2.is-style-c4aa-clipPath,
+	.entry .entry-content > h3.is-style-c4aa-clipPath,
+	.entry h2.entry-title.is-style-c4aa-clipPath,
+	h2.is-style-c4aa-clipPath,
+	h3.is-style-c4aa-clipPath {
 		margin-left: -2rem;
 	}
 
-	.entry .entry-content > h3,
-	h3 {
+	.entry .entry-content > h3.is-style-c4aa-clipPath,
+	h3.is-style-c4aa-clipPath {
 		max-width: 50%;
 	}
 
-	.entry .entry-content > h4,
-	h4 {
+	.entry .entry-content > h4.is-style-c4aa-clipPath,
+	h4.is-style-c4aa-clipPath {
 		margin-left: -4rem;
 		--leftPadding: 4rem;
 	}
 }
 
 /* Buttons */
-
-button,
-.button, 
-.wp-block-file__button,
-.wp-block-button:not(.is-style-outline),
-.entry .entry-content .wp-block-button .wp-block-button__link,
-.wp-block-button__link,
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"] {
-	--topPadding: 1.5rem;
-	--bottomPadding: 1.5rem;
-	--leftPadding:  1.5rem;
-	--rightPadding: 1.5rem;
+.give-form button,
+.give-form input[type="submit"],
+.wpcf7-form input[type="submit"],
+#mc-embedded-subscribe, 
+.entry .entry-content .wp-block-button.is-style-c4aa-clipPath-button .wp-block-button__link,
+.entry .entry-content .wp-block-button.is-style-c4aa-clipPath-button-outline .wp-block-button__link {
+	padding: 1.5rem;
 	margin-left: -.5rem;
+	color: var( --color-brandBeige );
 }
 
-.c4aa-default-button-wrapper {
+.is-style-c4aa-clipPath-button {
 	filter: drop-shadow(5px 5px 0px var( --color-brandGrey ));
 	height: fit-content;
 	transition: all 150ms ease-in-out;
 	width: fit-content;
 }
 
-.c4aa-default-button-wrapper:hover {
+.is-style-c4aa-clipPath-button:hover {
 	filter: none;
 }
 
-.c4aa-outline-button-wrapper  {
+.entry .entry-content .wp-block-button.is-style-c4aa-clipPath-button-outline .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-c4aa-clipPath-button-outline .wp-block-button__link:not(.has-text-color):hover,
+.entry .entry-content .wp-block-button.is-style-c4aa-clipPath-button-outline .wp-block-button__link:not(.has-text-color):focus,
+.entry .entry-content .wp-block-button.is-style-c4aa-clipPath-button-outline .wp-block-button__link:not(.has-text-color):visited {
+	color: var( --color-brandRed );
+	background-color: var( --color-brandBeige );
+}
+
+.is-style-c4aa-clipPath-button-outline  {
 	filter:	drop-shadow(-2px 0px 0px var( --color-brandRed ))
 			drop-shadow(0px -2px 0px var( --color-brandRed ))
 			drop-shadow(2px 0px 0px var( --color-brandRed ))
@@ -126,7 +134,7 @@ input[type="submit"] {
 	width: fit-content;
 }
 
-.c4aa-outline-button-wrapper:hover {
+.is-style-c4aa-clipPath-button-outline:hover {
 	filter:	drop-shadow(-2px 0px 0px var( --color-brandRed ))
 			drop-shadow(0px -2px 0px var( --color-brandRed ))
 			drop-shadow(2px 0px 0px var( --color-brandRed ))
