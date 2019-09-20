@@ -116,16 +116,31 @@ add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
 function c4aa_custom_dashboard_widgets() {
 global $wp_meta_boxes;
  
-wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'custom_dashboard_help');
+wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'c4aa_custom_dashboard_help');
 }
  
 function c4aa_custom_dashboard_help() {
-echo '<p>Welcome to the new C4AA theme!<p>
-	<p>Good ideas:</p>
+echo '
+	<h3 id="welcometothenewc4aatheme">Welcome to the new C4AA theme!</h3>
+	<p><strong>Good ideas:</strong></p>
+	<ul>
+		<li>➡ upload images at 1400px wide where possible</li>
+		<li>➡ use colors from the color picker</li>
+		<li>➡ If you have questions, ask Steve Lambert.</li>
+	</ul>
+
+	<p><strong>Advanced Settings:</strong></p>
 		<ul>
-		<li>upload images at 1400px wide where possible</li>
-		<li>use colors from the color picker</li>
-		<li>If you have questions, ask Steve Lambert.</li>
+			<li><code>no-hyphens</code> will turn off auto-hyphenating on everything in the block.</li>
+			<li><code>c4aa-duotone</code> plus one of the following will enable duotone effects on images. 
+				<ul>
+					<li>- <code>red-and-black</code> </li>
+					<li>- <code>beige-and-black</code> </li>
+					<li>- <code>beige-and-red</code> </li>
+					<li>- <code>beige-and-grey</code> </li>
+					<li>- <code>beige-and-grey-vintage</code> </li>
+				</ul>
+				</li>
 		</ul>
 	'; // end echo
 }
