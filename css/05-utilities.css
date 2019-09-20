@@ -1,3 +1,16 @@
+.a-colophon-grid {
+	display: grid;
+	grid-gap: 1rem;
+	justify-items: center;
+}
+
+@media( min-width: 800px ) {
+	.a-colophon-grid {
+		grid-template-columns: 1fr 80px 1fr;
+	}
+}
+
+
 .u-width-50 {
 	width: 50px;
 }
@@ -12,6 +25,10 @@
 
 .u-flex {
 	display: flex;
+}
+
+.u-flex-basis-15p {
+	flex-basis: 15%;
 }
 
 .u-align-items-center {
