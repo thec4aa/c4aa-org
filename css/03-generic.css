@@ -410,7 +410,7 @@ input[type="radio"]:checked + label::before {
 	margin-right: .1rem;
 }
 
-#colophon .site-info {
+.site-info > * {
 	color: var( --color-brandBlack );
 	text-transform: uppercase;
 	font-family: 'metropolis', sans-serif;
@@ -418,6 +418,7 @@ input[type="radio"]:checked + label::before {
 	letter-spacing: .14em;
 }
 
-#colophon .site-info .c4aa-magic-hand {
+.c4aa-magic-hand {
 	color: var( --color-brandGrey );
+	max-width: 80px;
 }
