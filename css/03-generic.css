@@ -402,3 +402,22 @@ input[type="radio"]:checked + label::before {
 	background-color: var( --color-brandWhite );
 	border: 6px solid var( --color-brandRed );
 }
+
+/* Footer */
+
+.cc-logo {
+	width: .66rem;
+	margin-right: .1rem;
+}
+
+#colophon .site-info {
+	color: var( --color-brandBlack );
+	text-transform: uppercase;
+	font-family: 'metropolis', sans-serif;
+	font-weight: 400;
+	letter-spacing: .14em;
+}
+
+#colophon .site-info .c4aa-magic-hand {
+	color: var( --color-brandGrey );
+}
