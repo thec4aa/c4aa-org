@@ -17,24 +17,22 @@
 
 	<footer id="colophon" class="site-footer">
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
-		<div class="site-info u-flex u-align-items-center wp-block-columns has-3-columns">
 
-			<div class="wp-block-column contact-info-column" style="flex-basis:42.5%">
-				
-					<div class="u-display-inline-block">
-						<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
-					</div>
-					<?php $blog_info = get_bloginfo( 'name' ); ?>
-					<?php if ( ! empty( $blog_info ) ) : ?>
-						<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					<?php endif; ?>
-					<br />
-					New York, USA  &nbsp;• &nbsp;+1 (646) 832-2454
-				
+		<div class="site-info u-align-items-center a-colophon-grid">
 
+			<div>
+				<div class="u-display-inline-block">
+					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
+				</div>
+				<?php $blog_info = get_bloginfo( 'name' ); ?>
+				<?php if ( ! empty( $blog_info ) ) : ?>
+					<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<?php endif; ?>
+				<br />
+				<?php echo esc_html( 'New York, USA  &nbsp;• &nbsp;+1 (646) 832-2454' ); ?>
 			</div>
 				
-			<div class="wp-block-column c4aa-magic-hand has-text-align-center" style="flex-basis:15%">
+			<div class="c4aa-magic-hand u-text-align-center">
 
 				<div class="u-width-100 u-display-inline-block">
 					<?php echo file_get_contents( get_stylesheet_directory() . '/svg/c4aa.magic.hand.svg' ); ?>
@@ -42,7 +40,7 @@
 
 			</div>
 
-			<div class="wp-block-column footer-menu-column has-text-align-right" style="flex-basis:42.5%">
+			<div class="footer-menu-column">
 
 				<?php
 				if ( function_exists( 'the_privacy_policy_link' ) ) {
