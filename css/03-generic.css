@@ -128,7 +128,7 @@ h4 {
 
 /* Remove H1 from home */
 
-body.home .entry-title {
+body.home header.entry-header, .imprint {
 	position:absolute;
 	left: -10000px;
 	top: auto;
@@ -401,4 +401,24 @@ input[type="radio"] + label::before {
 input[type="radio"]:checked + label::before {
 	background-color: var( --color-brandWhite );
 	border: 6px solid var( --color-brandRed );
+}
+
+/* Footer */
+
+.cc-logo {
+	width: .66rem;
+	margin-right: .1rem;
+}
+
+.site-info > * {
+	color: var( --color-brandBlack );
+	text-transform: uppercase;
+	font-family: 'metropolis', sans-serif;
+	font-weight: 400;
+	letter-spacing: .14em;
+}
+
+.c4aa-magic-hand {
+	color: var( --color-brandGrey );
+	max-width: 80px;
 }

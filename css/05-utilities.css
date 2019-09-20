@@ -1,0 +1,24 @@
+/* Algorithms */
+
+.a-colophon-grid {
+	display: grid;
+	grid-gap: 1rem;
+	justify-items: center;
+}
+
+@media( min-width: 800px ) {
+	.a-colophon-grid {
+		grid-template-columns: 1fr 80px 1fr;
+	}
+}
+
+/* Utilities */
+
+.u-display-inline-block {
+	display: inline-block;
+}
+
+
+.u-align-items-center {
+	align-items: center;
+}
