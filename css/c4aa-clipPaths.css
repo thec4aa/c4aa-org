@@ -37,9 +37,9 @@ header:not(.featured-image) h1.entry-title,
 /* Headers */
 
 header:not(.featured-image) h1.entry-title,
-h2.is-style-c4aa-clipPath,
-h3.is-style-c4aa-clipPath,
-h4.is-style-c4aa-clipPath {
+h2.is-style-c4aa-clipPath-heading,
+h3.is-style-c4aa-clipPath-heading,
+h4.is-style-c4aa-clipPath-heading {
 	color: var( --color-brandBeige );
 }
 
@@ -48,44 +48,44 @@ header:not(.featured-image) h1.entry-title {
 	font-size: 3rem;
 }
 
-h2.is-style-c4aa-clipPath {
+h2.is-style-c4aa-clipPath-heading {
 	background: var( --color-brandGrey );
 }
 
-h2:before.is-style-c4aa-clipPath, 
-.entry .entry-title:before.is-style-c4aa-clipPath {
+h2:before.is-style-c4aa-clipPath-heading, 
+.entry .entry-title:before.is-style-c4aa-clipPath-heading {
 	content: none;
 }
 
-.entry .entry-content > h2.is-style-c4aa-clipPath {
+.entry .entry-content > h2.is-style-c4aa-clipPath-heading {
 	max-width: none;
 }
 
-h3.is-style-c4aa-clipPath {
+h3.is-style-c4aa-clipPath-heading {
 	background: var( --color-brandBlack );
 }
 
-h4.is-style-c4aa-clipPath {
+h4.is-style-c4aa-clipPath--heading {
 	background: var( --color-brandRed ); 
 	display: inline-block;
 }
 
 @media only screen and (min-width: 768px) {
-	.entry .entry-content > h2.is-style-c4aa-clipPath,
-	.entry .entry-content > h3.is-style-c4aa-clipPath,
-	.entry h2.entry-title.is-style-c4aa-clipPath,
-	h2.is-style-c4aa-clipPath,
-	h3.is-style-c4aa-clipPath {
+	.entry .entry-content > h2.is-style-c4aa-clipPath-heading,
+	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
+	.entry h2.entry-title.is-style-c4aa-clipPath-heading,
+	h2.is-style-c4aa-clipPath-heading,
+	h3.is-style-c4aa-clipPath-heading {
 		margin-left: -2rem;
 	}
 
-	.entry .entry-content > h3.is-style-c4aa-clipPath,
-	h3.is-style-c4aa-clipPath {
+	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
+	h3.is-style-c4aa-clipPath-heading {
 		max-width: 50%;
 	}
 
-	.entry .entry-content > h4.is-style-c4aa-clipPath,
-	h4.is-style-c4aa-clipPath {
+	.entry .entry-content > h4.is-style-c4aa-clipPath-heading,
+	h4.is-style-c4aa-clipPath-heading {
 		margin-left: -4rem;
 		--leftPadding: 4rem;
 	}
