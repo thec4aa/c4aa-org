@@ -20,7 +20,7 @@
 
 		<div class="site-info u-align-items-center a-colophon-grid">
 
-			<div>
+			<div class="footer-contact">
 				<div class="u-display-inline-block">
 					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
 				</div>
@@ -40,7 +40,7 @@
 
 			</div>
 
-			<div class="footer-menu-column">
+			<div class="footer-menu-column u-text-align-right">
 
 				<?php if ( has_nav_menu( 'footer' ) ) : ?>
 					<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
