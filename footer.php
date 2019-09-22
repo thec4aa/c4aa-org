@@ -34,7 +34,7 @@
 				
 			<div class="c4aa-magic-hand u-text-align-center">
 
-				<div class="u-width-100 u-display-inline-block">
+				<div class="u-display-inline-block">
 					<?php echo file_get_contents( get_stylesheet_directory() . '/svg/c4aa.magic.hand.svg' ); ?>
 				</div>
 

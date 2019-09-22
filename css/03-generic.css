@@ -420,5 +420,4 @@ input[type="radio"]:checked + label::before {
 
 .c4aa-magic-hand {
 	color: var( --color-brandGrey );
-	max-width: 80px;
 }
