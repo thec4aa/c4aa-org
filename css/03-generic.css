@@ -411,7 +411,7 @@ input[type="radio"]:checked + label::before {
 }
 
 .site-info > * {
-	color: var( --color-brandBlack );
+	color: var( --color-brandRed );
 	text-transform: uppercase;
 	font-family: 'metropolis', sans-serif;
 	font-weight: 400;
@@ -419,5 +419,5 @@ input[type="radio"]:checked + label::before {
 }
 
 .c4aa-magic-hand {
-	color: var( --color-brandGrey );
+	color: var( --color-brandRed );;
 }
