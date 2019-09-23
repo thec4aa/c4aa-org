@@ -155,51 +155,57 @@ If still here by 8/10/2019, remove this code.
 /* Main Menu / Branding Container */
 /****************************************/
 
-.site-branding ul li {
-	white-space: nowrap;
-}
-
-/* set branding container to the top and add color*/
+/* style containers */
 .featured-image .site-branding-container,
 .site-header:not(.featured-image) {
 	background-color:  #fff;
 	z-index: 10;
 }
 
-/* recenter featured image */
+.featured-image .site-branding-container,
+.site-header {
+	padding: 1rem;
+}
+
+.site-branding {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* prevent menu items from wrapping mid word */
+.site-branding ul li {
+	white-space: nowrap;
+}
+
+/* recenter featured image vertically */
 .site-header.featured-image .site-featured-image .post-thumbnail img {
 	top: 5rem;
 }
 
-/*remove default button shadows */
-.main-navigation .main-menu > li.menu-item-has-children .c4aa-default-button-wrapper {
-	filter: none;
+/* stile the text-logo image */
+.c4aa-text-logo {
+	display: inline-block;
+	background-size: cover;
+	height: 44px;
+	width: 210px;
+	margin-right: 10px;
 }
 
-/* style logo hover */
+/* style text and icon logo hover */
 .site-logo .custom-logo-link:hover, 
 .site-logo .custom-logo-link:active, 
 .site-logo .custom-logo-link:focus,
 .site-header.featured-image .custom-logo-link:hover,
 .site-header.featured-image .custom-logo-link:active,
-.site-header.featured-image .custom-logo-link:focus {
+.site-header.featured-image .custom-logo-link:focus,
+.c4aa-text-logo:hover,
+.c4aa-text-logo:active,
+.c4aa-text-logo:hover:focus {
 	box-shadow: none;
-	opacity: 0.6;
+	opacity: 0.7;
 }
 
-/* style text */
-.site-title {
-	font-family: 'roboto', Georgia, serif;
-	font-weight: bold;
-	margin: 0;
-	text-transform: uppercase;
-	margin-top: 10px;
-	
-}
-
-.site-title a:link, .site-title a:visited,
-.site-header.featured-image .site-title a,
-.site-header.featured-image .site-title a:hover,
+/* style menu items text  */
 .site-header.featured-image .main-navigation a, 
 .site-header.featured-image .main-navigation a + svg, 
 .site-header.featured-image .social-navigation a, 
@@ -207,7 +213,6 @@ If still here by 8/10/2019, remove this code.
 .main-navigation .main-menu > li > a, 
 .main-navigation .main-menu > li .svg-icon  {
 	color:  var( --color-brandBlack );
-
 }
 
 .site-header.featured-image .main-navigation a:hover, 
@@ -226,101 +231,57 @@ If still here by 8/10/2019, remove this code.
 	font-size: 1rem;
 }
 
-/*  position elements 
-
-	containers: 
-		.site-branding
-		.featured-image .site-branding-container,
-		.site-header
-
-	logo: 
-		.site-logo
-
-	site title/text logo:
-		.site-title
-		.c4aa-text-logo
-
-	nav links:
-			#site-navigation
-			#menu-2019menu
-			#site-navigation ul li 
-
-
-*/
-
-.site-branding::after {
-	clear: both;
-	content: "";
-	display: table;
-}
-
-.featured-image .site-branding-container,
-.site-header {
-	padding: 1rem;
-}
-
-.site-logo {
-	float: left;
-}
-
-.c4aa-text-logo {
-	display: inline-block;
-	background-size: cover;
-	height: 44px;
-	width: 210px;
-	margin-right: 10px;
-}
-
+/* place navigation at bottom of container*/
 #site-navigation {
-	float: left;
-	padding-left: none;
 	width: 100%;
+	order: 3;
 }
 
 @media( min-width: 768px )  {
 	.site-branding {
-		overflow: hidden;
+		margin: 0;
 	}
 
+	/* center logo vertically on branding-container*/
 	.site-logo{
 		margin-top: .5rem;
 	}
 
+	/* center site-title vertically on branding-container */
 	.site-title,
 	.featured-image .site-title {
-		float: left;
 		margin-top: 1.5rem;
 	}
-
-	#site-navigation {
-		float: none;
-		margin-top: .55rem;
-	}
-
-	#site-navigation ul li {
-		overflow-wrap: initial;
-	}
-
+	
+	/* override parent theme logo positioning */
 	.site-logo {
-		float: right;
 		position: static;
 	}
 }
 
-@media( min-width: 1000px )  {
+@media( min-width: 1000px ) {
+	.site-branding {
+		margin: 0 calc(10% + 60px);
+	}
+}
+
+@media( min-width: 1260px )  {
 	.site-branding {
 		min-height: 5rem;
 		margin: 0 calc(10% + 60px);
+		flex-wrap: nowrap;
+		justify-content: space-evenly;
 	}
 
-	.site-header,
-	.featured-image .site-branding-container {
-		padding: .3rem 0;
+	/* place navigtation between logos and align vertically */
+	#site-navigation {
+		margin-top: 2rem;
+		width: auto;
+		order: 2;
 	}
 
-	#menu-2019menu {
-		float: left;
-		padding-left: 7px;
-		padding-top: 25px;
+	/* move logo to the right */
+	.site-logo {
+		order: 3;
 	}
 }
