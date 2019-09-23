@@ -11,7 +11,7 @@ const entryTitles = document.querySelectorAll( 'header:not(.featured-image) h1.e
 // widget titles
 const widgetTitles = document.querySelectorAll('.widget-title');
 
-//donate legent titles
+// donate length titles
 const donateLegendTitles = document.querySelectorAll('.give-form legend');
 
 /********************
