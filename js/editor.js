@@ -6,7 +6,7 @@ wp.domReady( () => {
 	wp.blocks.registerBlockStyle( 'core/heading', {
 		name: 'c4aa-clipPath-heading',
 		label: 'C4AA Clip Path',
-		isDefault: false,
+		isDefault: true,
     } );
     
     wp.blocks.registerBlockStyle( 'core/button', {
