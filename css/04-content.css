@@ -155,6 +155,10 @@ If still here by 8/10/2019, remove this code.
 /* Main Menu / Branding Container */
 /****************************************/
 
+.site-branding ul li {
+	white-space: nowrap;
+}
+
 /* set branding container to the top and add color*/
 .featured-image .site-branding-container,
 .site-header:not(.featured-image) {
@@ -191,15 +195,6 @@ If still here by 8/10/2019, remove this code.
 	text-transform: uppercase;
 	margin-top: 10px;
 	
-}
-
-.site-title span::after {
-	content: '\25CF';
-	font-size: .7rem;
-	margin-bottom: .5rem;
-	vertical-align: top;
-	color: var( --color-brandBlack );
-	width: 1rem;
 }
 
 .site-title a:link, .site-title a:visited,
@@ -240,10 +235,10 @@ If still here by 8/10/2019, remove this code.
 
 	logo: 
 		.site-logo
-		.site-logo img
 
-	title:
+	site title/text logo:
 		.site-title
+		.c4aa-text-logo
 
 	nav links:
 			#site-navigation
@@ -268,9 +263,8 @@ If still here by 8/10/2019, remove this code.
 	float: left;
 }
 
-.site-title a {
+.c4aa-text-logo {
 	display: inline-block;
-	background-image: url('http://backtobasics.c4aa.org/wp-content/uploads/2019/09/c4aa-text-slash.png');
 	background-size: cover;
 	height: 44px;
 	width: 210px;
@@ -323,10 +317,6 @@ If still here by 8/10/2019, remove this code.
 	.featured-image .site-branding-container {
 		padding: .3rem 0;
 	}
-
-	/* #site-navigation {
-		margin-top: 0;
-	} */
 
 	#menu-2019menu {
 		float: left;

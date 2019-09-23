@@ -15,19 +15,22 @@
 	<?php $blog_info = get_bloginfo( 'name' ); ?>
 	<?php if ( ! empty( $blog_info ) ) : ?>
 		<?php if ( is_front_page() && is_home() ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<span class="c4aa-text-logo" style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() . '/img/c4aa-text-slash.png' ); ?> ');">
+					</span>
+					<span class="c4aa-sr-only"><?php bloginfo( 'name' ); ?></span>
+				</a>
+			</h1>
 		<?php else : ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-		<?php endif; ?>
-	<?php endif; ?>
-
-	<?php
-	$description = get_bloginfo( 'description', 'display' );
-	if ( $description || is_customize_preview() ) :
-		?>
-			<p class="site-description">
-				<?php echo $description; ?>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<span class="c4aa-text-logo" style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() . '/img/c4aa-text-slash.png' ); ?> ');">
+					</span>
+					<span class="c4aa-sr-only"><?php bloginfo( 'name' ); ?></span>
+				</a>
 			</p>
+		<?php endif; ?>
 	<?php endif; ?>
 	<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">

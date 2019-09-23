@@ -1,5 +1,12 @@
 <?php
 
+function dequeue_priority_menu() {
+	wp_dequeue_script( 'twentynineteen-priority-menu' );
+ } 
+ add_action( 'wp_enqueue_scripts', 'dequeue_priority_menu', 100 );
+ 
+ 
+
 function c4aa_enqueue_assets() {
 	wp_enqueue_style( 'twentynineteen-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/style.css' );
