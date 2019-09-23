@@ -191,6 +191,10 @@ If still here by 8/10/2019, remove this code.
 	margin-right: 10px;
 }
 
+.site-title {
+	margin: 0;
+}
+
 /* style text and icon logo hover */
 .site-logo .custom-logo-link:hover, 
 .site-logo .custom-logo-link:active, 
@@ -230,6 +234,7 @@ If still here by 8/10/2019, remove this code.
 .main-menu li {
 	font-size: 1rem;
 }
+
 
 /* place navigation at bottom of container*/
 #site-navigation {
