@@ -5,6 +5,9 @@ const outlineButtonsLink = document.querySelectorAll( '.wp-block-button.is-style
 const clipProperties = ['--topLeftX', '--topLeftY', '--topRightX', '--topRightY', '--bottomLeftX', '--bottomLeftY', '--bottomRightX', '--bottomRightY' ];
 
 
+/************** 
+  Clip Paths
+ **************/
 /* Heading Clip Paths */
 
 headings.forEach( ( heading ) => {
