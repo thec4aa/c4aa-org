@@ -153,3 +153,142 @@ If still here by 8/10/2019, remove this code.
 	font-weight: bold;
 	font-size: 2rem;
 }
+
+/****************************************/
+/* Main Menu / Branding Container */
+/****************************************/
+
+/* style containers */
+.featured-image .site-branding-container,
+.site-header:not(.featured-image) {
+	background-color:  #fff;
+	z-index: 10;
+}
+
+.featured-image .site-branding-container,
+.site-header {
+	padding: 1rem;
+}
+
+.site-branding {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* prevent menu items from wrapping mid word */
+.site-branding ul li {
+	white-space: nowrap;
+}
+
+/* recenter featured image vertically */
+.site-header.featured-image .site-featured-image .post-thumbnail img {
+	top: 5rem;
+}
+
+/* stile the text-logo image */
+.c4aa-text-logo {
+	display: inline-block;
+	background-size: cover;
+	height: 44px;
+	width: 210px;
+	margin-right: 10px;
+}
+
+.site-title {
+	margin: 0;
+}
+
+/* style text and icon logo hover */
+.site-logo .custom-logo-link:hover, 
+.site-logo .custom-logo-link:active, 
+.site-logo .custom-logo-link:focus,
+.site-header.featured-image .custom-logo-link:hover,
+.site-header.featured-image .custom-logo-link:active,
+.site-header.featured-image .custom-logo-link:focus,
+.c4aa-text-logo:hover,
+.c4aa-text-logo:active,
+.c4aa-text-logo:hover:focus {
+	box-shadow: none;
+	opacity: 0.7;
+}
+
+/* style menu items text  */
+.site-header.featured-image .main-navigation a, 
+.site-header.featured-image .main-navigation a + svg, 
+.site-header.featured-image .social-navigation a, 
+.site-header.featured-image .site-featured-image a,
+.main-navigation .main-menu > li > a, 
+.main-navigation .main-menu > li .svg-icon  {
+	color:  var( --color-brandBlack );
+}
+
+.site-header.featured-image .main-navigation a:hover, 
+.site-header.featured-image .main-navigation a:active, 
+.site-header.featured-image .main-navigation a + svg:hover, 
+.site-header.featured-image .main-navigation a + svg:active, 
+.site-header.featured-image .social-navigation a:hover, 
+.site-header.featured-image .social-navigation a:active, 
+.site-header.featured-image .site-featured-image a:hover 
+.site-header.featured-image .site-featured-image a:active {
+	color:  var( --color-brandRed );
+	opacity: 1;
+}
+
+.main-menu li {
+	font-size: 1rem;
+}
+
+
+/* place navigation at bottom of container*/
+#site-navigation {
+	width: 100%;
+	order: 3;
+}
+
+@media( min-width: 768px )  {
+	.site-branding {
+		margin: 0;
+	}
+
+	/* center logo vertically on branding-container*/
+	.site-logo{
+		margin-top: .5rem;
+	}
+
+	/* center site-title vertically on branding-container */
+	.site-title,
+	.featured-image .site-title {
+		margin-top: 1.5rem;
+	}
+	
+	/* override parent theme logo positioning */
+	.site-logo {
+		position: static;
+	}
+}
+
+@media( min-width: 1000px ) {
+	.site-branding {
+		margin: 0 calc(10% + 60px);
+	}
+}
+
+@media( min-width: 1260px )  {
+	.site-branding {
+		min-height: 5rem;
+		flex-wrap: nowrap;
+		justify-content: space-evenly;
+	}
+
+	/* place navigtation between logos and align vertically */
+	#site-navigation {
+		margin-top: 2rem;
+		width: auto;
+		order: 2;
+	}
+
+	/* move logo to the right */
+	.site-logo {
+		order: 3;
+	}
+}

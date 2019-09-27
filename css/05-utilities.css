@@ -1,0 +1,30 @@
+/* Algorithms */
+
+.a-colophon-grid {
+	display: grid;
+	grid-gap: 1rem;
+}
+
+@media( min-width: 800px ) {
+	.a-colophon-grid {
+		grid-template-columns: 1fr 80px 1fr;
+	}
+}
+
+/* Utilities */
+
+.u-display-inline-block {
+	display: inline-block;
+}
+
+.u-text-align-center {
+	text-align: center;
+}
+
+.u-align-items-center {
+	align-items: center;
+}
+
+.u-text-align-right {
+	text-align: right;
+}

@@ -1,5 +1,12 @@
 <?php
 
+/* remove  parent script that inserts ellipsis icon on mobile */ 
+function dequeue_priority_menu() {
+	wp_dequeue_script( 'twentynineteen-priority-menu' );
+ } 
+ add_action( 'wp_enqueue_scripts', 'dequeue_priority_menu', 100 );
+
+
 function c4aa_enqueue_assets() {
 	wp_enqueue_style( 'twentynineteen-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/style.css' );
@@ -7,10 +14,11 @@ function c4aa_enqueue_assets() {
 	wp_enqueue_style( 'c4aa-style-elements', get_stylesheet_directory_uri() . '/css/02-elements.css' );
 	wp_enqueue_style( 'c4aa-style-generic', get_stylesheet_directory_uri() . '/css/03-generic.css' );
 	wp_enqueue_style( 'c4aa-style-content', get_stylesheet_directory_uri() . '/css/04-content.css' );
+	wp_enqueue_style( 'c4aa-style-utilities', get_stylesheet_directory_uri() . '/css/05-utilities.css' );
 	wp_enqueue_style( 'c4aa-style-c4aa-imageFilter', get_stylesheet_directory_uri() . '/css/c4aa-imageFilter.css' );
 	wp_enqueue_style( 'c4aa-style-c4aa-titleEffect', get_stylesheet_directory_uri() . '/css/c4aa-titleEffect.css' );
-	wp_enqueue_style( 'c4aa-style-c4aa-clipPaths', get_stylesheet_directory_uri() . '/css/c4aa-clipPaths.css' );
-	wp_enqueue_script( 'c4aa-js', get_stylesheet_directory_uri() . '/js/clipPaths.js', array(), '1.0.0', true );
+	wp_enqueue_style( 'c4aa-style-c4aa-clipPaths', get_stylesheet_directory_uri() . '/css/c4aa-clipPaths.css' )
+	wp_enqueue_script( 'c4aa-js-clipPath', get_stylesheet_directory_uri() . '/js/clipPath.js', array(), '1.0.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
@@ -133,16 +141,31 @@ add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
 function c4aa_custom_dashboard_widgets() {
 global $wp_meta_boxes;
  
-wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'custom_dashboard_help');
+wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'c4aa_custom_dashboard_help');
 }
  
 function c4aa_custom_dashboard_help() {
-echo '<p>Welcome to the new C4AA theme!<p>
-	<p>Good ideas:</p>
+echo '
+	<h3 id="welcometothenewc4aatheme">Welcome to the new C4AA theme!</h3>
+	<p><strong>Good ideas:</strong></p>
+	<ul>
+		<li>➡ upload images at 1400px wide where possible</li>
+		<li>➡ use colors from the color picker</li>
+		<li>➡ If you have questions, ask Steve Lambert.</li>
+	</ul>
+
+	<p><strong>Advanced Settings:</strong></p>
 		<ul>
-		<li>upload images at 1400px wide where possible</li>
-		<li>use colors from the color picker</li>
-		<li>If you have questions, ask Steve Lambert.</li>
+			<li><code>no-hyphens</code> will turn off auto-hyphenating on everything in the block.</li>
+			<li><code>c4aa-duotone</code> plus one of the following will enable duotone effects on images. 
+				<ul>
+					<li>- <code>red-and-black</code> </li>
+					<li>- <code>beige-and-black</code> </li>
+					<li>- <code>beige-and-red</code> </li>
+					<li>- <code>beige-and-grey</code> </li>
+					<li>- <code>beige-and-grey-vintage</code> </li>
+				</ul>
+				</li>
 		</ul>
 	'; // end echo
 }

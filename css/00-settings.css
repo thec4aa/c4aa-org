@@ -1,6 +1,7 @@
 :root {
 	/* Brand Colors */
-	--color-brandBeige: #e8e6df;
+	--color-brandBeige: #F2F1ED; /* Fallback */
+	--color-brandBeige: hsla(48, 16%, 94%, 1);
 	--color-brandBlack: #292724; /* Fallback */
 	--color-brandBlack: hsla(36, 6%, 5%, 0.9);
 	--color-brandBlue: #005eb8; /* Fallback */
@@ -101,4 +102,20 @@
 
 .has-caa-yellow-color {
 	color: var( --color-brandYellow);
+}
+
+/* 
+ * Accessibility Labels
+ *
+ * Hide text from the screen while still providing label for screen reader
+ * 
+ */
+
+.c4aa-sr-only {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
 }
