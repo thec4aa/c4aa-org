@@ -150,7 +150,7 @@ body.home header.entry-header, .imprint {
 }
 
 .site-header.featured-image {
-	min-height: 70vh;
+	min-height: 80vh;
 	padding: 0;
 }
 
@@ -287,7 +287,6 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 
 /* Buttons */
 
-/* default buttons overrides */
 
 button, 
 .button, 
@@ -298,14 +297,16 @@ button,
 input[type="button"], 
 input[type="reset"], 
 input[type="submit"] {
-	transition: all 150ms ease-in-out;
 	background-color: var( --color-brandRed );
 	border-radius: 0;
 	box-shadow: 5px 5px 0px var( --color-brandGrey );
 		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
 		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-	font-family: 'roboto', Georgia, serif;
 	color: var(--color-brandWhite);
+	font-family: 'roboto', Georgia, serif;
+	padding: .7rem;
+	transition: all 150ms ease-in-out;
+	
 }
 
 button.main-menu-more-toggle {
@@ -315,29 +316,13 @@ button.main-menu-more-toggle {
 button:hover,
 .button:hover, 
 .wp-block-file__button:hover,
-.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
+.entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
 input[type="button"]:hover, 
 input[type="reset"]:hover, 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
 	background-color: var( --color-brandRed );
 	box-shadow: none;
 	filter: brightness(87%);
-}
-
-/* outline buttons overrides
-
-	initial border serves as a fall-back style
-	border will be applied on the parent element to avoid it being cut by clip-paths
-
- */
-
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):hover,
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):focus,
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):visited {
-	border-color: var(--color-brandRed);
-	color: var( --color-brandRed );
-	background-color: var( --color-brandBeige );
 }
 
 /* Form Fields */
@@ -370,6 +355,7 @@ fieldset {
 }
 
 legend {
+	color: var( --color-brandBeige );
 	background-color: var( --color-brandBlack );
 	font-weight: bold;
 	margin-left: -2rem;
@@ -411,7 +397,7 @@ input[type="radio"]:checked + label::before {
 }
 
 .site-info > * {
-	color: var( --color-brandBlack );
+	color: var( --color-brandRed );
 	text-transform: uppercase;
 	font-family: 'metropolis', sans-serif;
 	font-weight: 400;
@@ -419,8 +405,7 @@ input[type="radio"]:checked + label::before {
 }
 
 .c4aa-magic-hand {
-	color: var( --color-brandGrey );
-	max-width: 80px;
+	color: var( --color-brandRed );;
 }
 
 /********************/

@@ -1,5 +1,12 @@
 <?php
 
+/* remove  parent script that inserts ellipsis icon on mobile */ 
+function dequeue_priority_menu() {
+	wp_dequeue_script( 'twentynineteen-priority-menu' );
+ } 
+ add_action( 'wp_enqueue_scripts', 'dequeue_priority_menu', 100 );
+
+
 function c4aa_enqueue_assets() {
 	wp_enqueue_style( 'twentynineteen-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/style.css' );
@@ -11,10 +18,28 @@ function c4aa_enqueue_assets() {
 	wp_enqueue_style( 'c4aa-style-c4aa-imageFilter', get_stylesheet_directory_uri() . '/css/c4aa-imageFilter.css' );
 	wp_enqueue_style( 'c4aa-style-c4aa-titleEffect', get_stylesheet_directory_uri() . '/css/c4aa-titleEffect.css' );
 	wp_enqueue_style( 'c4aa-style-c4aa-clipPaths', get_stylesheet_directory_uri() . '/css/c4aa-clipPaths.css' );
-	wp_enqueue_script( 'c4aa-js', get_stylesheet_directory_uri() . '/js/script.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'c4aa-js-clipPath', get_stylesheet_directory_uri() . '/js/clipPaths.js', array(), '1.0.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
+
+/**
+ * Gutenberg scripts and styles
+ * link https://www.billerickson.net/block-styles-in-gutenberg/
+ */
+
+function be_gutenberg_scripts() {
+	wp_enqueue_script(
+		'be-editor', 
+		get_stylesheet_directory_uri() . '/js/editor.js', 
+		array( 'wp-blocks', 'wp-dom' ), 
+		filemtime( get_stylesheet_directory() . '/js/editor.js' ),
+		true
+	);
+
+	
+}
+add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
 
 
 function c4aa_async_webfontloader_inline_script() {

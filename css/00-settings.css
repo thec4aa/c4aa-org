@@ -25,10 +25,6 @@
 	--bottomLeftX: 4;
 	--bottomLeftY: 10;
 	--rotate: 0;
-	--topPadding: 2rem;
-	--bottomPadding: 2rem;
-	--leftPadding: 2rem;
-	--rightPadding: 2rem;
 }
 
 /* 
@@ -106,4 +102,20 @@
 
 .has-caa-yellow-color {
 	color: var( --color-brandYellow);
+}
+
+/* 
+ * Accessibility Labels
+ *
+ * Hide text from the screen while still providing label for screen reader
+ * 
+ */
+
+.c4aa-sr-only {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
 }

@@ -20,7 +20,7 @@
 
 		<div class="site-info u-align-items-center a-colophon-grid">
 
-			<div>
+			<div class="footer-contact">
 				<div class="u-display-inline-block">
 					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
 				</div>
@@ -29,24 +29,18 @@
 					<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				<?php endif; ?>
 				<br />
-				<?php echo esc_html( 'New York, USA  &nbsp;• &nbsp;+1 (646) 832-2454' ); ?>
+				<?php echo esc_html( 'New York, USA  &nbsp;• &nbsp;+1&nbsp;(646)&nbsp;832-2454' ); ?>
 			</div>
 				
 			<div class="c4aa-magic-hand u-text-align-center">
 
-				<div class="u-width-100 u-display-inline-block">
+				<div class="u-display-inline-block">
 					<?php echo file_get_contents( get_stylesheet_directory() . '/svg/c4aa.magic.hand.svg' ); ?>
 				</div>
 
 			</div>
 
-			<div class="footer-menu-column">
-
-				<?php
-				if ( function_exists( 'the_privacy_policy_link' ) ) {
-					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-				}
-				?>
+			<div class="footer-menu-column u-text-align-right">
 
 				<?php if ( has_nav_menu( 'footer' ) ) : ?>
 					<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
