@@ -38,6 +38,8 @@ header:not(.featured-image) h1.entry-title,
 
 header:not(.featured-image) h1.entry-title,
 h2.is-style-c4aa-clipPath-heading,
+.archive h2.entry-title,
+.widget-title,
 h3.is-style-c4aa-clipPath-heading,
 h4.is-style-c4aa-clipPath-heading {
 	color: var( --color-brandBeige );
@@ -48,7 +50,9 @@ header:not(.featured-image) h1.entry-title {
 	font-size: 3rem;
 }
 
-h2.is-style-c4aa-clipPath-heading {
+h2.is-style-c4aa-clipPath-heading,
+.widget-title,
+.archive h2.entry-title {
 	background: var( --color-brandGrey );
 }
 
@@ -57,8 +61,14 @@ h2:before.is-style-c4aa-clipPath-heading,
 	content: none;
 }
 
-.entry .entry-content > h2.is-style-c4aa-clipPath-heading {
+.entry .entry-content > h2.is-style-c4aa-clipPath-heading,
+.widget-title {
 	max-width: none;
+}
+
+.widget-title {
+	font-size: 1.6875em;
+	margin-left: -1rem;
 }
 
 h3.is-style-c4aa-clipPath-heading {

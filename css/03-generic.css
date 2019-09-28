@@ -85,10 +85,7 @@ header.featured-image h1.entry-title {
 	margin-right: .5em;
 }
 
-h2 {
-	background: var( --color-brandGrey );
-}
-
+h1:before,
 h2:before, .entry .entry-title:before {
 	content: none;
 }
@@ -99,17 +96,6 @@ h2:before, .entry .entry-title:before {
 	margin-bottom: calc( 3vw + 30px );
 }
 
-h2.widget-title {
-	font-size: 1.6875em;
-	color: var( --color-brandWhite );
-	margin-left: -1rem;
-	max-width: none;
-}
-
-h3 {
-	background: var( --color-brandBlack );
-
-}
 
 @media only screen and (min-width: 768px) {
 	.entry .entry-content > h2 {
@@ -121,9 +107,9 @@ h3 {
 	}
 }
 
-h4 {
-	background: var( --color-brandRed ); 
-	display: inline-block;
+/* prevent words from breaking in columns */
+.wp-block-column h4 {
+	word-break: normal;
 }
 
 /* Remove H1 from home */
@@ -285,8 +271,7 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 	display: table;
 }
 
-/* Buttons */
-
+/* Default Buttons */
 
 button, 
 .button, 
@@ -323,6 +308,14 @@ input[type="submit"]:hover {
 	background-color: var( --color-brandRed );
 	box-shadow: none;
 	filter: brightness(87%);
+}
+
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color), 
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color), 
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) {
+	color: var( --color-brandRed );
+    border-color: var( --color-brandRed );
 }
 
 /* Form Fields */
