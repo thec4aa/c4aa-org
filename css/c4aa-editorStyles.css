@@ -1,0 +1,46 @@
+
+:root {
+	/* Brand Colors */
+	--color-brandBeige: #F2F1ED; /* Fallback */
+	--color-brandBeige: hsla(48, 16%, 94%, 1);
+	--color-brandBlack: #292724; /* Fallback */
+	--color-brandBlack: hsla(36, 6%, 5%, 0.9);
+	--color-brandBlue: #005eb8; /* Fallback */
+	--color-brandBlue: hsla(209, 100%, 34%, 0.9);
+	--color-brandGrey: #7B736c; /* Fallback */
+	--color-brandGrey: hsla(28, 6%, 42%, 0.9);
+	--color-brandRed: #da2f3b; /* Fallback */
+	--color-brandRed: hsla(356, 80%, 45%, 0.9);
+	--color-brandWhite: #fafaf9; /* Fallback */
+	--color-brandWhite: hsla(60, 9%, 98%, 0.9);
+	--color-brandYellow: #e1cd00; /* Fallback */
+	--color-brandYellow: hsla(55, 100%, 46%, 0.9);
+}
+
+.editor-styles-wrapper h2.is-style-c4aa-clipPath-heading,
+.editor-styles-wrapper h3.is-style-c4aa-clipPath-heading,
+.editor-styles-wrapper h4.is-style-c4aa-clipPath-heading {
+    color: var( --color-brandBeige );
+}
+
+h2.is-style-c4aa-clipPath-heading {
+    background-color: var( --color-brandGrey );
+}
+
+h3.is-style-c4aa-clipPath-heading {
+    background-color: var( --color-brandBlack );
+}
+
+h4.is-style-c4aa-clipPath-heading {
+    background-color: var( --color-brandRed );
+}
+
+.editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button:not(.is-style-outline) .wp-block-button__link {
+    background-color: var( --color-brandRed );
+}
+
+.editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button:not(.is-style-outline) .wp-block-button__link {
+    color: var( --color-brandRed );
+    border: 2px solid var( --color-brandRed );
+    background-color: var( --color-brandBeige );
+}
