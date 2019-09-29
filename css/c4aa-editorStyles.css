@@ -39,7 +39,7 @@ h4.is-style-c4aa-clipPath-heading {
     background-color: var( --color-brandRed );
 }
 
-.editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button:not(.is-style-outline) .wp-block-button__link {
+.editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button-outline:not(.is-style-outline) .wp-block-button__link {
     color: var( --color-brandRed );
     border: 2px solid var( --color-brandRed );
     background-color: var( --color-brandBeige );

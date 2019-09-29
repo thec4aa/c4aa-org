@@ -66,6 +66,10 @@ h2:before.is-style-c4aa-clipPath-heading,
 	max-width: none;
 }
 
+.is-style-c4aa-clipPath-heading a {
+	color: var( --color-brandWhite );
+}
+
 .widget-title {
 	font-size: 1.6875em;
 	margin-left: -1rem;
