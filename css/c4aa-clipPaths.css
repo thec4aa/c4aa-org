@@ -8,8 +8,9 @@ header:not(.featured-image) h1.entry-title,
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe,
 .is-style-c4aa-clipPath-button a,
-.is-style-c4aa-clipPath-button-outline a {
-	padding: 2rem;
+.is-style-c4aa-clipPath-button-outline a,
+.wp-block-quote,
+.wp-block-pullquote {
 	clip-path: polygon( 
 		calc( var( --topLeftX ) * 1px ) 
 		calc( var( --topLeftY ) * 1px ), 
@@ -32,6 +33,21 @@ header:not(.featured-image) h1.entry-title,
 		);
 
 	transform: rotate( calc( var( --rotate) * 1deg ) );
+}
+
+.is-style-c4aa-clipPath-heading,
+.archive h2.entry-title,
+header:not(.featured-image) h1.entry-title,
+.widget-title,
+.give-form legend,
+.give-form button,
+.give-form input[type="submit"],
+.wpcf7-form input[type="submit"],
+#mc-embedded-subscribe,
+.is-style-c4aa-clipPath-button a,
+.is-style-c4aa-clipPath-button-outline a,
+.wp-block-quote {
+	padding: 2rem;
 }
 
 /* Headers */

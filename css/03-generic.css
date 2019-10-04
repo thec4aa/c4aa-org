@@ -235,7 +235,7 @@ blockquote.wp-block-quote {
 	color: var( --color-brandBeige );
 	font-family: 'roboto', Georgia, serif;
 	font-weight: 900;
-	margin: -1.25em;
+	margin: -2.25em;
 	border: none;
 	transform: rotate(-.5deg);
 	mix-blend-mode: multiply;
