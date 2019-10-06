@@ -407,3 +407,45 @@ input[type="radio"]:checked + label::before {
 .c4aa-magic-hand {
 	color: var( --color-brandRed );;
 }
+
+/********************/
+/* Latests Posts */
+/********************/
+
+.entry .entry-content .wp-block-latest-posts.is-grid li {
+	border-top: none;
+	padding-top: 0;
+}
+
+.entry .entry-content .wp-block-latest-posts li {
+	color: var( --color-brandBlack );
+	font-family: 'roboto', Georgia, sans-serif;
+	font-size: 1em;
+	line-height: 1.2;
+	padding-bottom: 0.75rem;
+}
+
+.entry .entry-content .wp-block-latest-posts li,
+.wp-block-latest-posts__post-date  {
+	color: var( --color-brandBlack );
+}
+
+.wp-block-latest-posts__post-date {
+	border-bottom: 1px solid var( --color-brandGrey );
+	padding-bottom: .5em;
+}
+
+.entry .entry-content .wp-block-latest-posts li > a {
+	font-size: calc( 22px * 1.125 );
+	text-transform: uppercase;
+}
+
+.wp-block-latest-posts__post-excerpt {
+	padding-top: .5em;
+}
+
+.wp-block-latest-posts__post-excerpt a {
+	display: block;
+	padding-top: .5em;
+	text-transform: capitalize;
+}
