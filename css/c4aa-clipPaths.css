@@ -8,8 +8,9 @@ header:not(.featured-image) h1.entry-title,
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe,
 .is-style-c4aa-clipPath-button a,
-.is-style-c4aa-clipPath-button-outline a {
-	padding: 2rem;
+.is-style-c4aa-clipPath-button-outline a,
+.wp-block-quote,
+.wp-block-pullquote {
 	clip-path: polygon( 
 		calc( var( --topLeftX ) * 1px ) 
 		calc( var( --topLeftY ) * 1px ), 
@@ -34,10 +35,27 @@ header:not(.featured-image) h1.entry-title,
 	transform: rotate( calc( var( --rotate) * 1deg ) );
 }
 
+.is-style-c4aa-clipPath-heading,
+.archive h2.entry-title,
+header:not(.featured-image) h1.entry-title,
+.widget-title,
+.give-form legend,
+.give-form button,
+.give-form input[type="submit"],
+.wpcf7-form input[type="submit"],
+#mc-embedded-subscribe,
+.is-style-c4aa-clipPath-button a,
+.is-style-c4aa-clipPath-button-outline a,
+.wp-block-quote {
+	padding: 2rem;
+}
+
 /* Headers */
 
 header:not(.featured-image) h1.entry-title,
 h2.is-style-c4aa-clipPath-heading,
+.archive h2.entry-title,
+.widget-title,
 h3.is-style-c4aa-clipPath-heading,
 h4.is-style-c4aa-clipPath-heading {
 	color: var( --color-brandBeige );
@@ -48,7 +66,9 @@ header:not(.featured-image) h1.entry-title {
 	font-size: 3rem;
 }
 
-h2.is-style-c4aa-clipPath-heading {
+h2.is-style-c4aa-clipPath-heading,
+.widget-title,
+.archive h2.entry-title {
 	background: var( --color-brandGrey );
 }
 
@@ -57,8 +77,18 @@ h2:before.is-style-c4aa-clipPath-heading,
 	content: none;
 }
 
-.entry .entry-content > h2.is-style-c4aa-clipPath-heading {
+.entry .entry-content > h2.is-style-c4aa-clipPath-heading,
+.widget-title {
 	max-width: none;
+}
+
+.is-style-c4aa-clipPath-heading a {
+	color: var( --color-brandWhite );
+}
+
+.widget-title {
+	font-size: 1.6875em;
+	margin-left: -1rem;
 }
 
 h3.is-style-c4aa-clipPath-heading {

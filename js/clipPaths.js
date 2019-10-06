@@ -15,6 +15,12 @@ const widgetTitles = document.querySelectorAll('.widget-title');
 const donateLegendTitles = document.querySelectorAll('.give-form legend');
 
 /********************
+Get Clip Path Quote Selectors
+*********************/
+
+const blockquotes = document.querySelectorAll('.wp-block-quote, .wp-block-pullquote');
+
+/********************
 Get Clip Path Button Selectors
 *********************/
 
@@ -42,10 +48,12 @@ Apply Clip Paths
 
 /* Headings */
 
-addHeadingClipPaths(entryTitles);
-addHeadingClipPaths(headings);
-addHeadingClipPaths(widgetTitles);
-addHeadingClipPaths(donateLegendTitles);
+addBlockClipPaths(entryTitles);
+addBlockClipPaths(headings);
+addBlockClipPaths(widgetTitles);
+addBlockClipPaths(donateLegendTitles);
+addBlockClipPaths(blockquotes);
+
 
 /* Buttons */
 addPlugInButtonClipPaths(formButtons);
@@ -64,7 +72,7 @@ function getRandomNum( min, max, fixedPoint = 0 ) {
 	return float.toFixed( fixedPoint );
 }
 
-function addHeadingClipPaths ( selector ) {
+function addBlockClipPaths ( selector ) {
 
 	selector.forEach( ( heading ) => {
 		// rotate headings

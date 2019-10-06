@@ -29,6 +29,7 @@ add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
  */
 
 function be_gutenberg_scripts() {
+	wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/css/c4aa-editorStyles.css' );
 	wp_enqueue_script(
 		'be-editor', 
 		get_stylesheet_directory_uri() . '/js/editor.js', 
