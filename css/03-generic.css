@@ -62,6 +62,9 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 	background-color: var( --color-brandBeige);
 }
 
+.site-footer .widget-title {
+	color: var( --color-brandWhite )
+}
 
 /* Navigation */
 
