@@ -42,6 +42,10 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 	color: var( --color-brandRed );
 }
 
+.entry .entry-title a:hover {
+	color: var( --color-brandWhite );
+}
+
 .main-navigation .sub-menu > li > a:hover::after, .main-navigation .sub-menu > li > a:focus::after, .main-navigation .sub-menu > li > .menu-item-link-return:hover::after, .main-navigation .sub-menu > li > .menu-item-link-return:focus::after {
 	background-color: #555;
 }
@@ -58,6 +62,9 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 	background-color: var( --color-brandBeige);
 }
 
+.site-footer .widget-title {
+	color: var( --color-brandWhite )
+}
 
 /* Navigation */
 
