@@ -218,6 +218,10 @@ body.home .entry-header h1.entry-title {
 	width: 100%;
 }
 
+.entry .entry-footer {
+	color: var( --color-brandBlack);
+}
+
 /* Removes icons from entry-meta - keeping them for now */
 /* .site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
 	display: none;
