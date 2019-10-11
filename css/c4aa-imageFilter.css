@@ -77,18 +77,18 @@ body.c4aa-duotone .post-thumbnail::before,
 
 /* Remove Duotone on Hover */
 
-body.c4aa-duotone .post-thumbnail:hover,
+body.c4aa-duotone .post .post-thumbnail:hover,
 *[class*='is-style-c4aa-duotone']:hover {
 	background-color: initial;
 	opacity: 1;
 }
 
-body.c4aa-duotone .post-thumbnail:hover::before,
+body.c4aa-duotone .post .post-thumbnail:hover::before,
 *[class*='is-style-c4aa-duotone']:hover::before {
 	display: none;
 }
 
-body.c4aa-duotone .post-thumbnail:hover img,
+body.c4aa-duotone .post .post-thumbnail:hover img,
 *[class*='is-style-c4aa-duotone']:hover img {
 	filter: none;
 	mix-blend-mode: normal;
