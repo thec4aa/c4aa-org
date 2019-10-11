@@ -37,8 +37,6 @@ function be_gutenberg_scripts() {
 		filemtime( get_stylesheet_directory() . '/js/editor.js' ),
 		true
 	);
-
-	
 }
 add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
 

@@ -9,17 +9,17 @@
 /* Duotone Defaults */
 :root {
 	/* Default Colors */
-	--duotone-default-base: var( --color-brandBeige );
-	--duotone-default-foreground: var( --color-brandBlack );
+	--duotone-default-base: var(--color-brandBeige);
+	--duotone-default-foreground: var(--color-brandBlack);
 
 	/* Default Image Treatment */
-	--duotone-base:              var( --duotone-default-base );
-	--duotone-bg-blend:          multiply;
-	--duotone-blur:              0px;
-	--duotone-fg-blend:          screen;
-	--duotone-foreground:        var( --duotone-default-foreground );
-	--duotone-opacity:           1;
-	--duotone-spacing:           1%;
+	--duotone-base: var(--duotone-default-base);
+	--duotone-bg-blend: multiply;
+	--duotone-blur: 0px;
+	--duotone-fg-blend: screen;
+	--duotone-foreground: var(--duotone-default-foreground);
+	--duotone-opacity: 1;
+	--duotone-spacing: 1%;
 }
 
 /*
@@ -38,67 +38,67 @@ Single header:
 Page header:
 .page.c4aa-duotone .site-featured-image .post-thumbnail
 
-Ex
-
 */
 
 body.c4aa-duotone .post-thumbnail,
-[class*="align"].c4aa-duotone,
-.c4aa-duotone > figure[class*="align"] {
-	background-color:    var(--duotone-base);
-	overflow:            hidden;
-	padding:             var(--duotone-spacing);
-	position:            relative;
-	transition:          background-color 250ms ease;
+.is-style-c4aa-duotone {
+	background-color: var(--duotone-base);
+	overflow: hidden;
+	padding: var(--duotone-spacing);
+	position: relative;
+	transition: background-color 250ms ease;
 }
 
 body.c4aa-duotone .post-thumbnail img,
-.c4aa-duotone[class*="align"] > img,
-.c4aa-duotone > figure[class*="align"] > img {
-	filter:              grayscale(100%) contrast(1) blur(var(--duotone-blur));
-	mix-blend-mode:      var(--duotone-bg-blend);
-	object-fit:          cover;
-	opacity:             var(--duotone-opacity);
-	position:            relative;
-	width:               100%;
-	transition:          mix-blend-mode filter opacity 250ms ease-in-out;
+.is-style-c4aa-duotone img {
+	filter: grayscale(100%) contrast(1) blur(var(--duotone-blur));
+	mix-blend-mode: var(--duotone-bg-blend);
+	object-fit: cover;
+	opacity: var(--duotone-opacity);
+	position: relative;
+	width: 100%;
+	transition: mix-blend-mode filter opacity 250ms ease-in-out;
 }
 
 body.c4aa-duotone .post-thumbnail::before,
-.c4aa-duotone[class*="align"]::before,
-.c4aa-duotone > figure[class*="align"]::before {
-	background-color:    var(--duotone-foreground);
-	bottom:              0;
-	content:             '';
-	height:              100%;
-	left:                0;
-	mix-blend-mode:      var(--duotone-fg-blend);
-	position:            absolute;
-	right:               0;
-	top:                 0;
-	width:               100%;
-	z-index:             1;
+.is-style-c4aa-duotone::before {
+	background-color: var(--duotone-foreground);
+	bottom: 0;
+	content: '';
+	height: 100%;
+	left: 0;
+	mix-blend-mode: var(--duotone-fg-blend);
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
 
 /* Remove Duotone on Hover */
 
-.c4aa-duotone[class*="align"]:hover,
-.c4aa-duotone > figure[class*="align"]:hover {
+.is-style-c4aa-duotone:hover {
 	background-color: initial;
 	opacity: 1;
 }
 
-.c4aa-duotone > figure[class*="align"]:hover::before {
+.is-style-c4aa-duotone:hover::before {
 	display: none;
 }
 
-.c4aa-duotone[class*="align"]:hover > img,
-.c4aa-duotone > figure[class*="align"]:hover > img {
+.is-style-c4aa-duotone:hover img {
 	filter: none;
 	mix-blend-mode: normal;
 	opacity: 1;
 }
 
+.entry .entry-content .wp-block-image {
+	max-width: 100vw;
+}
+
+.entry .entry-content .wp-block-image.alignfull img {
+	width: 100%;
+}
 
 /********************************/
 /* Case by case box adjustments */
@@ -123,42 +123,42 @@ body.c4aa-duotone .post-thumbnail::before,
  */
 
 .red-and-black {
-	--duotone-base:              var( --color-brandRed );
-	--duotone-foreground:        var( --color-brandBlack );
-	--duotone-bg-blend:          multiply;
-	--duotone-fg-blend:          screen;
-	--duotone-opacity:           0.96;
-	--duotone-spacing:           20px;
+	--duotone-base: var(--color-brandRed);
+	--duotone-foreground: var(--color-brandBlack);
+	--duotone-bg-blend: multiply;
+	--duotone-fg-blend: screen;
+	--duotone-opacity: 0.96;
+	--duotone-spacing: 20px;
 }
 
 .beige-and-black {
-	--duotone-base:              var( --color-brandBeige );
-	--duotone-foreground:        var( --color-brandBlack );
-	--duotone-bg-blend:          multiply;
-	--duotone-fg-blend:          lighten;
-	--duotone-opacity:           1;
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandBlack);
+	--duotone-bg-blend: multiply;
+	--duotone-fg-blend: lighten;
+	--duotone-opacity: 1;
 }
 
 .beige-and-red {
-	--duotone-base:              var( --color-brandBeige );
-	--duotone-foreground:        var( --color-brandRed );
-	--duotone-bg-blend:          multiply;
-	--duotone-fg-blend:          screen;
-	--duotone-opacity:           1;
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandRed);
+	--duotone-bg-blend: multiply;
+	--duotone-fg-blend: screen;
+	--duotone-opacity: 1;
 }
 
 .beige-and-grey {
-	--duotone-base:              var( --color-brandBeige );
-	--duotone-foreground:        var( --color-brandGrey );
-	--duotone-bg-blend:          multiply;
-	--duotone-fg-blend:          screen;
-	--duotone-opacity:           1;
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandGrey);
+	--duotone-bg-blend: multiply;
+	--duotone-fg-blend: screen;
+	--duotone-opacity: 1;
 }
 
 .beige-and-grey-vintage {
-	--duotone-base:              var( --color-brandBeige );
-	--duotone-foreground:        var( --color-brandBlack );
-	--duotone-bg-blend:          color-burn;
-	--duotone-fg-blend:          screen;
-	--duotone-opacity:           0.69;
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandBlack);
+	--duotone-bg-blend: color-burn;
+	--duotone-fg-blend: screen;
+	--duotone-opacity: 0.69;
 }
