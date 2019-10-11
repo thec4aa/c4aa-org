@@ -92,14 +92,6 @@ body.c4aa-duotone .post-thumbnail::before,
 	opacity: 1;
 }
 
-.entry .entry-content .wp-block-image {
-	max-width: 100vw;
-}
-
-.entry .entry-content .wp-block-image.alignfull img {
-	width: 100%;
-}
-
 /********************************/
 /* Case by case box adjustments */
 /********************************/
