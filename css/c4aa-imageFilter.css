@@ -41,7 +41,7 @@ Page header:
 */
 
 body.c4aa-duotone .post-thumbnail,
-.is-style-c4aa-duotone {
+*[class*='is-style-c4aa-duotone'] {
 	background-color: var(--duotone-base);
 	overflow: hidden;
 	padding: var(--duotone-spacing);
@@ -50,7 +50,7 @@ body.c4aa-duotone .post-thumbnail,
 }
 
 body.c4aa-duotone .post-thumbnail img,
-.is-style-c4aa-duotone img {
+*[class*='is-style-c4aa-duotone'] img {
 	filter: grayscale(100%) contrast(1) blur(var(--duotone-blur));
 	mix-blend-mode: var(--duotone-bg-blend);
 	object-fit: cover;
@@ -61,7 +61,7 @@ body.c4aa-duotone .post-thumbnail img,
 }
 
 body.c4aa-duotone .post-thumbnail::before,
-.is-style-c4aa-duotone::before {
+*[class*='is-style-c4aa-duotone']::before {
 	background-color: var(--duotone-foreground);
 	bottom: 0;
 	content: '';
@@ -77,16 +77,16 @@ body.c4aa-duotone .post-thumbnail::before,
 
 /* Remove Duotone on Hover */
 
-.is-style-c4aa-duotone:hover {
+*[class*='is-style-c4aa-duotone']:hover {
 	background-color: initial;
 	opacity: 1;
 }
 
-.is-style-c4aa-duotone:hover::before {
+*[class*='is-style-c4aa-duotone']:hover::before {
 	display: none;
 }
 
-.is-style-c4aa-duotone:hover img {
+*[class*='is-style-c4aa-duotone']:hover img {
 	filter: none;
 	mix-blend-mode: normal;
 	opacity: 1;
@@ -122,7 +122,7 @@ body.c4aa-duotone .post-thumbnail::before,
  * The first color in the class name is base, the second is the foreground.
  */
 
-.red-and-black {
+*[class*='red-and-black'] {
 	--duotone-base: var(--color-brandRed);
 	--duotone-foreground: var(--color-brandBlack);
 	--duotone-bg-blend: multiply;
@@ -131,7 +131,7 @@ body.c4aa-duotone .post-thumbnail::before,
 	--duotone-spacing: 20px;
 }
 
-.beige-and-black {
+*[class*='beige-and-black'] {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandBlack);
 	--duotone-bg-blend: multiply;
@@ -139,7 +139,7 @@ body.c4aa-duotone .post-thumbnail::before,
 	--duotone-opacity: 1;
 }
 
-.beige-and-red {
+*[class*='beige-and-red'] {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandRed);
 	--duotone-bg-blend: multiply;
@@ -147,7 +147,7 @@ body.c4aa-duotone .post-thumbnail::before,
 	--duotone-opacity: 1;
 }
 
-.beige-and-grey {
+*[class*='beige-and-grey'] {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandGrey);
 	--duotone-bg-blend: multiply;
@@ -155,7 +155,7 @@ body.c4aa-duotone .post-thumbnail::before,
 	--duotone-opacity: 1;
 }
 
-.beige-and-grey-vintage {
+*[class*='beige-and-grey-vintage'] {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandBlack);
 	--duotone-bg-blend: color-burn;
