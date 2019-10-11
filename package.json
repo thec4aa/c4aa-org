@@ -1,0 +1,22 @@
+{
+  "name": "c4aa-2019",
+  "version": "1.0.0",
+  "description": "[C4AA.org](https://c4aa.org)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thec4aa/c4aa-org.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thec4aa/c4aa-org/issues"
+  },
+  "homepage": "https://github.com/thec4aa/c4aa-org#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
