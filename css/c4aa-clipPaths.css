@@ -50,6 +50,21 @@ header:not(.featured-image) h1.entry-title,
 	padding: 2rem;
 }
 
+/* If .wp-block-pullquote is the first element in entry content, only apply clip-path to bottom corner Ys */
+
+.entry-content > *:first-child.wp-block-pullquote {
+	clip-path: polygon( 
+		0 0, 
+		100% 0, 
+		100% 
+		calc( 100% - ( var( --bottomRightY ) * 2px ) ),
+		0 
+		calc( 100% - ( var( --bottomLeftY ) * 2px ) )
+	);
+
+	transform: initial;
+}
+
 /* Headers */
 
 header:not(.featured-image) h1.entry-title,
