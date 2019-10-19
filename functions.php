@@ -30,6 +30,7 @@ add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
 
 function be_gutenberg_scripts() {
 	wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/css/c4aa-editorStyles.css' );
+	wp_enqueue_style( 'c4aa-imageFilter', get_stylesheet_directory_uri() . '/css/c4aa-imageFilter.css' );
 	wp_enqueue_script(
 		'be-editor', 
 		get_stylesheet_directory_uri() . '/js/editor.js', 
@@ -37,8 +38,6 @@ function be_gutenberg_scripts() {
 		filemtime( get_stylesheet_directory() . '/js/editor.js' ),
 		true
 	);
-
-	
 }
 add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
 
