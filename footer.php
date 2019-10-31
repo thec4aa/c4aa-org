@@ -22,7 +22,7 @@
 
 			<div class="footer-contact">
 				<div class="u-display-inline-block">
-					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
+					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><?php echo file_get_contents( get_stylesheet_directory() . '/svg/cc.logo.circle.svg' ); ?></a>
 				</div>
 				<?php $blog_info = get_bloginfo( 'name' ); ?>
 				<?php if ( ! empty( $blog_info ) ) : ?>
