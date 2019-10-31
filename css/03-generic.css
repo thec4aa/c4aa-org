@@ -187,10 +187,6 @@ body.home .entry-header h1.entry-title {
      hyphens: manual;
 }
 
-.no-hyphens * {
-     hyphens: manual;
-}
-
 /* remove background from logo in header */
 .site-header.featured-image .custom-logo-link {
 	background: none;
