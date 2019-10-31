@@ -1,0 +1,86 @@
+
+/* Smaller default font size */
+html {
+	font-size: 18px;
+}
+
+body,
+button, 
+input,
+select,
+optgroup,
+textarea {
+	line-height: 1.7;
+}
+
+body,
+button, 
+input, 
+select, 
+optgroup, 
+textarea,
+blockquote cite,
+.entry .entry-content figcaption {
+	font-family: Georgia, serif;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
+}
+
+figure.wp-block-pullquote,
+body strong {
+	font-family: Georgia, serif;
+	font-weight: 700;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
+}
+
+.site-branding {
+	font-family: Arial, sans-serif;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
+}
+
+.site-branding .main-navigation ul li a {
+	font-family: Arial, sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
+}
+
+h1, 
+h2, 
+h3,
+.site-header.featured-image .entry-meta {
+	font-family: Arial, sans-serif;
+	font-weight: 900;
+	letter-spacing: .14em;
+	text-transform: uppercase;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
+	
+}
+
+h4, 
+h5, 
+h6 {
+	font-family: Georgia, serif;
+	font-weight: 900;
+	letter-spacing: .14em;
+	text-transform: uppercase;
+
+	.wf-active & {
+
+		font-family: 'roboto', Georgia, serif;
+	}
+}

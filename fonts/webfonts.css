@@ -10,7 +10,7 @@
          url('RobotoSlab-Light-webfont.svg#roboto_slablight') format('svg');
     font-weight: 500;
     font-style: normal;
-
+	font-display: swap;
 }
 
 
@@ -24,7 +24,7 @@
          url('RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg');
     font-weight: 700;
     font-style: normal;
-
+	font-display: swap;
 }
 
 
@@ -38,7 +38,7 @@
          url('RobotoSlab-Bold-webfont.svg#roboto_slabbold') format('svg');
     font-weight: 900;
     font-style: normal;
-
+	font-display: swap;
 }
 
 
@@ -50,7 +50,7 @@
          url('metropolis-extrabold-webfont.woff') format('woff');
     font-weight: 900;
     font-style: normal;
-
+	font-display: swap;
 }
 
 
@@ -60,7 +60,7 @@
          url('metropolis-extrabolditalic-webfont.woff') format('woff');
     font-weight: 900;
     font-style: italic;
-
+	font-display: swap;
 }
 
 
@@ -69,8 +69,8 @@
     src: url('metropolis-semibold-webfont.woff2') format('woff2'),
          url('metropolis-semibold-webfont.woff') format('woff');
     font-weight: 700;
-    font-style: normal;
-
+	font-style: normal;
+	font-display: swap;
 }
 
 
@@ -80,7 +80,7 @@
          url('metropolis-semibolditalic-webfont.woff') format('woff');
     font-weight: 700;
     font-style: italic;
-
+	font-display: swap;
 }
 
 
@@ -90,7 +90,7 @@
          url('metropolis-regular-webfont.woff') format('woff');
     font-weight: 500;
     font-style: normal;
-
+	font-display: swap;
 }
 
 
@@ -100,6 +100,6 @@
          url('metropolis-regularitalic-webfont.woff') format('woff');
     font-weight: 500;
     font-style: italic;
-
+	font-display: swap;
 }
 
