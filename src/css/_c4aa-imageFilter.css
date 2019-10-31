@@ -162,6 +162,6 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
 	filter: grayscale(100%)opacity(.7)brightness(1.1)contrast(2);
 }
 
-.wp-block-cover__inner-container {
+.wp-block-cover .wp-block-cover__inner-container * {
 	text-shadow: .12rem .12rem 0rem black;
 }
