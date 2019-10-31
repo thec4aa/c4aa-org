@@ -422,10 +422,14 @@ input[type="radio"]:checked + label::before {
 /* Footer Widgets */
 
 .widget-area ul li {
-    font-family: 'roboto', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1rem;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1rem;
+	font-family: Georgia, serif;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, sans-serif;
+	}
 }
 
 .widget-area ul li a {
