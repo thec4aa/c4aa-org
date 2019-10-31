@@ -13,6 +13,10 @@
 
 /* Utilities */
 
+.no-hyphens * {
+     hyphens: manual;
+}
+
 .u-display-inline-block {
 	display: inline-block;
 }

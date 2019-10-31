@@ -95,10 +95,6 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
 	opacity: 1;
 }
 
-/********************************/
-/* Case by case box adjustments */
-/********************************/
-
 /* Fill container on single post header images */
 .single.c4aa-duotone .site-featured-image .post-thumbnail,
 .page.c4aa-duotone .site-featured-image .post-thumbnail {
@@ -156,4 +152,12 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
 	--duotone-bg-blend: color-burn;
 	--duotone-fg-blend: screen;
 	--duotone-opacity: 0.69;
+}
+
+/*
+ * Cover Image Simple Filter
+ */
+
+.is-style-c4aa-simple-filter {
+	filter: grayscale(100%) sepia(0%);
 }
