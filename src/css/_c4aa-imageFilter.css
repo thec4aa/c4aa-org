@@ -159,5 +159,9 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
  */
 
 .is-style-c4aa-simple-filter {
-	filter: grayscale(100%)opacity(.7)brightness(1.5)contrast(2);
+	filter: grayscale(100%)opacity(.7)brightness(1.1)contrast(2);
+}
+
+.wp-block-cover__inner-container {
+	text-shadow: .12rem .12rem 0rem black;
 }
