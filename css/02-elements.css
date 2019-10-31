@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
+.wf-active .site-branding {
+	font-family: 'metropolis', sans-serif;
+}
+
 .wf-active .site-branding .main-navigation ul li a {
 	font-family: 'metropolis', sans-serif;
 	font-weight: 700;
