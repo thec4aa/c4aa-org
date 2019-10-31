@@ -29,6 +29,12 @@ wp.domReady( () => {
 		isDefault: false,
 	} );
 	
+	wp.blocks.registerBlockStyle( 'core/cover', {
+		name: 'c4aa-simple-filter',
+		label: 'C4AA Simple Filter',
+		isDefault: false,
+	} );
+	
 	imageFilters.forEach( ( filter) => {
 		wp.blocks.registerBlockStyle( 'core/image', {
 			name: 'c4aa-duotone-' + filter,
