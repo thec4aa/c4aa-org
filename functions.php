@@ -9,15 +9,7 @@ function dequeue_priority_menu() {
 
 function c4aa_enqueue_assets() {
 	wp_enqueue_style( 'twentynineteen-style', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'c4aa-style-settings', get_stylesheet_directory_uri() . '/css/00-settings.css' );
-	wp_enqueue_style( 'c4aa-style-elements', get_stylesheet_directory_uri() . '/css/02-elements.css' );
-	wp_enqueue_style( 'c4aa-style-generic', get_stylesheet_directory_uri() . '/css/03-generic.css' );
-	wp_enqueue_style( 'c4aa-style-content', get_stylesheet_directory_uri() . '/css/04-content.css' );
-	wp_enqueue_style( 'c4aa-style-utilities', get_stylesheet_directory_uri() . '/css/05-utilities.css' );
-	wp_enqueue_style( 'c4aa-style-c4aa-imageFilter', get_stylesheet_directory_uri() . '/css/c4aa-imageFilter.css' );
-	wp_enqueue_style( 'c4aa-style-c4aa-titleEffect', get_stylesheet_directory_uri() . '/css/c4aa-titleEffect.css' );
-	wp_enqueue_style( 'c4aa-style-c4aa-clipPaths', get_stylesheet_directory_uri() . '/css/c4aa-clipPaths.css' );
+	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/build/main.css' );
 	wp_enqueue_script( 'c4aa-js-clipPath', get_stylesheet_directory_uri() . '/js/clipPaths.js', array(), '1.0.0', true );
 }
 

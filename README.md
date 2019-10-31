@@ -29,9 +29,17 @@ Minimize use of plugins, javascript, and other dependencies. Hopefully avoid fro
 - Post SMTP
 - (more to be included later)
 
+
+## Local Development
+
+Once the theme is cloned, run `npm install` to download dependencies.
+
+* `npm run dev` - Start the Sass watcher for development.
+* `npm run prod` – Minify CSS before opening a PR.
+
 ## Credit:
 
-- Lara Schenck @lara126
+- Lara Schenck @laras126
 - Steve Lambert @slambert
 - Zoraida @zoracreates
 - [CSS Duotone](https://cssduotone.com/)

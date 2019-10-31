@@ -240,12 +240,16 @@ body.home .entry-header h1.entry-title {
 blockquote.wp-block-quote {
 	background-color: var( --color-brandRed );
 	color: var( --color-brandBeige );
-	font-family: 'roboto', Georgia, serif;
+	font-family: Georgia, serif;
 	font-weight: 900;
 	margin: -2.25em;
 	border: none;
 	transform: rotate(-.5deg);
 	mix-blend-mode: multiply;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
 }
 
 .entry .entry-content .wp-block-quote,
@@ -295,10 +299,13 @@ input[type="submit"] {
 		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
 		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
 	color: var(--color-brandWhite);
-	font-family: 'roboto', Georgia, serif;
+	font-family: Georgia, serif;
 	padding: .7rem;
 	transition: all 150ms ease-in-out;
-	
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
 }
 
 button.main-menu-more-toggle {
@@ -399,9 +406,13 @@ input[type="radio"]:checked + label::before {
 .site-info > * {
 	color: var( --color-brandRed );
 	text-transform: uppercase;
-	font-family: 'metropolis', sans-serif;
 	font-weight: 400;
 	letter-spacing: .14em;
+	font-family: Arial, sans-serif;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
 }
 
 .c4aa-magic-hand {
@@ -437,10 +448,14 @@ input[type="radio"]:checked + label::before {
 
 .entry .entry-content .wp-block-latest-posts li {
 	color: var( --color-brandBlack );
-	font-family: 'roboto', Georgia, sans-serif;
+	font-family: Georgia, serif;
 	font-size: 1em;
 	line-height: 1.2;
 	padding-bottom: 0.75rem;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, sans-serif;
+	}
 }
 
 .entry .entry-content .wp-block-latest-posts li,
