@@ -162,6 +162,12 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
 	filter: grayscale(100%) opacity(.85) brightness(1.1) contrast(1.5);
 }
 
-.wp-block-cover .wp-block-cover__inner-container * {
-  	text-shadow: .12rem .12rem 0rem black; 
-  }
+.wp-block-cover__inner-container * {
+    display: inline;
+    padding: 0em 0em;
+    background-color: hsla(36, 6%, 5%, 0.3);
+    box-shadow: .5em 0 0 hsla(36, 6%, 5%, 0.3), -.5em 0 0 hsla(36, 6%, 5%, 0.3);
+    box-decoration-break: clone;
+    opacity: .9;
+    color: var(--color-brandWhite);
+}
