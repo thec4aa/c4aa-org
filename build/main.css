@@ -1104,13 +1104,12 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
 .is-style-c4aa-simple-filter {
   filter: grayscale(100%) opacity(0.85) brightness(1.1) contrast(1.5); }
 
-.wp-block-cover__inner-container * {
+.wp-block-cover__inner-container p {
   display: inline;
   padding: 0em 0em;
-  background-color: rgba(14, 13, 12, 0.3);
-  box-shadow: 0.5em 0 0 rgba(14, 13, 12, 0.3), -0.5em 0 0 rgba(14, 13, 12, 0.3);
+  background-color: rgba(14, 13, 12, 0.8);
+  box-shadow: 0.5em 0 0 rgba(14, 13, 12, 0.8), -0.5em 0 0 rgba(14, 13, 12, 0.8);
   box-decoration-break: clone;
-  opacity: .9;
   color: var(--color-brandWhite); }
 
 /* 
