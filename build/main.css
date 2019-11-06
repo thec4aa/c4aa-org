@@ -326,7 +326,11 @@ blockquote.wp-block-quote {
 .entry .entry-content .wp-block-quote,
 .entry .entry-content .wp-block-quote:not(.is-large),
 .entry .entry-content .wp-block-quote:not(.is-style-large) {
+<<<<<<< HEAD
   padding: 1.5em; }
+=======
+  padding: 3em; }
+>>>>>>> master
 
 .entry .entry-content .wp-block-quote p {
   font-style: italic; }
@@ -1102,6 +1106,7 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
  * Cover Image Simple Filter
  */
 .is-style-c4aa-simple-filter {
+<<<<<<< HEAD
   filter: grayscale(100%) opacity(0.85) brightness(1.1) contrast(1.5); }
 
 .wp-block-cover__inner-container p {
@@ -1111,6 +1116,9 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
   box-shadow: 0.5em 0 0 rgba(14, 13, 12, 0.8), -0.5em 0 0 rgba(14, 13, 12, 0.8);
   box-decoration-break: clone;
   color: var(--color-brandWhite); }
+=======
+  filter: grayscale(100%) sepia(0%); }
+>>>>>>> master
 
 /* 
  * Title Effects
