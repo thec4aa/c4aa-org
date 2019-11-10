@@ -22,7 +22,8 @@
 	font-family: inherit;
 }
 
-.archive .page-header .page-description {
+.archive .page-header .page-description,
+.archive .page-header .page-title {
 	display: inline-block;
 }
 
@@ -44,6 +45,7 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 
 .entry .entry-title a:hover {
 	color: var( --color-brandWhite );
+	text-decoration: underline;
 }
 
 .main-navigation .sub-menu > li > a:hover::after, .main-navigation .sub-menu > li > a:focus::after, .main-navigation .sub-menu > li > .menu-item-link-return:hover::after, .main-navigation .sub-menu > li > .menu-item-link-return:focus::after {
@@ -75,6 +77,8 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 
 .main-navigation .main-menu > li {
 	padding-right: 1rem;
+	padding-bottom: 0.5rem;
+	display: inline-block;
 }
 
 .main-navigation .main-menu > li a {
@@ -83,6 +87,14 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 
 .main-navigation .sub-menu > li > a:hover {
 	background-color: var( --color-brandGrey );
+}
+
+.main-navigation > div {
+	display: block;
+}
+
+.main-navigation > .main-menu-more {
+	display: none; // not using this feautre.
 }
 
 /* Headers */
