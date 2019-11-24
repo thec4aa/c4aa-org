@@ -1,9 +1,13 @@
+.is-style-c4aa-clipPath-button {
+	display: inline-block;
+}
+
 .is-style-c4aa-clipPath-heading,
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
 .widget-title,
 .give-form legend:not(.give-hidden),
-.give-form button,
+.give-btn,
 .give-form input[type="submit"],
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe,
@@ -40,7 +44,7 @@ header:not(.featured-image) h1.entry-title,
 header:not(.featured-image) h1.entry-title,
 .widget-title,
 .give-form legend:not(.give-hidden),
-.give-form button,
+.give-btn,
 .give-form input[type="submit"],
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe,
@@ -137,7 +141,7 @@ h4.is-style-c4aa-clipPath-heading {
 }
 
 /* Buttons */
-.give-form button,
+.give-btn,
 .give-form input[type="submit"],
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe, 
