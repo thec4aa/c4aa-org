@@ -434,7 +434,9 @@ textarea {
 fieldset {
   border: none; }
 
-legend {
+form.give-form legend,
+form[id*="give-form"] legend,
+legend:not(.give-hidden) {
   color: var(--color-brandBeige);
   background-color: var(--color-brandBlack);
   font-weight: bold;
@@ -457,7 +459,8 @@ input[type="radio"] + label::before {
   border-radius: 1000px;
   display: inline-block;
   height: 1rem;
-  width: 1rem; }
+  width: 1rem;
+  margin-right: 0.5rem; }
 
 input[type="radio"]:checked + label::before {
   background-color: var(--color-brandWhite);
@@ -539,6 +542,9 @@ input[type="radio"]:checked + label::before {
 .entry .entry-content .wp-block-image.alignfull img {
   width: 100%; }
 
+form[id*="give-form"] #give-donation-level-radio-list > li {
+  display: inline-flex; }
+
 /**********/
 /* Blocks */
 /**********/
@@ -600,58 +606,17 @@ If still here by 8/10/2019, remove this code.
 /****************/
 /* Donate Form */
 /***************/
-/* closed modal */
-#give-payment-mode-select,
-#give_purchase_form_wrap,
-.mfp-preloader {
-  display: none; }
+form[id*="give-form"] #give-final-total-wrap .give-donation-total-label,
+form[id*="give-form"] .give-donation-amount .give-currency-symbol {
+  background-color: var(--color-brandGrey);
+  color: white; }
 
-.give-form {
-  background-color: var(--color-brandBeige);
-  border: 2px solid var(--color-brandGrey);
-  padding: 1.5rem; }
+form[id*="give-form"] .give-cs-mini-dropdown-icon::before {
+  border-color: white transparent transparent; }
 
-/* open modal */
-.give-modal-open .give-form {
-  background-color: rgba(228, 226, 218, 0.5);
-  border: none;
-  min-height: 100vh;
-  overflow: auto;
-  padding: 0; }
-
-.give-modal-open #give-payment-mode-select,
-.give-modal-open #give_purchase_form_wrap {
-  display: block; }
-
-.mfp-close {
-  padding: 1rem;
-  float: right;
-  margin-right: 1rem;
-  line-height: 0; }
-
-.give-modal-open .give-form::after {
-  clear: both;
-  content: "";
-  display: table; }
-
-/* general styles */
-.give-donation-levels-wrap,
-#give-gateway-radio-list {
-  display: flex;
-  flex-wrap: wrap; }
-
-#give-gateway-radio-list {
-  padding-left: 0; }
-
-.give-donation-levels-wrap li,
-#give-gateway-radio-list li {
-  list-style: none;
-  padding-bottom: 1.5rem;
-  padding-right: 1.5rem; }
-
-[for="give-amount"],
-.give-currency-symbol {
-  font-weight: bold; }
+form[id*="give-form"] legend,
+form.give-form legend {
+  background-color: var(--color-brandBlack); }
 
 #mc_embed_signup_scroll p:first-of-type {
   font-weight: bold;
@@ -850,7 +815,7 @@ If still here by 8/10/2019, remove this code.
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
 .widget-title,
-.give-form legend,
+.give-form legend:not(.give-hidden),
 .give-form button,
 .give-form input[type="submit"],
 .wpcf7-form input[type="submit"],
@@ -867,7 +832,7 @@ header:not(.featured-image) h1.entry-title,
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
 .widget-title,
-.give-form legend,
+.give-form legend:not(.give-hidden),
 .give-form button,
 .give-form input[type="submit"],
 .wpcf7-form input[type="submit"],
