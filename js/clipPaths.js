@@ -12,7 +12,7 @@ const entryTitles = document.querySelectorAll( 'header:not(.featured-image) h1.e
 const widgetTitles = document.querySelectorAll('.widget-title');
 
 // donate length titles
-const donateLegendTitles = document.querySelectorAll('.give-form legend');
+const donateLegendTitles = document.querySelectorAll('.give-form legend:not(.give-hidden)');
 
 /********************
 Get Clip Path Quote Selectors

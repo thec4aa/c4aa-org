@@ -373,7 +373,9 @@ fieldset {
 	border: none;
 }
 
-legend {
+form.give-form legend,
+form[id*="give-form"] legend,
+legend:not(.give-hidden) {
 	color: var( --color-brandBeige );
 	background-color: var( --color-brandBlack );
 	font-weight: bold;
@@ -401,6 +403,7 @@ input[type="radio"] + label::before {
 	display: inline-block;
 	height: 1rem;
 	width: 1rem;
+	margin-right: 0.5rem;
 }
 
 input[type="radio"]:checked + label::before {
@@ -508,3 +511,8 @@ input[type="radio"]:checked + label::before {
 .entry .entry-content .wp-block-image.alignfull img {
 	width: 100%;
 }
+
+form[id*="give-form"] #give-donation-level-radio-list > li {
+	display: inline-flex;
+}
+

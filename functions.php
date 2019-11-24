@@ -84,7 +84,7 @@ add_action( 'wp_head', 'c4aa_webfontloader_inline_script', 0 );
 if ( 'development' === WP_ENV ) {
 
 	add_filter('pre_option_upload_url_path', function( $upload_url_path ) {
-		return 'http://backtobasics.c4aa.org/wp-content/uploads';
+		return 'https://c4aa.org/wp-content/uploads';
 	});
 }
 
