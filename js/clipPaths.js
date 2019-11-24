@@ -33,7 +33,7 @@ const outlineButtons =   document.querySelectorAll( '.is-style-c4aa-clipPath-but
 	contact form (.wpcf7-form) buttons
  	newsletter subscribe button (#mc-embedded-subscribe)
  */
-const formButtons =   document.querySelectorAll( '.give-form button, .give-form input[type="submit"], .wpcf7-form input[type="submit"], #mc-embedded-subscribe');
+const formButtons =   document.querySelectorAll( '.give-btn, .give-form input[type="submit"], .wpcf7-form input[type="submit"], #mc-embedded-subscribe');
 
 
 /********************
