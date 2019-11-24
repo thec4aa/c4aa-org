@@ -271,70 +271,78 @@ form.give-form legend {
 
 /* Beige */
 
-.entry .entry-content *[class*='is-style'].has-caa-beige-background-color {
+.entry .entry-content *[class*='has-'].has-caa-beige-background-color {
 	background-color: var( --color-brandBeige);
 }
 
-.entry .entry-content *[class*='is-style'].has-caa-beige-color {
+.entry .entry-content *[class*='has-'].has-caa-beige-color {
 	color: var( --color-brandBeige);
 }
 
 /* Black */
 
-.entry .entry-content *[class*='is-style'].has-caa-black-background-color {
+.entry .entry-content *[class*='has-'].has-caa-black-background-color {
 	background-color: var( --color-brandBlack);
 }
 
-.entry .entry-content *[class*='is-style'].has-caa-black-color {
+.entry .entry-content *[class*='has-'].has-caa-black-color {
 	color: var( --color-brandBlack);
 }
 
 /* Blue */
 
-.entry .entry-content *[class*='is-style'].has-caa-blue-background-color {
+.entry .entry-content *[class*='has-'].has-caa-blue-background-color {
 	background-color: var( --color-brandBlue);
 }
 
-.entry .entry-content *[class*='is-style'].has-caa-blue-color {
+.entry .entry-content *[class*='has-'].has-caa-blue-color {
 	color: var( --color-brandBlue);
 }
 
 /* Grey */
 
-.entry .entry-content *[class*='is-style'].has-caa-grey-background-color {
+.has-caa-grey-background-color {
 	background-color: var( --color-brandGrey);
 }
 
-.entry .entry-content *[class*='is-style'].has-caa-grey-color {
+.entry .entry-content *[class*='has-'].has-caa-grey-color {
 	color: var( --color-brandGrey);
 }
 
 /* Red */
 
-.entry .entry-content *[class*='is-style'].has-caa-red-background-color {
+.entry .entry-content *[class*='has-'].has-caa-red-background-color {
 	background-color: var( --color-brandRed);
 }
 
-.entry .entry-content *[class*='is-style'].has-caa-red-color {
+.entry .entry-content *[class*='has-'].has-caa-red-color {
 	color: var( --color-brandRed);
 }
 
 /* White */
 
-.entry .entry-content *[class*='is-style'].has-caa-white-background-color {
+.entry .entry-content *[class*='has-'].has-caa-white-background-color {
 	background-color: var( --color-brandWhite);
 }
 
-.entry .entry-content *[class*='is-style'].has-caa-white-color {
+.entry .entry-content *[class*='has-'].has-caa-white-color {
 	color: var( --color-brandWhite);
 }
 
 /* Yellow */
 
-.entry .entry-content *[class*='is-style'].has-caa-yellow-background-color {
+.entry .entry-content *[class*='has-'].has-caa-yellow-background-color {
 	background-color: var( --color-brandYellow);
 }
 
-.entry .entry-content *[class*='is-style'].has-caa-yellow-color {
+.entry .entry-content *[class*='has-'].has-caa-yellow-color {
 	color: var( --color-brandYellow);
+}
+
+
+
+// Footer
+
+.widget ul {
+	margin-left: 1rem;
 }
