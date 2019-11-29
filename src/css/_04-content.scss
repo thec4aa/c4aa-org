@@ -112,6 +112,10 @@ form.give-form legend {
 	padding-top: 2rem;
 }
 
+.give-progress-bar {
+	background: var( --color-brandGrey );
+}
+
 
 .mfp-content form.give-form legend, form[id*="give-form"] legend, legend:not(.give-hidden) {
 	margin-left: -1rem;
