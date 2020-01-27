@@ -160,7 +160,8 @@ wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'c4aa_custom_d
  
 function c4aa_custom_dashboard_help() {
 echo '
-	<h3 id="welcometothenewc4aatheme">Welcome to the new C4AA theme!</h3>
+	<h3 id="welcometothenewc4aatheme">Welcome to the new Center for Artistic Activism theme!</h3>
+	<p>The new theme uses Gutenberg Blocks. <a href="https://wordpress.org/gutenberg/">Get an introduction and experiment with it here.</a></p>
 	<p><strong>Good ideas:</strong></p>
 	<ul>
 		<li>➡ upload images at 1400px wide where possible</li>
