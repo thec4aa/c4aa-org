@@ -39,6 +39,14 @@ header:not(.featured-image) h1.entry-title,
 	transform: rotate( calc( var( --rotate) * 1deg ) );
 }
 
+/* Prevent weird box sizing when quotes are in 
+columns block */
+.wp-block-column .wp-block-quote,
+.wp-block-column .wp-block-pullquote {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
 .is-style-c4aa-clipPath-heading,
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
@@ -130,7 +138,7 @@ h4.is-style-c4aa-clipPath-heading {
 
 	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
 	h3.is-style-c4aa-clipPath-heading {
-		max-width: 50%;
+		width: max-content;
 	}
 
 	.entry .entry-content > h4.is-style-c4aa-clipPath-heading,
