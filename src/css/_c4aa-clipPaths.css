@@ -63,7 +63,7 @@ header:not(.featured-image) h1.entry-title,
 		100% 
 		calc( 100% - ( var( --bottomRightY ) * 3px ) ),
 		0 
-		0 /* calc( 100% - ( var( --bottomLeftY ) * 3px ) )*/
+		0
 	);
 
 	transform: initial;
