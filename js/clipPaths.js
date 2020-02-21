@@ -26,14 +26,14 @@ Get Clip Path Button Selectors
 
 // selectors added through Gutenberg editor
 const defaultButtons = document.querySelectorAll( '.is-style-c4aa-clipPath-button a' );
-const outlineButtons =   document.querySelectorAll( '.is-style-c4aa-clipPath-button-outline a');
+const outlineButtons = document.querySelectorAll( '.is-style-c4aa-clipPath-button-outline a');
 
 /* Plug-in buttons
  	donate form (.give-form) buttons
 	contact form (.wpcf7-form) buttons
  	newsletter subscribe button (#mc-embedded-subscribe)
  */
-const formButtons =   document.querySelectorAll( '.give-btn, .give-form input[type="submit"], .wpcf7-form input[type="submit"], #mc-embedded-subscribe');
+const formButtons = document.querySelectorAll( '.give-btn, .give-form input[type="submit"], .wpcf7-form input[type="submit"], #mc-embedded-subscribe');
 
 
 /********************
