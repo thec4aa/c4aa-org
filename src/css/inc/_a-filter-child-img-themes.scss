@@ -1,0 +1,64 @@
+/* 
+ * Duotone Themes
+ *
+ * The variables that change from the defaults are overridden here.
+ * These must match 1 to 1 with ACF settings.
+ * 
+ * The first color in the class name is base, the second is the foreground.
+ */
+
+:root {
+	/* Default Colors */
+	--duotone-default-base: var(--color-brandBeige);
+	--duotone-default-foreground: var(--color-brandBlack);
+
+	/* Default Image Treatment */
+	--duotone-base: var(--duotone-default-base);
+	--duotone-bg-blend: multiply;
+	--duotone-blur: 0px;
+	--duotone-fg-blend: screen;
+	--duotone-foreground: var(--duotone-default-foreground);
+	--duotone-opacity: 1;
+	--duotone-spacing: 1%;
+}
+
+*[class*='red-and-black'] {
+	--duotone-base: var(--color-brandRed);
+	--duotone-foreground: var(--color-brandBlack);
+	--duotone-bg-blend: multiply;
+	--duotone-fg-blend: screen;
+	--duotone-opacity: 0.96;
+	--duotone-spacing: 20px;
+}
+
+*[class*='beige-and-black'] {
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandBlack);
+	--duotone-bg-blend: multiply;
+	--duotone-fg-blend: lighten;
+	--duotone-opacity: 1;
+}
+
+*[class*='beige-and-red'] {
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandRed);
+	--duotone-bg-blend: multiply;
+	--duotone-fg-blend: screen;
+	--duotone-opacity: 1;
+}
+
+*[class*='beige-and-grey'] {
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandGrey);
+	--duotone-bg-blend: multiply;
+	--duotone-fg-blend: screen;
+	--duotone-opacity: 1;
+}
+
+*[class*='beige-and-grey-vintage'] {
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandBlack);
+	--duotone-bg-blend: color-burn;
+	--duotone-fg-blend: screen;
+	--duotone-opacity: 0.69;
+}
