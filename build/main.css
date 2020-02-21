@@ -156,7 +156,7 @@ h6 {
   margin-bottom: 0; }
 
 /* Override main color */
-.site-header.featured-image .site-featured-image::before, .site-header.featured-image .site-featured-image::after, .entry .post-thumbnail::before, .entry .post-thumbnail::after, .main-navigation .sub-menu, .sticky-post, .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background), .entry .entry-content > .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].has-primary-background-color, .entry .entry-content > [class^="wp-block-"] .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color.has-primary-background-color,
+.site-header.featured-image .site-featured-image::before, .site-header.featured-image .site-featured-image::after, .entry .post-thumbnail::after, .main-navigation .sub-menu, .sticky-post, .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background), .entry .entry-content > .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].has-primary-background-color, .entry .entry-content > [class^="wp-block-"] .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color.has-primary-background-color,
 .entry .entry-title::before,
 .entry .entry-content .wp-block-separator, .entry .entry-content hr {
   background-color: var(--color-brandRed); }
@@ -256,12 +256,6 @@ body.home .entry-header h1.entry-title {
   color: white; }
 
 /* Image Filter Setup */
-.site-header.featured-image::before,
-.site-header.featured-image::after,
-.entry .post-thumbnail::before,
-.entry .post-thumbnail::after {
-  all: unset; }
-
 .site-header.featured-image .site-featured-image .entry-header {
   position: relative;
   z-index: 9;
@@ -643,10 +637,6 @@ form.give-form legend {
 .site-branding ul li {
   white-space: nowrap; }
 
-/* recenter featured image vertically */
-.site-header.featured-image .site-featured-image .post-thumbnail img {
-  top: 5rem; }
-
 /* stile the text-logo image */
 .c4aa-text-logo {
   display: inline-block;
@@ -981,7 +971,6 @@ Page header:
 .page.c4aa-duotone .site-featured-image .post-thumbnail
 
 */
-body.c4aa-duotone .post-thumbnail,
 *[class*='is-style-c4aa-duotone'] {
   background-color: var(--duotone-base);
   overflow: hidden;
@@ -989,7 +978,6 @@ body.c4aa-duotone .post-thumbnail,
   position: relative;
   transition: background-color 250ms ease; }
 
-body.c4aa-duotone .post-thumbnail img,
 *[class*='is-style-c4aa-duotone'] img {
   filter: grayscale(100%) contrast(1) blur(var(--duotone-blur));
   mix-blend-mode: var(--duotone-bg-blend);
@@ -999,7 +987,6 @@ body.c4aa-duotone .post-thumbnail img,
   width: 100%;
   transition: mix-blend-mode filter opacity 250ms ease-in-out; }
 
-body.c4aa-duotone .post-thumbnail::before,
 *[class*='is-style-c4aa-duotone']::before {
   background-color: var(--duotone-foreground);
   bottom: 0;
@@ -1014,28 +1001,17 @@ body.c4aa-duotone .post-thumbnail::before,
   z-index: 1; }
 
 /* Remove Duotone on Hover */
-body.c4aa-duotone .post .post-thumbnail:hover,
 *[class*='is-style-c4aa-duotone']:hover {
   background-color: initial;
   opacity: 1; }
 
-body.c4aa-duotone .post .post-thumbnail:hover::before,
 *[class*='is-style-c4aa-duotone']:hover::before {
   display: none; }
 
-body.c4aa-duotone .post .post-thumbnail:hover img,
 *[class*='is-style-c4aa-duotone']:hover img {
   filter: none;
   mix-blend-mode: normal;
   opacity: 1; }
-
-/* Fill container on single post header images */
-.single.c4aa-duotone .site-featured-image .post-thumbnail,
-.page.c4aa-duotone .site-featured-image .post-thumbnail {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  position: absolute; }
 
 /* 
  * Duotone Themes
@@ -1094,6 +1070,101 @@ body.c4aa-duotone .post .post-thumbnail:hover img,
   box-shadow: 0.5em 0 0 rgba(14, 13, 12, 0.8), -0.5em 0 0 rgba(14, 13, 12, 0.8);
   box-decoration-break: clone;
   color: var(--color-brandWhite); }
+
+/*
+This is a bunch of necessary, highly specific overrides
+to clean up the positioning of the featured post thumbnail 
+in single post and page headers.
+*/
+.site-header.featured-image {
+  justify-content: flex-start !important; }
+
+.site-header.featured-image .site-branding-container {
+  margin-bottom: unset; }
+
+.site-featured-image {
+  position: relative;
+  flex-grow: 1;
+  display: flex; }
+
+.site-header.featured-image .site-featured-image .entry-header {
+  display: flex;
+  flex-direction: column; }
+
+.site-header.featured-image .site-featured-image .entry-header .entry-title {
+  margin-top: auto; }
+
+.site-header.featured-image .site-featured-image .entry-header .entry-meta {
+  margin-top: auto; }
+
+.site-featured-image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: relative !important;
+  transform: initial !important;
+  z-index: initial !important; }
+
+.site-featured-image .post-thumbnail {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.site-featured-image .entry-header {
+  position: absolute;
+  bottom: 0; }
+
+/*********************************/
+/* Filter Child Image Algorithm */
+/*********************************/
+/* 
+   Used only on post thumbnails 
+   class is added in a theme
+   hook in functions.php 
+*/
+.a-filter-child-img {
+  background-color: var(--duotone-base);
+  overflow: hidden;
+  position: relative;
+  transition: background-color 250ms ease; }
+
+.a-filter-child-img img {
+  padding: var(--duotone-spacing);
+  filter: grayscale(100%) contrast(1) blur(var(--duotone-blur));
+  mix-blend-mode: var(--duotone-bg-blend);
+  object-fit: cover;
+  opacity: var(--duotone-opacity);
+  position: relative;
+  width: 100%;
+  transition: mix-blend-mode filter opacity 250ms ease-in-out; }
+
+.a-filter-child-img::before {
+  background-color: var(--duotone-foreground);
+  bottom: 0;
+  content: "" !important;
+  pointer-events: none;
+  height: 100%;
+  left: 0;
+  mix-blend-mode: var(--duotone-fg-blend);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
+
+/* Hover state - only on archive */
+.archive .a-filter-child-img:hover {
+  background-color: initial;
+  opacity: 1; }
+
+.archive .a-filter-child-img:hover::before {
+  background-color: initial; }
+
+.archive .a-filter-child-img:hover img {
+  filter: none;
+  mix-blend-mode: normal;
+  opacity: 1; }
 
 /* 
  * Title Effects
