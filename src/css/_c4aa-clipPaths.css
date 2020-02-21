@@ -75,9 +75,9 @@ header:not(.featured-image) h1.entry-title,
 		0 0, 
 		100% 0, 
 		100% 
-		calc( 100% - ( var( --bottomRightY ) * 2px ) ),
+		calc( 100% - ( var( --bottomRightY ) * 3px ) ),
 		0 
-		calc( 100% - ( var( --bottomLeftY ) * 2px ) )
+		0
 	);
 
 	transform: initial;
@@ -145,7 +145,7 @@ h4.is-style-c4aa-clipPath-heading {
 
 	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
 	h3.is-style-c4aa-clipPath-heading {
-		max-width: 50%;
+		width: max-content;
 	}
 
 	.entry .entry-content > h4.is-style-c4aa-clipPath-heading,
