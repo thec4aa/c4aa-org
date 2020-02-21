@@ -130,7 +130,7 @@ h4.is-style-c4aa-clipPath-heading {
 
 	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
 	h3.is-style-c4aa-clipPath-heading {
-		max-width: 50%;
+		width: max-content;
 	}
 
 	.entry .entry-content > h4.is-style-c4aa-clipPath-heading,
