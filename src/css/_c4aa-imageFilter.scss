@@ -35,8 +35,9 @@
 	@include a-filter-child-img_before;
 }
 
-// No padding on header images
-.site-featured-image {
+// No padding on header images or in image blocks
+.site-featured-image,
+.wp-block-image {
 	--duotone-spacing: 0;
 }
 
@@ -55,6 +56,13 @@
 	box-shadow: .5em 0 0 hsla(36, 6%, 5%, 0.8), -.5em 0 0 hsla(36, 6%, 5%, 0.8);
 	box-decoration-break: clone;
 	color: var(--color-brandWhite);
+}
+
+// Force image caption to display on top of filtered images
+.wp-block-image figcaption {
+	background-color: inherit;
+	z-index: 1;
+	position: relative;
 }
 
 /*
@@ -83,6 +91,7 @@ in single post and page headers.
 	flex-direction: column;
 	position: absolute;
 	margin-top: 0;
+	width: 100%;
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-title {
