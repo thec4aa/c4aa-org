@@ -1,0 +1,115 @@
+
+/* 
+* Image Filters
+*/
+
+@import 'inc/a-filter-child-img';
+@import 'inc/a-filter-child-img-themes';
+
+/*******************/
+/* Duotone Filters */
+/*******************/
+
+*[class*='is-style-c4aa-duotone'],
+.a-filter-child-img {
+	@include a-filter-child-img;
+}
+
+.archive .a-filter-child-img,
+*[class*='is-style-c4aa-duotone'] {
+	@include a-filter-child-img-hover;
+}
+
+*[class*='is-style-c4aa-duotone'] img,
+.a-filter-child-img img {
+	@include a-filter-child-img-img;
+}
+
+*[class*='is-style-c4aa-duotone'] img,
+.archive .a-filter-child-img img {
+	@include a-filter-child-img-img-hover;
+}
+
+*[class*='is-style-c4aa-duotone']::before,
+.a-filter-child-img::before {
+	@include a-filter-child-img_before;
+}
+
+// No padding on header images
+.site-featured-image {
+	--duotone-spacing: 0;
+}
+
+/*
+ * Cover Image Simple Filter
+ */
+
+.is-style-c4aa-simple-filter {
+	filter: grayscale(100%) opacity(.85) brightness(1.1) contrast(1.5);
+}
+
+.wp-block-cover__inner-container p {
+	display: inline;
+	padding: 0em 0em;
+	background-color: hsla(36, 6%, 5%, 0.8);
+	box-shadow: .5em 0 0 hsla(36, 6%, 5%, 0.8), -.5em 0 0 hsla(36, 6%, 5%, 0.8);
+	box-decoration-break: clone;
+	color: var(--color-brandWhite);
+}
+
+/*
+This is a bunch of necessary, highly specific overrides
+to clean up the positioning of the featured post thumbnail 
+in single post and page headers.
+*/
+.site-header.featured-image {
+	justify-content: flex-start !important;
+}
+
+.site-header.featured-image .site-branding-container {
+	margin-bottom: unset;
+}
+
+.site-featured-image {
+	position: relative;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.site-header.featured-image .site-featured-image .entry-header {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin-top: 0;
+}
+
+.site-header.featured-image .site-featured-image .entry-header .entry-title {
+	margin-top: auto;
+}
+
+.site-header.featured-image .site-featured-image .entry-header .entry-meta {
+	margin-top: auto;
+}
+
+.site-featured-image img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	position: relative !important;
+	transform: initial !important;
+	z-index: initial !important;
+}
+
+.site-featured-image .post-thumbnail {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.site-featured-image .entry-header {
+	position: absolute;
+	bottom: 0;
+}

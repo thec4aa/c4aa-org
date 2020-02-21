@@ -78,18 +78,6 @@ function c4aa_webfontloader_inline_script() {
 add_action( 'wp_head', 'c4aa_webfontloader_inline_script', 0 );
 
 /**
- * Point uploads path to the staging server for local development.
- */
-
-if ( 'development' === WP_ENV ) {
-
-	add_filter('pre_option_upload_url_path', function( $upload_url_path ) {
-		return 'https://c4aa.org/wp-content/uploads';
-	});
-}
-
-
-/**
  * ACF Body Class Options
  *
  * Add a body_class according to ACF options to 
@@ -98,15 +86,10 @@ if ( 'development' === WP_ENV ) {
 
 function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
 	$image_filter = get_field( 'c4aa_image_filter' );
-	// $title_effect = get_field( 'c4aa_title_effect' );
-
-	// if ( ! empty( $title_effect ) ) {
-	// 	$classes[] = "c4aa-titleEffect($title_effect)";
-	// }
 
 	if ( is_single() || is_page() ) {
 		if ( ! empty( $image_filter ) ) {
-			$classes[] = "c4aa-duotone $image_filter";
+			$classes[] = "$image_filter";
 		}
 	}
 
@@ -121,7 +104,6 @@ add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_pag
 function c4aa_add_archive_body_class( $classes ) {
 
 	if ( is_archive() || is_search() ) {
-		$classes[] = "c4aa-duotone";
 		$classes[] = "c4aa-excerpt-grid";
 	}
 
@@ -150,38 +132,38 @@ add_filter( 'post_class', 'c4aa_add_post_class_from_acf_options' );
  */ 
 
 
-add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
-  
 function c4aa_custom_dashboard_widgets() {
-global $wp_meta_boxes;
- 
-wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'c4aa_custom_dashboard_help');
+	global $wp_meta_boxes;
+	
+	wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'c4aa_custom_dashboard_help');
 }
+add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
+
  
 function c4aa_custom_dashboard_help() {
-echo '
-	<h3 id="welcometothenewc4aatheme">Welcome to the new Center for Artistic Activism theme!</h3>
-	<p>The new theme uses Gutenberg Blocks. <a href="https://wordpress.org/gutenberg/">Get an introduction and experiment with it here.</a></p>
-	<p><strong>Good ideas:</strong></p>
-	<ul>
-		<li>➡ upload images at 1400px wide where possible</li>
-		<li>➡ use colors from the color picker</li>
-		<li>➡ If you have questions, ask Steve Lambert.</li>
-	</ul>
-
-	<p><strong>Advanced Settings:</strong></p>
+	echo '
+		<h3 id="welcometothenewc4aatheme">Welcome to the new Center for Artistic Activism theme!</h3>
+		<p>The new theme uses Gutenberg Blocks. <a href="https://wordpress.org/gutenberg/">Get an introduction and experiment with it here.</a></p>
+		<p><strong>Good ideas:</strong></p>
 		<ul>
-			<li><code>no-hyphens</code> will turn off auto-hyphenating on everything in the block.</li>
-			<li><code>c4aa-duotone</code> plus one of the following will enable duotone effects on images. 
-				<ul>
-					<li>- <code>red-and-black</code> </li>
-					<li>- <code>beige-and-black</code> </li>
-					<li>- <code>beige-and-red</code> </li>
-					<li>- <code>beige-and-grey</code> </li>
-					<li>- <code>beige-and-grey-vintage</code> </li>
-				</ul>
-				</li>
+			<li>➡ upload images at 1400px wide where possible</li>
+			<li>➡ use colors from the color picker</li>
+			<li>➡ If you have questions, ask Steve Lambert.</li>
 		</ul>
+
+		<p><strong>Advanced Settings:</strong></p>
+			<ul>
+				<li><code>no-hyphens</code> will turn off auto-hyphenating on everything in the block.</li>
+				<li><code>c4aa-duotone</code> plus one of the following will enable duotone effects on images. 
+					<ul>
+						<li>- <code>red-and-black</code> </li>
+						<li>- <code>beige-and-black</code> </li>
+						<li>- <code>beige-and-red</code> </li>
+						<li>- <code>beige-and-grey</code> </li>
+						<li>- <code>beige-and-grey-vintage</code> </li>
+					</ul>
+					</li>
+			</ul>
 	'; // end echo
 }
 
@@ -237,3 +219,34 @@ function c4aa_setup_theme_supported_features() {
 } // end c4aa_setup_theme_supported_features
 
 add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 100 );
+
+/**
+ * Override default 2019 post thumbnail. 
+ * Only change is adding the class for the image 
+ * filter CSS algorithm, a-filter-child-img
+ */
+function twentynineteen_post_thumbnail() {
+	if ( ! twentynineteen_can_show_post_thumbnail() ) {
+		return;
+	}
+
+	if ( is_singular() ) :
+		?>
+
+		<figure class="post-thumbnail a-filter-child-img">
+			<?php the_post_thumbnail(); ?>
+		</figure><!-- .post-thumbnail -->
+
+		<?php
+	else :
+		?>
+
+	<figure class="post-thumbnail a-filter-child-img">
+		<a class="post-thumbnail-inner" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+		</a>
+	</figure>
+
+		<?php
+	endif; // End is_singular().
+}

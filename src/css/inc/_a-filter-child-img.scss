@@ -1,0 +1,64 @@
+//
+// Filter Child Image Algorithm
+// https://codepen.io/laras126/pen/Rwwwvjw
+//
+
+// Should follow markup like so:
+// <div class="some-wrapping-element red-and-black">
+// 		<div class="a-filter-child-img">
+// 			<img src="img.png">
+// 		</div>
+// </div>
+
+@mixin a-filter-child-img {
+	background-color: var(--duotone-base);
+	overflow: hidden;
+	padding: var(--duotone-spacing);
+	position: relative;
+	transition: background-color 250ms ease;
+}
+
+	@mixin a-filter-child-img-hover {
+		&:hover {
+			background-color: initial;
+			opacity: 1;
+		}
+
+		&:hover::before {
+			display: none;
+		}
+	}
+
+@mixin a-filter-child-img_before {
+	background-color: var(--duotone-foreground);
+	bottom: 0;
+	content: "" !important;
+	pointer-events: none;
+	height: 100%;
+	left: 0;
+	mix-blend-mode: var(--duotone-fg-blend);
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+@mixin a-filter-child-img-img {
+	filter: grayscale(100%) contrast(1) blur(var(--duotone-blur));
+	mix-blend-mode: var(--duotone-bg-blend);
+	object-fit: cover;
+	opacity: var(--duotone-opacity);
+	position: relative;
+	width: 100%;
+	transition: mix-blend-mode filter opacity 250ms ease-in-out;
+}
+
+	@mixin a-filter-child-img-img-hover() {
+		&:hover {
+			filter: none;
+			mix-blend-mode: normal;
+			opacity: 1;
+		}
+	}
+
