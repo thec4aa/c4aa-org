@@ -136,10 +136,9 @@ form.give-form legend {
 .c4aa-text-logo {
 	display: inline-block;
 	background-size: cover;
-	height: 44px;
-	width: 210px;
+	height: 0;
+	width: 0;
 	margin-right: 10px;
-	margin-left: 10px;
 }
 
 .site-title {
@@ -200,7 +199,7 @@ form.give-form legend {
 	}
 
 	/* center logo vertically on branding-container*/
-	.site-logo{
+	.site-logo {
 		margin-top: .5rem;
 	}
 
@@ -227,6 +226,11 @@ form.give-form legend {
 		min-height: 5rem;
 		flex-wrap: nowrap;
 		justify-content: space-evenly;
+	}
+
+	.c4aa-text-logo {
+		height: 44px;
+		width: 210px;
 	}
 
 	/* place navigtation between logos and align vertically */
