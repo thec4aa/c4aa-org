@@ -138,7 +138,7 @@ h2:before, .entry .entry-title:before {
 
 /* Remove H1 from home */
 
-body.home .entry-header h1.entry-title {
+body.home .entry-header {
 	position:absolute;
 	left: -10000px;
 	top: auto;
@@ -168,6 +168,11 @@ body.home .entry-header h1.entry-title {
 	color: white;
 }
 
+// Remove margins from homepage video block
+.home .entry-content .wp-block-cover:first-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 
 /* Image Filter Setup */
 
