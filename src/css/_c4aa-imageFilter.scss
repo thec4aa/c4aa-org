@@ -35,6 +35,11 @@
 	@include a-filter-child-img_before;
 }
 
+// No padding on header images
+.site-featured-image {
+	--duotone-spacing: 0;
+}
+
 /*
  * Cover Image Simple Filter
  */
@@ -69,11 +74,15 @@ in single post and page headers.
 	position: relative;
 	flex-grow: 1;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .site-header.featured-image .site-featured-image .entry-header {
 	display: flex;
 	flex-direction: column;
+	position: absolute;
+	margin-top: 0;
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-title {
