@@ -124,7 +124,7 @@ form.give-form legend {
 
 .site-branding {
 	display: flex;
-	flex-wrap: wrap;
+	align-items: center;
 }
 
 /* prevent menu items from wrapping mid word */
@@ -197,17 +197,6 @@ form.give-form legend {
 	.site-branding {
 		margin: 0;
 	}
-
-	/* center logo vertically on branding-container*/
-	.site-logo {
-		margin-top: .5rem;
-	}
-
-	/* center site-title vertically on branding-container */
-	.site-title,
-	.featured-image .site-title {
-		margin-top: 1.5rem;
-	}
 	
 	/* override parent theme logo positioning */
 	.site-logo {
@@ -235,7 +224,6 @@ form.give-form legend {
 
 	/* place navigtation between logos and align vertically */
 	#site-navigation {
-		margin-top: 2rem;
 		width: auto;
 		order: 2;
 	}
