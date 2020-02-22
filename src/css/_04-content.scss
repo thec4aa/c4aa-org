@@ -124,7 +124,7 @@ form.give-form legend {
 
 .site-branding {
 	display: flex;
-	flex-wrap: wrap;
+	align-items: center;
 }
 
 /* prevent menu items from wrapping mid word */
@@ -136,8 +136,8 @@ form.give-form legend {
 .c4aa-text-logo {
 	display: inline-block;
 	background-size: cover;
-	height: 44px;
-	width: 210px;
+	height: 0;
+	width: 0;
 	margin-right: 10px;
 }
 
@@ -190,22 +190,12 @@ form.give-form legend {
 #site-navigation {
 	width: 100%;
 	order: 3;
+	margin-right: auto;
 }
 
 @media( min-width: 768px )  {
 	.site-branding {
 		margin: 0;
-	}
-
-	/* center logo vertically on branding-container*/
-	.site-logo{
-		margin-top: .5rem;
-	}
-
-	/* center site-title vertically on branding-container */
-	.site-title,
-	.featured-image .site-title {
-		margin-top: 1.5rem;
 	}
 	
 	/* override parent theme logo positioning */
@@ -227,9 +217,13 @@ form.give-form legend {
 		justify-content: space-evenly;
 	}
 
+	.c4aa-text-logo {
+		height: 44px;
+		width: 210px;
+	}
+
 	/* place navigtation between logos and align vertically */
 	#site-navigation {
-		margin-top: 2rem;
 		width: auto;
 		order: 2;
 	}

@@ -81,8 +81,9 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 }
 
 .main-navigation .main-menu > li {
-	padding-right: 1rem;
-	padding-bottom: 0.5rem;
+	padding-left: 1rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
 	display: inline-block;
 }
 
@@ -138,7 +139,7 @@ h2:before, .entry .entry-title:before {
 
 /* Remove H1 from home */
 
-body.home .entry-header h1.entry-title {
+body.home .entry-header {
 	position:absolute;
 	left: -10000px;
 	top: auto;
@@ -168,6 +169,11 @@ body.home .entry-header h1.entry-title {
 	color: white;
 }
 
+// Remove margins from homepage video block
+.home .entry-content .wp-block-cover:first-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 
 /* Image Filter Setup */
 
