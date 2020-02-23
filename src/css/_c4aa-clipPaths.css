@@ -127,6 +127,7 @@ h2:before.is-style-c4aa-clipPath-heading,
 
 h3.is-style-c4aa-clipPath-heading {
 	background: var( --color-brandBlack );
+	display: inline-block;
 }
 
 h4.is-style-c4aa-clipPath-heading {
@@ -145,7 +146,7 @@ h4.is-style-c4aa-clipPath-heading {
 
 	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
 	h3.is-style-c4aa-clipPath-heading {
-		width: max-content;
+
 	}
 
 	.entry .entry-content > h4.is-style-c4aa-clipPath-heading,
