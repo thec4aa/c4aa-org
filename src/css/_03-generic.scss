@@ -447,7 +447,7 @@ input[type="radio"]:checked + label::before {
 	font-family: Georgia, serif;
 
 	.wf-active & {
-		font-family: 'roboto', Georgia, sans-serif;
+		font-family: 'roboto', Georgia, serif;
 	}
 }
 
@@ -477,7 +477,7 @@ input[type="radio"]:checked + label::before {
 	padding-bottom: 0.75rem;
 
 	.wf-active & {
-		font-family: 'roboto', Georgia, sans-serif;
+		font-family: 'roboto', Georgia, serif;
 	}
 }
 
