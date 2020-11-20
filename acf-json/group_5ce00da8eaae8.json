@@ -46,7 +46,7 @@
             "choices": {
                 "red-banner": "Red Banner",
                 "black-banner": "Black Banner",
-                "default": "Default"
+                "no-effect": "No Effect (white)"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -80,5 +80,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1605906116
+    "modified": 1605906789
 }
