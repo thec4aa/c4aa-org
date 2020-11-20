@@ -57,6 +57,10 @@ body strong {
 	}
 }
 
+/***********/
+/* Headers */
+/***********/
+
 h1, 
 h2, 
 h3,
@@ -84,4 +88,318 @@ h6 {
 
 		font-family: 'roboto', Georgia, serif;
 	}
+}
+
+header.featured-image h1.entry-title {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+h1:before,
+h2:before, .entry .entry-title:before {
+	content: none;
+}
+
+.entry .entry-content > h2 {
+	margin-left: -1.5rem;
+	margin-top: calc( 5vw + 30px );
+	margin-bottom: calc( 3vw + 30px );
+}
+
+
+@media only screen and (min-width: 768px) {
+	.entry .entry-content > h2 {
+		margin-left: -1rem;
+	}
+
+	.entry .entry-content > h3 {
+
+	}
+}
+
+/* prevent words from breaking in columns */
+.wp-block-column h4 {
+	word-break: normal;
+}
+
+
+/**********************************/
+/* Main Menu / Branding Container */
+/**********************************/
+
+/* style containers */
+.featured-image .site-branding-container,
+.site-header:not(.featured-image) {
+	background-color:  #fff;
+	z-index: 10;
+}
+
+.featured-image .site-branding-container,
+.site-header {
+	padding: 1rem;
+}
+
+.site-branding {
+	display: flex;
+	align-items: center;
+}
+
+/* prevent menu items from wrapping mid word */
+.site-branding ul li {
+	white-space: nowrap;
+}
+
+/* stile the text-logo image */
+.c4aa-text-logo {
+	display: inline-block;
+	background-size: cover;
+	height: 0;
+	width: 0;
+	margin-right: 10px;
+}
+
+.site-title {
+	margin: 0;
+}
+
+/* style text and icon logo hover */
+.site-logo .custom-logo-link:hover, 
+.site-logo .custom-logo-link:active, 
+.site-logo .custom-logo-link:focus,
+.site-header.featured-image .custom-logo-link:hover,
+.site-header.featured-image .custom-logo-link:active,
+.site-header.featured-image .custom-logo-link:focus,
+.c4aa-text-logo:hover,
+.c4aa-text-logo:active,
+.c4aa-text-logo:hover:focus {
+	box-shadow: none;
+	opacity: 0.7;
+}
+
+/* style menu items text  */
+.site-header.featured-image .main-navigation a, 
+.site-header.featured-image .main-navigation a + svg, 
+.site-header.featured-image .social-navigation a, 
+.site-header.featured-image .site-featured-image a,
+.main-navigation .main-menu > li > a, 
+.main-navigation .main-menu > li .svg-icon  {
+	color:  var( --color-brandBlack );
+}
+
+.site-header.featured-image .main-navigation a:hover, 
+.site-header.featured-image .main-navigation a:active, 
+.site-header.featured-image .main-navigation a + svg:hover, 
+.site-header.featured-image .main-navigation a + svg:active, 
+.site-header.featured-image .social-navigation a:hover, 
+.site-header.featured-image .social-navigation a:active, 
+.site-header.featured-image .site-featured-image a:hover 
+.site-header.featured-image .site-featured-image a:active {
+	color:  var( --color-brandRed );
+	opacity: 1;
+}
+
+.main-menu li {
+	font-size: 1rem;
+}
+
+
+/* place navigation at bottom of container*/
+#site-navigation {
+	width: 100%;
+	order: 3;
+	margin-right: auto;
+}
+
+@media( min-width: 768px )  {
+	.site-branding {
+		margin: 0;
+	}
+	
+	/* override parent theme logo positioning */
+	.site-logo {
+		position: static;
+	}
+}
+
+@media( min-width: 1000px ) {
+	.site-branding {
+		margin: 0 calc(10% + 60px);
+	}
+}
+
+@media( min-width: 1260px )  {
+	.site-branding {
+		min-height: 5rem;
+		flex-wrap: nowrap;
+		justify-content: space-evenly;
+	}
+
+	.c4aa-text-logo {
+		height: 44px;
+		width: 210px;
+	}
+
+	/* place navigtation between logos and align vertically */
+	#site-navigation {
+		width: auto;
+		order: 2;
+	}
+
+	/* move logo to the right */
+	.site-logo {
+		order: 3;
+	}
+}
+
+
+/**************/
+/* Navigation */
+/**************/
+
+.main-navigation .main-menu > li > a,
+.main-navigation .main-menu > li .svg-icon {
+	color: var( --color-brandRed );
+}
+
+.main-navigation .main-menu > li {
+	padding-left: 1rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	display: inline-block;
+}
+
+.main-navigation .main-menu > li a {
+	text-transform: initial;
+}
+
+.main-navigation .sub-menu > li > a:hover {
+	background-color: var( --color-brandGrey );
+}
+
+.main-navigation > div {
+	display: block;
+}
+
+.main-navigation > .main-menu-more {
+	display: none; // not using this feature.
+}
+
+
+/******************/
+/* Featured Image */
+/******************/
+
+/* Removes icons from entry-meta - keeping them for now */
+/* .site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
+	display: none;
+}*/
+
+.site-header.featured-image {
+	margin-bottom: 0;
+	text-shadow: initial;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.site-header.featured-image .site-featured-image .entry-header .entry-title::before {
+	height: 0;
+}
+
+.site-header.featured-image {
+	min-height: 80vh;
+	padding: 0;
+}
+
+.featured-image .site-description {
+	color: white;
+}
+
+/* remove margin under featured image (so we can put the first block right under) */
+.site-header.featured-image {
+	margin-bottom: 0rem;
+}
+
+/* Post Meta Data */
+.site-header.featured-image .site-featured-image .entry-header {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.site-header.featured-image .entry-title {
+	padding-bottom: 3rem;
+}
+
+.site-header.featured-image .entry-meta {
+	background-color: var( --duotone-foreground ); 
+	color: var( --color-brandBeige);
+	font-size: 0.75rem; 
+	font-weight: 500;
+	margin-top: auto;
+	padding: 0.75rem;
+	width: 100%;
+}
+
+/* remove space between blog quotes and featured image */
+.entry-content .wp-block-pullquote:first-child {
+	margin-top: 0;
+}
+
+
+/**********/
+/* Footer */
+/**********/
+
+.entry .entry-footer {
+	color: var( --color-brandBlack);
+}
+
+.cc-logo {
+	width: .66rem;
+	margin-right: .1rem;
+}
+
+.site-info > * {
+	color: var( --color-brandRed );
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: .14em;
+	font-family: Arial, sans-serif;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
+}
+
+.c4aa-magic-hand {
+	color: var( --color-brandRed );;
+}
+
+/* Footer Widgets */
+
+.site-footer .widget-title {
+	color: var( --color-brandWhite )
+}
+
+.widget ul {
+	margin-left: 1rem;
+}
+
+.widget-area ul li {
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1rem;
+	font-family: Georgia, serif;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
+}
+
+.widget-area ul li a {
+	color:  var( --color-brandBlack );
+}
+
+.widget-area ul li a:hover,
+.widget-area ul li a:visited {
+	color:  var( --color-brandGrey );
 }

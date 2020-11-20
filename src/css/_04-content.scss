@@ -61,6 +61,76 @@
 
 }
 
+/***************/
+/* Form Fields */
+/***************/
+
+/* text based inputs */
+
+input[type="text"], 
+input[type="email"], 
+input[type="url"], 
+input[type="password"], 
+input[type="search"], 
+input[type="number"], 
+input[type="tel"], 
+input[type="date"], 
+input[type="month"], 
+input[type="week"], 
+input[type="time"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+textarea {
+	background-color:  var( --color-brandWhite );
+	border-color: var( --color-brandGrey );
+	max-width: 100%;
+}
+
+/* field sets */
+
+fieldset {
+	border: none;
+}
+
+form.give-form legend,
+form[id*="give-form"] legend,
+legend:not(.give-hidden) {
+	color: var( --color-brandBeige );
+	background-color: var( --color-brandBlack );
+	font-weight: bold;
+	margin-left: -2rem;
+	text-transform: uppercase;
+}
+
+/* radio buttons */
+
+input[type="radio"] {
+	height: 0;
+	opacity: 0;
+	width: 0;
+}
+
+input[type="radio"] + label {
+	margin-top: -1rem;
+}
+
+input[type="radio"] + label::before {
+	content: ' ';
+	background-color: transparent;
+	border: 2px solid var( --color-brandBlack );
+	border-radius: 1000px;
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	margin-right: 0.5rem;
+}
+
+input[type="radio"]:checked + label::before {
+	background-color: var( --color-brandWhite );
+	border: 6px solid var( --color-brandRed );
+}
+
+
 /****************/
 /* Donate Form */
 /***************/
@@ -82,6 +152,10 @@ form[id*="give-form"] .give-cs-mini-dropdown-icon::before {
 form[id*="give-form"] legend,
 form.give-form legend {
 	background-color: var(--color-brandBlack);
+}
+
+form[id*="give-form"] #give-donation-level-radio-list > li {
+	display: inline-flex;
 }
 
 .give-btn,
@@ -106,217 +180,175 @@ form.give-form legend {
 	font-size: 2rem;
 }
 
-/****************************************/
-/* Main Menu / Branding Container */
-/****************************************/
+/*******************/
+/* Default Buttons */
+/*******************/
 
-/* style containers */
-.featured-image .site-branding-container,
-.site-header:not(.featured-image) {
-	background-color:  #fff;
-	z-index: 10;
+button, 
+.button, 
+.entry .button, 
+.entry .entry-content .wp-block-file .wp-block-file__button,
+.entry .entry-content .wp-block-button .wp-block-button__link,
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+	background-color: var( --color-brandRed );
+	border-radius: 0;
+	box-shadow: 5px 5px 0px var( --color-brandGrey );
+		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
+		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
+	color: var(--color-brandWhite);
+	font-family: Georgia, serif;
+	padding: .7rem;
+	transition: all 150ms ease-in-out;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
 }
 
-.featured-image .site-branding-container,
-.site-header {
-	padding: 1rem;
-}
-
-.site-branding {
-	display: flex;
-	align-items: center;
-}
-
-/* prevent menu items from wrapping mid word */
-.site-branding ul li {
-	white-space: nowrap;
-}
-
-/* stile the text-logo image */
-.c4aa-text-logo {
-	display: inline-block;
-	background-size: cover;
-	height: 0;
-	width: 0;
-	margin-right: 10px;
-}
-
-.site-title {
-	margin: 0;
-}
-
-/* style text and icon logo hover */
-.site-logo .custom-logo-link:hover, 
-.site-logo .custom-logo-link:active, 
-.site-logo .custom-logo-link:focus,
-.site-header.featured-image .custom-logo-link:hover,
-.site-header.featured-image .custom-logo-link:active,
-.site-header.featured-image .custom-logo-link:focus,
-.c4aa-text-logo:hover,
-.c4aa-text-logo:active,
-.c4aa-text-logo:hover:focus {
+button.main-menu-more-toggle {
 	box-shadow: none;
-	opacity: 0.7;
 }
 
-/* style menu items text  */
-.site-header.featured-image .main-navigation a, 
-.site-header.featured-image .main-navigation a + svg, 
-.site-header.featured-image .social-navigation a, 
-.site-header.featured-image .site-featured-image a,
-.main-navigation .main-menu > li > a, 
-.main-navigation .main-menu > li .svg-icon  {
-	color:  var( --color-brandBlack );
+button:hover,
+.button:hover, 
+.wp-block-file__button:hover,
+.entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
+input[type="button"]:hover, 
+input[type="reset"]:hover, 
+input[type="submit"]:hover {
+	background-color: var( --color-brandRed );
+	box-shadow: none;
+	filter: brightness(87%);
 }
 
-.site-header.featured-image .main-navigation a:hover, 
-.site-header.featured-image .main-navigation a:active, 
-.site-header.featured-image .main-navigation a + svg:hover, 
-.site-header.featured-image .main-navigation a + svg:active, 
-.site-header.featured-image .social-navigation a:hover, 
-.site-header.featured-image .social-navigation a:active, 
-.site-header.featured-image .site-featured-image a:hover 
-.site-header.featured-image .site-featured-image a:active {
-	color:  var( --color-brandRed );
-	opacity: 1;
-}
-
-.main-menu li {
-	font-size: 1rem;
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color), 
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color), 
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) {
+	color: var( --color-brandRed );
+    border-color: var( --color-brandRed );
 }
 
 
-/* place navigation at bottom of container*/
-#site-navigation {
-	width: 100%;
-	order: 3;
-	margin-right: auto;
+
+/*********************/
+/* Accordion Buttons */
+/*********************/
+
+.c-accordion__title--button {
+	font-style: italic;
+	text-decoration: underline;
 }
 
-@media( min-width: 768px )  {
-	.site-branding {
-		margin: 0;
-	}
-	
-	/* override parent theme logo positioning */
-	.site-logo {
-		position: static;
-	}
+.c-accordion__title--button::after {
+	content: "▼";
+	color: var( --color-brandRed );
+	right: auto;
+	margin-left: 1em;
 }
 
-@media( min-width: 1000px ) {
-	.site-branding {
-		margin: 0 calc(10% + 60px);
-	}
-}
+.is-open .c-accordion__title::after {
+    content: "▲";
+    }
 
-@media( min-width: 1260px )  {
-	.site-branding {
-		min-height: 5rem;
-		flex-wrap: nowrap;
-		justify-content: space-evenly;
-	}
 
-	.c4aa-text-logo {
-		height: 44px;
-		width: 210px;
-	}
+/***************/
+/* Blockquotes */
+/***************/
 
-	/* place navigtation between logos and align vertically */
-	#site-navigation {
-		width: auto;
-		order: 2;
-	}
+blockquote.wp-block-quote {
+	background-color: var( --color-brandRed );
+	color: var( --color-brandBeige );
+	font-family: Georgia, serif;
+	font-weight: 900;
+	margin: -2.25em;
+	border: none;
+	transform: rotate(-.5deg);
+	mix-blend-mode: multiply;
 
-	/* move logo to the right */
-	.site-logo {
-		order: 3;
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
 	}
 }
 
-
-
-/* 
- * Block Color Palette Colors
- *
- * Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
- * adds a hypen in front of the 4 in CSS classes, and it is cleaner to omit it.
- */
-
-/* Beige */
-
-.entry .entry-content *[class*='has-'].has-caa-beige-background-color {
-	background-color: var( --color-brandBeige);
+.entry .entry-content .wp-block-quote,
+.entry .entry-content .wp-block-quote:not(.is-large), 
+.entry .entry-content .wp-block-quote:not(.is-style-large) {
+	padding: 3em;
 }
 
-.entry .entry-content *[class*='has-'].has-caa-beige-color {
-	color: var( --color-brandBeige);
+.entry .entry-content .wp-block-quote p {
+	font-style: italic;
 }
 
-/* Black */
-
-.entry .entry-content *[class*='has-'].has-caa-black-background-color {
-	background-color: var( --color-brandBlack);
+blockquote.wp-block-quote.is-style-large {
+	color: var( --color-brandWhite );
 }
 
-.entry .entry-content *[class*='has-'].has-caa-black-color {
-	color: var( --color-brandBlack);
+blockquote.wp-block-quote cite {
+	color: var( --color-brandWhite );
+	font-weight: 700;
 }
 
-/* Blue */
-
-.entry .entry-content *[class*='has-'].has-caa-blue-background-color {
-	background-color: var( --color-brandBlue);
+blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
+	color: var( --color-brandWhite );
 }
 
-.entry .entry-content *[class*='has-'].has-caa-blue-color {
-	color: var( --color-brandBlue);
+
+/********************/
+/* Latests Posts    */
+/********************/
+
+.entry .entry-content .wp-block-latest-posts.is-grid li {
+	border-top: none;
+	padding-top: 0;
 }
 
-/* Grey */
+.entry .entry-content .wp-block-latest-posts li {
+	color: var( --color-brandBlack );
+	font-family: Georgia, serif;
+	font-size: 1em;
+	line-height: 1.2;
+	padding-bottom: 0.75rem;
 
-.has-caa-grey-background-color {
-	background-color: var( --color-brandGrey);
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
 }
 
-.entry .entry-content *[class*='has-'].has-caa-grey-color {
-	color: var( --color-brandGrey);
+.entry .entry-content .wp-block-latest-posts li,
+.wp-block-latest-posts__post-date  {
+	color: var( --color-brandBlack );
 }
 
-/* Red */
-
-.entry .entry-content *[class*='has-'].has-caa-red-background-color {
-	background-color: var( --color-brandRed);
+.wp-block-latest-posts__post-date {
+	border-bottom: 1px solid var( --color-brandGrey );
+	padding-bottom: .5em;
+	padding-top: .5em;
 }
 
-.entry .entry-content *[class*='has-'].has-caa-red-color {
-	color: var( --color-brandRed);
+.entry .entry-content .wp-block-latest-posts li > a {
+	font-size: calc( 18px * 1.125 );
+	text-transform: uppercase;
+	font-family: 'metropolis', sans-serif;
+	font-weight: 900;
+	letter-spacing: .14em;
 }
 
-/* White */
-
-.entry .entry-content *[class*='has-'].has-caa-white-background-color {
-	background-color: var( --color-brandWhite);
+.wp-block-latest-posts__post-excerpt {
+	padding-top: .5em;
+	font-weight: 400;
 }
 
-.entry .entry-content *[class*='has-'].has-caa-white-color {
-	color: var( --color-brandWhite);
-}
-
-/* Yellow */
-
-.entry .entry-content *[class*='has-'].has-caa-yellow-background-color {
-	background-color: var( --color-brandYellow);
-}
-
-.entry .entry-content *[class*='has-'].has-caa-yellow-color {
-	color: var( --color-brandYellow);
+.wp-block-latest-posts__post-excerpt a {
+	display: block;
+	padding-top: .5em;
+	text-transform: capitalize;
 }
 
 
 
-// Footer
 
-.widget ul {
-	margin-left: 1rem;
-}
