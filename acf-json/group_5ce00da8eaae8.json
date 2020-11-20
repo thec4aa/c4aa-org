@@ -16,6 +16,7 @@
                 "id": ""
             },
             "choices": {
+                "none": "none",
                 "red-and-black": "red-and-black",
                 "beige-and-black": "beige-and-black",
                 "beige-and-red": "beige-and-red",
@@ -76,7 +77,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1562336520
+    "modified": 1605899095
 }

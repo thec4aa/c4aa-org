@@ -45,7 +45,7 @@
 }
 
 @mixin a-filter-child-img-img {
-	filter: grayscale(100%) contrast(1) blur(var(--duotone-blur));
+	filter: unquote("grayscale(var(--duotone-grayscale))") contrast(var(--duotone-contrast)) blur(var(--duotone-blur));
 	mix-blend-mode: var(--duotone-bg-blend);
 	object-fit: cover;
 	opacity: var(--duotone-opacity);
