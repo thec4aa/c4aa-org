@@ -45,6 +45,7 @@
             },
             "choices": {
                 "red-banner": "Red Banner",
+                "black-banner": "Black Banner",
                 "default": "Default"
             },
             "allow_null": 0,
@@ -79,5 +80,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1605905267
+    "modified": 1605906116
 }

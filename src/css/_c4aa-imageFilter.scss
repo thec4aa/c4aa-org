@@ -126,26 +126,3 @@ in single post and page headers.
 	position: absolute;
 	bottom: 0;
 }
-
-// --- TEMP - needs to be organized ---
-
-.red-banner .site-featured-image .entry-title {
-	--rotate:-1.000; --topLeftX:11; --topLeftY:12; --topRightX:19; --topRightY:18; --bottomLeftX:12; --bottomLeftY:14; --bottomRightX:11; --bottomRightY:11;
-	background-color: var( --color-brandRed );
-	padding: 1rem;
-	clip-path: polygon(calc( var( --topLeftX ) * 1px) calc( var( --topLeftY ) * 1px), calc( 100% - ( var( --topRightX ) * 1px )) calc( var( --topRightY ) * 1px), calc( 100% - ( var( --bottomRightX ) * 1px )) calc( 100% - ( var( --bottomRightY ) * 1px )), calc( var( --bottomLeftX ) * 1px) calc( 100% - ( var( --bottomLeftY ) * 1px )));
-	transform: rotate(calc( var( --rotate) * 1deg));
-}
-
-.red-banner .site-header.featured-image .site-featured-image .entry-header {
-	align-items: center;
-}
-
-.red-banner .site-header.featured-image .site-featured-image .entry-meta {
-	background-color: var( --color-brandBlack );
-}
-
-// Something here is messing with height...
-h1:not(.site-title)::before, h2::before {
-	display: none;
-}

@@ -23,21 +23,21 @@
   /* Fallback */
   --color-brandYellow: hsla(55, 100%, 46%, 0.9);
   /* Clip Path Varaibles */
-  --topLeftX: 0;
-  --topLeftY: 0;
-  --topRightX: 0;
-  --topRightY: 7;
-  --bottomRightX: 0;
-  --bottomRightY: 0;
-  --bottomLeftX: 0;
-  --bottomLeftY: 0;
-  --rotate: 0; }
+  --rotate: -1.000;
+  --topLeftX: 11;
+  --topLeftY: 12;
+  --topRightX: 19;
+  --topRightY: 18;
+  --bottomLeftX: 12;
+  --bottomLeftY: 14;
+  --bottomRightX: 11;
+  --bottomRightY: 12; }
 
-/* 
+/*
  * Accessibility Labels
  *
  * Hide text from the screen while still providing label for screen reader
- * 
+ *
  */
 .c4aa-sr-only {
   position: absolute;
@@ -1182,49 +1182,28 @@ in single post and page headers.
   position: absolute;
   bottom: 0; }
 
-.red-banner .site-featured-image .entry-title {
-  --rotate:-1.000;
-  --topLeftX:11;
-  --topLeftY:12;
-  --topRightX:19;
-  --topRightY:18;
-  --bottomLeftX:12;
-  --bottomLeftY:14;
-  --bottomRightX:11;
-  --bottomRightY:11;
-  background-color: var(--color-brandRed);
+/*
+ * Title Effects
+ */
+[class*="banner"] .site-featured-image .entry-title {
   padding: 1rem;
   clip-path: polygon(calc( var( --topLeftX ) * 1px) calc( var( --topLeftY ) * 1px), calc( 100% - ( var( --topRightX ) * 1px )) calc( var( --topRightY ) * 1px), calc( 100% - ( var( --bottomRightX ) * 1px )) calc( 100% - ( var( --bottomRightY ) * 1px )), calc( var( --bottomLeftX ) * 1px) calc( 100% - ( var( --bottomLeftY ) * 1px )));
   transform: rotate(calc( var( --rotate) * 1deg)); }
 
-.red-banner .site-header.featured-image .site-featured-image .entry-header {
-  align-items: center; }
+.black-banner .site-featured-image .entry-title {
+  background-color: var(--color-brandRed); }
+
+.black-banner .site-header.featured-image .site-featured-image .entry-meta {
+  background-color: var(--color-brandBlack); }
+
+.red-banner .site-featured-image .entry-title {
+  background-color: var(--color-brandRed); }
 
 .red-banner .site-header.featured-image .site-featured-image .entry-meta {
   background-color: var(--color-brandBlack); }
 
+.site-header.featured-image .site-featured-image .entry-header {
+  align-items: center; }
+
 h1:not(.site-title)::before, h2::before {
   display: none; }
-
-/* 
- * Title Effects
- */
-/* .c4aa-titleEffect\(red-banner\) .site-header.featured-image .site-featured-image .entry-header {
-	mix-blend-mode: multiply;
-	background-color: var( --color-brandRed );
-	
-	clip-path: polygon(100% 0px, 100% 100%, 14.03% 103.11%, 20px 2.65%);
-	padding-left: 6rem;
-	padding-right: 2rem;
-	
-	transform: translateY( calc( -100% - 3rem ) );
-	position: absolute;
-	right: 0;
-	margin-right: 0;
-}
-
-.c4aa-titleEffect\(red-banner\) .site-header.featured-image .site-featured-image .entry-title {
-	letter-spacing: 2px;
-}
-
- */
