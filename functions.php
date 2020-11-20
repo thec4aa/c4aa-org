@@ -92,10 +92,15 @@ add_action( 'wp_head', 'c4aa_webfontloader_inline_script', 0 );
 
 function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
 	$image_filter = get_field( 'c4aa_image_filter' );
+	$title_effect = get_field( 'c4aa_title_effect' );
 
 	if ( is_single() || is_page() ) {
 		if ( ! empty( $image_filter ) ) {
 			$classes[] = "$image_filter";
+		}
+
+		if ( ! empty( $title_effect ) ) {
+			$classes[] = "$title_effect";
 		}
 	}
 
