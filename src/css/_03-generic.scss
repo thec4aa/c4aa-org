@@ -32,34 +32,9 @@
 }
 
 
-
-
-
 /* prevent words from breaking in columns */
 .wp-block-column h4 {
 	word-break: normal;
-}
-
-/*************/
-/* Home Page */
-/*************/
-
-/* Remove H1 from home */
-
-body.home .entry-header {
-	position:absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-}
-
-
-/* Remove margins from homepage video block */
-.home .entry-content .wp-block-cover:first-child {
-	margin-top: 0;
-	margin-bottom: 0;
 }
 
 /* squares circular logo in header */
@@ -120,8 +95,6 @@ body.home .entry-header {
 }
 
 
-
-
 /* Allow image blocks to actually be full width */
 
 .entry .entry-content .wp-block-image {
@@ -133,10 +106,31 @@ body.home .entry-header {
 }
 
 
-
 /* Lists in Blocks */
 
 .entry-content ul li, .entry-content ol li {
 	margin: 0 0 .6em 1em;
+}
+
+/*************/
+/* Home Page */
+/*************/
+
+/* Remove H1 from home */
+
+body.home .entry-header {
+	position:absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+
+/* Remove margins from homepage video block */
+.home .entry-content .wp-block-cover:first-child {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
