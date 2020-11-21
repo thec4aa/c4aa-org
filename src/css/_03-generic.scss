@@ -144,26 +144,6 @@ body.home .entry-header {
 	overflow: hidden;
 }
 
-/* Featured Image */
-
-.site-header.featured-image {
-	margin-bottom: 0;
-	text-shadow: initial;
-	padding-top: 0;
-}
-
-.site-header.featured-image .site-featured-image .entry-header .entry-title::before {
-	height: 0;
-}
-
-.site-header.featured-image {
-	min-height: 80vh;
-	padding: 0;
-}
-
-.featured-image .site-description {
-	color: var(--color-brandWhite);;
-}
 
 // Remove margins from homepage video block
 .home .entry-content .wp-block-cover:first-child {
