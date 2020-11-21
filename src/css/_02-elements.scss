@@ -90,6 +90,14 @@ h6 {
 /* Featured Image */
 /******************/
 
+.featured-image .site-branding-container {
+	background-color: var( --color-brandBlack );
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
 .site-header.featured-image {
 	margin-bottom: 0;
 	text-shadow: initial;
