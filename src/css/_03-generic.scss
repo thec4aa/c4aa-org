@@ -32,35 +32,6 @@
 }
 
 
-/* Navigation */
-
-.main-navigation .main-menu > li > a,
-.main-navigation .main-menu > li .svg-icon {
-	color: var( --color-brandRed );
-}
-
-.main-navigation .main-menu > li {
-	padding-left: 1rem;
-	padding-top: 0.25rem;
-	padding-bottom: 0.25rem;
-	display: inline-block;
-}
-
-.main-navigation .main-menu > li a {
-	text-transform: initial;
-}
-
-.main-navigation .sub-menu > li > a:hover {
-	background-color: var( --color-brandGrey );
-}
-
-.main-navigation > div {
-	display: block;
-}
-
-.main-navigation > .main-menu-more {
-	display: none; // not using this feautre.
-}
 
 /* Headers */
 
