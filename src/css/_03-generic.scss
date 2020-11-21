@@ -295,55 +295,7 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 	display: table;
 }
 
-/* Default Buttons */
 
-button, 
-.button, 
-.entry .button, 
-.entry .entry-content .wp-block-file .wp-block-file__button,
-.entry .entry-content .wp-block-button .wp-block-button__link,
-.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"] {
-	background-color: var( --color-brandRed );
-	border-radius: 0;
-	box-shadow: 5px 5px 0px var( --color-brandGrey );
-		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-	color: var(--color-brandWhite);
-	font-family: Georgia, serif;
-	padding: .7rem;
-	transition: all 150ms ease-in-out;
-
-	.wf-active & {
-		font-family: 'roboto', Georgia, serif;
-	}
-}
-
-button.main-menu-more-toggle {
-	box-shadow: none;
-}
-
-button:hover,
-.button:hover, 
-.wp-block-file__button:hover,
-.entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
-input[type="button"]:hover, 
-input[type="reset"]:hover, 
-input[type="submit"]:hover {
-	background-color: var( --color-brandRed );
-	box-shadow: none;
-	filter: brightness(87%);
-}
-
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color), 
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color), 
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) {
-	color: var( --color-brandRed );
-    border-color: var( --color-brandRed );
-}
 
 /* Form Fields */
 
