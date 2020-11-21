@@ -86,6 +86,38 @@ h6 {
 	}
 }
 
+/***********/
+/* Headers */
+/***********/
+
+
+header.featured-image h1.entry-title {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+h1:before,
+h2:before, .entry .entry-title:before {
+	content: none;
+}
+
+.entry .entry-content > h2 {
+	margin-left: -1.5rem;
+	margin-top: calc( 5vw + 30px );
+	margin-bottom: calc( 3vw + 30px );
+}
+
+
+@media only screen and (min-width: 768px) {
+	.entry .entry-content > h2 {
+		margin-left: -1rem;
+	}
+
+	.entry .entry-content > h3 {
+
+	}
+}
+
 /**************/
 /* Navigation */
 /**************/
