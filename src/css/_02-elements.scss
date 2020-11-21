@@ -109,6 +109,15 @@ h6 {
 	color: var(--color-brandWhite);;
 }
 
+/* Removes icons from entry-meta - keeping them for now */
+/* .site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
+	display: none;
+}*/
+
+/* remove space between blog quotes and featured image */
+.entry-content .wp-block-pullquote:first-child {
+	margin-top: 0;
+}
 
 /*******************/
 /* Default Buttons */
