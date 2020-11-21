@@ -40,6 +40,10 @@
 	word-break: normal;
 }
 
+/*************/
+/* Home Page */
+/*************/
+
 /* Remove H1 from home */
 
 body.home .entry-header {
@@ -56,24 +60,6 @@ body.home .entry-header {
 .home .entry-content .wp-block-cover:first-child {
 	margin-top: 0;
 	margin-bottom: 0;
-}
-
-/* Image Filter Setup */
-
-.site-header.featured-image .site-featured-image .entry-header {
-	position: relative;
-	z-index: 9;
-	font-size: calc( 1.5vw + 20px );
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.site-header.featured-image .site-branding-container::after, .site-header.featured-image .site-featured-image::before, .site-header.featured-image .site-featured-image::after, .site-header.featured-image::after {
-	all: unset;
-}
-
-.site-header.featured-image .site-branding .site-title, .site-header.featured-image .main-navigation a::after, .site-header.featured-image .main-navigation .main-menu > li.menu-item-has-children::after, .site-header.featured-image .main-navigation li, .site-header.featured-image .social-navigation li {
-	color: var( --color-brandRed );
 }
 
 /* squares circular logo in header */
