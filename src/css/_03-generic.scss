@@ -505,20 +505,3 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 	font-weight: 700;
 }
 
-/* Accordion Buttons */
-
-.c-accordion__title--button {
-	font-style: italic;
-	text-decoration: underline;
-}
-
-.c-accordion__title--button::after {
-	content: "▼";
-	color: var( --color-brandRed );
-	right: auto;
-	margin-left: 1em;
-}
-
-.is-open .c-accordion__title::after {
-    content: "▲";
-    }
