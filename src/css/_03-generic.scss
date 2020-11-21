@@ -166,7 +166,7 @@ body.home .entry-header {
 }
 
 .featured-image .site-description {
-	color: white;
+	color: var(--color-brandWhite);;
 }
 
 // Remove margins from homepage video block
@@ -198,9 +198,10 @@ body.home .entry-header {
 	border-radius: 0%;
 }
 
-/* de-hyphenate large pullquotes */
-.wp-block-pullquote.alignwide *, .wp-block-pullquote.alignfull * {
+/* de-hyphenate large pullquotes and header */
+.wp-block-pullquote.alignwide *, .wp-block-pullquote.alignfull *, header h1.entry-title {
      hyphens: manual;
+     -webkit-hyphens: none;
 }
 
 /* remove background from logo in header */
@@ -526,6 +527,11 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 	display: inline-flex;
 }
 
+/* Lists in Blocks */
+
+.entry-content ul li, .entry-content ol li {
+	margin: 0 0 .6em 1em;
+}
 
 /* Override link colors when using with background colors */
 /* Weight added so links are more visible w/o color change */

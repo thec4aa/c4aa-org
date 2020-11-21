@@ -315,8 +315,26 @@ form.give-form legend {
 
 
 
-// Footer
+/****************/
+/* Footer       */
+/****************/
 
 .widget ul {
 	margin-left: 1rem;
+}
+
+/*********************/
+/* Formiddable Forms */
+/*********************/
+
+.frm_required {
+    color: var(--color-brandRed);
+}
+
+.frm_form_field {
+    margin: 1em 0;
+}
+
+.frm_form_field input {
+    width: 100%;
 }
