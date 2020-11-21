@@ -319,6 +319,10 @@ legend:not(.give-hidden) {
 	text-transform: uppercase;
 }
 
+form[id*="give-form"] #give-donation-level-radio-list > li {
+	display: inline-flex;
+}
+
 /* radio buttons */
 
 input[type="radio"] {
