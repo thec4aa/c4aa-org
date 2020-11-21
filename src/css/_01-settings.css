@@ -138,6 +138,25 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 }
 
 
+/* Override link colors when using with background colors */
+/* Weight added so links are more visible w/o color change */
+
+.entry .entry-content .has-caa-white-color a,
+.entry .entry-content .has-caa-white-color a:hover,
+.entry .entry-content .has-caa-white-color a:visited,
+.entry .entry-content .has-caa-white-color a:active {
+	color: var( --color-brandWhite );
+	font-weight: 700;
+}
+
+.entry .entry-content .has-caa-beige-color a,
+.entry .entry-content .has-caa-beige-color a:hover,
+.entry .entry-content .has-caa-beige-color a:visited,
+.entry .entry-content .has-caa-beige-color a:active {
+	color: var( --color-brandBeige );
+	font-weight: 700;
+}
+
 /* 
  * Accessibility Labels
  *
