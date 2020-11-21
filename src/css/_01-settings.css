@@ -59,6 +59,10 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 	background-color: var( --color-brandBeige);
 }
 
+.entry .entry-footer {
+	color: var( --color-brandBlack);
+}
+
 
 /* 
  * Block Color Palette Colors
