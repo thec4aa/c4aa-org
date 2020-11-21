@@ -416,50 +416,7 @@ input[type="radio"]:checked + label::before {
 	border: 6px solid var( --color-brandRed );
 }
 
-/* Footer */
 
-.cc-logo {
-	width: .66rem;
-	margin-right: .1rem;
-}
-
-.site-info > * {
-	color: var( --color-brandRed );
-	text-transform: uppercase;
-	font-weight: 400;
-	letter-spacing: .14em;
-	font-family: Arial, sans-serif;
-
-	.wf-active & {
-		font-family: 'metropolis', sans-serif;
-	}
-}
-
-.c4aa-magic-hand {
-	color: var( --color-brandRed );;
-}
-
-/* Footer Widgets */
-
-.widget-area ul li {
-	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1rem;
-	font-family: Georgia, serif;
-
-	.wf-active & {
-		font-family: 'roboto', Georgia, serif;
-	}
-}
-
-.widget-area ul li a {
-	color:  var( --color-brandBlack );
-}
-
-.widget-area ul li a:hover,
-.widget-area ul li a:visited {
-	color:  var( --color-brandGrey );
-}
 
 /********************/
 /* Latests Posts */
