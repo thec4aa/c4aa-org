@@ -86,6 +86,7 @@ h6 {
 	}
 }
 
+
 /***********/
 /* Headers */
 /***********/
@@ -148,6 +149,49 @@ h2:before, .entry .entry-title:before {
 
 .main-navigation > .main-menu-more {
 	display: none; // not using this feautre.
+}
+
+/******************************/
+/* Site Header/Featured Image */
+/******************************/
+
+/* squares circular logo in header */
+.site-logo .custom-logo-link {
+	border-radius: 0%;
+}
+
+/* remove background from logo in header */
+.site-header.featured-image .custom-logo-link {
+	background: none;
+}
+
+/* remove margin under featured image (so we can put the first block right under) */
+.site-header.featured-image {
+	margin-bottom: 0rem;
+}
+
+/* Post Meta Data */
+.site-header.featured-image .site-featured-image .entry-header {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.site-header.featured-image  {
+	padding-bottom: 0;
+}
+
+.site-header.featured-image .entry-title {
+	padding-bottom: 3rem;
+}
+
+.site-header.featured-image .entry-meta {
+	background-color: var( --duotone-foreground ); 
+	color: var( --color-brandBeige);
+	font-size: 0.75rem; 
+	font-weight: 500;
+	margin-top: auto;
+	padding: 0.75rem;
+	width: 100%;
 }
 
 
