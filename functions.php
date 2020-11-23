@@ -1,16 +1,22 @@
 <?php
 
-/* remove  parent script that inserts ellipsis icon on mobile */ 
+/* remove  parent script that inserts ellipsis icon on mobile */
 function dequeue_priority_menu() {
 	wp_dequeue_script( 'twentynineteen-priority-menu' );
- } 
+ }
  add_action( 'wp_enqueue_scripts', 'dequeue_priority_menu', 100 );
 
 
 function c4aa_enqueue_assets() {
+	$style_path    = get_stylesheet_directory() . '/build/main.css';
+	$style_version = filemtime( $style_path );
+
+	$script_path    = get_stylesheet_directory() . '/js/clipPaths.js';
+	$script_version = filemtime( $script_path );
+
 	wp_enqueue_style( 'twentynineteen-style', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/build/main.css' );
-	wp_enqueue_script( 'c4aa-js-clipPath', get_stylesheet_directory_uri() . '/js/clipPaths.js', array(), '1.0.0', true );
+	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/build/main.css', [], $style_version );
+	wp_enqueue_script( 'c4aa-js-clipPath', get_stylesheet_directory_uri() . '/js/clipPaths.js', [], $script_version, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
@@ -24,9 +30,9 @@ function be_gutenberg_scripts() {
 	wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/css/c4aa-editorStyles.css' );
 	wp_enqueue_style( 'c4aa-imageFilter', get_stylesheet_directory_uri() . '/css/c4aa-imageFilter.css' );
 	wp_enqueue_script(
-		'be-editor', 
-		get_stylesheet_directory_uri() . '/js/editor.js', 
-		array( 'wp-blocks', 'wp-dom' ), 
+		'be-editor',
+		get_stylesheet_directory_uri() . '/js/editor.js',
+		array( 'wp-blocks', 'wp-dom' ),
 		filemtime( get_stylesheet_directory() . '/js/editor.js' ),
 		true
 	);
@@ -80,16 +86,21 @@ add_action( 'wp_head', 'c4aa_webfontloader_inline_script', 0 );
 /**
  * ACF Body Class Options
  *
- * Add a body_class according to ACF options to 
+ * Add a body_class according to ACF options to
  * provide hooks for CSS.
- */ 
+ */
 
 function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
 	$image_filter = get_field( 'c4aa_image_filter' );
+	$title_effect = get_field( 'c4aa_title_effect' );
 
 	if ( is_single() || is_page() ) {
 		if ( ! empty( $image_filter ) ) {
 			$classes[] = "$image_filter";
+		}
+
+		if ( ! empty( $title_effect ) ) {
+			$classes[] = "$title_effect";
 		}
 	}
 
@@ -99,7 +110,7 @@ add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_pag
 
 
 // Initialize Duotone on all post-thumbnails on archives. The specific color
-// scheme is set by filtering the post class below, and overriding the 
+// scheme is set by filtering the post class below, and overriding the
 // defaults via the cascade.
 function c4aa_add_archive_body_class( $classes ) {
 
@@ -125,21 +136,21 @@ add_filter( 'post_class', 'c4aa_add_post_class_from_acf_options' );
 
 /**
  * Add Dashboard Widget
- * 
- * A place for specific reference info & instructions about the theme 
+ *
+ * A place for specific reference info & instructions about the theme
  * for users of the site.
- * 
- */ 
+ *
+ */
 
 
 function c4aa_custom_dashboard_widgets() {
 	global $wp_meta_boxes;
-	
+
 	wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'c4aa_custom_dashboard_help');
 }
 add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
 
- 
+
 function c4aa_custom_dashboard_help() {
 	echo '
 		<h3 id="welcometothenewc4aatheme">Welcome to the new Center for Artistic Activism theme!</h3>
@@ -154,7 +165,7 @@ function c4aa_custom_dashboard_help() {
 		<p><strong>Advanced Settings:</strong></p>
 			<ul>
 				<li><code>no-hyphens</code> will turn off auto-hyphenating on everything in the block.</li>
-				<li><code>c4aa-duotone</code> plus one of the following will enable duotone effects on images. 
+				<li><code>c4aa-duotone</code> plus one of the following will enable duotone effects on images.
 					<ul>
 						<li>- <code>red-and-black</code> </li>
 						<li>- <code>beige-and-black</code> </li>
@@ -168,12 +179,12 @@ function c4aa_custom_dashboard_help() {
 }
 
 
-/** 
+/**
  * Block Color Palette
- * 
+ *
  * Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
  * adds a hypen in front of the 4 in CSS classes.
- * 
+ *
  * via: https://kinsta.com/blog/twenty-nineteen-theme/#block-color-palettes
  * also added in css
  */
@@ -214,15 +225,15 @@ function c4aa_setup_theme_supported_features() {
 			'slug' => 'caa-white',
 			'color' => '#fafaf9',
 		),
-	) 
+	)
 	); // end add_theme_support
 } // end c4aa_setup_theme_supported_features
 
 add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 100 );
 
 /**
- * Override default 2019 post thumbnail. 
- * Only change is adding the class for the image 
+ * Override default 2019 post thumbnail.
+ * Only change is adding the class for the image
  * filter CSS algorithm, a-filter-child-img
  */
 function twentynineteen_post_thumbnail() {

@@ -1,5 +1,5 @@
 
-/* 
+/*
 * Image Filters
 */
 
@@ -9,6 +9,10 @@
 /*******************/
 /* Duotone Filters */
 /*******************/
+
+*[class*='is-style-c4aa-duotone'] {
+	display: inline-block;
+}
 
 *[class*='is-style-c4aa-duotone'],
 .a-filter-child-img {
@@ -67,7 +71,7 @@
 
 /*
 This is a bunch of necessary, highly specific overrides
-to clean up the positioning of the featured post thumbnail 
+to clean up the positioning of the featured post thumbnail
 in single post and page headers.
 */
 .site-header.featured-image {

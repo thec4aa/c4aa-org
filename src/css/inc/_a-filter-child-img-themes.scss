@@ -1,9 +1,9 @@
-/* 
+/*
  * Duotone Themes
  *
  * The variables that change from the defaults are overridden here.
  * These must match 1 to 1 with ACF settings.
- * 
+ *
  * The first color in the class name is base, the second is the foreground.
  */
 
@@ -20,6 +20,19 @@
 	--duotone-foreground: var(--duotone-default-foreground);
 	--duotone-opacity: 1;
 	--duotone-spacing: 1%;
+	--duotone-grayscale: 100%;
+	--duotone-contrast: 1;
+}
+
+*[class*='none'] {
+	--duotone-base: initial;
+	--duotone-foreground: initial;
+	--duotone-bg-blend: initial;
+	--duotone-fg-blend: initial;
+	--duotone-opacity: initial;
+	--duotone-spacing: initial;
+	--duotone-grayscale: initial;
+	--duotone-contrast: initial;
 }
 
 *[class*='red-and-black'] {

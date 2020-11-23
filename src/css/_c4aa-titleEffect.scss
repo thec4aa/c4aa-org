@@ -1,0 +1,44 @@
+/*
+ * Title Effects
+ */
+
+[class*="banner"] .site-featured-image .entry-title {
+	padding: 1rem;
+	clip-path: polygon( calc(
+		var( --topLeftX ) * 1px) calc( var( --topLeftY ) * 1px),
+		calc( 100% - ( var( --topRightX ) * 1px )) calc( var( --topRightY ) * 1px),
+		calc( 100% - ( var( --bottomRightX ) * 1px )) calc( 100% - ( var( --bottomRightY ) * 1px )),
+		calc( var( --bottomLeftX ) * 1px) calc( 100% - ( var( --bottomLeftY ) * 1px )
+	) );
+	transform: rotate(calc( var( --rotate) * 1deg));
+}
+
+// Black banner
+
+.black-banner .site-featured-image .entry-title {
+	background-color: var( --color-brandBlack );
+}
+
+.black-banner .site-header.featured-image .site-featured-image .entry-meta {
+	background-color: var( --color-brandRed );
+}
+
+// Red banner
+
+.red-banner .site-featured-image .entry-title {
+	background-color: var( --color-brandRed );
+}
+
+.red-banner .site-header.featured-image .site-featured-image .entry-meta {
+	background-color: var( --color-brandBlack );
+}
+
+// TODO: Move to generic styles area once PR #201 is merged.
+
+.site-header.featured-image .site-featured-image .entry-header {
+	align-items: center;
+}
+
+h1:not(.site-title)::before, h2::before {
+	display: none;
+}

@@ -16,6 +16,7 @@
                 "id": ""
             },
             "choices": {
+                "none": "none",
                 "red-and-black": "red-and-black",
                 "beige-and-black": "beige-and-black",
                 "beige-and-red": "beige-and-red",
@@ -44,11 +45,12 @@
             },
             "choices": {
                 "red-banner": "Red Banner",
-                "default": "Default"
+                "black-banner": "Black Banner",
+                "no-effect": "No Effect (white)"
             },
             "allow_null": 0,
             "other_choice": 0,
-            "default_value": "",
+            "default_value": "red-banner",
             "layout": "vertical",
             "return_format": "value",
             "save_other_choice": 0
@@ -76,7 +78,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1562336520
+    "modified": 1605906789
 }
