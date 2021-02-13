@@ -85,3 +85,284 @@ h6 {
 		font-family: 'roboto', Georgia, serif;
 	}
 }
+
+
+/***********/
+/* Headers */
+/***********/
+
+
+header.featured-image h1.entry-title {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+h1:before,
+h2:before, .entry .entry-title:before {
+	content: none;
+}
+
+.entry .entry-content > h2 {
+	margin-left: -1.5rem;
+	margin-top: calc( 5vw + 30px );
+	margin-bottom: calc( 3vw + 30px );
+}
+
+
+@media only screen and (min-width: 768px) {
+	.entry .entry-content > h2 {
+		margin-left: -1rem;
+	}
+
+	.entry .entry-content > h3 {
+
+	}
+}
+
+/**************/
+/* Navigation */
+/**************/
+
+.main-navigation .main-menu > li > a,
+.main-navigation .main-menu > li .svg-icon {
+	color: var( --color-brandRed );
+}
+
+.main-navigation .main-menu > li {
+	padding-left: 1rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	display: inline-block;
+}
+
+.main-navigation .main-menu > li a {
+	text-transform: initial;
+}
+
+.main-navigation .sub-menu > li > a:hover {
+	background-color: var( --color-brandGrey );
+}
+
+.main-navigation > div {
+	display: block;
+}
+
+.main-navigation > .main-menu-more {
+	display: none; // not using this feautre.
+}
+
+/******************************/
+/* Site Header/Featured Image */
+/******************************/
+
+/* squares circular logo in header */
+.site-logo .custom-logo-link {
+	border-radius: 0%;
+}
+
+/* remove background from logo in header */
+.site-header.featured-image .custom-logo-link {
+	background: none;
+}
+
+/* remove margin under featured image (so we can put the first block right under) */
+.site-header.featured-image {
+	margin-bottom: 0rem;
+}
+
+/* Post Meta Data */
+.site-header.featured-image .site-featured-image .entry-header {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.site-header.featured-image  {
+	padding-bottom: 0;
+}
+
+.site-header.featured-image .entry-title {
+	padding-bottom: 3rem;
+}
+
+.site-header.featured-image .entry-meta {
+	background-color: var( --duotone-foreground ); 
+	color: var( --color-brandBeige);
+	font-size: 0.75rem; 
+	font-weight: 500;
+	margin-top: auto;
+	padding: 0.75rem;
+	width: 100%;
+}
+
+
+/******************/
+/* Featured Image */
+/******************/
+
+.featured-image .site-branding-container {
+	background-color: var( --color-brandBlack );
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.site-header.featured-image {
+	margin-bottom: 0;
+	text-shadow: initial;
+	padding-top: 0;
+}
+
+.site-header.featured-image .site-featured-image .entry-header .entry-title::before {
+	height: 0;
+}
+
+.site-header.featured-image {
+	min-height: 80vh;
+	padding: 0;
+}
+
+.featured-image .site-description {
+	color: var(--color-brandWhite);;
+}
+
+/* Removes icons from entry-meta - keeping them for now */
+/* .site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
+	display: none;
+}*/
+
+/* remove space between blog quotes and featured image */
+.entry-content .wp-block-pullquote:first-child {
+	margin-top: 0;
+}
+
+/*******************/
+/* Default Buttons */
+/*******************/
+
+button, 
+.button, 
+.entry .button, 
+.entry .entry-content .wp-block-file .wp-block-file__button,
+.entry .entry-content .wp-block-button .wp-block-button__link,
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+	background-color: var( --color-brandRed );
+	border-radius: 0;
+	box-shadow: 5px 5px 0px var( --color-brandGrey );
+		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
+		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
+	color: var(--color-brandWhite);
+	font-family: Georgia, serif;
+	padding: .7rem;
+	transition: all 150ms ease-in-out;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
+}
+
+button.main-menu-more-toggle {
+	box-shadow: none;
+}
+
+button:hover,
+.button:hover, 
+.wp-block-file__button:hover,
+.entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
+input[type="button"]:hover, 
+input[type="reset"]:hover, 
+input[type="submit"]:hover {
+	background-color: var( --color-brandRed );
+	box-shadow: none;
+	filter: brightness(87%);
+}
+
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color), 
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color), 
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) {
+	color: var( --color-brandRed );
+    border-color: var( --color-brandRed );
+}
+
+
+/*********************/
+/* Accordion Buttons */
+/*********************/
+
+.c-accordion__title--button {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.c-accordion__title--button::after {
+	content: "▼";
+	color: var( --color-brandRed );
+	right: auto;
+	margin-left: 1em;
+}
+
+.is-open .c-accordion__title::after {
+    content: "▲";
+    }
+
+
+
+
+/**********/
+/* Footer */
+/**********/
+
+.cc-logo {
+	width: .66rem;
+	margin-right: .1rem;
+}
+
+.site-info > * {
+	color: var( --color-brandRed );
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: .14em;
+	font-family: Arial, sans-serif;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
+}
+
+.c4aa-magic-hand {
+	color: var( --color-brandRed );;
+}
+
+/* Footer Widgets */
+
+.site-footer .widget-title {
+	color: var( --color-brandWhite )
+}
+
+.widget ul {
+	margin-left: 1rem;
+}
+
+.widget-area ul li {
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1rem;
+	font-family: Georgia, serif;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
+}
+
+.widget-area ul li a {
+	color:  var( --color-brandBlack );
+}
+
+.widget-area ul li a:hover,
+.widget-area ul li a:visited {
+	color:  var( --color-brandGrey );
+}

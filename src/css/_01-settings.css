@@ -27,6 +27,140 @@
 	--bottomRightY: 12;
 }
 
+/************************/
+/* Override main colors */
+/************************/
+
+.site-header.featured-image .site-featured-image::before, .site-header.featured-image .site-featured-image::after, .entry .post-thumbnail::after, .main-navigation .sub-menu, .sticky-post, .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background), .entry .entry-content > .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].has-primary-background-color, .entry .entry-content > [class^="wp-block-"] .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color.has-primary-background-color,
+.entry .entry-title::before,
+.entry .entry-content .wp-block-separator, .entry .entry-content hr {
+	background-color: var( --color-brandRed );
+}
+
+/* Poop */
+.entry .entry-content .wp-block-pullquote.is-style-solid-color {
+	background-color: var(--color-brandRed);
+}
+
+a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation .main-menu > li > a:hover, .main-navigation .main-menu > li > a:hover + svg, .post-navigation .nav-links a:hover, .post-navigation .nav-links a:hover .post-title, .author-bio .author-description .author-link:hover, .entry .entry-content > .has-secondary-color, .entry .entry-content > [class^="wp-block-"] .has-secondary-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p, .entry .entry-footer a:hover, .comment .comment-author .fn a:hover, .comment-reply-link:hover, .comment-navigation .nav-previous a:hover, .comment-navigation .nav-next a:hover, #cancel-comment-reply-link:hover, .widget a:hover {
+	color: var( --color-brandRed );
+}
+
+.entry .entry-title a:hover {
+	color: var( --color-brandWhite );
+	text-decoration: underline;
+}
+
+.main-navigation .sub-menu > li > a:hover::after, .main-navigation .sub-menu > li > a:focus::after, .main-navigation .sub-menu > li > .menu-item-link-return:hover::after, .main-navigation .sub-menu > li > .menu-item-link-return:focus::after {
+	background-color: #555;
+}
+
+.site-content {
+	background-color: var( --color-brandBeige);
+}
+
+.entry .entry-footer {
+	color: var( --color-brandBlack);
+}
+
+
+/* 
+ * Block Color Palette Colors
+ *
+ * Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
+ * adds a hypen in front of the 4 in CSS classes, and it is cleaner to omit it.
+ */
+
+/* Beige */
+
+.entry .entry-content *[class*='has-'].has-caa-beige-background-color {
+	background-color: var( --color-brandBeige);
+}
+
+.entry .entry-content *[class*='has-'].has-caa-beige-color {
+	color: var( --color-brandBeige);
+}
+
+/* Black */
+
+.entry .entry-content *[class*='has-'].has-caa-black-background-color {
+	background-color: var( --color-brandBlack);
+}
+
+.entry .entry-content *[class*='has-'].has-caa-black-color {
+	color: var( --color-brandBlack);
+}
+
+/* Blue */
+
+.entry .entry-content *[class*='has-'].has-caa-blue-background-color {
+	background-color: var( --color-brandBlue);
+}
+
+.entry .entry-content *[class*='has-'].has-caa-blue-color {
+	color: var( --color-brandBlue);
+}
+
+/* Grey */
+
+.has-caa-grey-background-color {
+	background-color: var( --color-brandGrey);
+}
+
+.entry .entry-content *[class*='has-'].has-caa-grey-color {
+	color: var( --color-brandGrey);
+}
+
+/* Red */
+
+.entry .entry-content *[class*='has-'].has-caa-red-background-color {
+	background-color: var( --color-brandRed);
+}
+
+.entry .entry-content *[class*='has-'].has-caa-red-color {
+	color: var( --color-brandRed);
+}
+
+/* White */
+
+.entry .entry-content *[class*='has-'].has-caa-white-background-color {
+	background-color: var( --color-brandWhite);
+}
+
+.entry .entry-content *[class*='has-'].has-caa-white-color {
+	color: var( --color-brandWhite);
+}
+
+/* Yellow */
+
+.entry .entry-content *[class*='has-'].has-caa-yellow-background-color {
+	background-color: var( --color-brandYellow);
+}
+
+.entry .entry-content *[class*='has-'].has-caa-yellow-color {
+	color: var( --color-brandYellow);
+}
+
+
+/* Override link colors when using with background colors */
+/* Weight added so links are more visible w/o color change */
+
+.entry .entry-content .has-caa-white-color a,
+.entry .entry-content .has-caa-white-color a:hover,
+.entry .entry-content .has-caa-white-color a:visited,
+.entry .entry-content .has-caa-white-color a:active {
+	color: var( --color-brandWhite );
+	font-weight: 700;
+}
+
+.entry .entry-content .has-caa-beige-color a,
+.entry .entry-content .has-caa-beige-color a:hover,
+.entry .entry-content .has-caa-beige-color a:visited,
+.entry .entry-content .has-caa-beige-color a:active {
+	color: var( --color-brandBeige );
+	font-weight: 700;
+}
+
 /*
  * Accessibility Labels
  *
