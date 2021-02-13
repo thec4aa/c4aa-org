@@ -16,15 +16,15 @@
 	--color-brandYellow: hsla(55, 100%, 46%, 0.9);
 
 	/* Clip Path Varaibles */
-	--topLeftX: 0;
-	--topLeftY: 0;
-	--topRightX: 0;
-	--topRightY: 7;
-	--bottomRightX: 0;
-	--bottomRightY: 0;
-	--bottomLeftX: 0;
-	--bottomLeftY: 0;
-	--rotate: 0;
+	--rotate: -1.000;
+	--topLeftX: 11;
+	--topLeftY: 12;
+	--topRightX: 19;
+	--topRightY: 18;
+	--bottomLeftX: 12;
+	--bottomLeftY: 14;
+	--bottomRightX: 11;
+	--bottomRightY: 12;
 }
 
 /************************/
@@ -161,11 +161,11 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 	font-weight: 700;
 }
 
-/* 
+/*
  * Accessibility Labels
  *
  * Hide text from the screen while still providing label for screen reader
- * 
+ *
  */
 
 .c4aa-sr-only {
