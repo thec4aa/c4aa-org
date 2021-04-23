@@ -335,6 +335,18 @@ form.give-form legend {
     margin: 1em 0;
 }
 
-.frm_form_field input {
-    width: 100%;
+.frm_description {
+	font-size: 15px;
+	font-style: italic;
+}
+
+.frm_error {
+	color: var(--color-brandWhite);
+	background: var(--color-brandRed);
+	font-weight: bold;
+  	padding: .3em;
+}
+
+.frm_primary_label {
+    display: block;
 }

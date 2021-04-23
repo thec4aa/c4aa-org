@@ -390,17 +390,17 @@ legend:not(.give-hidden) {
 
 /* radio buttons */
 
-input[type="radio"] {
+.give-form-wrap input[type="radio"] {
 	height: 0;
 	opacity: 0;
 	width: 0;
 }
 
-input[type="radio"] + label {
+.give-form-wrap input[type="radio"] + label {
 	margin-top: -1rem;
 }
 
-input[type="radio"] + label::before {
+.give-form-wrap input[type="radio"] + label::before {
 	content: ' ';
 	background-color: transparent;
 	border: 2px solid var( --color-brandBlack );
@@ -411,7 +411,7 @@ input[type="radio"] + label::before {
 	margin-right: 0.5rem;
 }
 
-input[type="radio"]:checked + label::before {
+.give-form-wrap input[type="radio"]:checked + label::before {
 	background-color: var( --color-brandWhite );
 	border: 6px solid var( --color-brandRed );
 }
