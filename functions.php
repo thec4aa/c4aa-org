@@ -3,9 +3,8 @@
 /* remove  parent script that inserts ellipsis icon on mobile */
 function dequeue_priority_menu() {
 	wp_dequeue_script( 'twentynineteen-priority-menu' );
- }
- add_action( 'wp_enqueue_scripts', 'dequeue_priority_menu', 100 );
-
+}
+add_action( 'wp_enqueue_scripts', 'dequeue_priority_menu', 100 );
 
 function c4aa_enqueue_assets() {
 	$style_path    = get_stylesheet_directory() . '/build/main.css';
@@ -26,7 +25,7 @@ add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
  * link https://www.billerickson.net/block-styles-in-gutenberg/
  */
 
-function be_gutenberg_scripts() {
+function c4aa_gutenberg_scripts() {
 	wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/css/c4aa-editorStyles.css' );
 	wp_enqueue_style( 'c4aa-imageFilter', get_stylesheet_directory_uri() . '/css/c4aa-imageFilter.css' );
 	wp_enqueue_script(
@@ -37,7 +36,7 @@ function be_gutenberg_scripts() {
 		true
 	);
 }
-add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
+add_action( 'enqueue_block_editor_assets', 'c4aa_gutenberg_scripts' );
 
 function c4aa_preload_tags() {
 	$fonts_path = get_stylesheet_directory_uri() . "/fonts/";
@@ -139,9 +138,7 @@ add_filter( 'post_class', 'c4aa_add_post_class_from_acf_options' );
  *
  * A place for specific reference info & instructions about the theme
  * for users of the site.
- *
  */
-
 
 function c4aa_custom_dashboard_widgets() {
 	global $wp_meta_boxes;
@@ -178,17 +175,23 @@ function c4aa_custom_dashboard_help() {
 	'; // end echo
 }
 
-
 /**
- * Block Color Palette
- *
- * Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
- * adds a hypen in front of the 4 in CSS classes.
- *
- * via: https://kinsta.com/blog/twenty-nineteen-theme/#block-color-palettes
- * also added in css
+ * Theme support.
+ * 
+ * Specify block color palette and adjust support for other
+ * features as needed.
  */
 function c4aa_setup_theme_supported_features() {
+	
+	// There is a bug with jetpack responsive videos, and they are
+	// already supported in core.
+	// @see https://github.com/Automattic/jetpack/issues/17170
+	remove_theme_support( 'jetpack-responsive-videos' ); 
+	
+	// Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
+	// adds a hypen in front of the 4 in CSS classes.
+	// @see https://kinsta.com/blog/twenty-nineteen-theme/#block-color-palettes
+	// also added in css
 	add_theme_support( 'editor-color-palette', array(
 		array(
 			'name' => __( 'C4AA Beige', 'c4aa' ),
@@ -229,7 +232,7 @@ function c4aa_setup_theme_supported_features() {
 	); // end add_theme_support
 } // end c4aa_setup_theme_supported_features
 
-add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 100 );
+add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 11 );
 
 /**
  * Override default 2019 post thumbnail.
