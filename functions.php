@@ -189,6 +189,11 @@ function c4aa_custom_dashboard_help() {
  * also added in css
  */
 function c4aa_setup_theme_supported_features() {
+	// There is a bug with jetpack responsive videos, and they are
+	// already supported in core.
+	// @see https://github.com/Automattic/jetpack/issues/17170
+	remove_theme_support( 'jetpack-responsive-videos' ); 
+	
 	add_theme_support( 'editor-color-palette', array(
 		array(
 			'name' => __( 'C4AA Beige', 'c4aa' ),
@@ -229,7 +234,7 @@ function c4aa_setup_theme_supported_features() {
 	); // end add_theme_support
 } // end c4aa_setup_theme_supported_features
 
-add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 100 );
+add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 11 );
 
 /**
  * Override default 2019 post thumbnail.
