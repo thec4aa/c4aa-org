@@ -39,7 +39,6 @@
 	background-color: var( --color-brandRed );
 }
 
-// Poop
 .entry .entry-content .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--color-brandRed);
 }
@@ -108,6 +107,9 @@ a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation 
 header.featured-image h1.entry-title {
 	margin-left: .5em;
 	margin-right: .5em;
+	font-size: 2rem; // fallback
+	// @see https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+	font-size: clamp(1.5rem, calc( -0.2647rem + 7.8431vw ), 3.5rem);
 }
 
 h1:before,
@@ -567,5 +569,5 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 }
 
 .is-open .c-accordion__title::after {
-    content: "▲";
-    }
+	content: "▲";
+}
