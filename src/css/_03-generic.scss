@@ -249,6 +249,10 @@ body.home .entry-header {
 	display: none;
 }*/
 
+/*******************/
+/*** Blockquotes ***/
+/*******************/
+
 /* remove space between blog quotes and featured image */
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
@@ -314,7 +318,10 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 	display: table;
 }
 
-/* Default Buttons */
+
+/***************/
+/*** Buttons ***/
+/***************/
 
 button, 
 .button, 
@@ -364,7 +371,9 @@ input[type="submit"]:hover {
     border-color: var( --color-brandRed );
 }
 
-/* Form Fields */
+/***************/
+/*** Forms ***/
+/***************/
 
 /* text based inputs */
 
@@ -431,7 +440,9 @@ legend:not(.give-hidden) {
 	border: 6px solid var( --color-brandRed );
 }
 
-/* Footer */
+/**************/
+/*** Footer ***/
+/**************/
 
 .cc-logo {
 	width: .66rem;
@@ -583,4 +594,29 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 
 .is-open .c-accordion__title::after {
 	content: "▲";
+}
+
+/*********************/
+/** Separator Block **/
+/*********************/
+
+
+.entry .entry-content hr {
+	opacity: 100%;
+}
+
+// Override media queries from theme
+.entry .entry-content .wp-block-separator.is-style-wide, .entry .entry-content hr.is-style-wide {
+	width: 100vw;
+	position: absolute;
+	left: 0;
+	max-width: unset;
+}
+
+// Default separator centered and width 50%
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default {
+	width: 50%;
+	max-width: unset;
+	margin-left: auto;
+	margin-right: auto;
 }
