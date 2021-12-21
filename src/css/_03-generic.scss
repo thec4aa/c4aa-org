@@ -311,14 +311,6 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 }
 
 
-/* Block Image and Paragraph Clearfix */
-.wp-block-image + p::after {
-	content: "";
-	clear: both;
-	display: table;
-}
-
-
 /***************/
 /*** Buttons ***/
 /***************/
@@ -619,4 +611,20 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 	max-width: unset;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+
+/*****************/
+/** Image Block **/
+/*****************/
+
+/* Block Image and Paragraph Clearfix */
+.wp-block-image + p::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.wp-block-image img:hover {
+	filter: unset;
 }
