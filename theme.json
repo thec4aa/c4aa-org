@@ -1,13 +1,8 @@
 {
     "version": 1,
     "settings": {
-        "border": {
-            "customRadius": false
-        },
         "color": {
-            "custom": true,
             "customDuotone": true,
-            "customGradient": true,
             "duotone": [
                 {
                     "colors": [ "hsla(36, 6%, 5%, 0.9)", "hsla(356, 80%, 45%, 0.9)" ],
@@ -29,30 +24,7 @@
                     "slug": "grey-and-beige",
                     "name": "Grey and Beige"
                 }
-            ],
-            "gradients": [],
-            "link": false,
-            "palette": []
-        },
-        "custom": {},
-        "layout": {},
-        "spacing": {},
-        "typography": {
-            "customFontSize": true,
-            "customLineHeight": false,
-            "dropCap": true,
-            "fontSizes": []
-        },
-        "blocks": {
-            "core/paragraph": {
-                "color": {},
-                "custom": {},
-                "layout": {},
-                "spacing": {},
-                "typography": {}
-            },
-            "core/heading": {},
-            "etc": {}
+            ]
         }
     }
 }
