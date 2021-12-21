@@ -608,8 +608,8 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 // Override media queries from theme
 .entry .entry-content .wp-block-separator.is-style-wide, .entry .entry-content hr.is-style-wide {
 	width: 100vw;
-	position: absolute;
-	left: 0;
+	position: relative;
+	right: calc(50vw - 50%);
 	max-width: unset;
 }
 
