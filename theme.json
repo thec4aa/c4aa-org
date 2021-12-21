@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "settings": {
+        "color": {
+            "customDuotone": true,
+            "duotone": [
+                {
+                    "colors": [ "hsla(36, 6%, 5%, 0.9)", "hsla(356, 80%, 45%, 0.9)" ],
+                    "slug": "black-and-red",
+                    "name": "Black and Red"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 5%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
+                    "slug": "black-and-beige",
+                    "name": "Black and Beige"
+                },
+                {
+                    "colors": [ "hsla(356, 80%, 45%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
+                    "slug": "red-and-beige",
+                    "name": "Red and Beige"
+                },
+                {
+                    "colors": [ "hsla(28, 6%, 42%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
+                    "slug": "grey-and-beige",
+                    "name": "Grey and Beige"
+                }
+            ]
+        }
+    }
+}

@@ -1,11 +1,3 @@
-var imageFilters = [
-	'red-and-black',
-	'beige-and-black',
-	'beige-and-red',
-	'beige-and-grey',
-	'beige-and-grey-vintage'
-];
-
 wp.domReady( () => {
 	
 	wp.blocks.unregisterBlockStyle( 'core/button', 'outline' );
@@ -34,12 +26,5 @@ wp.domReady( () => {
 		label: 'C4AA Simple Filter',
 		isDefault: false,
 	} );
-	
-	imageFilters.forEach( ( filter) => {
-		wp.blocks.registerBlockStyle( 'core/image', {
-			name: 'c4aa-duotone-' + filter,
-			label: 'C4AA Duotone Filter: ' + filter,
-			isDefault: false,
-		} );
-	});
+
 } );
