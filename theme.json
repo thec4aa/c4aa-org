@@ -1,6 +1,11 @@
 {
     "version": 1,
     "settings": {
+        "layout": {
+            "contentSize": "840px",
+            "wideSize": "1100px",
+            "units": [ "px", "em", "rem", "%", "vw" ]
+        },
         "color": {
             "customDuotone": true,
             "duotone": [
