@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/thec4aa/c4aa-org#readme",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.0"
   }
 }
