@@ -29,7 +29,10 @@ blockquote cite,
 }
 
 figure.wp-block-pullquote,
-body strong {
+p strong,
+ol strong,
+ul strong,
+table strong {
 	font-family: Georgia, serif;
 	font-weight: 700;
 
