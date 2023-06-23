@@ -32,12 +32,23 @@ Minimize use of plugins, javascript, and other dependencies. Hopefully avoid fro
 - [WP-Matomo](https://wordpress.org/plugins/wp-piwik/) for our Matomo stats install.
 
 
+# Contributing to this site
+C4AA welcomes all contributions to the C4AA website. 
+
+To participate, please follow [asmeurer's](https://github.com/asmeurer) [Open Source Git Workflow](https://www.asmeurer.com/git-workflow/).
+
 ## Local Development
 
-Once the theme is cloned, run `npm install` to download dependencies.
-
+* Download a recent copy of [WordPress](https://wordpress.org/), as well as [the TwentyNineteen theme](https://wordpress.org/themes/twentynineteen/) and install them locally in a directory you're comfortable working in. 
+* Start a local environment and install base WordPress. We recommend [Laravel Valet](https://laravel.com/docs/10.x/valet).
+* Clone this repo into your wp-content/themes directory. 
+* Once the theme is cloned, run `npm install` to download dependencies.
 * `npm run dev` - Start the Sass watcher for development.
 * `npm run prod` – Minify CSS before opening a PR.
+
+## Issues and Requests
+* Use GitHub Issues to make requests for bug fixes, enhancements, or any other request that you prefer. 
+* Issues labelled as "task" represent 
 
 ## Credit:
 
