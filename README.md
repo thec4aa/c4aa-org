@@ -48,6 +48,7 @@ To summarize briefly:
 * Make your changes in your fork in a feature branch off of master
 * Submit a Pull Request against the master branch of the C4AA.org repo
 * Reference the Issue or Request that you're attempting to solve in the PR.
+* All Pull Requests will be reviewed by site administrators and changes may be requested before a PR is accepted. 
 
 ## Local Development
 * Download a recent copy of [WordPress](https://wordpress.org/), as well as [the TwentyNineteen theme](https://wordpress.org/themes/twentynineteen/) and install them locally in a directory you're comfortable working in. 
