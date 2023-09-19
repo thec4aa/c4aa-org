@@ -2,15 +2,15 @@
 /* Archive */
 /***********/
 
-@media( min-width: 768px ) {
+@media(min-width: 768px) {
 
-	@supports ( display: grid ) {
+	@supports (display: grid) {
 		.c4aa-excerpt-grid .entry {
 			display: grid;
 			grid-template-columns: 2fr 1fr;
 			grid-template-rows: minmax(100px, min-content) 1fr;
 			grid-gap: 1rem;
-	
+
 			max-width: 1100px;
 			margin-left: auto;
 			margin-right: auto;
@@ -94,13 +94,16 @@ form.give-form legend {
 }
 
 .give-progress-bar {
-	background: var( --color-brandWhite );
+	background: var(--color-brandWhite);
 }
 
 
-.mfp-content form.give-form legend, form[id*="give-form"] legend, legend:not(.give-hidden) {
+.mfp-content form.give-form legend,
+form[id*="give-form"] legend,
+legend:not(.give-hidden) {
 	margin-left: -1rem;
 }
+
 #mc_embed_signup_scroll p:first-of-type {
 	font-weight: bold;
 	font-size: 2rem;
@@ -113,7 +116,7 @@ form.give-form legend {
 /* style containers */
 .featured-image .site-branding-container,
 .site-header:not(.featured-image) {
-	background-color:  #fff;
+	background-color: #fff;
 	z-index: 10;
 }
 
@@ -145,9 +148,13 @@ form.give-form legend {
 	margin: 0;
 }
 
+.site-featured-image .post-thumbnail img {
+	max-width: 100%;
+}
+
 /* style text and icon logo hover */
-.site-logo .custom-logo-link:hover, 
-.site-logo .custom-logo-link:active, 
+.site-logo .custom-logo-link:hover,
+.site-logo .custom-logo-link:active,
 .site-logo .custom-logo-link:focus,
 .site-header.featured-image .custom-logo-link:hover,
 .site-header.featured-image .custom-logo-link:active,
@@ -160,24 +167,23 @@ form.give-form legend {
 }
 
 /* style menu items text  */
-.site-header.featured-image .main-navigation a, 
-.site-header.featured-image .main-navigation a + svg, 
-.site-header.featured-image .social-navigation a, 
+.site-header.featured-image .main-navigation a,
+.site-header.featured-image .main-navigation a+svg,
+.site-header.featured-image .social-navigation a,
 .site-header.featured-image .site-featured-image a,
-.main-navigation .main-menu > li > a, 
-.main-navigation .main-menu > li .svg-icon  {
-	color:  var( --color-brandBlack );
+.main-navigation .main-menu>li>a,
+.main-navigation .main-menu>li .svg-icon {
+	color: var(--color-brandBlack);
 }
 
-.site-header.featured-image .main-navigation a:hover, 
-.site-header.featured-image .main-navigation a:active, 
-.site-header.featured-image .main-navigation a + svg:hover, 
-.site-header.featured-image .main-navigation a + svg:active, 
-.site-header.featured-image .social-navigation a:hover, 
-.site-header.featured-image .social-navigation a:active, 
-.site-header.featured-image .site-featured-image a:hover 
-.site-header.featured-image .site-featured-image a:active {
-	color:  var( --color-brandRed );
+.site-header.featured-image .main-navigation a:hover,
+.site-header.featured-image .main-navigation a:active,
+.site-header.featured-image .main-navigation a+svg:hover,
+.site-header.featured-image .main-navigation a+svg:active,
+.site-header.featured-image .social-navigation a:hover,
+.site-header.featured-image .social-navigation a:active,
+.site-header.featured-image .site-featured-image a:hover .site-header.featured-image .site-featured-image a:active {
+	color: var(--color-brandRed);
 	opacity: 1;
 }
 
@@ -193,24 +199,24 @@ form.give-form legend {
 	margin-right: auto;
 }
 
-@media( min-width: 768px )  {
+@media(min-width: 768px) {
 	.site-branding {
 		margin: 0;
 	}
-	
+
 	/* override parent theme logo positioning */
 	.site-logo {
 		position: static;
 	}
 }
 
-@media( min-width: 1000px ) {
+@media(min-width: 1000px) {
 	.site-branding {
 		margin: 0 calc(10% + 60px);
 	}
 }
 
-@media( min-width: 1260px )  {
+@media(min-width: 1260px) {
 	.site-branding {
 		min-height: 5rem;
 		flex-wrap: nowrap;
@@ -246,71 +252,71 @@ form.give-form legend {
 /* Beige */
 
 .entry .entry-content *[class*='has-'].has-caa-beige-background-color {
-	background-color: var( --color-brandBeige);
+	background-color: var(--color-brandBeige);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-beige-color {
-	color: var( --color-brandBeige);
+	color: var(--color-brandBeige);
 }
 
 /* Black */
 
 .entry .entry-content *[class*='has-'].has-caa-black-background-color {
-	background-color: var( --color-brandBlack);
+	background-color: var(--color-brandBlack);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-black-color {
-	color: var( --color-brandBlack);
+	color: var(--color-brandBlack);
 }
 
 /* Blue */
 
 .entry .entry-content *[class*='has-'].has-caa-blue-background-color {
-	background-color: var( --color-brandBlue);
+	background-color: var(--color-brandBlue);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-blue-color {
-	color: var( --color-brandBlue);
+	color: var(--color-brandBlue);
 }
 
 /* Grey */
 
 .has-caa-grey-background-color {
-	background-color: var( --color-brandGrey);
+	background-color: var(--color-brandGrey);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-grey-color {
-	color: var( --color-brandGrey);
+	color: var(--color-brandGrey);
 }
 
 /* Red */
 
 .entry .entry-content *[class*='has-'].has-caa-red-background-color {
-	background-color: var( --color-brandRed);
+	background-color: var(--color-brandRed);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-red-color {
-	color: var( --color-brandRed);
+	color: var(--color-brandRed);
 }
 
 /* White */
 
 .entry .entry-content *[class*='has-'].has-caa-white-background-color {
-	background-color: var( --color-brandWhite);
+	background-color: var(--color-brandWhite);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-white-color {
-	color: var( --color-brandWhite);
+	color: var(--color-brandWhite);
 }
 
 /* Yellow */
 
 .entry .entry-content *[class*='has-'].has-caa-yellow-background-color {
-	background-color: var( --color-brandYellow);
+	background-color: var(--color-brandYellow);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-yellow-color {
-	color: var( --color-brandYellow);
+	color: var(--color-brandYellow);
 }
 
 
@@ -328,11 +334,11 @@ form.give-form legend {
 /*********************/
 
 .frm_required {
-    color: var(--color-brandRed);
+	color: var(--color-brandRed);
 }
 
 .frm_form_field {
-    margin: 1em 0;
+	margin: 1em 0;
 }
 
 .frm_description {
@@ -344,9 +350,9 @@ form.give-form legend {
 	color: var(--color-brandWhite);
 	background: var(--color-brandRed);
 	font-weight: bold;
-  	padding: .3em;
+	padding: .3em;
 }
 
 .frm_primary_label {
-    display: block;
+	display: block;
 }
