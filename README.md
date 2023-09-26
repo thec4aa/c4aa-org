@@ -8,7 +8,7 @@ Our aims are:
 
 ## 1. Create a site that aligns with the Center for Artistic Activism Design Standards
 
-We have some design standards created by [Diane Shaw](https://www.behance.net/dianeshaw), then built upon over the years in our Center for Artistic Activism print material.
+We have some design standards created by [Diane Shaw](https://www.behance.net/dianeshaw), then built upon over the years in our Center for Artistic Activism print material and by subsequent designers like [Andy Outis](https://www.andyoutis.com/).
 
 ## 2. Code as few modifications as possible.
 
