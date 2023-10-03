@@ -30,6 +30,8 @@
 				<?php endif; ?>
 				<br />
 				<?php echo esc_html( 'New York, USA  &nbsp;• &nbsp;+1&nbsp;(646)&nbsp;832-2454' ); ?>
+				<br>
+				<?php echo esc_html('EIN: 45-3557000'); ?>
 			</div>
 				
 			<div class="c4aa-magic-hand u-text-align-center">
