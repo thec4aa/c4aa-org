@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "node_modules/.bin/sass --style=compressed src/css/main.scss build/main.css",
-    "dev": "node_modules/.bin/sass --watch src/css build/"
+    "dev": "node_modules/.bin/sass --watch src/css:build/"
   },
   "repository": {
     "type": "git",
