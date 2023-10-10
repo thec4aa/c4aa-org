@@ -202,7 +202,8 @@ body.home .entry-header {
 
 /* de-hyphenate large pullquotes and header */
 .wp-block-pullquote.alignwide *, .wp-block-pullquote.alignfull *, header h1.entry-title {
-     hyphens: manual;
+     -ms-hyphens: manual;
+         hyphens: manual;
      -webkit-hyphens: none;
 }
 
@@ -298,6 +299,15 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 	color: var( --color-brandWhite );
 }
 
+
+/* Extra padding to full width pullquote block */ 
+.entry .entry-content .wp-block-pullquote.alignfull {
+	@media only screen and (min-width: 768px){ 
+  	padding-left: calc(10% + 58px + (2 * 1rem));
+  	padding-right: calc(10% + 58px + (2 * 1rem));
+	}
+}
+
 /* Friendlier mobile styling for floating pullquotes in post */
 .entry .entry-content .wp-block-pullquote.alignright,
 .entry .entry-content .wp-block-pullquote.alignleft {
@@ -352,7 +362,8 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	background-color: var( --color-brandRed );
 	box-shadow: none;
-	filter: brightness(87%);
+	-webkit-filter: brightness(87%);
+	        filter: brightness(87%);
 }
 
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color), 
@@ -626,5 +637,6 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 }
 
 .wp-block-image img:hover {
-	filter: unset;
+	-webkit-filter: unset;
+	        filter: unset;
 }
