@@ -641,7 +641,43 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 	        filter: unset;
 }
 
-// Mella
-.menu-item-has-children{
-border-bottom: 1px solid #fafafa;
+// Updates: October 19, 2023
+#menu-2019menu .menu-item-has-children{
+	@media only screen and (max-width: 768px) {
+		display: block;
+	}
+	&:hover{
+		background-color: var( --color-brandRed );
+		background-color: white;
+		// box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+		a{
+			color: var(--color-brandRed);
+		}
+		.sub-menu{
+			top: 37px;
+			background-color: var( --color-brandRed );
+			background-color: white;
+			box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+			width: 100%;
+			li{
+				a{
+					color: var(--color-brandBlack);
+					&:hover{
+						background: transparent;
+						color: var(--color-brandRed);
+					}
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				width: auto;
+				min-width: 0;
+				left: auto;
+			}
+		}
+	}
 }
+.submenu-expand{
+box-shadow: none;
+}
+
