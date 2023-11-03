@@ -645,17 +645,23 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 // Updates: October 19, 2023
 /*****************/
 
-
 .main-menu{
 	@media only screen and (max-width: 768px) {
 		width: 100%;
 	}
 	.menu-item{
+		a{
+			// @extend .is-style-c4aa-clipPath-heading;
+			padding: 1rem 2rem;
+			background-color: var(--color-brandRed);
+			clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
+		}
 		@media only screen and (max-width: 768px) {
 			width: 100%;
 		}
 	}
 }
+
 #menu-2019menu {
 	.sub-menu{
 		background-color: white;
@@ -663,13 +669,13 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 		@media only screen and (max-width: 768px) {
 			top: -5px;
 		}
-		.menu-item a:before{
-		content: "↳";
-		display: inline;
-		padding-right: .5rem;
-		color: var(--color-brandGrey);
-		opacity: .5;
-		}
+		// .menu-item a:before{
+		// content: "↳";
+		// display: inline;
+		// padding-right: .5rem;
+		// color: var(--color-brandGrey);
+		// opacity: .5;
+		// }
 	}
 	.submenu-expand{
 		box-shadow: none;
@@ -698,16 +704,18 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 			padding-left: 0;
 		}
 		.sub-menu{
-			background-color: white;
+			background-color: var(--color-brandBlack);
 			width: 100%;
 			li{
-				background-color: white ;
+				// background-color: white ;
 				transition: top 0.3s ease;
 				visibility: visible;
 				opacity: 1;
 				top: 5px;
 				a{
-					color: var(--color-brandBlack);
+					clip-path: none;
+					background-color: transparent;
+					color: #ffffff;
 					padding-top: 5px;
 					padding-bottom: 5px;
 					@media only screen and (max-width: 768px) {
@@ -716,7 +724,7 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 					}
 					&:hover{
 						background: transparent;
-						color: var(--color-brandRed);
+						color: #ffffff;
 					}
 				}
 			}
@@ -729,13 +737,21 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 				position: relative;
 			}
 		}
-
-		.submenu-expand{
-			transform: translateY(4px) rotate(180deg);
-		}
 	}
 }
 
-
-
-
+#menu-2019menu .submenu-expand{
+	display: none;
+	transform: translateY(4px) rotate(180deg);
+}
+#menu-2019menu{
+	li.menu-item{
+			a{
+				// @extend .is-style-c4aa-clipPath-heading;
+				padding: 1rem 2rem;
+				background-color: var(--color-brandRed);
+				color: #ffffff;
+				clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
+			}
+	}
+}
