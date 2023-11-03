@@ -755,6 +755,23 @@ form[id*=give-form] #give-donation-level-radio-list > li {
   filter: unset;
 }
 
+.search-button-icon {
+  display: flex;
+  margin-left: 1.5rem;
+  width: 24px;
+}
+.search-button-icon svg {
+  color: #fff;
+}
+.search-button-icon:hover svg path {
+  stroke: var(--color-brandRed);
+}
+
+#site-navigation {
+  display: flex;
+  align-items: center;
+}
+
 /***********/
 /* Archive */
 /***********/
