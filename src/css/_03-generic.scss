@@ -641,7 +641,24 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 	        filter: unset;
 }
 
-// Mella
-.menu-item-has-children{
-border-bottom: 1px solid #fafafa;
+// ? Search in the main nav menu
+.search-button-icon{
+	display: flex;
+	margin-left: 1.5rem;
+	width: 24px;
+	svg{
+		color: #fff;
+	}
+	&:hover{
+		svg{
+			path{
+				stroke: var( --color-brandRed );
+			}
+		}
+	}
+}
+// This is needed to make the search icon float next to the menu:
+#site-navigation{
+	display: flex;
+    align-items: center;
 }
