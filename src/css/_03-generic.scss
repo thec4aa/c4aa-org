@@ -664,25 +664,24 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 
 #menu-2019menu {
 	.sub-menu{
+		display: none;
 		background-color: white;
 		left: 0;
 		@media only screen and (max-width: 768px) {
 			top: -5px;
+			display: block;
+			visibility: visible;
+			opacity: 1;
+			position: relative;
+			background-color: var( --color-brandBlack );
 		}
-		// .menu-item a:before{
-		// content: "↳";
-		// display: inline;
-		// padding-right: .5rem;
-		// color: var(--color-brandGrey);
-		// opacity: .5;
-		// }
 	}
 	.submenu-expand{
 		box-shadow: none;
 	}
 	.menu-item-has-children{
 		li{
-			top: -5px;
+			// top: -5px;
 			transition: all;
 			visibility: hidden;
 			opacity: 0;
@@ -692,20 +691,16 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 			position: relative;
 		}
 	}
-	// second level sub-menus:
-	.menu-item-has-children ul{
-		margin-left: 1rem;
-	}
 	.menu-item-has-children:hover{
-		// background-color: var( --color-brandRed );
 		a{
-			color: var(--color-brandRed);
-			// color: white;
-			padding-left: 0;
+			background-color: var( --color-brandBlack );
+			color: #fff;
 		}
 		.sub-menu{
+			display: block;
 			background-color: var(--color-brandBlack);
 			width: 100%;
+			padding-bottom: 5px;
 			li{
 				// background-color: white ;
 				transition: top 0.3s ease;
@@ -713,8 +708,13 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 				opacity: 1;
 				top: 5px;
 				a{
+					max-width: 100%;
+					display: block;
 					clip-path: none;
 					background-color: transparent;
+					font-weight: bold;
+					font-size: 0.9rem;
+					text-transform: capitalize;
 					color: #ffffff;
 					padding-top: 5px;
 					padding-bottom: 5px;
@@ -744,14 +744,38 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 	display: none;
 	transform: translateY(4px) rotate(180deg);
 }
+
+
 #menu-2019menu{
 	li.menu-item{
+		padding-left: 0;
+		padding-right: 0;
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+			display: block;
+			padding: 0;
+		}
 			a{
 				// @extend .is-style-c4aa-clipPath-heading;
-				padding: 1rem 2rem;
+				padding: 0.2rem .5rem;
+				font-weight: 900;
+				margin: 0;
 				background-color: var(--color-brandRed);
 				color: #ffffff;
-				clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
+				// clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
+				clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 94%);
+				@media only screen and (max-width: 768px) {
+					clip-path: none;
+					background-color: var(--color-brandBlack);
+					display: block;
+					width: 100%;
+				}
+			}
+			&:nth-child(odd) a{
+				clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+				@media only screen and (max-width: 768px) {
+					clip-path: none
+				}
 			}
 	}
 }

@@ -774,19 +774,24 @@ form[id*=give-form] #give-donation-level-radio-list > li {
 }
 
 #menu-2019menu .sub-menu {
+  display: none;
   background-color: white;
   left: 0;
 }
 @media only screen and (max-width: 768px) {
   #menu-2019menu .sub-menu {
     top: -5px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    background-color: var(--color-brandBlack);
   }
 }
 #menu-2019menu .submenu-expand {
   box-shadow: none;
 }
 #menu-2019menu .menu-item-has-children li {
-  top: -5px;
   transition: all;
   visibility: hidden;
   opacity: 0;
@@ -797,16 +802,15 @@ form[id*=give-form] #give-donation-level-radio-list > li {
     position: relative;
   }
 }
-#menu-2019menu .menu-item-has-children ul {
-  margin-left: 1rem;
-}
 #menu-2019menu .menu-item-has-children:hover a {
-  color: var(--color-brandRed);
-  padding-left: 0;
+  background-color: var(--color-brandBlack);
+  color: #fff;
 }
 #menu-2019menu .menu-item-has-children:hover .sub-menu {
+  display: block;
   background-color: var(--color-brandBlack);
   width: 100%;
+  padding-bottom: 5px;
 }
 #menu-2019menu .menu-item-has-children:hover .sub-menu li {
   transition: top 0.3s ease;
@@ -815,8 +819,13 @@ form[id*=give-form] #give-donation-level-radio-list > li {
   top: 5px;
 }
 #menu-2019menu .menu-item-has-children:hover .sub-menu li a {
+  max-width: 100%;
+  display: block;
   clip-path: none;
   background-color: transparent;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: capitalize;
   color: #ffffff;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -847,11 +856,40 @@ form[id*=give-form] #give-donation-level-radio-list > li {
   transform: translateY(4px) rotate(180deg);
 }
 
+#menu-2019menu li.menu-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media only screen and (max-width: 768px) {
+  #menu-2019menu li.menu-item {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+}
 #menu-2019menu li.menu-item a {
-  padding: 1rem 2rem;
+  padding: 0.2rem 0.5rem;
+  font-weight: 900;
+  margin: 0;
   background-color: var(--color-brandRed);
   color: #ffffff;
-  clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 94%);
+}
+@media only screen and (max-width: 768px) {
+  #menu-2019menu li.menu-item a {
+    clip-path: none;
+    background-color: var(--color-brandBlack);
+    display: block;
+    width: 100%;
+  }
+}
+#menu-2019menu li.menu-item:nth-child(odd) a {
+  clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+}
+@media only screen and (max-width: 768px) {
+  #menu-2019menu li.menu-item:nth-child(odd) a {
+    clip-path: none;
+  }
 }
 
 /***********/
