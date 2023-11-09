@@ -642,33 +642,73 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 }
 
 /*****************/
-// Updates: October 19, 2023
+// ? Updates: October 19, 2023
 /*****************/
 
-.main-menu{
+.main-navigation{
+margin-left: 2rem;
 	@media only screen and (max-width: 768px) {
-		width: 100%;
-	}
-	.menu-item{
-		a{
-			// @extend .is-style-c4aa-clipPath-heading;
-			padding: 1rem 2rem;
-			background-color: var(--color-brandRed);
-			clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
-		}
-		@media only screen and (max-width: 768px) {
-			width: 100%;
-		}
+		margin-left: 0;
+		padding-bottom: 2rem;
 	}
 }
 
 #menu-2019menu {
+	.main-menu{
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+		}
+	}
+	li.menu-item{
+		padding-left: 0;
+		padding-right: 0;
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+			display: block;
+			padding: 0;
+		}
+		a{
+			// @extend .is-style-c4aa-clipPath-heading;
+			padding: 0.2rem .5rem;
+			font-weight: 900;
+			margin: 0;
+			background-color: var(--color-brandRed);
+			color: #ffffff;
+			// clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
+			clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 94%);
+			@media only screen and (max-width: 768px) {
+				clip-path: none;
+				background-color: var(--color-brandBlack);
+				display: block;
+				width: 100%;
+			}
+		}
+
+		&:nth-child(odd) a{
+			clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+			@media only screen and (max-width: 768px) {
+				clip-path: none
+			}
+		}
+		&:nth-child(3) a{
+			clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
+			@media only screen and (max-width: 768px) {
+				clip-path: none
+			}
+		}
+	}
 	.sub-menu{
 		display: none;
-		background-color: white;
+		// background-color: white;
 		left: 0;
+		li{
+			a{
+				text-transform: capitalize;
+				font-weight: normal;
+				font-size: 0.9rem;
+			}
+		}
 		@media only screen and (max-width: 768px) {
-			top: -5px;
 			display: block;
 			visibility: visible;
 			opacity: 1;
@@ -676,15 +716,18 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 			background-color: var( --color-brandBlack );
 		}
 	}
-	.submenu-expand{
-		box-shadow: none;
-	}
 	.menu-item-has-children{
 		li{
-			// top: -5px;
-			transition: all;
-			visibility: hidden;
 			opacity: 0;
+
+			// Show the submenu by default on mobile:
+			@media only screen and (max-width: 768px) {
+				visibility: visible;
+				opacity: 1;
+				font-size: 0.9rem;
+				text-transform: capitalize;
+
+			}
 		}
 		@media only screen and (max-width: 768px) {
 			display: block;
@@ -700,82 +743,134 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 			display: block;
 			background-color: var(--color-brandBlack);
 			width: 100%;
-			padding-bottom: 5px;
-			li{
-				// background-color: white ;
-				transition: top 0.3s ease;
-				visibility: visible;
-				opacity: 1;
-				top: 5px;
-				a{
-					max-width: 100%;
-					display: block;
-					clip-path: none;
-					background-color: transparent;
-					font-weight: bold;
-					font-size: 0.9rem;
-					text-transform: capitalize;
-					color: #ffffff;
-					padding-top: 5px;
-					padding-bottom: 5px;
-					@media only screen and (max-width: 768px) {
-						padding-top: 0px;
-						padding-bottom: 5px;
-					}
-					&:hover{
-						background: transparent;
-						color: #ffffff;
-					}
-				}
-			}
+			// left: 0;
 			@media only screen and (max-width: 768px) {
 				width: auto;
 				min-width: 0;
-				left: 0;
-				top: 0px;
-				transition: all .3s ease;
 				position: relative;
+				visibility: visible;
+				opacity: 1;
+			}
+			li{
+				visibility: visible;
+				opacity: 1;
+				a{
+					max-width: 100%;
+					display: block;
+					text-transform: capitalize;
+					color: #ffffff;
+				}
 			}
 		}
 	}
 }
 
+// Caret arrow next to expandable links:
 #menu-2019menu .submenu-expand{
 	display: none;
 	transform: translateY(4px) rotate(180deg);
+	box-shadow: none;
 }
 
 
-#menu-2019menu{
-	li.menu-item{
-		padding-left: 0;
-		padding-right: 0;
-		@media only screen and (max-width: 768px) {
-			width: 100%;
+// Hide the logo icon on mobile:
+@media only screen and (max-width: 768px) {
+	.site-logo{
+		display: none;
+	}
+}
+
+// ? START Hamburger icon
+.menu-toggle {
+    display: none; /* Hide the hamburger icon by default on larger screens */
+    cursor: pointer;
+}
+.bar {
+		display: block;
+		width: 30px;
+		height: 5px;
+		background-color: var(--color-brandRed);
+		margin: 4px 0;
+		transition: 0.4s;
+}
+.menu-toggle .bar:nth-child(1) {
+    transform: rotate(1.5deg);
+}
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 8px);
+}
+.menu-toggle .bar:nth-child(2) {
+    transform: rotate(-1.5deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle .bar:nth-child(1) {
+    transform: rotate(1.5deg);
+}
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -8px);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the hamburger icon on smaller screens */
+    }
+
+    #site-navigation {
+        display: none; /* Hide the main navigation menu by default on smaller screens */
+    }
+
+    .menu-toggle.active + .main-navigation {
+        display: block; /* Show the main navigation menu when the icon is clicked */
+    }
+}
+.mobile-header{
+	// margin: 0 -1rem; // Undo the padding on the parent element so we can add a background colour.
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	&.active{
+		background-color: #222;
+	}
+}
+// ? End Hamburger icon
+
+.logo-c4aa-mobile{
+display: none;
+}
+@media screen and (max-width: 768px) {
+	.logo-c4aa-mobile{
+		width: 85%;
+	}
+	.logo-c4aa-mobile.logo-c4aa-mobile--red{
+		display: none;
+		&.active{
 			display: block;
-			padding: 0;
 		}
-			a{
-				// @extend .is-style-c4aa-clipPath-heading;
-				padding: 0.2rem .5rem;
-				font-weight: 900;
-				margin: 0;
-				background-color: var(--color-brandRed);
-				color: #ffffff;
-				// clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
-				clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 94%);
-				@media only screen and (max-width: 768px) {
-					clip-path: none;
-					background-color: var(--color-brandBlack);
-					display: block;
-					width: 100%;
-				}
-			}
-			&:nth-child(odd) a{
-				clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
-				@media only screen and (max-width: 768px) {
-					clip-path: none
-				}
-			}
+	}
+	.logo-c4aa-mobile.logo-c4aa-mobile--white{
+			display: none;
+		&.active{
+			mix-blend-mode: screen;
+			display: block;
+		}
+	}
+}
+
+#masthead.site-header{
+	@media screen and (max-width: 768px) {
+		padding: 0;
+	}
+}
+#masthead .site-branding-container{
+	@media screen and (max-width: 768px) {
+		padding: 0;
+	}
+}
+.site-header.active,
+.site-header.active .site-branding-container{
+	@media screen and (max-width: 768px) {
+		background-color: var(--color-brandBlack) !important;
 	}
 }

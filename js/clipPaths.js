@@ -42,8 +42,8 @@ Store Clip Path Properties in Array
 
 const clipProperties = ['--topLeftX', '--topLeftY', '--topRightX', '--topRightY', '--bottomLeftX', '--bottomLeftY', '--bottomRightX', '--bottomRightY' ];
 
-/************** 
-Apply Clip Paths 
+/**************
+Apply Clip Paths
 **************/
 
 /* Headings */
@@ -60,8 +60,8 @@ addPlugInButtonClipPaths(formButtons);
 addThemeButtonClipPaths(defaultButtons);
 addThemeButtonClipPaths(outlineButtons);
 
-/************** 
- Clip Path Helper Function 
+/**************
+ Clip Path Helper Function
 **************/
 
 //if no fixedPoint is set, then this function will generate an integer
@@ -77,7 +77,7 @@ function addBlockClipPaths ( selector ) {
 	selector.forEach( ( heading ) => {
 		// rotate headings
 		heading.style.setProperty( '--rotate', getRandomNum( -1.5, 2, 3 ) );
-		
+
 		// add clip path css properties
 		clipProperties.forEach( ( property ) => {
 				heading.style.setProperty( property, getRandomNum( 10, 20) );
@@ -101,17 +101,45 @@ function addPlugInButtonClipPaths ( selector ) {
 		// create container for dropshadow
 		let wrapShadow = document.createElement('div');
 		wrapShadow.setAttribute( 'class', 'is-style-c4aa-clipPath-button' );
-	
+
 		// insert container before button in the DOM tree
 		button.parentNode.insertBefore( wrapShadow, button );
-	
+
 		// move button into container
 		wrapShadow.appendChild( button );
-	
+
 		// add clip path css properties
 		clipProperties.forEach( ( property ) => {
 				button.style.setProperty( property, getRandomNum( 10, 20) );
 		});
-		
+
 	});
 }
+
+// Hamburger
+document.addEventListener('DOMContentLoaded', function() {
+    var menuToggle = document.querySelector('.menu-toggle');
+    var mainNavigation = document.querySelector('.main-navigation');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mainNavigation.style.display = (menuToggle.classList.contains('active')) ? 'block' : 'none';
+        });
+    }
+});
+// Toggle red and white logos
+document.addEventListener('DOMContentLoaded', function() {
+    var menuToggle = document.querySelector('.menu-toggle');
+	var logoC4aaMobileRed = document.querySelector('.logo-c4aa-mobile--red');
+	var logoC4aaMobileWhite = document.querySelector('.logo-c4aa-mobile--white');
+	var siteHeader = document.querySelector('.site-header');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            logoC4aaMobileRed.classList.toggle('active');
+            logoC4aaMobileWhite.classList.toggle('active');
+            siteHeader.classList.toggle('active');
+		});
+    }
+});
