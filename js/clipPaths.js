@@ -115,31 +115,3 @@ function addPlugInButtonClipPaths ( selector ) {
 
 	});
 }
-
-// Hamburger
-document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.querySelector('.menu-toggle');
-    var mainNavigation = document.querySelector('.main-navigation');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
-            mainNavigation.style.display = (menuToggle.classList.contains('active')) ? 'block' : 'none';
-        });
-    }
-});
-// Toggle red and white logos
-document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.querySelector('.menu-toggle');
-	var logoC4aaMobileRed = document.querySelector('.logo-c4aa-mobile--red');
-	var logoC4aaMobileWhite = document.querySelector('.logo-c4aa-mobile--white');
-	var siteHeader = document.querySelector('.site-header');
-
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            logoC4aaMobileRed.classList.toggle('active');
-            logoC4aaMobileWhite.classList.toggle('active');
-            siteHeader.classList.toggle('active');
-		});
-    }
-});
