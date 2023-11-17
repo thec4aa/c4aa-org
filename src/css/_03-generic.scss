@@ -874,3 +874,53 @@ display: none;
 		background-color: var(--color-brandBlack) !important;
 	}
 }
+
+// START Social icons header
+.social-header{
+	background: var(--color-brandBeige);
+	font-family: "metropolis", sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.14em;
+	font-size: 0.71111em;
+	padding: 0 0.5rem;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	text-transform: uppercase;
+	margin: -18px;
+	@media screen and (max-width: 768px) {
+		margin: 0;
+	}
+}
+.social-header__list{
+	display: flex;
+	list-style: none;
+	margin: 0.5rem;
+}
+.social-header__list-item{
+	margin-left: .5rem;
+	transform: rotate(-1.5deg);
+	transition: all;
+	transition-duration: 100ms;
+	transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+	&:nth-child(odd){
+		transform: rotate(1.5deg);
+	}
+	&:hover{
+		transform: rotate(4deg);
+		&:nth-child(odd){
+			transform: rotate(-4deg);
+		}
+	}
+}
+.social-header__icon-link{
+	display: flex;
+	align-items: center;
+	background-color: var(--color-brandRed);
+	padding: .2rem;
+	stroke: white;
+	svg{
+		width: 1.5rem;
+	}
+}
+// END Social icons header
