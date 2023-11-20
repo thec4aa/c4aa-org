@@ -2,7 +2,7 @@
  * Title Effects
  */
 
-[class*="banner"] .site-featured-image .entry-title {
+[class*="banner"] .site-featured-image .entry-title{
 	padding: 1rem;
 	clip-path: polygon( calc(
 		var( --topLeftX ) * 1px) calc( var( --topLeftY ) * 1px),
