@@ -645,6 +645,14 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 // ? Updates: October 19, 2023
 /*****************/
 
+/* Show the main navigation for larger screens */
+@media screen and (min-width: 768px) {
+    .main-navigation {
+        display: block;
+    }
+}
+
+
 .main-navigation{
 margin-left: 2rem;
 	@media only screen and (max-width: 768px) {
@@ -720,7 +728,7 @@ margin-left: 2rem;
 		li{
 			opacity: 0;
 
-			// Show the submenu by default on mobile:
+			// Show submenus by default on mobile:
 			@media only screen and (max-width: 768px) {
 				visibility: visible;
 				opacity: 1;
@@ -773,8 +781,14 @@ margin-left: 2rem;
 }
 
 
-// Hide the logo icon on mobile:
+// Hide the logo icon on mobile because we use the wordmark (".site-title"):
 @media only screen and (max-width: 768px) {
+	.site-logo{
+		display: none;
+	}
+}
+// Hide the logo icon on large screens because we use the wordmark (".site-title"):
+@media only screen and (min-width: 1260px) {
 	.site-logo{
 		display: none;
 	}

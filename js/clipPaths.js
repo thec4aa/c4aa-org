@@ -127,7 +127,22 @@ document.addEventListener('DOMContentLoaded', function() {
             mainNavigation.style.display = (menuToggle.classList.contains('active')) ? 'block' : 'none';
         });
     }
+	// Event listener for window resize
+	window.addEventListener('resize', function() {
+		// Check if the window width is greater than a certain size (e.g., 768px for desktop)
+		if (window.innerWidth > 768) {
+			// Show the menu for desktop sizes
+			mainNavigation.style.display = 'block';
+		} else {
+			// Toggle the menu based on the state of the hamburger icon for smaller sizes
+			if (!menuToggle.classList.contains('active')) {
+				mainNavigation.style.display = 'none';
+			}
+		}
+	});
 });
+
+
 // Toggle red and white logos
 document.addEventListener('DOMContentLoaded', function() {
     var menuToggle = document.querySelector('.menu-toggle');
