@@ -892,10 +892,17 @@ display: none;
 		margin: 0;
 	}
 }
+.social-header .is-style-c4aa-clipPath-button{
+	filter: none;
+}
+.social-header .is-style-c4aa-clipPath-button a{
+	padding: 1.5rem;
+}
 .social-header__list{
 	display: flex;
 	list-style: none;
 	margin: 0.5rem;
+	margin-left: 0;
 }
 .social-header__list-item{
 	margin-left: .5rem;

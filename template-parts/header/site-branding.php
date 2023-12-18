@@ -8,10 +8,12 @@
  */
 ?>
 <header class="social-header">
-	<a href="/newsletter" class="">Newsletter</a><!-- / -->
+	<span class="is-style-c4aa-clipPath-button">
+		<a href="/newsletter" class="button">Newsletter</a><!-- / -->
+	</span><!-- / -->
 	<ul class="social-header__list">
 		<li class="social-header__list-item">
-			<a href="" class="social-header__icon-link">
+			<a href="https://twitter.com/thec4aa" target="_blank" class="social-header__icon-link">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-x" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 				<path d="M4 4l11.733 16h4.267l-11.733 -16z" />
@@ -20,7 +22,7 @@
 			</a><!-- / -->
 		</li><!-- / -->
 		<li class="social-header__list-item">
-			<a href="" class="social-header__icon-link">
+			<a href="https://www.youtube.com/@theC4AA" target="_blank" class="social-header__icon-link">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 				<path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
@@ -29,7 +31,7 @@
 			</a><!-- / -->
 		</li><!-- / -->
 		<li class="social-header__list-item">
-			<a href="" class="social-header__icon-link">
+			<a href="https://instagram.com/thec4aa" target="_blank" class="social-header__icon-link">
 				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
 				<path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
