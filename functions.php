@@ -177,17 +177,17 @@ function c4aa_custom_dashboard_help() {
 
 /**
  * Theme support.
- * 
+ *
  * Specify block color palette and adjust support for other
  * features as needed.
  */
 function c4aa_setup_theme_supported_features() {
-	
+
 	// There is a bug with jetpack responsive videos, and they are
 	// already supported in core.
 	// @see https://github.com/Automattic/jetpack/issues/17170
-	remove_theme_support( 'jetpack-responsive-videos' ); 
-	
+	remove_theme_support( 'jetpack-responsive-videos' );
+
 	// Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
 	// adds a hypen in front of the 4 in CSS classes.
 	// @see https://kinsta.com/blog/twenty-nineteen-theme/#block-color-palettes
