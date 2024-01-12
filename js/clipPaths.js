@@ -115,3 +115,46 @@ function addPlugInButtonClipPaths ( selector ) {
 
 	});
 }
+
+// Hamburger
+document.addEventListener('DOMContentLoaded', function() {
+    var menuToggle = document.querySelector('.menu-toggle');
+    var mainNavigation = document.querySelector('.main-navigation');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mainNavigation.style.display = (menuToggle.classList.contains('active')) ? 'block' : 'none';
+        });
+    }
+	// Event listener for window resize
+	window.addEventListener('resize', function() {
+		// Check if the window width is greater than a certain size (e.g., 768px for desktop)
+		if (window.innerWidth > 768) {
+			// Show the menu for desktop sizes
+			mainNavigation.style.display = 'block';
+		} else {
+			// Toggle the menu based on the state of the hamburger icon for smaller sizes
+			if (!menuToggle.classList.contains('active')) {
+				mainNavigation.style.display = 'none';
+			}
+		}
+	});
+});
+
+
+// Toggle red and white logos
+document.addEventListener('DOMContentLoaded', function() {
+    var menuToggle = document.querySelector('.menu-toggle');
+	var logoC4aaMobileRed = document.querySelector('.logo-c4aa-mobile--red');
+	var logoC4aaMobileWhite = document.querySelector('.logo-c4aa-mobile--white');
+	var siteHeader = document.querySelector('.site-header');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            logoC4aaMobileRed.classList.toggle('active');
+            logoC4aaMobileWhite.classList.toggle('active');
+            siteHeader.classList.toggle('active');
+		});
+    }
+});
