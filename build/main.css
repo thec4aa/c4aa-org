@@ -1378,6 +1378,16 @@ h4.is-style-c4aa-clipPath-heading {
   --duotone-contrast: 1;
 }
 
+*[class*=being-and-blue] {
+  --duotone-base: #27aae130;
+  --duotone-foreground: #003f72;
+  --duotone-bg-blend: multiply;
+  --duotone-fg-blend: screen;
+  --duotone-opacity: 1;
+  --duotone-grayscale: 100%;
+  --duotone-contrast: 1;
+}
+
 /*******************/
 /* Duotone Filters */
 /*******************/
