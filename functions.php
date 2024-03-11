@@ -1,4 +1,7 @@
 <?php
+if( !defined('POWERPRESS_NO_REMOVE_WP_HEAD') ) {
+	define( 'POWERPRESS_NO_REMOVE_WP_HEAD', true );
+}
 
 /* remove  parent script that inserts ellipsis icon on mobile */
 function dequeue_priority_menu() {
