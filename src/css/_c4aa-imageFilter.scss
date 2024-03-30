@@ -53,15 +53,6 @@
 	filter: grayscale(100%) opacity(.85) brightness(1.1) contrast(1.5);
 }
 
-.wp-block-cover__inner-container p {
-	display: inline;
-	padding: 0em 0em;
-	background-color: hsla(36, 6%, 5%, 0.8);
-	box-shadow: .5em 0 0 hsla(36, 6%, 5%, 0.8), -.5em 0 0 hsla(36, 6%, 5%, 0.8);
-	box-decoration-break: clone;
-	color: var(--color-brandWhite);
-}
-
 // Force image caption to display on top of filtered images
 .wp-block-image figcaption {
 	background-color: inherit;
