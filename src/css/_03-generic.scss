@@ -405,44 +405,6 @@ fieldset {
 	border: none;
 }
 
-form.give-form legend,
-form[id*="give-form"] legend,
-legend:not(.give-hidden) {
-	color: var( --color-brandBeige );
-	background-color: var( --color-brandBlack );
-	font-weight: bold;
-	margin-left: -2rem;
-	text-transform: uppercase;
-}
-
-/* radio buttons */
-
-.give-form-wrap input[type="radio"] {
-	height: 0;
-	opacity: 0;
-	width: 0;
-}
-
-.give-form-wrap input[type="radio"] + label {
-	margin-top: -1rem;
-}
-
-.give-form-wrap input[type="radio"] + label::before {
-	content: ' ';
-	background-color: transparent;
-	border: 2px solid var( --color-brandBlack );
-	border-radius: 1000px;
-	display: inline-block;
-	height: 1rem;
-	width: 1rem;
-	margin-right: 0.5rem;
-}
-
-.give-form-wrap input[type="radio"]:checked + label::before {
-	background-color: var( --color-brandWhite );
-	border: 6px solid var( --color-brandRed );
-}
-
 /**************/
 /*** Footer ***/
 /**************/
@@ -550,10 +512,6 @@ legend:not(.give-hidden) {
 
 .entry .entry-content .wp-block-image.alignfull img {
 	width: 100%;
-}
-
-form[id*="give-form"] #give-donation-level-radio-list > li {
-	display: inline-flex;
 }
 
 /* Lists in Blocks */
