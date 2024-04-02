@@ -118,6 +118,11 @@ h2:before.is-style-c4aa-clipPath-heading,
 
 .is-style-c4aa-clipPath-heading a {
 	color: var( --color-brandWhite );
+	text-decoration: none !important; 
+}
+
+.is-style-c4aa-clipPath-heading a:hover {
+	text-decoration: underline !important;
 }
 
 .widget-title {

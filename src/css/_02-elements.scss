@@ -60,6 +60,10 @@ table strong {
 	}
 }
 
+// --------- //
+//  HEADERS  //
+// --------- //
+
 h1, 
 h2, 
 h3,
@@ -88,6 +92,46 @@ h6 {
 		font-family: 'roboto', Georgia, serif;
 	}
 }
+
+// ------------ //
+// END HEADERS  //
+// ------------ //
+
+// ------------ //
+//    LINKS     //
+// ------------ //
+
+.entry .entry-content a:link {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-style: dotted;
+}
+
+.entry .entry-content h1 a:link, 
+.entry .entry-content h2 a:link, 
+.entry .entry-content h3 a:link, 
+.entry .entry-content h4 a:link, 
+.entry .entry-content h5 a:link, 
+.entry .entry-content h6 a:link {
+	text-decoration: none;
+}
+
+.entry .entry-content h1 a:hover, 
+.entry .entry-content h2 a:hover, 
+.entry .entry-content h3 a:hover, 
+.entry .entry-content h4 a:hover, 
+.entry .entry-content h5 a:hover, 
+.entry .entry-content h6 a:hover,
+.entry .entry-content a:hover { 
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-thickness: 1px;
+}
+
+// ------------ //
+//  END LINKS   //
+// ------------ //
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 	
 	.entry {
