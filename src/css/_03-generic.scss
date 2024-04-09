@@ -320,6 +320,13 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 	}
 }
 
+/* Properly aligns collapsed, nested sets of columns */
+/* when using the Multi Breakpoint Columns plugin    */
+@media only screen and (min-width: 768px) {
+	.entry .entry-content .wp-block-columns .wp-block-column:not(:first-child) {
+	  margin-left: 0px;
+	}
+  }
 
 /***************/
 /*** Buttons ***/
