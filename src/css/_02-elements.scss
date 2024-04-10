@@ -88,6 +88,20 @@ h6 {
 		font-family: 'roboto', Georgia, serif;
 	}
 }
+.entry {
+    .entry-content {
+        figure {
+            &.wp-block-pullquote {
+                &.c4aa-pullquote-style {
+                    font-weight: 400;
+                    p {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 	
 	.entry {
