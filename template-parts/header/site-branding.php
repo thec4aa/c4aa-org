@@ -7,6 +7,19 @@
  * @since 1.0.0
  */
 ?>
+
+<header class="mobile-header">
+	<a href="/" class="">
+		<img src="/wp-content/themes/c4aa-org/img/logo-c4aa-red.png" alt="" class="logo-c4aa-mobile logo-c4aa-mobile--red active">
+		<img src="/wp-content/themes/c4aa-org/img/logo-c4aa-white.png" alt="" class="logo-c4aa-mobile logo-c4aa-mobile--white">
+	</a><!-- / -->
+	<div class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+	</div>
+</header><!-- / -->
+
 <div class="site-branding">
 
 	<?php if ( has_custom_logo() ) : ?>
@@ -17,7 +30,7 @@
 		<?php if ( is_front_page() && is_home() ) : ?>
 			<h1 class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<span class="c4aa-text-logo" style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() . '/img/c4aa-text-slash.png' ); ?> ');">
+					<span class="c4aa-text-logo" style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-red.png' ); ?> ');">
 					</span>
 					<span class="c4aa-sr-only"><?php bloginfo( 'name' ); ?></span>
 				</a>
@@ -25,7 +38,7 @@
 		<?php else : ?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<span class="c4aa-text-logo" style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() . '/img/c4aa-text-slash.png' ); ?> ');">
+					<span class="c4aa-text-logo" style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-red.png' ); ?> ');">
 					</span>
 					<span class="c4aa-sr-only"><?php bloginfo( 'name' ); ?></span>
 				</a>

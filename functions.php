@@ -1,4 +1,7 @@
 <?php
+if( !defined('POWERPRESS_NO_REMOVE_WP_HEAD') ) {
+	define( 'POWERPRESS_NO_REMOVE_WP_HEAD', true );
+}
 
 /* remove  parent script that inserts ellipsis icon on mobile */
 function dequeue_priority_menu() {
@@ -15,6 +18,7 @@ function c4aa_enqueue_assets() {
 
 	wp_enqueue_style( 'twentynineteen-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/build/main.css', [], $style_version );
+	wp_enqueue_script( 'c4aa-js-mobileMenu', get_stylesheet_directory_uri() . '/js/mobileMenu.js', [], $script_version, true );
 	wp_enqueue_script( 'c4aa-js-clipPath', get_stylesheet_directory_uri() . '/js/clipPaths.js', [], $script_version, true );
 }
 
@@ -178,17 +182,17 @@ function c4aa_custom_dashboard_help() {
 
 /**
  * Theme support.
- * 
+ *
  * Specify block color palette and adjust support for other
  * features as needed.
  */
 function c4aa_setup_theme_supported_features() {
-	
+
 	// There is a bug with jetpack responsive videos, and they are
 	// already supported in core.
 	// @see https://github.com/Automattic/jetpack/issues/17170
-	remove_theme_support( 'jetpack-responsive-videos' ); 
-	
+	remove_theme_support( 'jetpack-responsive-videos' );
+
 	// Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
 	// adds a hypen in front of the 4 in CSS classes.
 	// @see https://kinsta.com/blog/twenty-nineteen-theme/#block-color-palettes
