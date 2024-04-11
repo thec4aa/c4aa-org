@@ -103,7 +103,7 @@ h6 {
 
 .entry .entry-content a:link {
 	text-decoration: underline;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: unset;
 	text-decoration-style: dotted;
 }
 
@@ -125,7 +125,7 @@ h6 {
 .entry .entry-content a:hover { 
 	text-decoration: underline;
 	text-decoration-style: solid;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: unset;
 }
 
 // ------------ //
