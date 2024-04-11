@@ -86,6 +86,7 @@ h6 {
 	font-weight: 900;
 	letter-spacing: .14em;
 	text-transform: uppercase;
+	line-height: 1.4;
 
 	.wf-active & {
 
@@ -101,19 +102,16 @@ h6 {
 //    LINKS     //
 // ------------ //
 
-.entry .entry-content a:link {
-	text-decoration: underline;
-	text-decoration-thickness: unset;
-	text-decoration-style: dotted;
-}
-
-.entry .entry-content h1 a:link, 
-.entry .entry-content h2 a:link, 
-.entry .entry-content h3 a:link, 
-.entry .entry-content h4 a:link, 
-.entry .entry-content h5 a:link, 
-.entry .entry-content h6 a:link {
-	text-decoration: none;
+.entry .entry-content a:link, .entry .entry-content a,
+.entry .entry-content h1 a:link, .entry .entry-content h1 a,
+.entry .entry-content h2 a:link, .entry .entry-content h2 a, 
+.entry .entry-content h3 a:link, .entry .entry-content h3 a, 
+.entry .entry-content h4 a:link, .entry .entry-content h4 a, 
+.entry .entry-content h5 a:link, .entry .entry-content h5 a, 
+.entry .entry-content h6 a:link, .entry .entry-content h6 a {
+	text-decoration: underline dotted 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
+	text-underline-offset: 0.2em; // must be set or will show up different on different browsers
+	text-decoration-skip-ink: none;
 }
 
 .entry .entry-content h1 a:hover, 
@@ -123,9 +121,7 @@ h6 {
 .entry .entry-content h5 a:hover, 
 .entry .entry-content h6 a:hover,
 .entry .entry-content a:hover { 
-	text-decoration: underline;
-	text-decoration-style: solid;
-	text-decoration-thickness: unset;
+	text-decoration: underline solid 10%;
 }
 
 // ------------ //
