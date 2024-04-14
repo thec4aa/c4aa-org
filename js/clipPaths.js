@@ -11,9 +11,6 @@ const entryTitles = document.querySelectorAll( 'header:not(.featured-image) h1.e
 // widget titles
 const widgetTitles = document.querySelectorAll('.widget-title');
 
-// donate length titles
-const donateLegendTitles = document.querySelectorAll('.give-form legend:not(.give-hidden)');
-
 /********************
 Get Clip Path Quote Selectors
 *********************/
@@ -29,11 +26,10 @@ const defaultButtons = document.querySelectorAll( '.is-style-c4aa-clipPath-butto
 const outlineButtons = document.querySelectorAll( '.is-style-c4aa-clipPath-button-outline a');
 
 /* Plug-in buttons
- 	donate form (.give-form) buttons
 	contact form (.wpcf7-form) buttons
  	newsletter subscribe button (#mc-embedded-subscribe)
  */
-const formButtons = document.querySelectorAll( '.give-btn, .give-form input[type="submit"], .wpcf7-form input[type="submit"], #mc-embedded-subscribe');
+const formButtons = document.querySelectorAll( '.wpcf7-form input[type="submit"], #mc-embedded-subscribe');
 
 
 /********************

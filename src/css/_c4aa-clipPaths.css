@@ -6,9 +6,6 @@
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
 .widget-title,
-.give-form legend:not(.give-hidden),
-.give-btn,
-.give-form input[type="submit"],
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe,
 .is-style-c4aa-clipPath-button a,
@@ -51,9 +48,6 @@ columns block */
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
 .widget-title,
-.give-form legend:not(.give-hidden),
-.give-btn,
-.give-form input[type="submit"],
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe,
 .is-style-c4aa-clipPath-button a,
@@ -162,8 +156,6 @@ h4.is-style-c4aa-clipPath-heading {
 }
 
 /* Buttons */
-.give-btn,
-.give-form input[type="submit"],
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe, 
 .entry .entry-content .wp-block-button.is-style-c4aa-clipPath-button .wp-block-button__link,
