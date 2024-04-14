@@ -646,6 +646,7 @@ form[id*="give-form"] #give-donation-level-radio-list > li {
 /*****************/
 
 .main-navigation{
+margin-top: 0; // reset from parent theme
 margin-left: 2rem;
 	@media only screen and (max-width: 768px) {
 		margin-left: 0;
@@ -673,7 +674,7 @@ margin-left: 2rem;
 			font-weight: 900;
 			margin: 0;
 			background-color: var(--color-brandRed);
-			color: #ffffff;
+			color: #fff;
 			// clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
 			clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 94%);
 			@media only screen and (max-width: 768px) {
@@ -758,7 +759,7 @@ margin-left: 2rem;
 					max-width: 100%;
 					display: block;
 					text-transform: capitalize;
-					color: #ffffff;
+					color: #fff;
 				}
 			}
 		}
