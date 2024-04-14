@@ -60,6 +60,10 @@ table strong {
 	}
 }
 
+// --------- //
+//  HEADERS  //
+// --------- //
+
 h1, 
 h2, 
 h3,
@@ -82,6 +86,7 @@ h6 {
 	font-weight: 900;
 	letter-spacing: .14em;
 	text-transform: uppercase;
+	line-height: 1.4;
 
 	.wf-active & {
 
@@ -89,9 +94,60 @@ h6 {
 	}
 }
 
+
 .entry .entry-content .wp-block-pullquote.is-style-solid-color p {
 	font-size: 2.25em;
 	font-weight: 400;
 	font-style: normal;
 	hyphens: manual;
+}
+
+// ------------ //
+// END HEADERS  //
+// ------------ //
+
+// ------------ //
+//    LINKS     //
+// ------------ //
+
+.entry .entry-content a:link, .entry .entry-content a,
+.entry .entry-content h1 a:link, .entry .entry-content h1 a,
+.entry .entry-content h2 a:link, .entry .entry-content h2 a, 
+.entry .entry-content h3 a:link, .entry .entry-content h3 a, 
+.entry .entry-content h4 a:link, .entry .entry-content h4 a, 
+.entry .entry-content h5 a:link, .entry .entry-content h5 a, 
+.entry .entry-content h6 a:link, .entry .entry-content h6 a {
+	text-decoration: underline dotted 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
+	text-underline-offset: 0.2em; // must be set or will show up different on different browsers
+	text-decoration-skip-ink: none;
+}
+
+.entry .entry-content h1 a:hover, 
+.entry .entry-content h2 a:hover, 
+.entry .entry-content h3 a:hover, 
+.entry .entry-content h4 a:hover, 
+.entry .entry-content h5 a:hover, 
+.entry .entry-content h6 a:hover,
+.entry .entry-content a:hover { 
+	text-decoration: underline solid 10%;
+}
+
+// ------------ //
+//  END LINKS   //
+// ------------ //
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	
+	.entry {
+		.entry-content {
+			.wp-block-pullquote {
+				&.about {
+					blockquote {
+						hyphens: none;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
 }
