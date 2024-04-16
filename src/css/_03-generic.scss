@@ -622,6 +622,15 @@ fieldset {
 // ? Updates: October 19, 2023
 /*****************/
 
+.site-branding .main-navigation ul li a {
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
+}
+
 .main-navigation{
 margin-top: 0; // reset from parent theme
 margin-left: 2rem;
