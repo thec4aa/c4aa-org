@@ -131,7 +131,12 @@ h6 {
 }
 
 .entry .entry-content a:link, .entry .entry-content a {
-	font-weight: 700;
+	font-weight: bolder;
+}
+
+.entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
+	// keep font weight the same as surrounding text
+	font-weight: inherit;
 }
 
 .entry .entry-content h1 a:hover, 
