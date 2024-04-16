@@ -43,8 +43,42 @@
 	background-color: var(--color-brandRed);
 }
 
-a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation .main-menu > li > a:hover, .main-navigation .main-menu > li > a:hover + svg, .post-navigation .nav-links a:hover, .post-navigation .nav-links a:hover .post-title, .author-bio .author-description .author-link:hover, .entry .entry-content > .has-secondary-color, .entry .entry-content > [class^="wp-block-"] .has-secondary-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p, .entry .entry-footer a:hover, .comment .comment-author .fn a:hover, .comment-reply-link:hover, .comment-navigation .nav-previous a:hover, .comment-navigation .nav-next a:hover, #cancel-comment-reply-link:hover, .widget a:hover {
+a, 
+a:hover, 
+a:active, 
+a:visited, 
+#colophon .site-info a:hover, 
+.main-navigation .main-menu > li > a:hover, 
+.main-navigation .main-menu > li > a:hover + svg, 
+.post-navigation .nav-links a:hover, 
+.post-navigation .nav-links a:hover .post-title, 
+.author-bio .author-description .author-link:hover, 
+.entry .entry-content > .has-secondary-color, 
+.entry .entry-content > [class^="wp-block-"] .has-secondary-color, 
+.entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color, 
+.entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p, 
+.entry .entry-footer a:hover, 
+.comment .comment-author .fn a:hover, 
+.comment-reply-link:hover, 
+.comment-navigation .nav-previous a:hover, 
+.comment-navigation .nav-next a:hover, 
+#cancel-comment-reply-link:hover, .widget a:hover {
 	color: var( --color-brandRed );
+}
+
+h1 a, h1 a:hover, h1 a:active, h1 a:visited, 
+h2 a, h2 a:hover, h2 a:active, h2 a:visited, 
+h3 a, h3 a:hover, h3 a:active, h3 a:visited, 
+h4 a, h4 a:hover, h4 a:active, h4 a:visited, 
+h5 a, h5 a:hover, h5 a:active, h5 a:visited, 
+h6 a, h6 a:hover, h6 a:active, h6 a:visited {
+	color: var( --color-brandBlack );
+}
+
+h1.is-style-c4aa-clipPath-heading a, h1.is-style-c4aa-clipPath-heading a:hover, h1.is-style-c4aa-clipPath-heading a:active, h1.is-style-c4aa-clipPath-heading a:visited, 
+h2.is-style-c4aa-clipPath-heading a, h2.is-style-c4aa-clipPath-heading a:hover, h2.is-style-c4aa-clipPath-heading a:active, h2.is-style-c4aa-clipPath-heading a:visited, 
+h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, h3.is-style-c4aa-clipPath-heading a:active, h3.is-style-c4aa-clipPath-heading a:visited {
+	color: var( --color-brandBeige );
 }
 
 .entry .entry-title a:hover {
@@ -412,44 +446,6 @@ fieldset {
 	border: none;
 }
 
-form.give-form legend,
-form[id*="give-form"] legend,
-legend:not(.give-hidden) {
-	color: var( --color-brandBeige );
-	background-color: var( --color-brandBlack );
-	font-weight: bold;
-	margin-left: -2rem;
-	text-transform: uppercase;
-}
-
-/* radio buttons */
-
-.give-form-wrap input[type="radio"] {
-	height: 0;
-	opacity: 0;
-	width: 0;
-}
-
-.give-form-wrap input[type="radio"] + label {
-	margin-top: -1rem;
-}
-
-.give-form-wrap input[type="radio"] + label::before {
-	content: ' ';
-	background-color: transparent;
-	border: 2px solid var( --color-brandBlack );
-	border-radius: 1000px;
-	display: inline-block;
-	height: 1rem;
-	width: 1rem;
-	margin-right: 0.5rem;
-}
-
-.give-form-wrap input[type="radio"]:checked + label::before {
-	background-color: var( --color-brandWhite );
-	border: 6px solid var( --color-brandRed );
-}
-
 /**************/
 /*** Footer ***/
 /**************/
@@ -557,10 +553,6 @@ legend:not(.give-hidden) {
 
 .entry .entry-content .wp-block-image.alignfull img {
 	width: 100%;
-}
-
-form[id*="give-form"] #give-donation-level-radio-list > li {
-	display: inline-flex;
 }
 
 /* Lists in Blocks */

@@ -173,7 +173,7 @@ function c4aa_custom_dashboard_help() {
 						<li>- <code>beige-and-red</code> </li>
 						<li>- <code>beige-and-grey</code> </li>
 						<li>- <code>beige-and-grey-vintage</code> </li>
-						<li>- <code>being-and-blue</code> </li>
+						<li>- <code>beige-and-blue</code> </li>
 					</ul>
 					</li>
 			</ul>
