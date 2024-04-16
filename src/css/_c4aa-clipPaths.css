@@ -1,7 +1,3 @@
-.is-style-c4aa-clipPath-button {
-	display: inline-block;
-}
-
 .is-style-c4aa-clipPath-heading,
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
@@ -156,6 +152,11 @@ h4.is-style-c4aa-clipPath-heading {
 }
 
 /* Buttons */
+
+.is-style-c4aa-clipPath-button {
+	display: inline-block;
+}
+
 .wpcf7-form input[type="submit"],
 #mc-embedded-subscribe, 
 .entry .entry-content .wp-block-button.is-style-c4aa-clipPath-button .wp-block-button__link,
