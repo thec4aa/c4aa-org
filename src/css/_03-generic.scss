@@ -432,27 +432,9 @@ fieldset {
 	max-width: 80px;
 }
 
-/* Footer Widgets */
-
-.widget-area ul li {
-	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1rem;
-	font-family: var( --font-sans );
-}
-
-.widget-area ul li a {
-	color:  var( --color-brandBlack );
-}
-
-.widget-area ul li a:hover,
-.widget-area ul li a:visited {
-	color:  var( --color-brandGrey );
-}
-
-/*****************************/
+/********************/
 /* Latests Posts on Homepage */
-/*****************************/
+/********************/
 
 .entry .entry-content .wp-block-latest-posts.is-grid li {
 	border-top: none;
