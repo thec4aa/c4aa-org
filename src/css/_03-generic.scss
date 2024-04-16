@@ -43,7 +43,26 @@
 	background-color: var(--color-brandRed);
 }
 
-a, a:hover, a:active, a:visited, #colophon .site-info a:hover, .main-navigation .main-menu > li > a:hover, .main-navigation .main-menu > li > a:hover + svg, .post-navigation .nav-links a:hover, .post-navigation .nav-links a:hover .post-title, .author-bio .author-description .author-link:hover, .entry .entry-content > .has-secondary-color, .entry .entry-content > [class^="wp-block-"] .has-secondary-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p, .entry .entry-footer a:hover, .comment .comment-author .fn a:hover, .comment-reply-link:hover, .comment-navigation .nav-previous a:hover, .comment-navigation .nav-next a:hover, #cancel-comment-reply-link:hover, .widget a:hover {
+a, 
+a:hover, 
+a:active, 
+a:visited, 
+#colophon .site-info a:hover, 
+.main-navigation .main-menu > li > a:hover, 
+.main-navigation .main-menu > li > a:hover + svg, 
+.post-navigation .nav-links a:hover, 
+.post-navigation .nav-links a:hover .post-title, 
+.author-bio .author-description .author-link:hover, 
+.entry .entry-content > .has-secondary-color, 
+.entry .entry-content > [class^="wp-block-"] .has-secondary-color, 
+.entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color, 
+.entry .entry-content > [class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p, 
+.entry .entry-footer a:hover, 
+.comment .comment-author .fn a:hover, 
+.comment-reply-link:hover, 
+.comment-navigation .nav-previous a:hover, 
+.comment-navigation .nav-next a:hover, 
+#cancel-comment-reply-link:hover, .widget a:hover {
 	color: var( --color-brandRed );
 }
 
