@@ -127,6 +127,11 @@ h6 {
 	text-decoration-thickness: 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
 	text-underline-offset: 0.2em; // must be set or will show up different on different browsers
 	text-decoration-skip-ink: none;
+	font-weight: inherit;
+}
+
+.entry .entry-content a:link, .entry .entry-content a {
+	font-weight: 700;
 }
 
 .entry .entry-content h1 a:hover, 
