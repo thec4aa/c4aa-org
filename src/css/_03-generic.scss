@@ -321,9 +321,15 @@ blockquote.wp-block-quote.is-style-large {
 	color: var( --color-brandWhite );
 }
 
-blockquote.wp-block-quote cite {
+.entry .entry-content .wp-block-pullquote cite {
 	color: var( --color-brandWhite );
 	font-weight: 700;
+	font-size: 1.2rem;
+	font-family: Arial, Helvetica, sans-serif;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
 }
 
 blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
