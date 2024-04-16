@@ -75,6 +75,12 @@ h6 a, h6 a:hover, h6 a:active, h6 a:visited {
 	color: var( --color-brandBlack );
 }
 
+h1.is-style-c4aa-clipPath-heading a, h1.is-style-c4aa-clipPath-heading a:hover, h1.is-style-c4aa-clipPath-heading a:active, h1.is-style-c4aa-clipPath-heading a:visited, 
+h2.is-style-c4aa-clipPath-heading a, h2.is-style-c4aa-clipPath-heading a:hover, h2.is-style-c4aa-clipPath-heading a:active, h2.is-style-c4aa-clipPath-heading a:visited, 
+h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, h3.is-style-c4aa-clipPath-heading a:active, h3.is-style-c4aa-clipPath-heading a:visited {
+	color: var( --color-brandBeige );
+}
+
 .entry .entry-title a:hover {
 	color: var( --color-brandWhite );
 	text-decoration: underline;
