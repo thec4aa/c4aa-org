@@ -112,10 +112,6 @@ h2:before.is-style-c4aa-clipPath-heading,
 	max-width: none;
 }
 
-.is-style-c4aa-clipPath-heading a {
-	color: var( --color-brandWhite );
-}
-
 h5.is-style-c4aa-clipPath-heading a,
 h6.is-style-c4aa-clipPath-heading a {
 	color: var( --color-brandBlack );
