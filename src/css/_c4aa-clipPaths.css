@@ -77,12 +77,18 @@ header:not(.featured-image) h1.entry-title,
 /* Headers */
 
 header:not(.featured-image) h1.entry-title,
+h1.is-style-c4aa-clipPath-heading,
 h2.is-style-c4aa-clipPath-heading,
 .archive h2.entry-title,
 .widget-title,
 h3.is-style-c4aa-clipPath-heading,
 h4.is-style-c4aa-clipPath-heading {
 	color: var( --color-brandBeige );
+}
+
+h5.is-style-c4aa-clipPath-heading,
+h6.is-style-c4aa-clipPath-heading {
+	color: var( --color-brandBlack );	
 }
 
 header:not(.featured-image) h1.entry-title {
@@ -120,8 +126,15 @@ h2:before.is-style-c4aa-clipPath-heading,
 	margin-left: -1rem;
 }
 
+h1.is-style-c4aa-clipPath-heading,
 h3.is-style-c4aa-clipPath-heading {
 	background: var( --color-brandBlack );
+	display: inline-block;
+}
+
+h5.is-style-c4aa-clipPath-heading,
+h6.is-style-c4aa-clipPath-heading {
+	background: var( --color-brandWhite );
 	display: inline-block;
 }
 
