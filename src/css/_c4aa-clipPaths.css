@@ -107,11 +107,6 @@ h2:before.is-style-c4aa-clipPath-heading,
 	content: none;
 }
 
-.entry .entry-content > h2.is-style-c4aa-clipPath-heading,
-.widget-title {
-	max-width: none;
-}
-
 h5.is-style-c4aa-clipPath-heading a,
 h6.is-style-c4aa-clipPath-heading a {
 	color: var( --color-brandBlack );
