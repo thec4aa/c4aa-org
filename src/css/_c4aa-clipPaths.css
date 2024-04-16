@@ -116,6 +116,11 @@ h2:before.is-style-c4aa-clipPath-heading,
 	color: var( --color-brandWhite );
 }
 
+h5.is-style-c4aa-clipPath-heading a,
+h6.is-style-c4aa-clipPath-heading a {
+	color: var( --color-brandBlack );
+}
+
 .widget-title {
 	font-size: 1.6875em;
 	margin-left: -1rem;
