@@ -67,6 +67,7 @@ table strong {
 h1, 
 h2, 
 h3,
+h6,
 .site-header.featured-image .entry-meta {
 	font-family: Arial, sans-serif;
 	font-weight: 900;
@@ -80,8 +81,7 @@ h3,
 }
 
 h4, 
-h5, 
-h6 {
+h5 {
 	font-family: Georgia, serif;
 	font-weight: 900;
 	letter-spacing: .14em;
@@ -92,6 +92,11 @@ h6 {
 
 		font-family: 'roboto', Georgia, serif;
 	}
+}
+
+h5,
+h6 {
+	font-size: 0.9em;
 }
 
 // PULL QUOTES
