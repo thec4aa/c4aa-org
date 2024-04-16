@@ -423,6 +423,8 @@ fieldset {
 /* Latests Posts */
 /********************/
 
+// this is the latest post block currently on the home page 2024-04-16
+
 .entry .entry-content .wp-block-latest-posts.is-grid li {
 	border-top: none;
 	padding-top: 0;
@@ -470,16 +472,6 @@ fieldset {
 	text-transform: capitalize;
 }
 
-
-/* Allow image blocks to actually be full width */
-
-.entry .entry-content .wp-block-image {
-	max-width: 100vw;
-}
-
-.entry .entry-content .wp-block-image.alignfull img {
-	width: 100%;
-}
 
 /* Lists in Blocks */
 
