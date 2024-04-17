@@ -32,6 +32,7 @@
             "units": [ "px", "em", "rem", "%", "vw" ]
         },
         "color": {
+            "link": true,
             "defaultPalette": false,
             "defaultDuotone": false,
             "customDuotone": true,
