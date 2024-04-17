@@ -34,7 +34,6 @@
         "color": {
             "link": true,
             "defaultPalette": false,
-            "defaultDuotone": false,
             "customDuotone": true,
             "duotone": [
                 {
@@ -57,7 +56,8 @@
                     "slug": "grey-and-beige",
                     "name": "Grey and Beige"
                 }
-            ]
+            ],
+            "defaultDuotone": false
         }
     }
 }
