@@ -122,9 +122,21 @@ h6 {
 .entry .entry-content h4 a:link, .entry .entry-content h4 a, 
 .entry .entry-content h5 a:link, .entry .entry-content h5 a, 
 .entry .entry-content h6 a:link, .entry .entry-content h6 a {
-	text-decoration: underline dotted 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
 	text-underline-offset: 0.2em; // must be set or will show up different on different browsers
 	text-decoration-skip-ink: none;
+	font-weight: inherit;
+}
+
+.entry .entry-content a:link, .entry .entry-content a {
+	font-weight: bolder;
+}
+
+.entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
+	// keep font weight the same as surrounding text
+	font-weight: inherit;
 }
 
 .entry .entry-content h1 a:hover, 
@@ -134,7 +146,7 @@ h6 {
 .entry .entry-content h5 a:hover, 
 .entry .entry-content h6 a:hover,
 .entry .entry-content a:hover { 
-	text-decoration: underline solid 10%;
+	text-decoration-style: solid;
 }
 
 // ------------ //
