@@ -24,20 +24,22 @@ blockquote cite,
 	font-family: Georgia, serif;
 
 	.wf-active & {
-		font-family: 'worksans', Georgia, serif;
-	}
+		font-family: var( --font-sans );
+		font-weight: 400;
+		}
 }
 
 figure.wp-block-pullquote,
 p strong,
 ol strong,
 ul strong,
+.entry .entry-content figcaption,
 table strong {
-	font-family: Georgia, serif;
+	font-family: Arial, sans-serif;
 	font-weight: 700;
 
 	.wf-active & {
-		font-family: 'worksans', Georgia, serif;
+		font-family: var( --font-sans );
 	}
 }
 
@@ -46,18 +48,14 @@ table strong {
 	font-family: Arial, sans-serif;
 
 	.wf-active & {
-		font-family: 'metropolis', sans-serif;
+		font-family: var ( --font-serif );
 	}
 }
 
 .site-branding .main-navigation ul li a {
-	font-family: Arial, sans-serif;
+	font-family: var( --font-sans );
 	font-weight: 700;
 	text-transform: uppercase;
-
-	.wf-active & {
-		font-family: 'metropolis', sans-serif;
-	}
 }
 
 // --------- //
@@ -69,20 +67,17 @@ h2,
 h3,
 h6,
 .site-header.featured-image .entry-meta {
-	font-family: Arial, sans-serif;
-	font-weight: 900;
+	font-family: var( --font-serif );
+	font-weight: 700;
 	letter-spacing: .14em;
 	text-transform: uppercase;
 
-	.wf-active & {
-		font-family: 'metropolis', sans-serif;
-	}
 	
 }
 
 h4, 
 h5 {
-	font-family: Georgia, serif;
+	font-family: Arial, sans-serif;
 	font-weight: 900;
 	letter-spacing: .14em;
 	text-transform: uppercase;
@@ -90,7 +85,7 @@ h5 {
 
 	.wf-active & {
 
-		font-family: 'worksans', Georgia, serif;
+		font-family: var( --font-sans );
 	}
 }
 

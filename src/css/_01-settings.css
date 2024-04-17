@@ -27,19 +27,8 @@
 	--bottomRightY: 12;
 
 	/* Typography */
-	--font-sans-regular: "Work Sans Regular", Helvetica Neue, Helvetica, Arial, sans-serif;
-	--font-sans-italic: "Work Sans Italic", Helvetica Neue, Helvetica, Arial, sans-serif;
-	--font-sans-bold: "Work Sans Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
-	--font-sans-bold-italic: "Work Sans Bold Italic", Helvetica Neue, Helvetica, Arial, sans-serif;
-	--font-sans-light: "Work Sans Light", Helvetica Neue, Helvetica, Arial, sans-serif;
-	--font-sans-light-italic: "Work Sans Light Italic", Helvetica Neue, Helvetica, Arial, sans-serif;
-	--font-serif-regular: "Zilla Slab Regular", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
-	--font-serif-italic: "Zilla Slab Italic", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
-	--font-serif-bold: "Zilla Slab Bold", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
-	--font-serif-bold-italic: "Zilla Slab Bold Italic", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
-	--font-serif-light: "Zilla Slab Light", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
-	--font-serif-light-italic: "Zilla Slab Light Italic", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
-
+	--font-sans: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;	
+	--font-serif: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
 }
 
 /*
