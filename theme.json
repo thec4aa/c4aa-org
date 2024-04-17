@@ -42,19 +42,34 @@
                     "name": "Black and Red"
                 },
                 {
-                    "colors": [ "hsla(36, 6%, 5%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
-                    "slug": "black-and-beige",
-                    "name": "Black and Beige"
-                },
-                {
                     "colors": [ "hsla(356, 80%, 45%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
                     "slug": "red-and-beige",
                     "name": "Red and Beige"
                 },
                 {
+                    "colors": [ "hsla(356, 80%, 45%, 0.9)", "hsla(60, 9%, 98%, 0.9)" ],
+                    "slug": "red-and-white",
+                    "name": "Red and White"
+                },
+                {
+                    "colors": [ "hsla(209, 100%, 34%, 0.9)", "hsla(60, 9%, 98%, 0.9)" ],
+                    "slug": "blue-and-white",
+                    "name": "Blue and White"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 5%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
+                    "slug": "black-and-beige",
+                    "name": "Black and Beige"
+                },
+                {
                     "colors": [ "hsla(28, 6%, 42%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
                     "slug": "grey-and-beige",
                     "name": "Grey and Beige"
+                },
+                {
+                    "colors": [ "hsla(60, 9%, 98%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
+                    "slug": "beige-and-white",
+                    "name": "Beige and White"
                 }
             ],
             "defaultDuotone": false
