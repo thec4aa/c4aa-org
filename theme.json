@@ -6,6 +6,156 @@
             "wideSize": "1100px",
             "units": [ "px", "em", "rem", "%", "vw" ]
         },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "\"Zilla Slab Regular\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
+                    "name": "Zilla Slab Regular",
+                    "slug": "zilla-slab-regular",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Zilla Slab",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-regular.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-regular.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Zilla Slab Italic\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
+                    "name": "Zilla Slab Italic",
+                    "slug": "zilla-slab-italic",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Zilla Slab Italic",
+                            "fontWeight": "400",
+                            "fontStyle": "italic",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-italic.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-italic.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Zilla Slab Bold\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
+                    "name": "Zilla Slab Bold",
+                    "slug": "zilla-slab-bold",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Zilla Slab Bold",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-700.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Zilla Slab Bold Italic\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
+                    "name": "Zilla Slab Bold Italic",
+                    "slug": "zilla-slab-bold-italic",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Zilla Slab Bold Italic",
+                            "fontWeight": "700",
+                            "fontStyle": "italic",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Zilla Slab Light\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
+                    "name": "Zilla Slab Light",
+                    "slug": "zilla-slab-light",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Zilla Slab Light",
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-300.ttf" ]
+                        }
+                    ],
+                    
+                    "fontFamily": "\"Zilla Slab Light Italic\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
+                    "name": "Zilla Slab Light Italic",
+                    "slug": "zilla-slab-light-italic",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Zilla Slab Light Italic",
+                            "fontWeight": "300",
+                            "fontStyle": "italic",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Work Sans Regular\", Helvetica Neue, Helvetica, Arial, sans-serif",
+                    "name": "Work Sans Regular",
+                    "slug": "work-sans-regular",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Work Sans",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-regular.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-regular.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Work Sans Italic\", Helvetica Neue, Helvetica, Arial, sans-serif",
+                    "name": "Work Sans Italic",
+                    "slug": "work-sans-italic",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Work Sans Italic",
+                            "fontWeight": "400",
+                            "fontStyle": "italic",
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-italic.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-italic.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Work Sans Bold\", Helvetica Neue, Helvetica, Arial, sans-serif",
+                    "name": "Work Sans Bold",
+                    "slug": "work-sans-bold",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Work Sans Bold",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-700.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-700.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Work Sans Bold Italic\", Helvetica Neue, Helvetica, Arial, sans-serif",
+                    "name": "Work Sans Bold Italic",
+                    "slug": "work-sans-bold-italic",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Work Sans Bold Italic",
+                            "fontWeight": "700",
+                            "fontStyle": "italic",
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-700italic.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-700italic.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Work Sans Light\", Helvetica Neue, Helvetica, Arial, sans-serif",
+                    "name": "Work Sans Light",
+                    "slug": "work-sans-light",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Work Sans Light",
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-300.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-300.ttf" ]
+                        }
+                    ],
+
+                    "fontFamily": "\"Work Sans Light Italic\", Helvetica Neue, Helvetica, Arial, sans-serif",
+                    "name": "Work Sans Light Italic",
+                    "slug": "work-sans-light-italic",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Work Sans Light Italic",
+                            "fontWeight": "300",
+                            "fontStyle": "italic",
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-300italic.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-300italic.ttf" ]
+                        }
+                    ]
+
+                }
+            ]
+        },
         "color": {
             "customDuotone": true,
             "duotone": [
@@ -30,6 +180,10 @@
                     "name": "Grey and Beige"
                 }
             ]
+        },
+        "styles": {
+            "typography": {
+            },
         }
     }
 }
