@@ -68,10 +68,7 @@ a:visited,
 
 h1 a, h1 a:hover, h1 a:active, h1 a:visited, 
 h2 a, h2 a:hover, h2 a:active, h2 a:visited, 
-h3 a, h3 a:hover, h3 a:active, h3 a:visited, 
-h4 a, h4 a:hover, h4 a:active, h4 a:visited, 
-h5 a, h5 a:hover, h5 a:active, h5 a:visited, 
-h6 a, h6 a:hover, h6 a:active, h6 a:visited {
+h3 a, h3 a:hover, h3 a:active, h3 a:visited {
 	color: var( --color-brandBlack );
 }
 
@@ -168,7 +165,7 @@ body.home .entry-header {
 }
 
 .featured-image .site-description {
-	color: var(--color-brandWhite);;
+	color: var(--color-brandWhite);
 }
 
 // Remove margins from homepage video block
@@ -254,7 +251,7 @@ body.home .entry-header {
 /*** Blockquotes ***/
 /*******************/
 
-/* remove space between blog quotes and featured image */
+/* remove space between block quotes and featured image */
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
 }
@@ -290,9 +287,15 @@ blockquote.wp-block-quote.is-style-large {
 	color: var( --color-brandWhite );
 }
 
-blockquote.wp-block-quote cite {
+.entry .entry-content .wp-block-pullquote cite {
 	color: var( --color-brandWhite );
 	font-weight: 700;
+	font-size: 1.2rem;
+	font-family: Arial, Helvetica, sans-serif;
+
+	.wf-active & {
+		font-family: 'metropolis', sans-serif;
+	}
 }
 
 blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
@@ -434,7 +437,8 @@ fieldset {
 }
 
 .c4aa-magic-hand {
-	color: var( --color-brandRed );;
+	color: var( --color-brandRed );
+	max-width: 80px;
 }
 
 /* Footer Widgets */
@@ -459,9 +463,9 @@ fieldset {
 	color:  var( --color-brandGrey );
 }
 
-/********************/
-/* Latests Posts */
-/********************/
+/*****************************/
+/* Latests Posts on Homepage */
+/*****************************/
 
 .entry .entry-content .wp-block-latest-posts.is-grid li {
 	border-top: none;
@@ -473,10 +477,16 @@ fieldset {
 	padding-bottom: 0.75rem;
 }
 
-.wp-block-latest-posts__post-date {
+.entry .entry-content .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	border-bottom: 1px solid var( --color-brandGrey );
 	padding-bottom: .5em;
 	padding-top: .5em;
+	text-align: right;
+	font-family: Georgia, serif;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
 }
 
 .entry .entry-content .wp-block-latest-posts li > a {
@@ -504,14 +514,12 @@ fieldset {
 }
 
 /* Override link colors when using with background colors */
-/* Weight added so links are more visible w/o color change */
 
 .entry .entry-content .has-caa-white-color a,
 .entry .entry-content .has-caa-white-color a:hover,
 .entry .entry-content .has-caa-white-color a:visited,
 .entry .entry-content .has-caa-white-color a:active {
 	color: var( --color-brandWhite );
-	font-weight: 700;
 }
 
 .entry .entry-content .has-caa-beige-color a,
@@ -519,7 +527,6 @@ fieldset {
 .entry .entry-content .has-caa-beige-color a:visited,
 .entry .entry-content .has-caa-beige-color a:active {
 	color: var( --color-brandBeige );
-	font-weight: 700;
 }
 
 /* Accordion Buttons */
