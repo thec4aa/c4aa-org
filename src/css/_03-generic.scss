@@ -198,7 +198,7 @@ body.home .entry-header {
 }
 
 .featured-image .site-description {
-	color: var(--color-brandWhite);;
+	color: var(--color-brandWhite);
 }
 
 // Remove margins from homepage video block
@@ -284,7 +284,7 @@ body.home .entry-header {
 /*** Blockquotes ***/
 /*******************/
 
-/* remove space between blog quotes and featured image */
+/* remove space between block quotes and featured image */
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
 }
@@ -496,9 +496,9 @@ fieldset {
 	color:  var( --color-brandGrey );
 }
 
-/********************/
-/* Latests Posts */
-/********************/
+/*****************************/
+/* Latests Posts on Homepage */
+/*****************************/
 
 .entry .entry-content .wp-block-latest-posts.is-grid li {
 	border-top: none;
@@ -522,10 +522,16 @@ fieldset {
 	color: var( --color-brandBlack );
 }
 
-.wp-block-latest-posts__post-date {
+.entry .entry-content .wp-block-latest-posts .wp-block-latest-posts__post-date {
 	border-bottom: 1px solid var( --color-brandGrey );
 	padding-bottom: .5em;
 	padding-top: .5em;
+	text-align: right;
+	font-family: Georgia, serif;
+
+	.wf-active & {
+		font-family: 'roboto', Georgia, serif;
+	}
 }
 
 .entry .entry-content .wp-block-latest-posts li > a {
