@@ -6,7 +6,24 @@
 				"lightbox": {
 					"allowEditing": true
 				}
-			}
+			},
+            "core/separator": {
+                "color": {
+                    "defaultPalette": false,
+                    "palette": [
+                        {
+                            "slug": "grey",
+                            "color": "#968c83",
+                            "name": "C4AA Grey"
+                        },
+                        {
+                            "slug": "red",
+                            "color": "#f5333f",
+                            "name": "C4AA Red"
+                        }
+                    ]
+                }
+            }
 		},
         "spacing": {
 			"blockGap": true, 
