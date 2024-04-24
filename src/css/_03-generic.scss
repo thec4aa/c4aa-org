@@ -303,7 +303,7 @@ blockquote.wp-block-quote {
 	mix-blend-mode: multiply;
 
 	.wf-active & {
-		font-family: 'worksans', Georgia, serif;
+		font-family: var( --font-sans );
 	}
 }
 
@@ -323,12 +323,12 @@ blockquote.wp-block-quote.is-style-large {
 
 .entry .entry-content .wp-block-pullquote cite {
 	color: var( --color-brandWhite );
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 1.2rem;
 	font-family: Arial, Helvetica, sans-serif;
 
 	.wf-active & {
-		font-family: 'metropolis', sans-serif;
+		font-family: var( --font-serif );
 	}
 }
 
@@ -532,8 +532,8 @@ fieldset {
 .entry .entry-content .wp-block-latest-posts li > a {
 	font-size: calc( 18px * 1.125 );
 	text-transform: uppercase;
-	font-family: 'metropolis', sans-serif;
-	font-weight: 900;
+	font-family: var( --font-sans );
+	font-weight: 400;
 	letter-spacing: .14em;
 }
 
@@ -671,7 +671,7 @@ margin-left: 2rem;
 		a{
 			// @extend .is-style-c4aa-clipPath-heading;
 			padding: 0.2rem .5rem;
-			font-weight: 900;
+			font-weight: 700;
 			margin: 0;
 			background-color: var(--color-brandRed);
 			color: #fff;
