@@ -39,7 +39,7 @@
 				"unit": "rem"
 			},
 			"spacingSizes": [],
-			"units": [ "em", "rem", "vh", "vw", "%" ]
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
 		},
         "dimensions": {
 			"minHeight": true
