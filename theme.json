@@ -49,10 +49,11 @@
                             "fontStyle": "italic",
                             "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.ttf" ]
                         }
-                    ],
-
+                    ]
+                },
+                {
                     "fontFamily": "\"Work Sans Regular\", Helvetica Neue, Helvetica, Arial, sans-serif",
-                    "name": "Work Sans Regular",
+                    "name": "Work Sans",
                     "slug": "work-sans-regular",
                     "fontFace": [
                         {
