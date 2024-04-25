@@ -54,7 +54,7 @@
                 {
                     "fontFamily": "\"Work Sans Regular\", Helvetica Neue, Helvetica, Arial, sans-serif",
                     "name": "Work Sans",
-                    "slug": "work-sans-regular",
+                    "slug": "work-sans",
                     "fontFace": [
                         {
                             "fontFamily": "Work Sans",
@@ -120,10 +120,6 @@
                     "name": "Grey and Beige"
                 }
             ]
-        },
-        "styles": {
-            "typography": {
-            }
         }
     }
 }
