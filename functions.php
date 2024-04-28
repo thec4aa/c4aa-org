@@ -54,6 +54,12 @@ function c4aa_preload_tags() {
 		'RobotoSlab-Bold',
 		'RobotoSlab-Regular',
 		'RobotoSlab-Light',
+		'zillaslab-regular',
+		'zillaslab-bold',
+		'zillaslab-light',
+		'zillaslab-medium',
+		'zillaslab-semibold',
+		'worksans-variablefont_wght',
 	];
 	$preload_str = '';
 
@@ -72,7 +78,7 @@ function c4aa_webfontloader_inline_script() {
 
 	WebFontConfig = {
 		custom: {
-			families: ['metropolis', 'roboto'],
+			families: ['metropolis', 'roboto', 'zillaslab', 'worksans'],
 			urls: [ '$font_css_path' ]
 		}
 	};
@@ -206,7 +212,7 @@ function c4aa_setup_theme_supported_features() {
 		array(
 			'name' => __( 'C4AA Red', 'c4aa' ),
 			'slug' => 'caa-red',
-			'color' => '#ef3340',
+			'color' => '#f5333f',
 		),
 		array(
 			'name' => __( 'C4AA Grey', 'c4aa' ),
@@ -233,6 +239,47 @@ function c4aa_setup_theme_supported_features() {
 			'slug' => 'caa-white',
 			'color' => '#fafaf9',
 		),
+		array(
+			'name' => __( 'C4AA Not Black', 'c4aa' ),
+			'slug' => 'caa-not-black',
+			'color' => '#292724',
+		),
+		array(
+			'name' => __( 'C4AA Paper(New)', 'c4aa' ),
+			'slug' => 'caa-paper-new',
+			'color' => '#f9f4d2',
+		),
+		array(
+			'name' => __( 'C4AA Not White(New)', 'c4aa' ),
+			'slug' => 'caa-not-white',
+			'color' => '#fffef6',
+		),
+		array(
+			'name' => __( 'C4AA Non-Partisan Blue', 'c4aa' ),
+			'slug' => 'caa-non-partisan-blue',
+			'color' => '#27aae1',
+		),
+		array(
+			'name' => __( 'C4AA Community Green', 'c4aa' ),
+			'slug' => 'caa-community-green',
+			'color' => '#8fb73e',
+		),
+		array(
+			'name' => __( 'C4AA Vibrant Violet', 'c4aa' ),
+			'slug' => 'caa-vibrant-violet',
+			'color' => '#a03c9b',
+		),
+		array(
+			'name' => __( 'C4AA Unstoppable Gold', 'c4aa' ),
+			'slug' => 'caa-unstoppable-gold',
+			'color' => '#decb00',
+		),
+		array(
+			'name' => __( 'C4AA Middle Gray', 'c4aa' ),
+			'slug' => 'caa-middle-gray',
+			'color' => '#968c83',
+		),
+		
 	)
 	); // end add_theme_support
 } // end c4aa_setup_theme_supported_features

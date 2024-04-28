@@ -48,3 +48,5 @@ To summarize briefly:
 - [CSS Duotone](https://cssduotone.com/)
 - [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab)
 - [Raleway Font](https://www.theleagueofmoveabletype.com/raleway) from the League of Moveable Type
+- [Work Sans](https://fonts.google.com/specimen/Work+Sans)
+- [Zilla Slab](https://fonts.google.com/specimen/Zilla+Slab)
