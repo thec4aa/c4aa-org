@@ -124,16 +124,6 @@ function c4aa_custom_dashboard_help() {
 		<p><strong>Advanced Settings:</strong></p>
 			<ul>
 				<li><code>no-hyphens</code> will turn off auto-hyphenating on everything in the block.</li>
-				<li><code>c4aa-duotone</code> plus one of the following will enable duotone effects on images.
-					<ul>
-						<li>- <code>red-and-black</code> </li>
-						<li>- <code>beige-and-black</code> </li>
-						<li>- <code>beige-and-red</code> </li>
-						<li>- <code>beige-and-grey</code> </li>
-						<li>- <code>beige-and-grey-vintage</code> </li>
-						<li>- <code>beige-and-blue</code> </li>
-					</ul>
-					</li>
 			</ul>
 	'; // end echo
 }
