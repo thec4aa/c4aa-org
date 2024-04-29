@@ -581,11 +581,11 @@ color: var(--color-brandGrey);
 /*****************/
 
 /* Block Image and Paragraph Clearfix */
-.wp-block-image + p::after {
-	content: "";
-	clear: both;
-	display: table;
-}
+// .wp-block-image + p::after {
+// 	content: "";
+// 	clear: both;
+// 	display: table;
+// }
 
 /* turn off duotone on hover */
 .wp-block-image img:hover, figure[class*="wp-duotone"] img:hover {
