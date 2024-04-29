@@ -160,24 +160,139 @@
             "defaultDuotone": false,
             "duotone": [
                 {
-                    "colors": [ "hsla(36, 6%, 5%, 0.9)", "hsla(356, 80%, 45%, 0.9)" ],
+                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                    "slug": "black-and-white",
+                    "name": "Black and White"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                    "slug": "black-and-beige",
+                    "name": "Black and Paper"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(356, 91%, 58%, 1)" ],
                     "slug": "black-and-red",
                     "name": "Black and Red"
                 },
                 {
-                    "colors": [ "hsla(36, 6%, 5%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
-                    "slug": "black-and-beige",
-                    "name": "Black and Beige"
+                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(356, 91%, 58%, 1)" ],
+                    "slug": "grey-and-red",
+                    "name": "Gray and Red"
                 },
                 {
-                    "colors": [ "hsla(356, 80%, 45%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
+                    "colors": [ "hsla(356, 91%, 58%, 1)", "hsla(52, 76%, 90%, 1)" ],
                     "slug": "red-and-beige",
-                    "name": "Red and Beige"
+                    "name": "Red and Paper"
                 },
                 {
-                    "colors": [ "hsla(28, 6%, 42%, 0.9)", "hsla(48, 16%, 94%, 1)" ],
+                    "colors": [ "hsla(356, 91%, 58%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                    "slug": "red-and-white",
+                    "name": "Red and White"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(28, 6%, 45%, 1)" ],
+                    "slug": "black-and-grey",
+                    "name": "Black and Grey"
+                },
+                {
+                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                    "slug": "grey-and-white",
+                    "name": "Gray and White"
+                },
+                {
+                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(52, 76%, 90%, 1)" ],
                     "slug": "grey-and-beige",
-                    "name": "Grey and Beige"
+                    "name": "Grey and Paper"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(198, 76%, 52%, 1)" ],
+                    "slug": "black-and-blue",
+                    "name": "Black and Blue"
+                },
+                {
+                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(198, 76%, 52%, 1)" ],
+                    "slug": "grey-and-blue",
+                    "name": "Grey and Blue"
+                },
+                {
+                    "colors": [ "hsla(198, 76%, 52%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                    "slug": "blue-and-white",
+                    "name": "Blue and White"
+                },
+                {
+                    "colors": [ "hsla(198, 76%, 52%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                    "slug": "blue-and-beige",
+                    "name": "Blue and Paper"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(80, 49%, 48%, 1)" ],
+                    "slug": "black-and-green",
+                    "name": "Black and Green"
+                },
+                {
+                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(80, 49%, 48%, 1)" ],
+                    "slug": "grey-and-green",
+                    "name": "Gray and Green"
+                },
+                {
+                    "colors": [ "hsla(80, 49%, 48%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                    "slug": "green-and-white",
+                    "name": "Green and White"
+                },
+                {
+                    "colors": [ "hsla(80, 49%, 48%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                    "slug": "green-and-beige",
+                    "name": "Green and Paper"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(303, 45%, 43%, 1)" ],
+                    "slug": "black-and-purple",
+                    "name": "Black and Violet"
+                },
+                {
+                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(303, 45%, 43%, 1)" ],
+                    "slug": "grey-and-purple",
+                    "name": "Grey and Violet"
+                },
+                {
+                    "colors": [ "hsla(303, 45%, 43%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                    "slug": "purple-and-white",
+                    "name": "Violet and White"
+                },
+                {
+                    "colors": [ "hsla(303, 45%, 43%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                    "slug": "purple-and-beige",
+                    "name": "Violet and Paper"
+                },
+                {
+                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(55, 100%, 44%, 1)" ],
+                    "slug": "black-and-yellow",
+                    "name": "Black and Yellow"
+                },
+                {
+                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(55, 100%, 44%, 1)" ],
+                    "slug": "grey-and-yellow",
+                    "name": "Grey and Yellow"
+                },
+                {
+                    "colors": [ "hsla(55, 100%, 44%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                    "slug": "yellow-and-white",
+                    "name": "Yellow and White"
+                },
+                {
+                    "colors": [ "hsla(55, 100%, 44%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                    "slug": "yellow-and-beige",
+                    "name": "Violet and Paper"
+                },
+                {
+                    "colors": [ "hsla(356, 91%, 58%, 1)", "hsla(198, 76%, 52%, 1)" ],
+                    "slug": "red-and-blue",
+                    "name": "Red and Blue"
+                },
+                {
+                    "colors": [ "hsla(198, 76%, 52%, 1)", "hsla(356, 91%, 58%, 1)" ],
+                    "slug": "blue-and-red",
+                    "name": "Blue and Red"
                 }
             ]
         }
