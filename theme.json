@@ -64,38 +64,11 @@
                     "fontFace": [
                         {
                             "fontFamily": "Work Sans",
-                            "fontWeight": "400",
-                            "fontStyle": "normal",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-regular.woff2" ]
-                        },{
-                            "fontFamily": "Work Sans",
-                            "fontWeight": "400",
-                            "fontStyle": "italic",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-italic.woff2" ]
-                        },
-                        {
-                            "fontFamily": "Work Sans",
-                            "fontWeight": "700",
-                            "fontStyle": "normal",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-700.woff2" ]
-                        },
-                        {
-                            "fontFamily": "Work Sans",
-                            "fontWeight": "700",
-                            "fontStyle": "italic",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-700italic.woff2" ]
-                        },
-                        {
-                            "fontFamily": "Work Sans",
-                            "fontWeight": "300",
-                            "fontStyle": "normal",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-300.woff2" ]
-                        },
-                        {
-                            "fontFamily": "Work Sans",
-                            "fontWeight": "300",
-                            "fontStyle": "italic",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-300italic.woff2" ]
+                            "fontWeight": "100 900",
+                            "fontStyle": "auto",
+                            "fontDisplay": "swap",
+                            "src": [ "file:./fonts/worksans-variablefont_wght-webfont.woff2",
+                                     "file:./fonts/worksans-variablefont_wght-webfont.woff" ]
                         }
                     ]
 
