@@ -539,21 +539,7 @@ fieldset {
 	margin: 0 0 .6em 1em;
 }
 
-/* Override link colors when using with background colors */
 
-.entry .entry-content .has-caa-white-color a,
-.entry .entry-content .has-caa-white-color a:hover,
-.entry .entry-content .has-caa-white-color a:visited,
-.entry .entry-content .has-caa-white-color a:active {
-	color: var( --color-brandWhite );
-}
-
-.entry .entry-content .has-caa-beige-color a,
-.entry .entry-content .has-caa-beige-color a:hover,
-.entry .entry-content .has-caa-beige-color a:visited,
-.entry .entry-content .has-caa-beige-color a:active {
-	color: var( --color-brandBeige );
-}
 
 /* Accordion Buttons */
 
