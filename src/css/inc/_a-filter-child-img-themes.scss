@@ -76,16 +76,6 @@
 	--duotone-contrast: 1;
 }
 
-*[class*='beige-and-grey-vintage'] {
-	--duotone-base: var(--color-brandBeige);
-	--duotone-foreground: var(--color-brandBlack);
-	--duotone-bg-blend: color-burn;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 0.69;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-}
-
 *[class*=beige-and-blue] {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandBlue);
