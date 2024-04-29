@@ -3,7 +3,7 @@
  */
 
 [class*="banner"] .site-featured-image .entry-title{
-	padding: 1rem;
+	padding: 1rem 3rem 1rem 3rem;
 	clip-path: polygon( calc(
 		var( --topLeftX ) * 1px) calc( var( --topLeftY ) * 1px),
 		calc( 100% - ( var( --topRightX ) * 1px )) calc( var( --topRightY ) * 1px),

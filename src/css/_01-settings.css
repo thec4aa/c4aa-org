@@ -1,19 +1,36 @@
 :root {
-	/* Brand Colors */
-	--color-brandBeige: #F2F1ED; /* Fallback */
-	--color-brandBeige: hsla(48, 16%, 94%, 1);
+	/* Primary Brand Colors */
+	/* Make sure these mirror palette and duotone colors in theme.json */
+	--color-brandWhite: #fffef6; /* Fallback */
+	--color-brandWhite: hsla(53, 100%, 98%, 1);
+
 	--color-brandBlack: #292724; /* Fallback */
-	--color-brandBlack: hsla(36, 6%, 5%, 0.9);
-	--color-brandBlue: #005eb8; /* Fallback */
-	--color-brandBlue: hsla(209, 100%, 34%, 0.9);
+	--color-brandBlack: hsla(36, 6%, 15%, 1);
+
+	--color-brandBeige: #f9f4d2; /* Fallback */
+	--color-brandBeige: hsla(52, 76%, 90%, 1);
+
+	--color-brandRed: #f5333f; /* Fallback */
+	--color-brandRed: hsla(356, 91%, 58%, 1);
+
 	--color-brandGrey: #7B736c; /* Fallback */
-	--color-brandGrey: hsla(28, 6%, 42%, 0.9);
-	--color-brandRed: #da2f3b; /* Fallback */
-	--color-brandRed: hsla(356, 80%, 45%, 0.9);
-	--color-brandWhite: #fafaf9; /* Fallback */
-	--color-brandWhite: hsla(60, 9%, 98%, 0.9);
-	--color-brandYellow: #e1cd00; /* Fallback */
-	--color-brandYellow: hsla(55, 100%, 46%, 0.9);
+	--color-brandGrey: hsla(28, 6%, 45%, 1);
+
+	/* Secondary Brand Colors */
+
+	--color-brandBlue: #27aae1; /* Fallback */
+	--color-brandBlue: hsla(198, 76%, 52%, 1);
+
+	--color-brandGreen: #8fb73e; /* Fallback */
+	--color-brandGreen: hsla(80, 49%, 48%, 1);
+
+	--color-brandPurple: #a03c9b; /* Fallback */
+	--color-brandPurple: hsla(303, 45%, 43%, 1);
+
+	--color-brandYellow: #decb00; /* Fallback */
+	--color-brandYellow: hsla(55, 100%, 44%, 1);
+
+	
 
 	/* Clip Path Varaibles */
 	--rotate: -1.000;
@@ -25,6 +42,10 @@
 	--bottomLeftY: 14;
 	--bottomRightX: 11;
 	--bottomRightY: 12;
+
+	/* Typography */
+	--font-sans: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;	
+	--font-serif: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
 }
 
 /*

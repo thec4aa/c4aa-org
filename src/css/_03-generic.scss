@@ -38,10 +38,6 @@
 	background-color: var( --color-brandRed );
 }
 
-.entry .entry-content .wp-block-pullquote.is-style-solid-color {
-	background-color: var(--color-brandRed);
-}
-
 a, 
 a:hover, 
 a:active, 
@@ -74,7 +70,7 @@ h3 a, h3 a:hover, h3 a:active, h3 a:visited {
 h1.is-style-c4aa-clipPath-heading a, h1.is-style-c4aa-clipPath-heading a:hover, h1.is-style-c4aa-clipPath-heading a:active, h1.is-style-c4aa-clipPath-heading a:visited, 
 h2.is-style-c4aa-clipPath-heading a, h2.is-style-c4aa-clipPath-heading a:hover, h2.is-style-c4aa-clipPath-heading a:active, h2.is-style-c4aa-clipPath-heading a:visited, 
 h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, h3.is-style-c4aa-clipPath-heading a:active, h3.is-style-c4aa-clipPath-heading a:visited {
-	color: var( --color-brandBeige );
+	color: var( --color-brandWhite );
 }
 
 .entry .entry-title a:hover {
@@ -88,10 +84,6 @@ h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, 
 	padding-bottom: 2rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-}
-
-.site-content {
-	background-color: var( --color-brandBeige);
 }
 
 .site-footer .widget-title {
@@ -247,7 +239,7 @@ body.home .entry-header {
 }*/
 
 /*******************/
-/*** Blockquotes ***/
+/*** Pullquotes & Blockquotes */
 /*******************/
 
 /* remove space between block quotes and featured image */
@@ -255,52 +247,15 @@ body.home .entry-header {
 	margin-top: 0;
 }
 
-/* Blockquotes */
+/* Pullquotes */
 
-blockquote.wp-block-quote {
-	background-color: var( --color-brandRed );
-	color: var( --color-brandBeige );
-	font-family: Georgia, serif;
-	font-weight: 900;
-	margin: -2.25em;
-	border: none;
-	transform: rotate(-.5deg);
-	mix-blend-mode: multiply;
-
-	.wf-active & {
-		font-family: 'roboto', Georgia, serif;
+.entry .entry-content .wp-block-pullquote.is-style-solid-color {
+	background-color: var(--color-brandRed);
+	
+	& p {
+		color: var(--color-brandWhite);
 	}
 }
-
-.entry .entry-content .wp-block-quote,
-.entry .entry-content .wp-block-quote:not(.is-large),
-.entry .entry-content .wp-block-quote:not(.is-style-large) {
-	padding: 3em;
-}
-
-.entry .entry-content .wp-block-quote p {
-	font-style: italic;
-}
-
-blockquote.wp-block-quote.is-style-large {
-	color: var( --color-brandWhite );
-}
-
-.entry .entry-content .wp-block-pullquote cite {
-	color: var( --color-brandWhite );
-	font-weight: 700;
-	font-size: 1.2rem;
-	font-family: Arial, Helvetica, sans-serif;
-
-	.wf-active & {
-		font-family: 'metropolis', sans-serif;
-	}
-}
-
-blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
-	color: var( --color-brandWhite );
-}
-
 
 /* Extra padding to full width pullquote block */
 .entry .entry-content .wp-block-pullquote.alignfull {
@@ -320,6 +275,50 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 		padding: 1rem;
 		margin: 0;
 	}
+}
+
+/* Blockquotes */
+
+blockquote.wp-block-quote {
+	background-color: var( --color-brandRed );
+	color: var( --color-brandWhite );
+	font-family: var( --font-serif );
+	font-weight: 700;
+	margin: -2.25em;
+	border: none;
+	transform: rotate(-.5deg);
+	mix-blend-mode: multiply;
+}
+
+.entry .entry-content .wp-block-quote,
+.entry .entry-content .wp-block-quote:not(.is-large),
+.entry .entry-content .wp-block-quote:not(.is-style-large) {
+	padding: 3em;
+	font-size: 1.125rem;
+	font-weight: 500;
+	
+		& p {
+			line-height: 1.2;
+		}
+
+		& cite {
+			font-size: calc(1rem / (1.25 * 1));
+		}
+}
+
+blockquote.wp-block-quote.is-style-large {
+	color: var( --color-brandWhite );
+}
+
+.entry .entry-content .wp-block-pullquote cite {
+	color: var( --color-brandWhite );
+	font-weight: 400;
+	font-size: 1.2rem;
+	font-family: var( --font-serif );
+}
+
+blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
+	color: var( --color-brandWhite );
 }
 
 /* Properly aligns collapsed, nested sets of columns */
@@ -352,10 +351,7 @@ input[type="submit"] {
 	font-family: Georgia, serif;
 	padding: .7rem;
 	transition: all 150ms ease-in-out;
-
-	.wf-active & {
-		font-family: 'roboto', Georgia, serif;
-	}
+	font-family: var( --font-sans );
 }
 
 button.main-menu-more-toggle {
@@ -428,11 +424,7 @@ fieldset {
 	text-transform: uppercase;
 	font-weight: 400;
 	letter-spacing: .14em;
-	font-family: Arial, sans-serif;
-
-	.wf-active & {
-		font-family: 'metropolis', sans-serif;
-	}
+	font-family: var( --font-sans );
 }
 
 .c4aa-magic-hand {
@@ -446,11 +438,7 @@ fieldset {
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 1rem;
-	font-family: Georgia, serif;
-
-	.wf-active & {
-		font-family: 'roboto', Georgia, serif;
-	}
+	font-family: var( --font-sans );
 }
 
 .widget-area ul li a {
@@ -474,6 +462,7 @@ fieldset {
 .entry .entry-content .wp-block-latest-posts li {
 	line-height: 1.2;
 	padding-bottom: 0.75rem;
+	font-family: var( --font-sans );
 }
 
 .entry .entry-content .wp-block-latest-posts .wp-block-latest-posts__post-date {
@@ -490,8 +479,8 @@ fieldset {
 .entry .entry-content .wp-block-latest-posts li > a {
 	font-size: calc( 18px * 1.125 );
 	text-transform: uppercase;
-	font-family: 'metropolis', sans-serif;
-	font-weight: 900;
+	font-family: var( --font-sans );
+	font-weight: 400;
 	letter-spacing: .14em;
 }
 
@@ -511,21 +500,7 @@ fieldset {
 	margin: 0 0 .6em 1em;
 }
 
-/* Override link colors when using with background colors */
 
-.entry .entry-content .has-caa-white-color a,
-.entry .entry-content .has-caa-white-color a:hover,
-.entry .entry-content .has-caa-white-color a:visited,
-.entry .entry-content .has-caa-white-color a:active {
-	color: var( --color-brandWhite );
-}
-
-.entry .entry-content .has-caa-beige-color a,
-.entry .entry-content .has-caa-beige-color a:hover,
-.entry .entry-content .has-caa-beige-color a:visited,
-.entry .entry-content .has-caa-beige-color a:active {
-	color: var( --color-brandBeige );
-}
 
 /* Accordion Buttons */
 
@@ -632,7 +607,7 @@ margin-left: 2rem;
 		a{
 			// @extend .is-style-c4aa-clipPath-heading;
 			padding: 0.2rem .5rem;
-			font-weight: 900;
+			font-weight: 700;
 			margin: 0;
 			background-color: var(--color-brandRed);
 			color: #fff;
