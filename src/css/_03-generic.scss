@@ -295,16 +295,12 @@ body.home .entry-header {
 blockquote.wp-block-quote {
 	background-color: var( --color-brandRed );
 	color: var( --color-brandBeige );
-	font-family: Georgia, serif;
+	font-family: var( --font-sans );
 	font-weight: 900;
 	margin: -2.25em;
 	border: none;
 	transform: rotate(-.5deg);
 	mix-blend-mode: multiply;
-
-	.wf-active & {
-		font-family: var( --font-sans );
-	}
 }
 
 .entry .entry-content .wp-block-quote,
@@ -325,11 +321,7 @@ blockquote.wp-block-quote.is-style-large {
 	color: var( --color-brandWhite );
 	font-weight: 400;
 	font-size: 1.2rem;
-	font-family: Arial, Helvetica, sans-serif;
-
-	.wf-active & {
-		font-family: var( --font-serif );
-	}
+	font-family: var( --font-serif );
 }
 
 blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
@@ -387,10 +379,7 @@ input[type="submit"] {
 	font-family: Georgia, serif;
 	padding: .7rem;
 	transition: all 150ms ease-in-out;
-
-	.wf-active & {
-		font-family: 'worksans', Georgia, serif;
-	}
+	font-family: var( --font-sans );
 }
 
 button.main-menu-more-toggle {
@@ -463,11 +452,7 @@ fieldset {
 	text-transform: uppercase;
 	font-weight: 400;
 	letter-spacing: .14em;
-	font-family: Arial, sans-serif;
-
-	.wf-active & {
-		font-family: 'metropolis', sans-serif;
-	}
+	font-family: var( --font-sans );
 }
 
 .c4aa-magic-hand {
@@ -481,11 +466,7 @@ fieldset {
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 1rem;
-	font-family: Georgia, serif;
-
-	.wf-active & {
-		font-family: 'worksans', Georgia, serif;
-	}
+	font-family: var( --font-sans );
 }
 
 .widget-area ul li a {
@@ -512,10 +493,7 @@ fieldset {
 	font-size: 1em;
 	line-height: 1.2;
 	padding-bottom: 0.75rem;
-
-	.wf-active & {
-		font-family: 'worksans', Georgia, serif;
-	}
+	font-family: var( --font-sans );
 }
 
 .entry .entry-content .wp-block-latest-posts li,

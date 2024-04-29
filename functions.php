@@ -42,55 +42,7 @@ function c4aa_gutenberg_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'c4aa_gutenberg_scripts' );
 
-function c4aa_preload_tags() {
-	$fonts_path = get_stylesheet_directory_uri() . "/fonts/";
-	$fonts = [
-		'metropolis-regular',
-		'metropolis-regularitalic',
-		'metropolis-semibold',
-		'metropolis-semibolditalic',
-		'metropolis-extrabold',
-		'metropolis-extrabolditalic',
-		'RobotoSlab-Bold',
-		'RobotoSlab-Regular',
-		'RobotoSlab-Light',
-		'zillaslab-regular',
-		'zillaslab-bold',
-		'zillaslab-light',
-		'zillaslab-medium',
-		'zillaslab-semibold',
-		'worksans-variablefont_wght',
-	];
-	$preload_str = '';
 
-	foreach ( $fonts as $font ) {
-		$preload_str .= "<link rel='preload' href='" . $fonts_path . $font . "-webfont.woff2' as='font'>\n";
-	}
-
-	echo $preload_str;
-}
-add_action( 'wp_head', 'c4aa_preload_tags', 0 );
-
-function c4aa_webfontloader_inline_script() {
-	$font_css_path = get_stylesheet_directory_uri() . "/fonts/webfonts.css";
-
-	echo "<script>
-
-	WebFontConfig = {
-		custom: {
-			families: ['metropolis', 'roboto', 'zillaslab', 'worksans'],
-			urls: [ '$font_css_path' ]
-		}
-	};
-
-	(function(d) {
-		var wf = d.createElement('script'), s = d.scripts[0];
-		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-		wf.async = true;
-		s.parentNode.insertBefore(wf, s);
-	 })(document);</script>\n";
-}
-add_action( 'wp_head', 'c4aa_webfontloader_inline_script', 0 );
 
 /**
  * ACF Body Class Options

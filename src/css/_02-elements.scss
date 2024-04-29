@@ -21,12 +21,9 @@ optgroup,
 textarea,
 blockquote cite,
 .entry .entry-content figcaption {
-	font-family: Arial, sans-serif;
-
-	.wf-active & {
-		font-family: var( --font-sans );
-		font-weight: 400;
-		}
+	font-family: var( --font-sans );
+	font-weight: 400;
+		
 }
 
 figure.wp-block-pullquote,
@@ -35,21 +32,13 @@ ol strong,
 ul strong,
 .entry .entry-content figcaption,
 table strong {
-	font-family: Arial, sans-serif;
+	font-family: var( --font-sans );
 	font-weight: 700;
-
-	.wf-active & {
-		font-family: var( --font-sans );
-	}
 }
 
 .site-branding,
 .page-title {
-	font-family: Arial, sans-serif;
-
-	.wf-active & {
-		font-family: var ( --font-serif );
-	}
+	font-family: var ( --font-serif );
 }
 
 .site-branding .main-navigation ul li a {
@@ -77,16 +66,11 @@ h6,
 
 h4, 
 h5 {
-	font-family: Arial, sans-serif;
+	font-family: var( --font-sans );
 	font-weight: 900;
 	letter-spacing: .14em;
 	text-transform: uppercase;
 	line-height: 1.4;
-
-	.wf-active & {
-
-		font-family: var( --font-sans );
-	}
 }
 
 h5,
