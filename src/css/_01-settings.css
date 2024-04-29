@@ -49,7 +49,7 @@
 }
 
 /*
- * Accessibility Labels
+ * Accessibility Helpers
  *
  * Hide text from the screen while still providing label for screen reader
  *
@@ -63,3 +63,16 @@
 	height:1px;
 	overflow:hidden;
 }
+
+/*
+ * Reduce motion for those who prefer it - may get vertigo/nauseous
+ */
+
+@media screen and (prefers-reduced-motion: reduce) {  
+	* {
+	  /* Very short durations means JavaScript that relies on events still works */
+	  animation-duration: 0.001ms !important;
+	  animation-iteration-count: 1 !important;
+	  transition-duration: 0.001ms !important;
+	}
+  }
