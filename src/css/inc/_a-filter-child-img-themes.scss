@@ -87,8 +87,8 @@
 }
 
 *[class*=beige-and-blue] {
-	--duotone-base: #27aae130;
-	--duotone-foreground: #003f72;
+	--duotone-base: var(--color-brandBeige);
+	--duotone-foreground: var(--color-brandBlue);
 	--duotone-bg-blend: multiply;
 	--duotone-fg-blend: screen;
 	--duotone-opacity: 1;
