@@ -303,10 +303,16 @@ blockquote.wp-block-quote {
 .entry .entry-content .wp-block-quote:not(.is-large),
 .entry .entry-content .wp-block-quote:not(.is-style-large) {
 	padding: 3em;
-}
+	font-size: 1.125rem;
+	font-weight: 500;
+	
+		& p {
+			line-height: 1.2;
+		}
 
-.entry .entry-content .wp-block-quote p {
-	font-style: italic;
+		& cite {
+			font-size: calc(1rem / (1.25 * 1));
+		}
 }
 
 blockquote.wp-block-quote.is-style-large {
