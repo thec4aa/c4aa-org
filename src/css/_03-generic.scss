@@ -75,7 +75,7 @@ h3 a, h3 a:hover, h3 a:active, h3 a:visited {
 h1.is-style-c4aa-clipPath-heading a, h1.is-style-c4aa-clipPath-heading a:hover, h1.is-style-c4aa-clipPath-heading a:active, h1.is-style-c4aa-clipPath-heading a:visited, 
 h2.is-style-c4aa-clipPath-heading a, h2.is-style-c4aa-clipPath-heading a:hover, h2.is-style-c4aa-clipPath-heading a:active, h2.is-style-c4aa-clipPath-heading a:visited, 
 h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, h3.is-style-c4aa-clipPath-heading a:active, h3.is-style-c4aa-clipPath-heading a:visited {
-	color: var( --color-brandBeige );
+	color: var( --color-brandWhite );
 }
 
 .entry .entry-title a:hover {
@@ -93,10 +93,6 @@ h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, 
 	padding-bottom: 2rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
-}
-
-.site-content {
-	background-color: var( --color-brandBeige);
 }
 
 .site-footer .widget-title {
