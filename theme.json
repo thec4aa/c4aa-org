@@ -17,37 +17,37 @@
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "400",
                             "fontStyle": "normal",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-regular.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-regular.ttf" ]
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-regular.woff2" ]
                         },
                         {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "400",
                             "fontStyle": "italic",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-italic.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-italic.ttf" ]
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-italic.woff2" ]
                         },
                         {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "700",
                             "fontStyle": "normal",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-700.ttf" ]
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700.woff2" ]
                         },
                         {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "700",
                             "fontStyle": "italic",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.ttf" ]
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2" ]
                         },
                         {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "300",
                             "fontStyle": "normal",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-300.ttf" ]
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2" ]
                         },
                         {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "300",
                             "fontStyle": "italic",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2", "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.ttf" ]
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2" ]
                         }
                     ]
                 },
@@ -60,36 +60,36 @@
                             "fontFamily": "Work Sans",
                             "fontWeight": "400",
                             "fontStyle": "normal",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-regular.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-regular.ttf" ]
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-regular.woff2" ]
                         },{
                             "fontFamily": "Work Sans",
                             "fontWeight": "400",
                             "fontStyle": "italic",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-italic.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-italic.ttf" ]
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-italic.woff2" ]
                         },
                         {
                             "fontFamily": "Work Sans",
                             "fontWeight": "700",
                             "fontStyle": "normal",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-700.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-700.ttf" ]
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-700.woff2" ]
                         },
                         {
                             "fontFamily": "Work Sans",
                             "fontWeight": "700",
                             "fontStyle": "italic",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-700italic.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-700italic.ttf" ]
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-700italic.woff2" ]
                         },
                         {
                             "fontFamily": "Work Sans",
                             "fontWeight": "300",
                             "fontStyle": "normal",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-300.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-300.ttf" ]
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-300.woff2" ]
                         },
                         {
                             "fontFamily": "Work Sans",
                             "fontWeight": "300",
                             "fontStyle": "italic",
-                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-300italic.woff2", "file:./fonts/work-sans-v19-latin_latin-ext-300italic.ttf" ]
+                            "src": [ "file:./fonts/work-sans-v19-latin_latin-ext-300italic.woff2" ]
                         }
                     ]
 
