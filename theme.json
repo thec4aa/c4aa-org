@@ -91,5 +91,10 @@
             ],
             "defaultDuotone": false
         }
+    },
+    "styles": {
+        "spacing": {
+            "blockGap": "1.5rem"
+        }
     }
 }
