@@ -39,10 +39,6 @@
 	background-color: var( --color-brandRed );
 }
 
-.entry .entry-content .wp-block-pullquote.is-style-solid-color {
-	background-color: var(--color-brandRed);
-}
-
 a, 
 a:hover, 
 a:active, 
@@ -278,12 +274,42 @@ body.home .entry-header {
 }*/
 
 /*******************/
-/*** Blockquotes ***/
+/*** Pullquotes & Blockquotes */
 /*******************/
 
-/* remove space between blog quotes and featured image */
+/* remove space between block quotes and featured image */
 .entry-content .wp-block-pullquote:first-child {
 	margin-top: 0;
+}
+
+/* Pullquotes */
+
+.entry .entry-content .wp-block-pullquote.is-style-solid-color {
+	background-color: var(--color-brandRed);
+	
+	& p {
+		color: var(--color-brandWhite);
+	}
+}
+
+/* Extra padding to full width pullquote block */
+.entry .entry-content .wp-block-pullquote.alignfull {
+	@media only screen and (min-width: 768px){
+  	padding-left: calc(10% + 58px + (2 * 1rem));
+  	padding-right: calc(10% + 58px + (2 * 1rem));
+	}
+}
+
+/* Friendlier mobile styling for floating pullquotes in post */
+.entry .entry-content .wp-block-pullquote.alignright,
+.entry .entry-content .wp-block-pullquote.alignleft {
+
+	@media screen and ( max-width: 767px ) {
+		float: none;
+		max-width: 100%;
+		padding: 1rem;
+		margin: 0;
+	}
 }
 
 /* Blockquotes */
@@ -328,27 +354,6 @@ blockquote.wp-block-quote.is-style-large {
 
 blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 	color: var( --color-brandWhite );
-}
-
-
-/* Extra padding to full width pullquote block */
-.entry .entry-content .wp-block-pullquote.alignfull {
-	@media only screen and (min-width: 768px){
-  	padding-left: calc(10% + 58px + (2 * 1rem));
-  	padding-right: calc(10% + 58px + (2 * 1rem));
-	}
-}
-
-/* Friendlier mobile styling for floating pullquotes in post */
-.entry .entry-content .wp-block-pullquote.alignright,
-.entry .entry-content .wp-block-pullquote.alignleft {
-
-	@media screen and ( max-width: 767px ) {
-		float: none;
-		max-width: 100%;
-		padding: 1rem;
-		margin: 0;
-	}
 }
 
 /* Properly aligns collapsed, nested sets of columns */
