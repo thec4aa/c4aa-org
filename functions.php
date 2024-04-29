@@ -141,8 +141,6 @@ function c4aa_custom_dashboard_help() {
 /**
  * Theme support.
  *
- * Specify block color palette and adjust support for other
- * features as needed.
  */
 function c4aa_setup_theme_supported_features() {
 
@@ -151,89 +149,6 @@ function c4aa_setup_theme_supported_features() {
 	// @see https://github.com/Automattic/jetpack/issues/17170
 	remove_theme_support( 'jetpack-responsive-videos' );
 
-	// Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
-	// adds a hypen in front of the 4 in CSS classes.
-	// @see https://kinsta.com/blog/twenty-nineteen-theme/#block-color-palettes
-	// also added in css
-	add_theme_support( 'editor-color-palette', array(
-		array(
-			'name' => __( 'C4AA Beige', 'c4aa' ),
-			'slug' => 'caa-beige',
-			'color' => '#e8e6df',
-		),
-		array(
-			'name' => __( 'C4AA Red', 'c4aa' ),
-			'slug' => 'caa-red',
-			'color' => '#f5333f',
-		),
-		array(
-			'name' => __( 'C4AA Grey', 'c4aa' ),
-			'slug' => 'caa-grey',
-			'color' => '#968c83',
-		),
-		array(
-			'name' => __( 'C4AA Black', 'c4aa' ),
-			'slug' => 'caa-black',
-			'color' => '#000000',
-		),
-		array(
-			'name' => __( 'C4AA Yellow', 'c4aa' ),
-			'slug' => 'caa-yellow',
-			'color' => '#e1cd00',
-		),
-		array(
-			'name' => __( 'C4AA Blue', 'c4aa' ),
-			'slug' => 'caa-blue',
-			'color' => '#005eb8',
-		),
-		array(
-			'name' => __( 'C4AA White', 'c4aa' ),
-			'slug' => 'caa-white',
-			'color' => '#fafaf9',
-		),
-		array(
-			'name' => __( 'C4AA Not Black', 'c4aa' ),
-			'slug' => 'caa-not-black',
-			'color' => '#292724',
-		),
-		array(
-			'name' => __( 'C4AA Paper(New)', 'c4aa' ),
-			'slug' => 'caa-paper-new',
-			'color' => '#f9f4d2',
-		),
-		array(
-			'name' => __( 'C4AA Not White(New)', 'c4aa' ),
-			'slug' => 'caa-not-white',
-			'color' => '#fffef6',
-		),
-		array(
-			'name' => __( 'C4AA Non-Partisan Blue', 'c4aa' ),
-			'slug' => 'caa-non-partisan-blue',
-			'color' => '#27aae1',
-		),
-		array(
-			'name' => __( 'C4AA Community Green', 'c4aa' ),
-			'slug' => 'caa-community-green',
-			'color' => '#8fb73e',
-		),
-		array(
-			'name' => __( 'C4AA Vibrant Violet', 'c4aa' ),
-			'slug' => 'caa-vibrant-violet',
-			'color' => '#a03c9b',
-		),
-		array(
-			'name' => __( 'C4AA Unstoppable Gold', 'c4aa' ),
-			'slug' => 'caa-unstoppable-gold',
-			'color' => '#decb00',
-		),
-		array(
-			'name' => __( 'C4AA Middle Gray', 'c4aa' ),
-			'slug' => 'caa-middle-gray',
-			'color' => '#968c83',
-		),
-		
-	)
-	); // end add_theme_support
 } // end c4aa_setup_theme_supported_features
 
 add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 11 );

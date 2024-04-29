@@ -104,7 +104,60 @@
             ]
         },
         "color": {
-            "customDuotone": true,
+            "background": true,
+            "text": true,
+            "link": true,
+            "custom": false,
+            "defaultPalette": false,
+            "palette": [
+                {
+                    "name": "Not White",
+                    "slug": "base",
+                    "color": "#fffef6"
+                },
+                {
+                    "name": "Not Black",
+                    "slug": "contrast",
+                    "color": "#292724"
+                },
+                {
+                    "name": "Red",
+                    "slug": "red",
+                    "color": "#f5333f"
+                },
+                {
+                    "name": "Paper",
+                    "slug": "paper",
+                    "color": "#f9f4d2"
+                },
+                {
+                    "name": "Middle Grey",
+                    "slug": "grey",
+                    "color": "#968c83"
+                },
+                {
+                    "name": "Non-Partisan Blue",
+                    "slug": "Blue",
+                    "color": "#27aae1"
+                },
+                {
+                    "name": "Community Green",
+                    "slug": "green",
+                    "color": "#8fb73e"
+                },
+                {
+                    "name": "Vibrant Violet",
+                    "slug": "purple",
+                    "color": "#a03c9b"
+                },
+                {
+                    "name": "Unstoppable Gold",
+                    "slug": "yellow",
+                    "color": "#decb00"
+                }
+            ],
+            "customDuotone": false,
+            "defaultDuotone": false,
             "duotone": [
                 {
                     "colors": [ "hsla(36, 6%, 5%, 0.9)", "hsla(356, 80%, 45%, 0.9)" ],
