@@ -83,7 +83,7 @@ h2.is-style-c4aa-clipPath-heading,
 .widget-title,
 h3.is-style-c4aa-clipPath-heading,
 h4.is-style-c4aa-clipPath-heading {
-	color: var( --color-brandBeige );
+	color: var( --color-brandWhite );
 }
 
 h5.is-style-c4aa-clipPath-heading,
@@ -119,7 +119,7 @@ h6.is-style-c4aa-clipPath-heading a {
 
 h4.is-style-c4aa-clipPath-heading a,
 h4.is-style-c4aa-clipPath-heading a:hover {
-	color: var( --color-brandBeige );
+	color: var( --color-brandWhite );
 }
 
 .widget-title {
