@@ -1,33 +1,34 @@
 :root {
 	/* Primary Brand Colors */
+	/* Make sure these mirror palette and duotone colors in theme.json */
 	--color-brandWhite: #fffef6; /* Fallback */
-	--color-brandWhite: hsla(53.33, 100%, 98.24%, 1);
+	--color-brandWhite: hsla(53, 100%, 98%, 1);
 
 	--color-brandBlack: #292724; /* Fallback */
-	--color-brandBlack: hsla(36, 6.49%, 15.1%, 1);
+	--color-brandBlack: hsla(36, 6%, 15%, 1);
 
 	--color-brandBeige: #f9f4d2; /* Fallback */
-	--color-brandBeige: hsla(52.31, 76.47%, 90%, 1);
+	--color-brandBeige: hsla(52, 76%, 90%, 1);
 
 	--color-brandRed: #f5333f; /* Fallback */
-	--color-brandRed: hsla(356.29, 90.65%, 58.04%, 1);
+	--color-brandRed: hsla(356, 91%, 58%, 1);
 
 	--color-brandGrey: #7B736c; /* Fallback */
-	--color-brandGrey: hsla(28, 6%, 42%, 0.9);
+	--color-brandGrey: hsla(28, 6%, 45%, 1);
 
 	/* Secondary Brand Colors */
 
 	--color-brandBlue: #27aae1; /* Fallback */
-	--color-brandBlue: hsla(197.74, 75.61%, 51.76%, 1);
+	--color-brandBlue: hsla(198, 76%, 52%, 1);
 
 	--color-brandGreen: #8fb73e; /* Fallback */
-	--color-brandGreen: hsla(79.83, 49.39%, 48.04%, 1);
+	--color-brandGreen: hsla(80, 49%, 48%, 1);
 
 	--color-brandPurple: #a03c9b; /* Fallback */
-	--color-brandPurple: hsla(303, 45.45%, 43.14%, 1);
+	--color-brandPurple: hsla(303, 45%, 43%, 1);
 
 	--color-brandYellow: #decb00; /* Fallback */
-	--color-brandYellow: hsla(54.86, 100%, 43.53%, 1);
+	--color-brandYellow: hsla(55, 100%, 44%, 1);
 
 	
 
