@@ -1,19 +1,35 @@
 :root {
-	/* Brand Colors */
-	--color-brandBeige: #F2F1ED; /* Fallback */
-	--color-brandBeige: hsla(48, 16%, 94%, 1);
+	/* Primary Brand Colors */
+	--color-brandWhite: #fffef6; /* Fallback */
+	--color-brandWhite: hsla(53.33, 100%, 98.24%, 1);
+
 	--color-brandBlack: #292724; /* Fallback */
-	--color-brandBlack: hsla(36, 6%, 5%, 0.9);
-	--color-brandBlue: #005eb8; /* Fallback */
-	--color-brandBlue: hsla(209, 100%, 34%, 0.9);
+	--color-brandBlack: hsla(36, 6.49%, 15.1%, 1);
+
+	--color-brandBeige: #f9f4d2; /* Fallback */
+	--color-brandBeige: hsla(52.31, 76.47%, 90%, 1);
+
+	--color-brandRed: #f5333f; /* Fallback */
+	--color-brandRed: hsla(356.29, 90.65%, 58.04%, 1);
+
 	--color-brandGrey: #7B736c; /* Fallback */
 	--color-brandGrey: hsla(28, 6%, 42%, 0.9);
-	--color-brandRed: #da2f3b; /* Fallback */
-	--color-brandRed: hsla(356, 80%, 45%, 0.9);
-	--color-brandWhite: #fafaf9; /* Fallback */
-	--color-brandWhite: hsla(60, 9%, 98%, 0.9);
-	--color-brandYellow: #e1cd00; /* Fallback */
-	--color-brandYellow: hsla(55, 100%, 46%, 0.9);
+
+	/* Secondary Brand Colors */
+
+	--color-brandBlue: #27aae1; /* Fallback */
+	--color-brandBlue: hsla(197.74, 75.61%, 51.76%, 1);
+
+	--color-brandGreen: #8fb73e; /* Fallback */
+	--color-brandGreen: hsla(79.83, 49.39%, 48.04%, 1);
+
+	--color-brandPurple: #a03c9b; /* Fallback */
+	--color-brandPurple: hsla(303, 45.45%, 43.14%, 1);
+
+	--color-brandYellow: #decb00; /* Fallback */
+	--color-brandYellow: hsla(54.86, 100%, 43.53%, 1);
+
+	
 
 	/* Clip Path Varaibles */
 	--rotate: -1.000;
