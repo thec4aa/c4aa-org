@@ -15,6 +15,20 @@
                     "fontFace": [
                         {
                             "fontFamily": "Zilla Slab",
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Zilla Slab",
+                            "fontWeight": "300",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Zilla Slab",
                             "fontWeight": "400",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
@@ -29,6 +43,34 @@
                         },
                         {
                             "fontFamily": "Zilla Slab",
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-500.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Zilla Slab",
+                            "fontWeight": "500",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-500italic.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Zilla Slab",
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "fontDisplay": "swap",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-600.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Zilla Slab",
+                            "fontWeight": "600",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-600italic.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Zilla Slab",
                             "fontWeight": "700",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
@@ -40,20 +82,6 @@
                             "fontStyle": "italic",
                             "fontDisplay": "swap",
                             "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2" ]
-                        },
-                        {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "300",
-                            "fontStyle": "normal",
-                            "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2" ]
-                        },
-                        {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "300",
-                            "fontStyle": "italic",
-                            "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2" ]
                         }
                     ]
                 },
