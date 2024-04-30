@@ -1,14 +1,14 @@
 {
     "$schema": "https://schemas.wp.org/trunk/theme.json",
-    "version": 2, 
+    "version": 3, 
     "settings": {
         "blocks": {
-			"core/image": {
-				"lightbox": {
+            "core/image": {
+                "lightbox": {
                     "enabled": true,
-					"allowEditing": true
-				}
-			},
+                    "allowEditing": true
+                }
+            },
             "core/separator": {
                 "color": {
                     "defaultPalette": false,
@@ -45,6 +45,10 @@
         "dimensions": {
 			"minHeight": true
 		},
+        "lightbox": {
+            "enabled": true,
+            "allowEditing": true
+        },
         "layout": {
             "contentSize": "840px",
             "wideSize": "1100px"
