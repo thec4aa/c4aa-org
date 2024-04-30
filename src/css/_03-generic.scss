@@ -813,12 +813,15 @@ display: none;
 	}
 }
 
-// Jetpack Carousel
+// Jetpack Carousel/Lightbox
 
 .jp-carousel-light.jp-carousel-overlay {
-	background: var(--color-brandBeige);
+	background: var(--color-brandWhite);
 }
 
+.wp-lightbox-overlay .scrim {
+	background-color: var(--color-brandWhite);
+}
 // Simple Banner fixes
 
 .simple-banner-text a:link { text-decoration: underline !important;}
