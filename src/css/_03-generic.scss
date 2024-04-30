@@ -610,7 +610,7 @@ margin-left: 2rem;
 			font-weight: 700;
 			margin: 0;
 			background-color: var(--color-brandRed);
-			color: #fff;
+			color: var(--color-brandWhite);
 			// clip-path: polygon(calc(var(--topLeftX) * 1px) calc(var(--topLeftY) * 1px), calc(100% - var(--topRightX) * 1px) calc(var(--topRightY) * 1px), calc(100% - var(--bottomRightX) * 1px) calc(100% - var(--bottomRightY) * 1px), calc(var(--bottomLeftX) * 1px) calc(100% - var(--bottomLeftY) * 1px));
 			clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 94%);
 			@media only screen and (max-width: 768px) {
@@ -674,7 +674,7 @@ margin-left: 2rem;
 	.menu-item-has-children:hover{
 		a{
 			background-color: var( --color-brandBlack );
-			color: #fff;
+			color: var( --color-brandWhite );
 		}
 		.sub-menu{
 			display: block;
@@ -695,7 +695,7 @@ margin-left: 2rem;
 					max-width: 100%;
 					display: block;
 					text-transform: capitalize;
-					color: #fff;
+					color: var(--color-brandWhite);
 				}
 			}
 		}
