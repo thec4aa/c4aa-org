@@ -494,12 +494,6 @@ fieldset {
 	width: 100%;
 }
 
-/* Lists in Blocks */
-
-.entry-content ul li, .entry-content ol li {
-	margin: 0 0 .6em 1em;
-}
-
 
 
 /* Accordion Buttons */
@@ -514,6 +508,13 @@ fieldset {
 	color: var( --color-brandRed );
 	right: auto;
 	margin-left: 1em;
+}
+
+.c-accordion__title::after {
+	font-weight: 600 !important;
+	padding: 0 .1em .1em .25em;
+	color: var(--color-brandWhite) !important;
+	background: var(--color-brandRed) !important;
 }
 
 .is-open .c-accordion__title::after {
@@ -811,3 +812,16 @@ display: none;
 		background-color: var(--color-brandBlack) !important;
 	}
 }
+
+// Jetpack Carousel
+
+.jp-carousel-light.jp-carousel-overlay {
+	background: var(--color-brandBeige);
+}
+
+// Simple Banner fixes
+
+.simple-banner-text a:link { text-decoration: underline !important;}
+.simple-banner-text a:visited { text-decoration: underline !important;}
+.simple-banner-text a:hover {text-decoration: none !important;}
+
