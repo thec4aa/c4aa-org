@@ -5,6 +5,7 @@
         "blocks": {
 			"core/image": {
 				"lightbox": {
+                    "enabled": true,
 					"allowEditing": true
 				}
 			},
