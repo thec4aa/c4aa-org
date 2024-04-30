@@ -89,6 +89,12 @@
 	margin: auto;
 }
 
+/* center images that are not set to alignwide or aligncenter */
+.entry .entry-content .wp-block-image:not(.alignwide):not(.aligncenter):not(.alignleft):not(.alignright) img {
+		display: block;
+		margin: auto;
+}
+
 /*
  * Accessibility Helpers
  *
