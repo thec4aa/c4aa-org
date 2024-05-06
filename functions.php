@@ -65,6 +65,13 @@ function c4aa_preload_tags() {
 }
 add_action( 'wp_head', 'c4aa_preload_tags', 0 );
 
+// function to add bloomerang tracking script:
+function c4aa_add_bloomerang_tracking_script() {
+	echo '<script src="https://api.bloomerang.co/v1/WebsiteVisit?ApiKey=pub_3cb484db-d146-11ec-b5ee-066e3d38bc77" type="text/javascript"></script>
+	';
+}
+add_action( 'wp_head', 'c4aa_add_bloomerang_tracking_script', 0 );
+
 function c4aa_webfontloader_inline_script() {
 	$font_css_path = get_stylesheet_directory_uri() . "/fonts/webfonts.css";
 
