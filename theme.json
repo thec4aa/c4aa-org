@@ -140,11 +140,20 @@
                         {
                             "fontFamily": "Work Sans",
                             "fontWeight": "100 900",
-                            "fontStyle": "auto",
+                            "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/worksans-variablefont_wght-webfont.woff2",
-                                     "file:./fonts/worksans-variablefont_wght-webfont.woff" ]
+                            "src": [ 
+                                "file:./fonts/WorkSans-VariableFont_wght.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Work Sans",
+                            "fontWeight": "100 900",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": [ 
+                                "file:./fonts/WorkSans-Italic-VariableFont_wght.woff2" ]
                         }
+                        
                     ]
 
                 }
