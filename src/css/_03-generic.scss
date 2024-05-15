@@ -104,8 +104,16 @@ h1:before,
 h2:before, .entry .entry-title:before {
 	content: none;
 }
-
-.entry .entry-content > h2 {
+.entry .entry-content .wp-block-heading:not(.alignfull) {
+	max-width: 840px;
+}
+.entry .entry-content .wp-block-heading.alignwide {
+	max-width: 1100px;
+}
+.entry .entry-content .wp-block-heading:not(.has-text-align-center):not(.is-style-c4aa-clipPath-heading) {
+	margin-left: 0;
+}
+.entry .entry-content > h2.is-style-c4aa-clipPath-heading {
 	margin-left: -1.5rem;
 	margin-top: calc( 5vw + 30px );
 	margin-bottom: calc( 3vw + 30px );
@@ -113,7 +121,7 @@ h2:before, .entry .entry-title:before {
 
 
 @media only screen and (min-width: 768px) {
-	.entry .entry-content > h2 {
+	.entry .entry-content > h2.is-style-c4aa-clipPath-heading {
 		margin-left: -1rem;
 	}
 

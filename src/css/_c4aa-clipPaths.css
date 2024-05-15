@@ -143,7 +143,12 @@ h4.is-style-c4aa-clipPath-heading {
 	background: var( --color-brandRed ); 
 	display: inline-block;
 }
-
+@media only screen and (max-width: 1200px) {
+	.entry .entry-content .wp-block-heading.is-style-c4aa-clipPath-heading:not(.has-text-align-center),
+	.entry .entry-content h2.wp-block-heading.is-style-c4aa-clipPath-heading:not(.has-text-align-center) {
+		margin-left: 0;
+	}
+}
 @media only screen and (min-width: 768px) {
 	.entry .entry-content > h2.is-style-c4aa-clipPath-heading,
 	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
