@@ -45,13 +45,6 @@
 	--duotone-spacing: 0;
 }
 
-/*
- * Cover Image Simple Filter
- */
-
-.is-style-c4aa-simple-filter {
-	filter: grayscale(100%) opacity(.85) brightness(1.1) contrast(1.5);
-}
 
 // Force image caption to display on top of filtered images
 .wp-block-image figcaption {

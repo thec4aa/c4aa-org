@@ -6,8 +6,9 @@
             "key": "field_5ce00db2dcfae",
             "label": "Featured Image Duotone Filter",
             "name": "c4aa_image_filter",
+            "aria-label": "",
             "type": "radio",
-            "instructions": "",
+            "instructions": "Remember: use only one color from the secondary palette.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,26 +17,42 @@
                 "id": ""
             },
             "choices": {
-                "red-and-black": "red-and-black",
-                "beige-and-black": "beige-and-black",
-                "beige-and-red": "beige-and-red",
-                "beige-and-grey": "beige-and-grey",
-                "beige-and-grey-vintage": "beige-and-grey-vintage",
-                "beige-and-blue": "beige-and-blue"
+                "none": "Full Color",
+                "beige-and-black": "Black and Beige",
+                "white-and-black": "Black and White",
+                "red-and-black": "Black and Red",
+                "beige-and-red": "Red and Beige",
+                "white-and-red": "Red and White",
+                "beige-and-grey": "Grey and Beige",
+                "white-and-grey": "Grey and White",
+                "beige-and-blue": "Blue and Beige",
+                "white-and-blue": "Blue and White",
+                "blue-and-black": "Black and Blue",
+                "beige-and-green": "Green and Beige",
+                "white-and-green": "Green and White",
+                "green-and-black": "Black and Green",
+                "beige-and-yellow": "Yellow and Beige",
+                "white-and-yellow": "Yellow and White",
+                "yellow-and-black": "Black and Yellow",
+                "beige-and-purple": "Purple and Beige",
+                "white-and-purple": "Purple and White",
+                "purple-and-black": "Black and Purple",
+                "white-and-beige": "Beige and White"
             },
+            "default_value": "beige-and-blue",
+            "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
-            "default_value": "",
             "layout": "vertical",
-            "return_format": "value",
             "save_other_choice": 0
         },
         {
             "key": "field_5ce021ca5be86",
-            "label": "Title Effect",
+            "label": "Post Title Banner Color",
             "name": "c4aa_title_effect",
+            "aria-label": "",
             "type": "radio",
-            "instructions": "",
+            "instructions": "Go for contrast. Avoid the same color banner as the duotone.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -45,13 +62,20 @@
             },
             "choices": {
                 "red-banner": "Red Banner",
+                "black-banner": "Black Banner",
+                "yellow-banner": "Yellow Banner",
+                "grey-banner": "Grey Banner",
+                "blue-banner": "Blue Banner",
+                "green-banner": "Green Banner",
+                "purple-banner": "Violet Banner",
+                "white-banner": "White Banner",
                 "default": "Default"
             },
+            "default_value": "",
+            "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
-            "default_value": "",
             "layout": "vertical",
-            "return_format": "value",
             "save_other_choice": 0
         }
     ],
@@ -79,5 +103,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1709377410
+    "show_in_rest": 0,
+    "modified": 1715805082
 }
