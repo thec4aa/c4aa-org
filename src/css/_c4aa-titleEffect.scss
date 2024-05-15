@@ -33,6 +33,68 @@
 	background-color: var( --color-brandBlack );
 }
 
+// Yellow banner
+
+.yellow-banner .site-featured-image .entry-title {
+	background-color: var( --color-brandYellow );
+	color: var( --color-brandBlack );
+}
+
+.yellow-banner .site-header.featured-image .site-featured-image .entry-meta {
+	background-color: var( --color-brandBlack );
+}
+
+// Grey banner
+
+.grey-banner .site-featured-image .entry-title {
+	background-color: var( --color-brandGrey );
+}
+
+.grey-banner .site-header.featured-image .site-featured-image .entry-meta {
+	background-color: var( --color-brandRed );
+}
+
+// Blue banner
+
+.blue-banner .site-featured-image .entry-title {
+	background-color: var( --color-brandBlue );
+}
+
+.blue-banner .site-header.featured-image .site-featured-image .entry-meta {
+	background-color: var( --color-brandBlack );
+}
+
+// Green banner
+
+.green-banner .site-featured-image .entry-title {
+	background-color: var( --color-brandGreen );
+}
+
+.green-banner .site-header.featured-image .site-featured-image .entry-meta {
+	background-color: var( --color-brandBlack );
+}
+
+// Purple banner
+
+.purple-banner .site-featured-image .entry-title {
+	background-color: var( --color-brandPurple );
+}
+
+.purple-banner .site-header.featured-image .site-featured-image .entry-meta {
+	background-color: var( --color-brandPurple );
+}
+
+// White banner
+
+.white-banner .site-featured-image .entry-title {
+	background-color: var( --color-brandWhite );
+	color: var(--color-brandBlack);
+}
+
+.white-banner .site-header.featured-image .site-featured-image .entry-meta {
+	background-color: var( --color-brandBlack );
+}
+
 // TODO: Move to generic styles area once PR #201 is merged.
 
 .site-header.featured-image .site-featured-image .entry-header {
