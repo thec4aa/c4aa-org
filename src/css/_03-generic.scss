@@ -301,19 +301,10 @@ blockquote.wp-block-quote {
 		}
 }
 
-blockquote.wp-block-quote.is-style-large {
-	color: var( --color-brandWhite );
-}
-
 .entry .entry-content .wp-block-pullquote cite {
-	color: var( --color-brandWhite );
 	font-weight: 400;
 	font-size: 1.2rem;
 	font-family: var( --font-serif );
-}
-
-blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
-	color: var( --color-brandWhite );
 }
 
 /* Properly aligns collapsed, nested sets of columns */
