@@ -115,7 +115,7 @@ h6 {
 }
 
 .entry .entry-content a:link, .entry .entry-content a {
-	font-weight: 700;
+	font-weight: inherit; // was bolder, trying this for now
 }
 
 .entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
