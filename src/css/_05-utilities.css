@@ -38,3 +38,47 @@
 .u-text-align-right {
   text-align: right;
 }
+
+/* Viewport Height Utilities */
+
+.u-min-height-100vh {
+  min-height: 100vh;
+}
+
+.u-min-height-80vh {
+  min-height: 80vh;
+}
+
+/* Rotation Utilities */
+
+.u-rotate-1 {
+  transform: rotate(1deg);
+}
+
+.u-rotate-neg1 {
+  transform: rotate(-1deg);
+}
+
+.u-rotate-2 {
+  transform: rotate(2deg);
+}
+
+.u-rotate-neg2 {
+  transform: rotate(-2deg);
+}
+
+.u-rotate-3 {
+  transform: rotate(3deg);
+}
+
+.u-rotate-neg3 {
+  transform: rotate(-3deg);
+}
+
+.u-multiply {
+  mix-blend-mode: multiply;
+}
+
+.u-darken {
+  mix-blend-mode: darken;
+}

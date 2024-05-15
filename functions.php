@@ -42,28 +42,6 @@ function c4aa_gutenberg_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'c4aa_gutenberg_scripts' );
 
-function c4aa_preload_tags() {
-	$fonts_path = get_stylesheet_directory_uri() . "/fonts/";
-	$fonts = [
-		'metropolis-regular',
-		'metropolis-regularitalic',
-		'metropolis-semibold',
-		'metropolis-semibolditalic',
-		'metropolis-extrabold',
-		'metropolis-extrabolditalic',
-		'RobotoSlab-Bold',
-		'RobotoSlab-Regular',
-		'RobotoSlab-Light',
-	];
-	$preload_str = '';
-
-	foreach ( $fonts as $font ) {
-		$preload_str .= "<link rel='preload' href='" . $fonts_path . $font . "-webfont.woff2' as='font'>\n";
-	}
-
-	echo $preload_str;
-}
-add_action( 'wp_head', 'c4aa_preload_tags', 0 );
 
 // function to add bloomerang tracking script:
 function c4aa_add_bloomerang_tracking_script() {
@@ -72,26 +50,6 @@ function c4aa_add_bloomerang_tracking_script() {
 }
 add_action( 'wp_head', 'c4aa_add_bloomerang_tracking_script', 0 );
 
-function c4aa_webfontloader_inline_script() {
-	$font_css_path = get_stylesheet_directory_uri() . "/fonts/webfonts.css";
-
-	echo "<script>
-
-	WebFontConfig = {
-		custom: {
-			families: ['metropolis', 'roboto'],
-			urls: [ '$font_css_path' ]
-		}
-	};
-
-	(function(d) {
-		var wf = d.createElement('script'), s = d.scripts[0];
-		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-		wf.async = true;
-		s.parentNode.insertBefore(wf, s);
-	 })(document);</script>\n";
-}
-add_action( 'wp_head', 'c4aa_webfontloader_inline_script', 0 );
 
 /**
  * ACF Body Class Options
@@ -173,16 +131,6 @@ function c4aa_custom_dashboard_help() {
 		<p><strong>Advanced Settings:</strong></p>
 			<ul>
 				<li><code>no-hyphens</code> will turn off auto-hyphenating on everything in the block.</li>
-				<li><code>c4aa-duotone</code> plus one of the following will enable duotone effects on images.
-					<ul>
-						<li>- <code>red-and-black</code> </li>
-						<li>- <code>beige-and-black</code> </li>
-						<li>- <code>beige-and-red</code> </li>
-						<li>- <code>beige-and-grey</code> </li>
-						<li>- <code>beige-and-grey-vintage</code> </li>
-						<li>- <code>beige-and-blue</code> </li>
-					</ul>
-					</li>
 			</ul>
 	'; // end echo
 }
@@ -190,8 +138,6 @@ function c4aa_custom_dashboard_help() {
 /**
  * Theme support.
  *
- * Specify block color palette and adjust support for other
- * features as needed.
  */
 function c4aa_setup_theme_supported_features() {
 
@@ -200,48 +146,6 @@ function c4aa_setup_theme_supported_features() {
 	// @see https://github.com/Automattic/jetpack/issues/17170
 	remove_theme_support( 'jetpack-responsive-videos' );
 
-	// Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
-	// adds a hypen in front of the 4 in CSS classes.
-	// @see https://kinsta.com/blog/twenty-nineteen-theme/#block-color-palettes
-	// also added in css
-	add_theme_support( 'editor-color-palette', array(
-		array(
-			'name' => __( 'C4AA Beige', 'c4aa' ),
-			'slug' => 'caa-beige',
-			'color' => '#e8e6df',
-		),
-		array(
-			'name' => __( 'C4AA Red', 'c4aa' ),
-			'slug' => 'caa-red',
-			'color' => '#ef3340',
-		),
-		array(
-			'name' => __( 'C4AA Grey', 'c4aa' ),
-			'slug' => 'caa-grey',
-			'color' => '#968c83',
-		),
-		array(
-			'name' => __( 'C4AA Black', 'c4aa' ),
-			'slug' => 'caa-black',
-			'color' => '#000000',
-		),
-		array(
-			'name' => __( 'C4AA Yellow', 'c4aa' ),
-			'slug' => 'caa-yellow',
-			'color' => '#e1cd00',
-		),
-		array(
-			'name' => __( 'C4AA Blue', 'c4aa' ),
-			'slug' => 'caa-blue',
-			'color' => '#005eb8',
-		),
-		array(
-			'name' => __( 'C4AA White', 'c4aa' ),
-			'slug' => 'caa-white',
-			'color' => '#fafaf9',
-		),
-	)
-	); // end add_theme_support
 } // end c4aa_setup_theme_supported_features
 
 add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 11 );
