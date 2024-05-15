@@ -47,7 +47,6 @@ Apply Clip Paths
 addBlockClipPaths(entryTitles);
 addBlockClipPaths(headings);
 addBlockClipPaths(widgetTitles);
-addBlockClipPaths(donateLegendTitles);
 addBlockClipPaths(blockquotes);
 
 

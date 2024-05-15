@@ -43,6 +43,13 @@ function c4aa_gutenberg_scripts() {
 add_action( 'enqueue_block_editor_assets', 'c4aa_gutenberg_scripts' );
 
 
+// function to add bloomerang tracking script:
+function c4aa_add_bloomerang_tracking_script() {
+	echo '<script src="https://api.bloomerang.co/v1/WebsiteVisit?ApiKey=pub_3cb484db-d146-11ec-b5ee-066e3d38bc77" type="text/javascript"></script>
+	';
+}
+add_action( 'wp_head', 'c4aa_add_bloomerang_tracking_script', 0 );
+
 
 /**
  * ACF Body Class Options

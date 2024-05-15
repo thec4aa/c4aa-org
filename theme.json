@@ -133,18 +133,27 @@
                     ]
                 },
                 {
-                    "fontFamily": "\"Work Sans Regular\", Helvetica Neue, Helvetica, Arial, sans-serif",
+                    "fontFamily": "\"Work Sans\", Helvetica Neue, Helvetica, Arial, sans-serif",
                     "name": "Work Sans",
                     "slug": "work-sans",
                     "fontFace": [
                         {
                             "fontFamily": "Work Sans",
                             "fontWeight": "100 900",
-                            "fontStyle": "auto",
+                            "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/worksans-variablefont_wght-webfont.woff2",
-                                     "file:./fonts/worksans-variablefont_wght-webfont.woff" ]
+                            "src": [ 
+                                "file:./fonts/WorkSans-VariableFont_wght.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Work Sans",
+                            "fontWeight": "100 900",
+                            "fontStyle": "italic",
+                            "fontDisplay": "swap",
+                            "src": [ 
+                                "file:./fonts/WorkSans-Italic-VariableFont_wght.woff2" ]
                         }
+                        
                     ]
 
                 }
@@ -329,7 +338,7 @@
                 {
                     "colors": [ "hsla(55, 100%, 44%, 1)", "hsla(52, 76%, 90%, 1)" ],
                     "slug": "yellow-and-beige",
-                    "name": "Violet and Paper"
+                    "name": "Yellow and Paper"
                 },
                 {
                     "colors": [ "hsla(356, 91%, 58%, 1)", "hsla(198, 76%, 52%, 1)" ],

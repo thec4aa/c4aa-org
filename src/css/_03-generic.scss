@@ -485,6 +485,11 @@ fieldset {
 }
 
 
+/* Remove top and bottom margins on alignfull */
+.entry .entry-content .alignfull {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 
 
 /* Accordion Buttons */
