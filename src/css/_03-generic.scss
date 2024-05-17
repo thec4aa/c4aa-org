@@ -73,11 +73,6 @@ h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, 
 	color: var( --color-brandWhite );
 }
 
-.entry .entry-title a:hover {
-	color: var( --color-brandWhite );
-	text-decoration: underline;
-}
-
 .featured-image .site-branding-container {
 	background-color: var( --color-brandBlack );
 	padding-top: 2rem;
@@ -107,8 +102,8 @@ h2:before, .entry .entry-title:before {
 
 .entry .entry-content > h2 {
 	margin-left: -1.5rem;
-	margin-top: calc( 5vw + 30px );
-	margin-bottom: calc( 3vw + 30px );
+	// margin-top: calc( 5vw + 30px );
+	// margin-bottom: calc( 3vw + 30px );
 }
 
 
@@ -306,19 +301,10 @@ blockquote.wp-block-quote {
 		}
 }
 
-blockquote.wp-block-quote.is-style-large {
-	color: var( --color-brandWhite );
-}
-
 .entry .entry-content .wp-block-pullquote cite {
-	color: var( --color-brandWhite );
 	font-weight: 400;
 	font-size: 1.2rem;
 	font-family: var( --font-serif );
-}
-
-blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
-	color: var( --color-brandWhite );
 }
 
 /* Properly aligns collapsed, nested sets of columns */
@@ -432,27 +418,9 @@ fieldset {
 	max-width: 80px;
 }
 
-/* Footer Widgets */
-
-.widget-area ul li {
-	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1rem;
-	font-family: var( --font-sans );
-}
-
-.widget-area ul li a {
-	color:  var( --color-brandBlack );
-}
-
-.widget-area ul li a:hover,
-.widget-area ul li a:visited {
-	color:  var( --color-brandGrey );
-}
-
-/*****************************/
+/********************/
 /* Latests Posts on Homepage */
-/*****************************/
+/********************/
 
 .entry .entry-content .wp-block-latest-posts.is-grid li {
 	border-top: none;
@@ -484,15 +452,6 @@ fieldset {
 	letter-spacing: .14em;
 }
 
-/* Allow image blocks to actually be full width */
-
-.entry .entry-content .wp-block-image {
-	max-width: 100vw;
-}
-
-.entry .entry-content .wp-block-image.alignfull img {
-	width: 100%;
-}
 
 /* Remove top and bottom margins on alignfull */
 .entry .entry-content .alignfull {
