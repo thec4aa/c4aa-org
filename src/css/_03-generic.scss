@@ -328,21 +328,18 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background-color: var( --color-brandRed );
-	border-radius: 0;
-	box-shadow: 5px 5px 0px var( --color-brandGrey );
-		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
+	background-color: var( --color-brandBlue );
+	border-radius: 1rem;
 	color: var(--color-brandWhite);
-	font-family: Georgia, serif;
+	font-family: var(--font-serif);
+	font-weight: 500;
+	line-height: 1.7rem;
 	padding: .7rem;
 	transition: all 150ms ease-in-out;
-	font-family: var( --font-sans );
+	transform: rotate(-2deg);
+	border: none;
 }
 
-button.main-menu-more-toggle {
-	box-shadow: none;
-}
 
 button:hover,
 .button:hover,
@@ -361,8 +358,8 @@ input[type="submit"]:hover {
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color),
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) {
-	color: var( --color-brandRed );
-    border-color: var( --color-brandRed );
+	color: var( --color-brandBeige );
+    border-color: var( --color-brandBlue );
 }
 
 /***************/

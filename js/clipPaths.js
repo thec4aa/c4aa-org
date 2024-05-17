@@ -18,21 +18,6 @@ Get Clip Path Quote Selectors
 const blockquotes = document.querySelectorAll('.wp-block-quote, .wp-block-pullquote');
 
 /********************
-Get Clip Path Button Selectors
-*********************/
-
-// selectors added through Gutenberg editor
-const defaultButtons = document.querySelectorAll( '.is-style-c4aa-clipPath-button a' );
-const outlineButtons = document.querySelectorAll( '.is-style-c4aa-clipPath-button-outline a');
-
-/* Plug-in buttons
-	contact form (.wpcf7-form) buttons
- 	newsletter subscribe button (#mc-embedded-subscribe)
- */
-const formButtons = document.querySelectorAll( '.wpcf7-form input[type="submit"], #mc-embedded-subscribe');
-
-
-/********************
 Store Clip Path Properties in Array
 *********************/
 
@@ -50,10 +35,6 @@ addBlockClipPaths(widgetTitles);
 addBlockClipPaths(blockquotes);
 
 
-/* Buttons */
-addPlugInButtonClipPaths(formButtons);
-addThemeButtonClipPaths(defaultButtons);
-addThemeButtonClipPaths(outlineButtons);
 
 /**************
  Clip Path Helper Function
@@ -80,33 +61,3 @@ function addBlockClipPaths ( selector ) {
 	});
 }
 
-function addThemeButtonClipPaths ( selector ) {
-	selector.forEach( ( button ) => {
-		// add clip path css properties
-		clipProperties.forEach( ( property ) => {
-				button.style.setProperty( property, getRandomNum( 10, 20) );
-		});
-	});
-}
-
-function addPlugInButtonClipPaths ( selector ) {
-
-	selector.forEach( ( button ) => {
-
-		// create container for dropshadow
-		let wrapShadow = document.createElement('div');
-		wrapShadow.setAttribute( 'class', 'is-style-c4aa-clipPath-button' );
-
-		// insert container before button in the DOM tree
-		button.parentNode.insertBefore( wrapShadow, button );
-
-		// move button into container
-		wrapShadow.appendChild( button );
-
-		// add clip path css properties
-		clipProperties.forEach( ( property ) => {
-				button.style.setProperty( property, getRandomNum( 10, 20) );
-		});
-
-	});
-}
