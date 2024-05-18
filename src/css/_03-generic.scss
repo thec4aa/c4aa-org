@@ -328,18 +328,17 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background-color: var( --color-brandBlue );
+	// background-color: var( --color-brandBlue );
 	border-radius: 1rem;
-	color: var(--color-brandWhite);
-	font-family: var(--font-serif);
-	font-weight: 500;
-	line-height: 1.7rem;
+	// color: var(--color-brandWhite);
+	// font-family: var(--font-serif);
+	font-size: initial; // this is so theme.json can set the size
 	padding: .7rem;
 	transition: all 150ms ease-in-out;
 	transform: rotate(-2deg);
 	border: none;
+	
 }
-
 
 button:hover,
 .button:hover,

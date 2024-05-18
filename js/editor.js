@@ -8,11 +8,6 @@ wp.domReady( () => {
 		label: 'High Emphasis',
 		isDefault: true
 	} );
-	  
-	  wp.blocks.registerBlockStyle('core/button', {
-		name: 'med-emphasis-button',
-		label: 'Medium Emphasis'
-	} );
 
 	wp.blocks.registerBlockStyle('core/button', {
 		name: 'low-emphasis-button',

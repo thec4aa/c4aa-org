@@ -29,23 +29,33 @@
             "core/button": {
                 "color": {
                     "background": true,
-                    "text": true
+                    "text": true,
+                    "gradients": [],
+                    "customGradient": false,
+                    "defaultGradients": false
                 },
                 "typography": {
-                    "fontSize": true,
+                    "fontSizes": true,
                     "lineHeight": true,
-                    "fontFamily": true,
+                    "fontFamilies": true,
                     "fontWeight": true,
                     "fontStyle": false,
                     "textTransform": true,
                     "textDecoration": false,
                     "letterSpacing": true,
-                    "defaultControls": {
-                        "fontSize": true,
-                        "lineHeight": true
+                    "__experimentalDefaultControls": {
+                        "fontSizes": true,
+                        "letterSpacing": false,
+                        "letterCase": true,
+                        "lineHeight": false,
+                        "textTransform": false,
+                        "fontFamilies": false,
+                        "fontWeight": false
                         }
-                    }
-                    
+                    },
+                    "shadow": {
+                        "defaultPresets": false
+                    }     
                 }
 		},
         "spacing": {
@@ -185,6 +195,9 @@
             "text": true,
             "link": true,
             "custom": false,
+            "gradients": [],
+            "defaultGradients": false,
+            "customGradient": false,
             "defaultPalette": false,
             "palette": [
                 {
@@ -377,6 +390,40 @@
     "styles": {
         "spacing": {
             "blockGap": "1.5rem"
+        },
+        "elements": {
+            "button": {
+                "color": {
+                    "background": "var(--wp--preset--color--paper)",
+                    "text": "var(--wp--preset--color--blue)"
+                },
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--zilla-slab)",
+                    "fontSize": "1.4rem",
+                    "fontWeight": "600",
+                    "lineHeight": "1.7rem"
+                }
+            }
+        },
+        "styles": {
+            "core/buttons": {
+                "core/button": {
+                    "color": {
+                        "background": "var(--wp--preset--color--blue)",
+                        "text": "var(--wp--preset--color--paper)"
+                    },
+                    "typography": {
+                        "fontFamily": "var(--wp--preset--font-family--zilla-slab)",
+                        "fontSize": "1.4rem",
+                        "fontWeight": "600",
+                        "lineHeight": "1.7rem"
+                    }
+                }
+                
+            }
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--work-sans)"
         }
     }
 }
