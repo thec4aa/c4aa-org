@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
-    "version": 3, 
+    "version": 3,
     "settings": {
         "blocks": {
             "core/image": {
@@ -51,31 +51,44 @@
                         "textTransform": false,
                         "fontFamilies": false,
                         "fontWeight": false
-                        }
-                    },
-                    "shadow": {
-                        "defaultPresets": false
-                    }     
+                    }
+                },
+                "shadow": {
+                    "defaultPresets": false
+                },
+                "border": {
+                    "radius": true,
+                    "width": true,
+                    "style": true,
+                    "color": true
                 }
-		},
+            }
+        },
         "spacing": {
-			"blockGap": true, 
-			"customSpacingSize": true,
-			"margin": true,
-			"padding": true,
-			"spacingScale": {
-				"operator": "*",
-				"increment": 1.5,
-				"steps": 7,
-				"mediumStep": 1.5,
-				"unit": "rem"
-			},
-			"spacingSizes": [],
-			"units": [ "px", "em", "rem", "vh", "vw", "%" ]
-		},
+            "blockGap": true,
+            "customSpacingSize": true,
+            "margin": true,
+            "padding": true,
+            "spacingScale": {
+                "operator": "*",
+                "increment": 1.5,
+                "steps": 7,
+                "mediumStep": 1.5,
+                "unit": "rem"
+            },
+            "spacingSizes": [],
+            "units": [
+                "px",
+                "em",
+                "rem",
+                "vh",
+                "vw",
+                "%"
+            ]
+        },
         "dimensions": {
-			"minHeight": true
-		},
+            "minHeight": true
+        },
         "lightbox": {
             "enabled": true,
             "allowEditing": true
@@ -96,74 +109,67 @@
                             "fontWeight": "300",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2" ]
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2"]
                         },
                         {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "300",
                             "fontStyle": "italic",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2" ]
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2"]
                         },
                         {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "400",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-regular.woff2" ]
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-regular.woff2"]
                         },
                         {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "400",
                             "fontStyle": "italic",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-italic.woff2" ]
-                        },
-                        {
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-italic.woff2"]
+                        }, {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "500",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-500.woff2" ]
-                        },
-                        {
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-500.woff2"]
+                        }, {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "500",
                             "fontStyle": "italic",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-500italic.woff2" ]
-                        },
-                        {
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-500italic.woff2"]
+                        }, {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "600",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-600.woff2" ]
-                        },
-                        {
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-600.woff2"]
+                        }, {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "600",
                             "fontStyle": "italic",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-600italic.woff2" ]
-                        },
-                        {
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-600italic.woff2"]
+                        }, {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "700",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700.woff2" ]
-                        },
-                        {
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-700.woff2"]
+                        }, {
                             "fontFamily": "Zilla Slab",
                             "fontWeight": "700",
                             "fontStyle": "italic",
                             "fontDisplay": "swap",
-                            "src": [ "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2" ]
+                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2"]
                         }
                     ]
-                },
-                {
+                }, {
                     "fontFamily": "\"Work Sans\", Helvetica Neue, Helvetica, Arial, sans-serif",
                     "name": "Work Sans",
                     "slug": "work-sans",
@@ -173,18 +179,15 @@
                             "fontWeight": "100 900",
                             "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": [ 
-                                "file:./fonts/WorkSans-VariableFont_wght.woff2" ]
-                        },
-                        {
+                            "src": ["file:./fonts/WorkSans-VariableFont_wght.woff2"]
+                        }, {
                             "fontFamily": "Work Sans",
                             "fontWeight": "100 900",
                             "fontStyle": "italic",
                             "fontDisplay": "swap",
-                            "src": [ 
-                                "file:./fonts/WorkSans-Italic-VariableFont_wght.woff2" ]
+                            "src": ["file:./fonts/WorkSans-Italic-VariableFont_wght.woff2"]
                         }
-                        
+
                     ]
 
                 }
@@ -219,28 +222,23 @@
                     "name": "Paper",
                     "slug": "paper",
                     "color": "#f9f4d2"
-                },
-                {
+                }, {
                     "name": "Middle Grey",
                     "slug": "grey",
                     "color": "#968c83"
-                },
-                {
+                }, {
                     "name": "Non-Partisan Blue",
                     "slug": "Blue",
                     "color": "#27aae1"
-                },
-                {
+                }, {
                     "name": "Community Green",
                     "slug": "green",
                     "color": "#8fb73e"
-                },
-                {
+                }, {
                     "name": "Vibrant Violet",
                     "slug": "purple",
                     "color": "#a03c9b"
-                },
-                {
+                }, {
                     "name": "Unstoppable Gold",
                     "slug": "yellow",
                     "color": "#decb00"
@@ -250,137 +248,168 @@
             "defaultDuotone": false,
             "duotone": [
                 {
-                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)", "hsla(53, 100%, 98%, 1)"
+                    ],
                     "slug": "black-and-white",
                     "name": "Black and White"
                 },
                 {
-                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)", "hsla(52, 76%, 90%, 1)"
+                    ],
                     "slug": "black-and-beige",
                     "name": "Black and Paper"
                 },
                 {
-                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(356, 91%, 58%, 1)" ],
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)", "hsla(356, 91%, 58%, 1)"
+                    ],
                     "slug": "black-and-red",
                     "name": "Black and Red"
                 },
                 {
-                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(356, 91%, 58%, 1)" ],
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)", "hsla(356, 91%, 58%, 1)"
+                    ],
                     "slug": "grey-and-red",
                     "name": "Gray and Red"
-                },
-                {
-                    "colors": [ "hsla(356, 91%, 58%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(356, 91%, 58%, 1)", "hsla(52, 76%, 90%, 1)"
+                    ],
                     "slug": "red-and-beige",
                     "name": "Red and Paper"
-                },
-                {
-                    "colors": [ "hsla(356, 91%, 58%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(356, 91%, 58%, 1)", "hsla(53, 100%, 98%, 1)"
+                    ],
                     "slug": "red-and-white",
                     "name": "Red and White"
-                },
-                {
-                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(28, 6%, 45%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)", "hsla(28, 6%, 45%, 1)"
+                    ],
                     "slug": "black-and-grey",
                     "name": "Black and Grey"
-                },
-                {
-                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)", "hsla(53, 100%, 98%, 1)"
+                    ],
                     "slug": "grey-and-white",
                     "name": "Gray and White"
-                },
-                {
-                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)", "hsla(52, 76%, 90%, 1)"
+                    ],
                     "slug": "grey-and-beige",
                     "name": "Grey and Paper"
-                },
-                {
-                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(198, 76%, 52%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)", "hsla(198, 76%, 52%, 1)"
+                    ],
                     "slug": "black-and-blue",
                     "name": "Black and Blue"
-                },
-                {
-                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(198, 76%, 52%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)", "hsla(198, 76%, 52%, 1)"
+                    ],
                     "slug": "grey-and-blue",
                     "name": "Grey and Blue"
-                },
-                {
-                    "colors": [ "hsla(198, 76%, 52%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(198, 76%, 52%, 1)", "hsla(53, 100%, 98%, 1)"
+                    ],
                     "slug": "blue-and-white",
                     "name": "Blue and White"
-                },
-                {
-                    "colors": [ "hsla(198, 76%, 52%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(198, 76%, 52%, 1)", "hsla(52, 76%, 90%, 1)"
+                    ],
                     "slug": "blue-and-beige",
                     "name": "Blue and Paper"
-                },
-                {
-                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(80, 49%, 48%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)", "hsla(80, 49%, 48%, 1)"
+                    ],
                     "slug": "black-and-green",
                     "name": "Black and Green"
-                },
-                {
-                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(80, 49%, 48%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)", "hsla(80, 49%, 48%, 1)"
+                    ],
                     "slug": "grey-and-green",
                     "name": "Gray and Green"
-                },
-                {
-                    "colors": [ "hsla(80, 49%, 48%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(80, 49%, 48%, 1)", "hsla(53, 100%, 98%, 1)"
+                    ],
                     "slug": "green-and-white",
                     "name": "Green and White"
-                },
-                {
-                    "colors": [ "hsla(80, 49%, 48%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(80, 49%, 48%, 1)", "hsla(52, 76%, 90%, 1)"
+                    ],
                     "slug": "green-and-beige",
                     "name": "Green and Paper"
-                },
-                {
-                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(303, 45%, 43%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)", "hsla(303, 45%, 43%, 1)"
+                    ],
                     "slug": "black-and-purple",
                     "name": "Black and Violet"
-                },
-                {
-                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(303, 45%, 43%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)", "hsla(303, 45%, 43%, 1)"
+                    ],
                     "slug": "grey-and-purple",
                     "name": "Grey and Violet"
-                },
-                {
-                    "colors": [ "hsla(303, 45%, 43%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(303, 45%, 43%, 1)", "hsla(53, 100%, 98%, 1)"
+                    ],
                     "slug": "purple-and-white",
                     "name": "Violet and White"
-                },
-                {
-                    "colors": [ "hsla(303, 45%, 43%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(303, 45%, 43%, 1)", "hsla(52, 76%, 90%, 1)"
+                    ],
                     "slug": "purple-and-beige",
                     "name": "Violet and Paper"
-                },
-                {
-                    "colors": [ "hsla(36, 6%, 15%, 1)", "hsla(55, 100%, 44%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)", "hsla(55, 100%, 44%, 1)"
+                    ],
                     "slug": "black-and-yellow",
                     "name": "Black and Yellow"
-                },
-                {
-                    "colors": [ "hsla(28, 6%, 45%, 1)", "hsla(55, 100%, 44%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)", "hsla(55, 100%, 44%, 1)"
+                    ],
                     "slug": "grey-and-yellow",
                     "name": "Grey and Yellow"
-                },
-                {
-                    "colors": [ "hsla(55, 100%, 44%, 1)", "hsla(53, 100%, 98%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(55, 100%, 44%, 1)", "hsla(53, 100%, 98%, 1)"
+                    ],
                     "slug": "yellow-and-white",
                     "name": "Yellow and White"
-                },
-                {
-                    "colors": [ "hsla(55, 100%, 44%, 1)", "hsla(52, 76%, 90%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(55, 100%, 44%, 1)", "hsla(52, 76%, 90%, 1)"
+                    ],
                     "slug": "yellow-and-beige",
                     "name": "Yellow and Paper"
-                },
-                {
-                    "colors": [ "hsla(356, 91%, 58%, 1)", "hsla(198, 76%, 52%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(356, 91%, 58%, 1)", "hsla(198, 76%, 52%, 1)"
+                    ],
                     "slug": "red-and-blue",
                     "name": "Red and Blue"
-                },
-                {
-                    "colors": [ "hsla(198, 76%, 52%, 1)", "hsla(356, 91%, 58%, 1)" ],
+                }, {
+                    "colors": [
+                        "hsla(198, 76%, 52%, 1)", "hsla(356, 91%, 58%, 1)"
+                    ],
                     "slug": "blue-and-red",
                     "name": "Blue and Red"
                 }
@@ -388,11 +417,26 @@
         }
     },
     "styles": {
+        "blocks": {
+            "core/buttons": {
+                "elements": {
+                    "button": {
+                            "color": {
+                                "background": "var(--wp--preset--color--blue)",
+                                "text": "var(--wp--preset--color--paper)"
+                            }
+                    }
+                }
+            }
+        },
         "spacing": {
             "blockGap": "1.5rem"
         },
         "elements": {
             "button": {
+                "border": {
+                    "radius": "1rem"
+                },
                 "color": {
                     "background": "var(--wp--preset--color--paper)",
                     "text": "var(--wp--preset--color--blue)"
@@ -427,7 +471,6 @@
                         "text": "var(--wp--preset--color--paper)"
                     }
                 }
-                
             }
         },
         "typography": {
