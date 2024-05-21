@@ -208,7 +208,8 @@ h4.is-style-c4aa-clipPath-heading a {
 /* Buttons  */
 
 .editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button:not(.is-style-outline) .wp-block-button__link {
-    background-color: var( --color-brandRed );
+    background-color: var( --color-brandBlue );
+	color: var( --color-brandBeige );
 }
 
 .editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button-outline:not(.is-style-outline) .wp-block-button__link {
