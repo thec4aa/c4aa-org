@@ -440,6 +440,7 @@ input[type="submit"]:active::before {
 input[type="button"].button,
 input[type="reset"].button,
 input[type="submit"].button,
+input[type="submit"],
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
 .entry .entry-content .wp-element-button {
 	background-color: var( --color-brandBlue );
@@ -448,7 +449,8 @@ input[type="submit"].button,
 // form buttons have a border - animation doesn't work, but moving on.
 input[type="button"].button,
 input[type="reset"].button,
-input[type="submit"].button {
+input[type="submit"].button,
+input[type="submit"] {
 	border: 2px solid var( --color-brandRed );
 }
 
