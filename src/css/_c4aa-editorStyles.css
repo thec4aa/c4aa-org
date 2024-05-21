@@ -127,7 +127,7 @@ h6 {
 	transform: rotate(-2deg);
 }
 
-.is-style-c4aa-clipPath-heading,
+.is-style-c4aa-clipPath-heading:not(h1, h5, h6),
 .is-style-c4aa-clipPath-heading a { 
 	color: var( --color-brandWhite );
 }
