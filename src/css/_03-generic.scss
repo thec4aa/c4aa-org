@@ -335,10 +335,9 @@ input[type="submit"],
 .entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link {
 		border-radius: 1rem;
 		font-family: var(--font-serif);
-		font-size: 1rem; 
 		font-weight: 500;
-		padding: .7rem;
-		transition: all 50ms ease-in-out;
+		padding: .75rem 1rem;
+		transition: rotate 50ms ease-in-out, transform 150ms ease-in-out, scale 150ms ease-in-out;
 		transform: rotate(-2deg);
 		border: none;
 
@@ -352,6 +351,11 @@ input[type="submit"],
 			// rotate the sold part of the button on hover
 			transform:rotate(-1deg);
 			color: var(--color-brandWhite);
+		}
+
+		&:active {
+			// move the sold part of the button on click
+			transform:scale(.8);
 		}
 
 		&::before {
@@ -407,19 +411,40 @@ input[type="submit"]:focus::before {
 	transform:rotate(-1deg) translateX(-2px) translateY(-5%);
 }
 
+// flash to white on active
+button:active::before,
+.button:active::before,
+.entry .button:active::before,
+.entry .entry-content .wp-element-button:active::before,
+.entry .entry-content .wp-block-file .wp-block-file__button:active::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:active::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:active:not(.has-background):active::before,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active::before,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:active::before,
+input[type="button"]:active::before,
+input[type="reset"]:active::before,
+input[type="submit"]:active::before {
+	transform:rotate(-1deg) translateX(-2px) translateY(-5%);
+	border: var(--color-brandWhite);
+}
+
 
 
 // if no text color is specified, use Beige
-.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-text-color) {
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-element-button {
 	color: var( --color-brandBeige );
 }
 
 // if no background is specified, use Blue
-.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
+.entry .entry-content .wp-element-button {
 	background-color: var( --color-brandBlue );
 }
 
 // in T19 an unstyled button hovers/focus black. This is a fix for that.
+.entry .entry-content .wp-element-button .wp-block-button__link:not(.has-background):hover,
+.entry .entry-content .wp-element-button .wp-block-button__link:not(.has-background):focus,
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background):focus {
 	background-color: var( --color-brandBlue );
@@ -435,13 +460,17 @@ input[type="submit"]:focus::before {
 /* default background color of the high emphasis button */
 .entry .entry-content .is-style-high-emphasis-button .wp-block-button__link:not(.has-background) {
 	background-color: var( --color-brandRed ) !important;
-	font-weight: 700;
 }
 
 /* default text color of the high emphasis button */
 .entry .entry-content .is-style-high-emphasis-button .wp-block-button__link:not(.has-text-color) {
 	color: var( --color-brandWhite ) !important;
 	}
+
+/* increase font weight of high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link {
+	font-weight: 700;
+}
 
 // Low Emphasis Buttons
 

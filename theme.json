@@ -98,6 +98,42 @@
             "wideSize": "1100px"
         },
         "typography": {
+            "fluid": true,
+            "fontSizes": [
+                {
+                "size": ".875rem",
+                "fluid": {
+                    "min": "0.875rem",
+                    "max": "1rem"
+                },
+                "slug": "small",
+                "name": "Small"
+                },
+                {
+                "size": "1rem",
+                "fluid": {
+                    "min": "1rem",
+                    "max": "1.5rem"
+                },
+                "slug": "normal",
+                "name": "Normal"
+                },
+                {
+                "size": "1.5rem",
+                "fluid": {
+                    "min": "1.5rem",
+                    "max": "2rem"
+                },
+                "slug": "large",
+                "name": "Large"
+                },
+                {
+                "size": "2.25rem",
+                "fluid": false,
+                "slug": "x-large",
+                "name": "Extra large"
+                }
+            ],
             "fontFamilies": [
                 {
                     "fontFamily": "\"Zilla Slab\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
