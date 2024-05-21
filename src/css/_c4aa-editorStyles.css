@@ -205,19 +205,33 @@ h4.is-style-c4aa-clipPath-heading a {
 
 
 
-/* Buttons  */
+/* Buttons */
 
-.editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button:not(.is-style-outline) .wp-block-button__link {
-    background-color: var( --color-brandRed );
-}
-
-.editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button-outline:not(.is-style-outline) .wp-block-button__link {
-    color: var( --color-brandRed );
-    border: 2px solid var( --color-brandRed );
-    background-color: var( --color-brandBeige );
-}
-
-
+.editor-styles-wrapper button,
+.editor-styles-wrapper .button,
+.editor-styles-wrapper .wp-element-button,
+.editor-styles-wrapper .entry .entry-content .wp-block-file .wp-block-file__button,
+.editor-styles-wrapper .entry .entry-content .wp-block-button .wp-block-button__link,
+.editor-styles-wrapper input[type="button"],
+.editor-styles-wrapper input[type="reset"],
+.editor-styles-wrapper input[type="submit"],
+.editor-styles-wrapper .wp-block-button:not(.is-style-squared) .wp-block-button__link, 
+.editor-styles-wrapper .wp-block-button:not(.is-style-outline) .wp-block-button__link, 
+.editor-styles-wrapper .wp-block-button:not(.is-style-solid) .wp-block-button__link, 
+.editor-styles-wrapper .wp-block-button:not(.has-background) .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button:not(.has-text-color) .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.is-style-solid .wp-block-button__link {
+		border-radius: 1rem;
+		font-family: var(--font-serif);
+		font-weight: 500;
+		padding: .75rem 1rem;
+		transition: all 50ms ease-in-out;
+		transform: rotate(-2deg);
+		border: 2px solid var(--color-brandRed); 
+		background: var(--color-brandBlue); 
+		color: var(--color-brandBeige);
+	}
 
 /* 
 LINKS 
