@@ -337,7 +337,7 @@ input[type="submit"],
 		font-family: var(--font-serif);
 		font-weight: 500;
 		padding: .75rem 1rem;
-		transition: all 50ms ease-in-out;
+		transition: rotate 50ms ease-in-out, transform 150ms ease-in-out, scale 150ms ease-in-out;
 		transform: rotate(-2deg);
 		border: none;
 
@@ -351,6 +351,11 @@ input[type="submit"],
 			// rotate the sold part of the button on hover
 			transform:rotate(-1deg);
 			color: var(--color-brandWhite);
+		}
+
+		&:active {
+			// move the sold part of the button on click
+			transform:scale(.8);
 		}
 
 		&::before {
@@ -404,6 +409,23 @@ input[type="button"]:focus::before,
 input[type="reset"]:focus::before,
 input[type="submit"]:focus::before {
 	transform:rotate(-1deg) translateX(-2px) translateY(-5%);
+}
+
+// flash to white on active
+button:active::before,
+.button:active::before,
+.entry .button:active::before,
+.entry .entry-content .wp-element-button:active::before,
+.entry .entry-content .wp-block-file .wp-block-file__button:active::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:active::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:active:not(.has-background):active::before,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active::before,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:active::before,
+input[type="button"]:active::before,
+input[type="reset"]:active::before,
+input[type="submit"]:active::before {
+	transform:rotate(-1deg) translateX(-2px) translateY(-5%);
+	border: var(--color-brandWhite);
 }
 
 
