@@ -322,7 +322,7 @@ blockquote.wp-block-quote {
 /* Solid part of the button */
 /* note: first line is excluded buttons from other forms, tinymce editor, formiddable forms, etc. */
 button:not(:where(#simple-banner-close-button *, .wp-editor-tools *,
-.mce-container *, .frm_upload_text *, .frm_upload_text * )),
+.mce-container *, .frm_upload_text *, .frm_upload_text *, .frm_show_password_btn )),
 .button,
 .entry .button,
 .entry .entry-content .wp-element-button,
