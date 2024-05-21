@@ -285,21 +285,55 @@
 	margin-left: 1rem;
 }
 
-/*********************/
+
 /* Formiddable Forms */
-/*********************/
+
+.frm_forms fieldset{
+	padding: 0
+}
+
+input + .frm_description,
+select + .frm_description,
+textarea + .frm_description,
+.frm_opt_container + .frm_description {
+	font-family: var(--font-serif);
+	font-size: .9rem;
+	color: var(--color-brandGrey);
+	font-style: italic;
+}
+
+.frm_range_container .frm_range_value {
+	font-family: var(--font-serif);
+	font-size: 1.2rem;
+	color: var(--color-brandGrey);
+	font-style: italic;
+	margin-left: .5rem;
+}
+
+.frm_opt_container label {
+	font-weight: 400;
+}
 
 .frm_required {
     color: var(--color-brandRed);
 }
+
+.frm_slider,
+.frm_range_container input {
+	background-color: var(--color-brandBeige);
+}
+
+.frm_range_container input {
+	border-radius: 1rem;
+}
+
 
 .frm_form_field {
     margin: 1em 0;
 }
 
 .frm_description {
-	font-size: 15px;
-	font-style: italic;
+	font-size: 1rem;
 }
 
 .frm_error {
@@ -311,6 +345,21 @@
 
 .frm_primary_label {
     display: block;
+}
+
+// File upload dropzone
+.frm_dropzone .dz-message {
+	border: 2px dotted var(--color-brandGrey);
+	border-radius: 1rem;
+	line-height: 1.2rem;
+}
+
+.frmsvg {
+	fill: var(--color-brandBlack);
+}
+
+.frmsvg:hover {
+	fill: var(--color-brandGrey);
 }
 
 .logged-in .frm_grid_container {
