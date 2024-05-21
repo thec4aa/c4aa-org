@@ -409,16 +409,20 @@ input[type="submit"]:focus::before {
 
 
 // if no text color is specified, use Beige
-.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-text-color) {
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-element-button {
 	color: var( --color-brandBeige );
 }
 
 // if no background is specified, use Blue
-.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
+.entry .entry-content .wp-element-button {
 	background-color: var( --color-brandBlue );
 }
 
 // in T19 an unstyled button hovers/focus black. This is a fix for that.
+.entry .entry-content .wp-element-button .wp-block-button__link:not(.has-background):hover,
+.entry .entry-content .wp-element-button .wp-block-button__link:not(.has-background):focus,
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background):focus {
 	background-color: var( --color-brandBlue );
