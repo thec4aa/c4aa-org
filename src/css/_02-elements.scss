@@ -78,9 +78,15 @@ h6 {
 	font-size: 1em;
 }
 
-// ------------ //
-// END HEADERS  //
-// ------------ //
+/* LISTS */
+
+.entry .entry-content ol *,
+.entry .entry-content ul * {
+	font-family: var( --font-serif );
+	font-weight: 400;
+	line-height: 1.3rem;
+	padding-bottom: 1rem;
+}
 
 // ------------ //
 //    LINKS     //
