@@ -127,7 +127,7 @@ h6 {
 	transform: rotate(-2deg);
 }
 
-.is-style-c4aa-clipPath-heading,
+.is-style-c4aa-clipPath-heading:not(h1, h5, h6),
 .is-style-c4aa-clipPath-heading a { 
 	color: var( --color-brandWhite );
 }
@@ -206,8 +206,6 @@ h4.is-style-c4aa-clipPath-heading a {
 
 
 /* Buttons */
-
-.editor-styles-wrapper button,
 .editor-styles-wrapper .button,
 .editor-styles-wrapper .wp-element-button,
 .editor-styles-wrapper .entry .entry-content .wp-block-file .wp-block-file__button,
@@ -272,3 +270,76 @@ a:hover {
 .entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
 	font-weight: inherit;
 }
+
+
+/* Utilities from _05-utilities.css */
+
+.no-hyphens * {
+	-webkit-hyphens: manual;
+	-ms-hyphens: manual;
+	hyphens: manual;
+  }
+  
+  .u-display-inline-block {
+	display: inline-block;
+  }
+  
+  .u-display-block {
+	display: block;
+  }
+  
+  .u-text-align-center {
+	text-align: center;
+  }
+  
+  .u-align-items-center {
+	align-items: center;
+  }
+  
+  .u-text-align-right {
+	text-align: right;
+  }
+  
+  /* Viewport Height Utilities */
+  
+  .u-min-height-100vh {
+	min-height: 100vh;
+  }
+  
+  .u-min-height-80vh {
+	min-height: 80vh;
+  }
+  
+  /* Rotation Utilities */
+  
+  .u-rotate-1 {
+	transform: rotate(1deg);
+  }
+  
+  .u-rotate-neg1 {
+	transform: rotate(-1deg);
+  }
+  
+  .u-rotate-2 {
+	transform: rotate(2deg);
+  }
+  
+  .u-rotate-neg2 {
+	transform: rotate(-2deg);
+  }
+  
+  .u-rotate-3 {
+	transform: rotate(3deg);
+  }
+  
+  .u-rotate-neg3 {
+	transform: rotate(-3deg);
+  }
+  
+  .u-multiply {
+	mix-blend-mode: multiply;
+  }
+  
+  .u-darken {
+	mix-blend-mode: darken;
+  }
