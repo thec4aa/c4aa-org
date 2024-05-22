@@ -187,7 +187,8 @@
 	}
 }
 
-@media( min-width: 1000px ) {
+/* this was 1000px and not sure why. Seems to work at 1260px */
+@media( min-width: 1260px ) {
 	.site-branding {
 		margin: 0 calc(10% + 60px);
 	}
