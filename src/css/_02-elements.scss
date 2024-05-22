@@ -80,8 +80,8 @@ h6 {
 
 /* LISTS */
 
-.entry .entry-content ol *,
-.entry .entry-content ul * {
+.entry .entry-content ol li,
+.entry .entry-content ul li {
 	font-family: var( --font-serif );
 	font-weight: 400;
 	line-height: 1.3rem;

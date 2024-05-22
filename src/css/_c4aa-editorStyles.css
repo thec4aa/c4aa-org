@@ -154,6 +154,16 @@ h4.is-style-c4aa-clipPath-heading a {
     color: var( --color-brandWhite );
 }
 
+/* LISTS */
+
+ol li,
+ul li{
+	font-family: var( --font-serif );
+	font-weight: 400;
+	line-height: 1.3rem;
+	padding-bottom: 1rem;
+}
+
 /* BLOCKQUOTES */
 
 .wp-block-quote {
