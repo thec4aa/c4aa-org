@@ -241,6 +241,7 @@ body.home .entry-header {
 
 /* Pullquotes */
 
+/* basic styles */
 .entry .entry-content .wp-block-pullquote,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--color-brandRed);
@@ -271,8 +272,10 @@ body.home .entry-header {
 /* Friendlier mobile styling for floating pullquotes in post */
 .entry .entry-content .wp-block-pullquote.alignright,
 .entry .entry-content .wp-block-pullquote.alignleft {
-
-	@media screen and ( max-width: 767px ) {
+	& blockquote {
+		padding: 0rem 2.5rem;
+	}
+	@media screen and ( max-width: 768px ) {
 		float: none;
 		max-width: 100%;
 		padding: 1rem;
