@@ -82,12 +82,13 @@ h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, 
 }
 
 .site-footer .widget-title {
-	color: var( --color-brandWhite )
+	color: var( --color-brandWhite );
 }
 
 /* Headers */
 
-header.featured-image h1.entry-title {
+.site-header.featured-image .entry-title {
+	color: var( --color-brandWhite );
 	margin-left: .5em;
 	margin-right: .5em;
 	font-size: 2rem; // fallback
@@ -110,10 +111,6 @@ h2:before, .entry .entry-title:before {
 @media only screen and (min-width: 768px) {
 	.entry .entry-content > h2 {
 		margin-left: -1rem;
-	}
-
-	.entry .entry-content > h3 {
-
 	}
 }
 
@@ -244,13 +241,24 @@ body.home .entry-header {
 
 /* Pullquotes */
 
+.entry .entry-content .wp-block-pullquote,
 .entry .entry-content .wp-block-pullquote.is-style-solid-color {
 	background-color: var(--color-brandRed);
 	
 	& p {
 		color: var(--color-brandWhite);
+		font-size: 2rem;
+		font-weight: 400;
+		font-style: normal;
+		hyphens: manual;
 	}
 }
+
+.entry .entry-content .wp-block-pullquote cite {
+	color: var(--color-brandWhite);
+	font: 400 1.25rem var(--font-serif);
+}
+
 
 /* Extra padding to full width pullquote block */
 .entry .entry-content .wp-block-pullquote.alignfull {
@@ -299,12 +307,6 @@ blockquote.wp-block-quote {
 		& cite {
 			font-size: calc(1rem / (1.25 * 1));
 		}
-}
-
-.entry .entry-content .wp-block-pullquote cite {
-	font-weight: 400;
-	font-size: 1.2rem;
-	font-family: var( --font-serif );
 }
 
 /* Properly aligns collapsed, nested sets of columns */

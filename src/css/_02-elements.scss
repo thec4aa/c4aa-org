@@ -29,13 +29,11 @@ blockquote cite,
 		
 }
 
-figure.wp-block-pullquote,
 p strong,
 ol strong,
 ul strong,
 .entry .entry-content figcaption,
 table strong {
-	font-family: var( --font-sans );
 	font-weight: 600;
 }
 
@@ -83,14 +81,6 @@ h6 {
 // ------------ //
 // END HEADERS  //
 // ------------ //
-
-// PULL QUOTES
-.entry .entry-content .wp-block-pullquote.is-style-solid-color p {
-	font-size: 2em;
-	font-weight: 400;
-	font-style: normal;
-	hyphens: manual;
-}
 
 // ------------ //
 //    LINKS     //
