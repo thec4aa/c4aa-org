@@ -714,7 +714,8 @@ color: var(--color-brandGrey);
 }
 
 // makes "Default" gutenberg selected separator centered and width 50%
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default {
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default,
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
 	width: 90%;
 	max-width: unset;
 	margin-left: auto;
