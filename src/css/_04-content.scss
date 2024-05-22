@@ -1,6 +1,30 @@
+/* Page Titles */
+
+.search .page-header .page-title, 
+.error404 .page-header .page-title,
+.archive .page-header .page-title {
+	font-family: var( --font-serif );
+	color: var(--color-brandGrey) !important;
+	font-weight: 300;
+	font-size: 2rem;
+	letter-spacing: .14em;
+	text-transform: uppercase;
+}
+
+.archive .page-header .page-description, 
+.search .page-header .page-description,
+.error404 .page-header .page-description {
+	font-family: var( --font-sans );
+	font-weight: 400;
+	font-size: 2rem;
+	color: var(--color-brandBlack);
+}
+
+
 /***********/
 /* Archive */
 /***********/
+
 
 @media( min-width: 768px ) {
 

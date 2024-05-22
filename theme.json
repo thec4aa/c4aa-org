@@ -6,9 +6,7 @@
             "core/image": {
                 "lightbox": {
                     "enabled": true,
-                    "allowEditing": true,
-                "padding": true,
-                "margin": true
+                    "allowEditing": true
                 }
             },
             "core/separator": {
