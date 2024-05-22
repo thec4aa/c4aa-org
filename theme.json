@@ -35,23 +35,12 @@
                     "defaultGradients": false
                 },
                 "typography": {
-                    "fontSizes": true,
                     "lineHeight": true,
-                    "fontFamilies": true,
                     "fontWeight": true,
                     "fontStyle": false,
                     "textTransform": true,
                     "textDecoration": false,
-                    "letterSpacing": true,
-                    "__experimentalDefaultControls": {
-                        "fontSizes": true,
-                        "letterSpacing": false,
-                        "letterCase": true,
-                        "lineHeight": false,
-                        "textTransform": false,
-                        "fontFamilies": false,
-                        "fontWeight": false
-                    }
+                    "letterSpacing": true
                 },
                 "shadow": {
                     "defaultPresets": false
@@ -461,6 +450,35 @@
                                 "background": "var(--wp--preset--color--blue)",
                                 "text": "var(--wp--preset--color--paper)"
                             }
+                    }
+                }
+            },
+            "core/list": {
+                "typography": {
+                    "lineHeight": "1.3rem"
+                }
+            },
+            "core/pullquote": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--work-sans)",
+                    "fontSize": "2rem",
+                    "fontWeight": "400",
+                    "fontStyle": "normal"
+                    },
+                "color": {
+                    "background": "var(--wp--preset--color--red)",
+                    "text": "var(--wp--preset--color--base)"
+                },
+                "elements": {
+                    "cite": {
+                        "typography": {
+                            "fontFamily": "var(--wp--preset--font-family--zilla-slab)",
+                            "fontSize": "1.2rem",
+                            "fontWeight": "400"
+                        },
+                        "color": {
+                            "text": "var(--wp--preset--color--base)"
+                        }
                     }
                 }
             }
