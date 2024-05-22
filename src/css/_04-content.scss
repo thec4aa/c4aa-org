@@ -187,7 +187,7 @@
 	}
 }
 
-/* this was 1000px and not sure why. Seems to work at 1260px */
+/* this was 1000px and not sure why. Seems to work at 1260px  #309 */
 @media( min-width: 1260px ) {
 	.site-branding {
 		margin: 0 calc(10% + 60px);
@@ -300,7 +300,13 @@
 	color: var( --color-brandYellow);
 }
 
+/* Donate Page */
 
+/* Kindful/Bloomerang donate form height */
+
+.kindful-embed-wrapper {
+	height: 700px !important;
+}
 
 /****************/
 /* Footer       */
