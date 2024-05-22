@@ -35,23 +35,12 @@
                     "defaultGradients": false
                 },
                 "typography": {
-                    "fontSizes": true,
                     "lineHeight": true,
-                    "fontFamilies": true,
                     "fontWeight": true,
                     "fontStyle": false,
                     "textTransform": true,
                     "textDecoration": false,
-                    "letterSpacing": true,
-                    "__experimentalDefaultControls": {
-                        "fontSizes": true,
-                        "letterSpacing": false,
-                        "letterCase": true,
-                        "lineHeight": false,
-                        "textTransform": false,
-                        "fontFamilies": false,
-                        "fontWeight": false
-                    }
+                    "letterSpacing": true
                 },
                 "shadow": {
                     "defaultPresets": false
