@@ -204,6 +204,7 @@ ul li{
 	font-size: 3rem;
 }
 
+.wp-block-pullquote:not(.has-background, .has-text-color),
 .wp-block-pullquote.is-style-solid-color:not(.has-background) {
 	background-color: var( --color-brandRed );
 	color: var( --color-brandWhite );
