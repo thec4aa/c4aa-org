@@ -76,12 +76,12 @@ function ace_add_external_link_icon(  ) {
 				'</svg>';
 			// Check if content is available
 			if (!document.querySelector('.entry-content')) return;
-			var links = document.querySelector('.entry-content').querySelectorAll('a:not(:has(img))');
-			[...links].forEach(function (link) {
-				if (link.host !== window.location.host) {
-					link.innerHTML += ' ' + icon;
-				}
-			});
+				var links = document.querySelector('.entry-content').querySelectorAll('a:not(:has(img)):not(.wp-block-social-link-anchor)');
+				[...links].forEach(function (link) {
+					if (link.host !== window.location.host) {
+						link.innerHTML += ' ' + icon;
+					}
+				});
 		}
 		window.addEventListener('load', externalLinkIcon, false);
 	" );

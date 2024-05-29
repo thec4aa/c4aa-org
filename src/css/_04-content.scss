@@ -308,6 +308,18 @@
 	height: 700px !important;
 }
 
+/* About Page - Temporary until we get People Post Type */
+
+#post-11514 .entry-content .wp-block-column h5.wp-block-heading,
+#post-11514 .entry-content .wp-block-column h5.wp-block-heading + p {
+	margin: 0rem;
+}
+
+#post-11514 .entry-content .wp-block-column h5.wp-block-heading + p {
+	margin-top: .5rem;
+	line-height: 1.4rem;
+}
+
 /****************/
 /* Footer       */
 /****************/
