@@ -99,13 +99,13 @@ h2:before.is-style-c4aa-clipPath-heading,
 	content: none;
 }
 
-h5.is-style-c4aa-clipPath-heading a,
-h6.is-style-c4aa-clipPath-heading a {
+h5.is-style-c4aa-clipPath-heading:not(.has-text-color) a,
+h6.is-style-c4aa-clipPath-heading:not(.has-text-color) a {
 	color: var( --color-brandBlack );
 }
 
-h4.is-style-c4aa-clipPath-heading a,
-h4.is-style-c4aa-clipPath-heading a:hover {
+h4.is-style-c4aa-clipPath-heading:not(.has-text-color) a,
+h4.is-style-c4aa-clipPath-heading:not(.has-text-color) a:hover {
 	color: var( --color-brandWhite );
 }
 
