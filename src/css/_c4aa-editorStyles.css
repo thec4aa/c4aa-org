@@ -204,16 +204,16 @@ ul li{
 	font-size: 3rem;
 }
 
-.wp-block-pullquote:not(.has-background, .has-text-color),
-.wp-block-pullquote.is-style-solid-color:not(.has-background) {
+.wp-block-pullquote:not(.has-background),
+.wp-block-pullquote:not(.has-background) a,
+.wp-block-pullquote:not(.has-background) cite {
 	background-color: var( --color-brandRed );
+}
+.wp-block-pullquote:not(.has-text-color),
+.wp-block-pullquote:not(.has-text-color) a,
+.wp-block-pullquote:not(.has-text-color) cite {
 	color: var( --color-brandWhite );
 }
-
-.wp-block-pullquote.is-style-solid-color blockquote:not(.has-text-color) {
-	color: var(--color-brandWhite);
-  }
-
 
 
 /* Buttons */
