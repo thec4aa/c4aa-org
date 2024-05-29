@@ -85,6 +85,18 @@
 
 }
 
+/* Query Loop */
+/* break columns down to 1 on tablet size screens */
+
+@media screen and (max-width: 1024px) {
+	ul.wp-container-core-post-template-is-layout-2.wp-container-core-post-template-is-layout-2,
+	ul.wp-container-core-post-template-is-layout-3.wp-container-core-post-template-is-layout-3,
+	ul.wp-container-core-post-template-is-layout-4.wp-container-core-post-template-is-layout-4,
+	ul.wp-block-latest-posts.columns4 {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}			
+}
+
 /****************************************/
 /* Main Menu / Branding Container */
 /****************************************/
