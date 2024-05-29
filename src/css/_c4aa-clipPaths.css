@@ -37,7 +37,7 @@ columns block */
 }
 
 .is-style-c4aa-clipPath-heading, 
-.is-style-c4aa-clipPath-heading.has-background,
+.entry .entry-content .is-style-c4aa-clipPath-heading.has-background,
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
 .widget-title,
