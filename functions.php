@@ -19,6 +19,7 @@ function c4aa_enqueue_assets() {
 	wp_enqueue_style( 'twentynineteen-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/build/main.css', [], $style_version );
 	wp_enqueue_script( 'c4aa-js-mobileMenu', get_stylesheet_directory_uri() . '/js/mobileMenu.js', [], $script_version, true );
+	wp_enqueue_script( 'c4aa-js-scrolling', get_stylesheet_directory_uri() . '/js/scrolling.js', [], $script_version, true );
 	wp_enqueue_script( 'c4aa-js-clipPath', get_stylesheet_directory_uri() . '/js/clipPaths.js', [], $script_version, true );
 }
 
@@ -30,8 +31,8 @@ add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
  */
 
 function c4aa_gutenberg_scripts() {
-	wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/css/c4aa-editorStyles.css' );
-	wp_enqueue_style( 'c4aa-imageFilter', get_stylesheet_directory_uri() . '/css/c4aa-imageFilter.css' );
+	// wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/src/css/_c4aa-editorStyles.css' );
+	wp_enqueue_style( 'c4aa-imageFilter', get_stylesheet_directory_uri() . '/src/css/_c4aa-imageFilter.css' );
 	wp_enqueue_script(
 		'be-editor',
 		get_stylesheet_directory_uri() . '/js/editor.js',
@@ -42,6 +43,12 @@ function c4aa_gutenberg_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'c4aa_gutenberg_scripts' );
 
+add_action( 'admin_init', 'wpdocs_add_editor_styles' );
+function wpdocs_add_editor_styles() {
+  add_theme_support( 'editor-styles' );
+  add_editor_style( '/src/css/_c4aa-editorStyles.css' );
+
+}
 
 // function to add bloomerang tracking script:
 function c4aa_add_bloomerang_tracking_script() {
@@ -50,6 +57,36 @@ function c4aa_add_bloomerang_tracking_script() {
 }
 add_action( 'wp_head', 'c4aa_add_bloomerang_tracking_script', 0 );
 
+
+
+/**
+ * Add link icons.
+ *
+ * Adds a external-link icon to external links only.
+ * Related post: https://jeroensormani.com/adding-a-icon-to-external-links/
+ */
+function ace_add_external_link_icon(  ) {
+	wp_register_script( 'external-link-icon', false );
+	wp_enqueue_script( 'external-link-icon' );
+	
+	wp_add_inline_script( 'external-link-icon', "
+		function externalLinkIcon() {
+			var icon = '<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" aria-hidden=\"true\" role=\"img\" width=\"1em\" height=\"1em\" preserveAspectRatio=\"xMidYMid meet\" viewBox=\"0 0 20 20\">' +
+				'<path d=\"M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z\" fill=\"currentColor\"/>' +
+				'</svg>';
+			// Check if content is available
+			if (!document.querySelector('.entry-content')) return;
+				var links = document.querySelector('.entry-content').querySelectorAll('a:not(:has(img)):not(.wp-block-social-link-anchor)');
+				[...links].forEach(function (link) {
+					if (link.host !== window.location.host) {
+						link.innerHTML += ' ' + icon;
+					}
+				});
+		}
+		window.addEventListener('load', externalLinkIcon, false);
+	" );
+}
+add_action( 'wp_enqueue_scripts', 'ace_add_external_link_icon' );
 
 /**
  * ACF Body Class Options

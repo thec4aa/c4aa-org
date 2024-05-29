@@ -4,8 +4,7 @@ html {
 	font-size: 18px;
 }
 
-body,
-button, 
+body, 
 input,
 select,
 optgroup,
@@ -19,7 +18,6 @@ textarea {
 }
 
 body,
-button, 
 input, 
 select, 
 optgroup, 
@@ -31,24 +29,21 @@ blockquote cite,
 		
 }
 
-figure.wp-block-pullquote,
 p strong,
 ol strong,
 ul strong,
 .entry .entry-content figcaption,
 table strong {
-	font-family: var( --font-sans );
 	font-weight: 600;
 }
 
 .site-branding,
 .page-title {
-	font-family: var ( --font-serif );
+	font-family: var( --font-serif );
 }
 
 .site-branding .main-navigation ul li a {
 	font-family: var( --font-sans );
-	font-weight: 700;
 	text-transform: uppercase;
 }
 
@@ -63,37 +58,45 @@ h6,
 .site-header.featured-image .entry-meta {
 	font-family: var( --font-serif );
 	font-weight: 700;
-	letter-spacing: .14em;
-	text-transform: uppercase;
-
-	
+	letter-spacing: .14em;	
 }
 
 h4, 
 h5 {
 	font-family: var( --font-sans );
-	font-weight: 800;
+	font-weight: 700;
 	letter-spacing: .14em;
-	text-transform: uppercase;
-	line-height: 1.4;
+}
+
+h3 {
+	font-size: 1.6875em; /* fallback */
+	font-size: clamp(1.5rem, 1.3594rem + 0.7031vw, 1.6875rem);
+
+}
+
+h4 {
+	font-size: 1.4rem; /* fallback */
+	font-size: clamp(1.2rem, 1.0500rem + 0.7500vw, 1.4rem);
 }
 
 h5,
 h6 {
-	font-size: 1em;
+	font-size: 1.25rem;
 }
 
-// PULL QUOTES
-.entry .entry-content .wp-block-pullquote.is-style-solid-color p {
-	font-size: 2em;
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+}
+
+/* LISTS */
+
+.entry .entry-content ol li,
+.entry .entry-content ul li:not(.wp-social-link) {
+	font-family: var( --font-serif );
 	font-weight: 400;
-	font-style: normal;
-	hyphens: manual;
+	line-height: 1.3rem;
+	padding-bottom: 1rem;
 }
-
-// ------------ //
-// END HEADERS  //
-// ------------ //
 
 // ------------ //
 //    LINKS     //

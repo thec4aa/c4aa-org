@@ -12,7 +12,7 @@ We have some design standards created by [Diane Shaw](https://www.behance.net/di
 
 ## 2. Code as few modifications as possible.
 
-Minimize use of plugins, javascript, and other dependencies. Hopefully avoid front-end plugins entirely.
+Minimize use of plugins, javascript, and other dependencies. 
 
 # Contributing to this site
 C4AA welcomes all contributions to the C4AA website. 

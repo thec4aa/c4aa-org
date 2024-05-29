@@ -5,7 +5,7 @@
   grid-gap: 1rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .a-colophon-grid {
     grid-template-columns: 1fr 80px 1fr;
   }

@@ -33,7 +33,11 @@
 
 /* Override main color */
 
-.site-header.featured-image .site-featured-image::before, .site-header.featured-image .site-featured-image::after, .entry .post-thumbnail::after, .main-navigation .sub-menu, .sticky-post, .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background), .entry .entry-content > .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].has-primary-background-color, .entry .entry-content > [class^="wp-block-"] .has-primary-background-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color, .entry .entry-content > [class^="wp-block-"].is-style-solid-color.has-primary-background-color,
+.site-header.featured-image .site-featured-image::before,
+.site-header.featured-image .site-featured-image::after,
+.entry .post-thumbnail::after,
+.main-navigation .sub-menu,
+.sticky-post,
 .entry .entry-title::before {
 	background-color: var( --color-brandRed );
 }
@@ -73,11 +77,6 @@ h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, 
 	color: var( --color-brandWhite );
 }
 
-.entry .entry-title a:hover {
-	color: var( --color-brandWhite );
-	text-decoration: underline;
-}
-
 .featured-image .site-branding-container {
 	background-color: var( --color-brandBlack );
 	padding-top: 2rem;
@@ -87,12 +86,13 @@ h3.is-style-c4aa-clipPath-heading a, h3.is-style-c4aa-clipPath-heading a:hover, 
 }
 
 .site-footer .widget-title {
-	color: var( --color-brandWhite )
+	color: var( --color-brandWhite );
 }
 
 /* Headers */
 
-header.featured-image h1.entry-title {
+.site-header.featured-image .entry-title {
+	color: var( --color-brandWhite );
 	margin-left: .5em;
 	margin-right: .5em;
 	font-size: 2rem; // fallback
@@ -107,18 +107,14 @@ h2:before, .entry .entry-title:before {
 
 .entry .entry-content > h2 {
 	margin-left: -1.5rem;
-	margin-top: calc( 5vw + 30px );
-	margin-bottom: calc( 3vw + 30px );
+	// margin-top: calc( 5vw + 30px );
+	// margin-bottom: calc( 3vw + 30px );
 }
 
 
 @media only screen and (min-width: 768px) {
 	.entry .entry-content > h2 {
 		margin-left: -1rem;
-	}
-
-	.entry .entry-content > h3 {
-
 	}
 }
 
@@ -249,13 +245,41 @@ body.home .entry-header {
 
 /* Pullquotes */
 
-.entry .entry-content .wp-block-pullquote.is-style-solid-color {
+/* basic styles */
+
+.entry .entry-content .wp-block-pullquote {
 	background-color: var(--color-brandRed);
+	color: var(--color-brandWhite);
 	
 	& p {
-		color: var(--color-brandWhite);
+		font-size: 2rem; /* fallback */
+		font-size: clamp(1.5rem, 1.1250rem + 1.8750vw, 2rem);
+		font-weight: 400;
+		font-style: normal;
+		hyphens: manual;
 	}
+
+	& cite {
+		font: 400 1.25rem var(--font-serif);
+		}
 }
+
+/* default colors */
+
+.entry .entry-content .wp-block-pullquote:not(.has-text-color),
+.entry .entry-content .wp-block-pullquote:not(.has-text-color) a,
+.entry .entry-content .wp-block-pullquote:not(.has-text-color) cite {
+	color: var(--color-brandWhite);
+}
+
+.entry .entry-content .wp-block-pullquote:not(.has-background) {
+	background-color: var(--color-brandRed);
+}
+
+.entry .entry-content .wp-block-pullquote.has-text-color cite {
+	color: inherit;
+}
+
 
 /* Extra padding to full width pullquote block */
 .entry .entry-content .wp-block-pullquote.alignfull {
@@ -268,8 +292,10 @@ body.home .entry-header {
 /* Friendlier mobile styling for floating pullquotes in post */
 .entry .entry-content .wp-block-pullquote.alignright,
 .entry .entry-content .wp-block-pullquote.alignleft {
-
-	@media screen and ( max-width: 767px ) {
+	& blockquote {
+		padding: 0rem 2.5rem;
+	}
+	@media screen and ( max-width: 768px ) {
 		float: none;
 		max-width: 100%;
 		padding: 1rem;
@@ -306,21 +332,6 @@ blockquote.wp-block-quote {
 		}
 }
 
-blockquote.wp-block-quote.is-style-large {
-	color: var( --color-brandWhite );
-}
-
-.entry .entry-content .wp-block-pullquote cite {
-	color: var( --color-brandWhite );
-	font-weight: 400;
-	font-size: 1.2rem;
-	font-family: var( --font-serif );
-}
-
-blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
-	color: var( --color-brandWhite );
-}
-
 /* Properly aligns collapsed, nested sets of columns */
 /* when using the Multi Breakpoint Columns plugin    */
 @media only screen and (min-width: 768px) {
@@ -333,58 +344,229 @@ blockquote a, blockquote a:hover, blockquote a:active, blockquote a:visited {
 /*** Buttons ***/
 /***************/
 
-button,
+/* Solid part of the button */
+/* note: first line is excluded buttons from other forms, tinymce editor, formiddable forms, etc. */
+button:not(:where(#simple-banner-close-button *, .wp-editor-tools *,
+.mce-container *, .frm_upload_text *, .frm_upload_text *, .frm_show_password_btn )),
 .button,
 .entry .button,
+.entry .entry-content .wp-element-button,
 .entry .entry-content .wp-block-file .wp-block-file__button,
 .entry .entry-content .wp-block-button .wp-block-button__link,
-.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
 input[type="button"],
 input[type="reset"],
+input[type="submit"],
+/* catch old styles */
+.entry .entry-content .wp-block-button:not(.is-style-squared) .wp-block-button__link, 
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link {
+		border-radius: 1rem;
+		font-family: var(--font-serif);
+		font-weight: 500;
+		padding: .75rem 1rem;
+		transition: rotate 50ms ease-in-out, transform 150ms ease-in-out, scale 150ms ease-in-out;
+		transform: rotate(-2deg);
+		border: none;
+
+		&:hover {
+			// rotate the sold part of the button on hover
+			transform:rotate(-1deg);
+			color: var(--color-brandWhite);
+		}
+
+		&:focus {
+			// rotate the sold part of the button on hover
+			transform:rotate(-1deg);
+			color: var(--color-brandWhite);
+		}
+
+		&:active {
+			// move the sold part of the button on click
+			transform:scale(.8);
+		}
+
+		&::before {
+			// outline part of the button
+			transition: all 50ms ease;
+			content:'';
+			//  display:inline-block; 
+			position: absolute;
+			top: 0;
+			left: 2px;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			rotate: 1deg;
+			border: 2px solid var(--color-brandRed); 
+			border-radius: 1rem;
+			//mix-blend-mode: darken; 
+			transform: rotate(1deg);
+			width: 100%;
+			height: 110%;
+		}
+}
+
+// rotate the outline on hover
+button:hover::before,
+.button:hover::before,
+.entry .button:hover::before,
+.entry .entry-content .wp-element-button:hover::before,
+.entry .entry-content .wp-block-file .wp-block-file__button:hover::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:hover::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:hover:not(.has-background):hover::before,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover::before,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:hover::before,
+input[type="button"]:hover::before,
+input[type="reset"]:hover::before,
+input[type="submit"]:hover::before {
+	transform:rotate(-1deg) translateX(-2px) translateY(-5%);
+}
+
+// rotate the outline on focus
+button:focus::before,
+.button:focus::before,
+.entry .button:focus::before,
+.entry .entry-content .wp-element-button:focus::before,
+.entry .entry-content .wp-block-file .wp-block-file__button:focus::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:focus::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:focus:not(.has-background):focus::before,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus::before,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:focus::before,
+input[type="button"]:focus::before,
+input[type="reset"]:focus::before,
+input[type="submit"]:focus::before {
+	transform:rotate(-1deg) translateX(-2px) translateY(-5%);
+}
+
+// flash to white on active
+button:active::before,
+.button:active::before,
+.entry .button:active::before,
+.entry .entry-content .wp-element-button:active::before,
+.entry .entry-content .wp-block-file .wp-block-file__button:active::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:active::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:active:not(.has-background):active::before,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active::before,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:active::before,
+input[type="button"]:active::before,
+input[type="reset"]:active::before,
+input[type="submit"]:active::before {
+	transform:rotate(-1deg) translateX(-2px) translateY(-5%);
+	border: var(--color-brandWhite);
+}
+
+
+
+// if no text color is specified, use Beige
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-element-button {
+	color: var( --color-brandBeige );
+}
+
+// if no background is specified, use Blue
+input[type="button"].button,
+input[type="reset"].button,
+input[type="submit"].button,
+input[type="submit"],
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
+.entry .entry-content .wp-element-button,
+.frm_button_submit
+{
+	background-color: var( --color-brandBlue );
+}
+
+// form buttons have a border - animation doesn't work, but moving on.
+input[type="button"].button,
+input[type="reset"].button,
+input[type="submit"].button,
 input[type="submit"] {
-	background-color: var( --color-brandRed );
-	border-radius: 0;
-	box-shadow: 5px 5px 0px var( --color-brandGrey );
-		-webkit-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-		-moz-box-shadow: 5px 5px 0px 0px var( --color-brandGrey );
-	color: var(--color-brandWhite);
-	font-family: Georgia, serif;
-	padding: .7rem;
-	transition: all 150ms ease-in-out;
-	font-family: var( --font-sans );
+	border: 2px solid var( --color-brandRed );
 }
 
-button.main-menu-more-toggle {
-	box-shadow: none;
-}
-
-button:hover,
-.button:hover,
-.wp-block-file__button:hover,
-.entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
+// in T19 and formiddiable unstyled buttons hover/focus black. This is a fix for those
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background-color: var( --color-brandRed );
-	box-shadow: none;
-	-webkit-filter: brightness(87%);
-	        filter: brightness(87%);
+input[type="submit"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.entry .entry-content .wp-element-button .wp-block-button__link:not(.has-background):hover,
+.entry .entry-content .wp-element-button .wp-block-button__link:not(.has-background):focus,
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background):focus,
+.frm_button_submit:hover,
+.frm_button_submit:focus
+ {
+	background-color: var( --color-brandBlue );
 }
 
+// High Emphasis Buttons
+
+/* outline of the high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link::before {
+	border: 2px solid var(--color-brandBlue) !important;
+}
+
+/* default background color of the high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link:not(.has-background) {
+	background-color: var( --color-brandRed ) !important;
+}
+
+/* default text color of the high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link:not(.has-text-color) {
+	color: var( --color-brandWhite ) !important;
+	}
+
+/* increase font weight of high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link {
+	font-weight: 700;
+}
+
+// Low Emphasis Buttons
+
+/* outline of the low emphasis button */
+.entry .entry-content .is-style-low-emphasis-button .wp-block-button__link::before {
+	border: 2px solid var(--color-brandBlue) !important;
+}
+
+/* default background color of the low emphasis button */
+.entry .entry-content .is-style-low-emphasis-button .wp-block-button__link:not(.has-background) {
+	background-color: var( --color-brandBeige ) !important;
+}
+
+/* default text color of the low emphasis button */
+.entry .entry-content .is-style-low-emphasis-button .wp-block-button__link:not(.has-text-color) {
+	color: var( --color-brandBlue ) !important;
+	}
+
+/* old styles */
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color),
 .entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
-.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) {
-	color: var( --color-brandRed );
-    border-color: var( --color-brandRed );
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color)
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:focus:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:active:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:hover:not(.has-text-color) {
+	color: var( --color-brandBeige );
+    border-color: var( --color-brandBlue );
 }
 
 /***************/
 /*** Forms ***/
 /***************/
 
+form label,
+.frm_primary_label {
+	font-family: var( --font-serif );
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 1.3;
+}
+
 /* text based inputs */
 
+input,
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -399,16 +581,37 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 textarea {
-	background-color:  var( --color-brandWhite );
-	border-color: var( --color-brandGrey );
+	background-color:  var( --color-brandBeige );
+	border: 2px solid #aaa;
 	max-width: 100%;
+	font-size: 1rem;
 }
 
+textarea {
+	margin-top: .5rem;
+}
 /* field sets */
 
 fieldset {
 	border: none;
 }
+
+/* contactform7 messages */
+
+.wpcf7-not-valid-tip {
+	font-family: var(--font-serif);
+	color: var( --color-brandRed );
+	font-style: italic;
+	font-weight: 600;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+	font-family: var(--font-serif);
+	border: none;
+	background-color: var(--color-brandYellow);
+	font-weight: 600;
+}
+
 
 /**************/
 /*** Footer ***/
@@ -432,27 +635,9 @@ fieldset {
 	max-width: 80px;
 }
 
-/* Footer Widgets */
-
-.widget-area ul li {
-	font-weight: 400;
-	font-size: 1rem;
-	line-height: 1rem;
-	font-family: var( --font-sans );
-}
-
-.widget-area ul li a {
-	color:  var( --color-brandBlack );
-}
-
-.widget-area ul li a:hover,
-.widget-area ul li a:visited {
-	color:  var( --color-brandGrey );
-}
-
-/*****************************/
+/********************/
 /* Latests Posts on Homepage */
-/*****************************/
+/********************/
 
 .entry .entry-content .wp-block-latest-posts.is-grid li {
 	border-top: none;
@@ -549,7 +734,8 @@ color: var(--color-brandGrey);
 }
 
 // makes "Default" gutenberg selected separator centered and width 50%
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default {
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default,
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
 	width: 90%;
 	max-width: unset;
 	margin-left: auto;
@@ -573,6 +759,13 @@ color: var(--color-brandGrey);
 	-webkit-filter: unset;
 	        filter: unset;
 		}
+
+/* images in advanced columns */
+/* fixes images extending beyond the width of a column */
+.entry .entry-content .wp-block-advanced-columns-columns .wp-block-image:not(.alignwide):not(.alignfull) > img {
+	max-width: 100%;
+}
+
 
 /*****************/
 // ? Updates: October 19, 2023

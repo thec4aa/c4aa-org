@@ -1,6 +1,6 @@
 :root {
 	/* Primary Brand Colors */
-	/* Make sure these mirror palette and duotone colors in theme.json */
+	/* Make sure these mirror palette and duotone colors in theme.json and /src/css/_c4aa-editorStyles.css */
 	--color-brandWhite: #fffef6; /* Fallback */
 	--color-brandWhite: hsla(53, 100%, 98%, 1);
 
@@ -31,6 +31,10 @@
 	--color-brandYellow: hsla(55, 100%, 44%, 1);
 
 	
+	/* Typography */
+	--font-sans: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;	
+	--font-serif: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+	
 
 	/* Clip Path Varaibles */
 	--rotate: -1.000;
@@ -42,10 +46,6 @@
 	--bottomLeftY: 14;
 	--bottomRightX: 11;
 	--bottomRightY: 12;
-
-	/* Typography */
-	--font-sans: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;	
-	--font-serif: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
 }
 
 /* Basic Widths, Alignment, and Margins 

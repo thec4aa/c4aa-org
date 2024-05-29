@@ -1,46 +1,356 @@
+/*!
+C4AA/Twenty Nineteen Editor Styles
+v1.0.2024-05-16.09.35.26 
+
+PURPOSE
+We want to approximate for editors what the rendered page will look like so they don't have to preview in another window as often. To that end, this file pulls some of the selectors from the Twenty-Nineteen styles-editor and adds a few more to approximate some of the common styles of the C4AA theme. 
+
+HOW THIS WORKS
+The add_editor_style in functions.php imports the styles so they are inline, override the Twenty-Nineteen editor styles, and eliminate the need for adding editor specific selectors and !important tags. 
+
+This file is compiled by hand, so changes to other css files may need to be updated here as well. Not ideal, but it's too useful to average users to wait for a better solution.
+
+NOTES
+1. These styles *shouldn't* override changes in the block editor. The way it's set up should prevent that from happening. But test anyway to be sure.
+
+To-do:
+- re-organize other css/scss files so they can be imported rather than duplicated.
+
+*/
 
 :root {
-	/* Brand Colors */
-	--color-brandBeige: #F2F1ED; /* Fallback */
-	--color-brandBeige: hsla(48, 16%, 94%, 1);
+	/* Brand Colors and Typography */
+	/* copied from src/css/_01-settings.css */
+
+	--color-brandWhite: #fffef6; /* Fallback */
+	--color-brandWhite: hsla(53, 100%, 98%, 1);
+
 	--color-brandBlack: #292724; /* Fallback */
-	--color-brandBlack: hsla(36, 6%, 5%, 0.9);
-	--color-brandBlue: #005eb8; /* Fallback */
-	--color-brandBlue: hsla(209, 100%, 34%, 0.9);
+	--color-brandBlack: hsla(36, 6%, 15%, 1);
+
+	--color-brandBeige: #f9f4d2; /* Fallback */
+	--color-brandBeige: hsla(52, 76%, 90%, 1);
+
+	--color-brandRed: #f5333f; /* Fallback */
+	--color-brandRed: hsla(356, 91%, 58%, 1);
+
 	--color-brandGrey: #7B736c; /* Fallback */
-	--color-brandGrey: hsla(28, 6%, 42%, 0.9);
-	--color-brandRed: #da2f3b; /* Fallback */
-	--color-brandRed: hsla(356, 80%, 45%, 0.9);
-	--color-brandWhite: #fafaf9; /* Fallback */
-	--color-brandWhite: hsla(60, 9%, 98%, 0.9);
-	--color-brandYellow: #e1cd00; /* Fallback */
-	--color-brandYellow: hsla(55, 100%, 46%, 0.9);
+	--color-brandGrey: hsla(28, 6%, 45%, 1);
+
+	/* Secondary Brand Colors */
+
+	--color-brandBlue: #27aae1; /* Fallback */
+	--color-brandBlue: hsla(198, 76%, 52%, 1);
+
+	--color-brandGreen: #8fb73e; /* Fallback */
+	--color-brandGreen: hsla(80, 49%, 48%, 1);
+
+	--color-brandPurple: #a03c9b; /* Fallback */
+	--color-brandPurple: hsla(303, 45%, 43%, 1);
+
+	--color-brandYellow: #decb00; /* Fallback */
+	--color-brandYellow: hsla(55, 100%, 44%, 1);
+
+	
+	/* Typography */
+	--font-sans: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;	
+	--font-serif: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
 }
 
-.editor-styles-wrapper h2.is-style-c4aa-clipPath-heading,
-.editor-styles-wrapper h3.is-style-c4aa-clipPath-heading,
-.editor-styles-wrapper h4.is-style-c4aa-clipPath-heading {
-    color: var( --color-brandBeige );
+body {
+	font-family: var( --font-sans);
+	background-color: var( --color-brandWhite );
+	color: var( --color-brandBlack );
+	font-size: 18px;
+}
+
+p {
+	font-size: 18px;
+  }
+
+/* Main typography elements */
+
+
+/* Set font families */
+
+/* Post title */
+h1.editor-post-title__input {
+	font-family: var( --font-sans);
+	text-transform: uppercase;
+}
+
+/* Sans */
+.editor-block-list__layout .editor-block-list__block,
+.editor-post-title__block .editor-post-title__input,
+h4,
+h5,
+h6,
+table,
+.wp-block-quote cite {
+	font-family: var( --font-sans);
+}
+
+
+/* Serif */
+h1,
+h2,
+h3,
+h6,
+.wp-block-quote {
+	font-family: var( --font-serif);
+}
+
+/* HEADERS */
+
+/* Remove the line above the headers in the editor */
+h1::before,
+h2::before {
+	content: none;
+}
+
+/* all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}
+
+/* CLIP PATH HEADERS */
+
+/* all clip paths */
+.is-style-c4aa-clipPath-heading {
+	padding-left: 2rem;
+	padding-right: 1.2rem;
+	transform: rotate(-2deg);
+}
+
+.is-style-c4aa-clipPath-heading:not(h1, h5, h6),
+.is-style-c4aa-clipPath-heading a { 
+	color: var( --color-brandWhite );
 }
 
 h2.is-style-c4aa-clipPath-heading {
-    background-color: var( --color-brandGrey );
+	background-color: var( --color-brandGrey );
+	font-weight: 900;
+	letter-spacing: .14em;
+	text-transform: uppercase;
 }
 
 h3.is-style-c4aa-clipPath-heading {
     background-color: var( --color-brandBlack );
+	font-weight: 900;
+	letter-spacing: .14em;
+	text-transform: uppercase;
 }
 
 h4.is-style-c4aa-clipPath-heading {
     background-color: var( --color-brandRed );
 }
 
-.editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button:not(.is-style-outline) .wp-block-button__link {
-    background-color: var( --color-brandRed );
+h4.is-style-c4aa-clipPath-heading a {
+    color: var( --color-brandWhite );
 }
 
-.editor-styles-wrapper .wp-block-button.is-style-c4aa-clipPath-button-outline:not(.is-style-outline) .wp-block-button__link {
-    color: var( --color-brandRed );
-    border: 2px solid var( --color-brandRed );
-    background-color: var( --color-brandBeige );
+/* LISTS */
+
+ol li,
+ul li{
+	font-family: var( --font-serif );
+	font-weight: 400;
+	line-height: 1.3rem;
+	padding-bottom: 1rem;
 }
+
+/* BLOCKQUOTES */
+
+.wp-block-quote {
+	color: var( --color-brandWhite );
+	font-weight: 500;
+	background-color: var( --color-brandRed );
+	padding: 2rem;
+	border: none;
+}
+
+/* PULLQUOTES */
+
+.wp-block-pullquote {
+	padding: 3rem;
+}
+
+.wp-block-pullquote[data-type="core/pullquote"] p {
+	font-style: normal;
+}
+
+.wp-block-pullquote[data-type="core/pullquote"] p em {
+	font-style: italic;
+}
+
+.wp-block-pullquote:not(.has-small-font-size):not(.has-large-font-size):not(.has-huge-font-size) blockquote {
+	font-size: 1rem;
+}
+
+.wp-block-pullquote.has-small-font-size blockquote {
+	font-size: .75rem;
+}
+
+.wp-block-pullquote.has-large-font-size blockquote {
+	font-size: 2rem;
+}
+
+.wp-block-pullquote.has-huge-font-size blockquote {
+	font-size: 3rem;
+}
+
+.wp-block-pullquote:not(.has-background),
+.wp-block-pullquote:not(.has-background) a,
+.wp-block-pullquote:not(.has-background) cite {
+	background-color: var( --color-brandRed );
+}
+.wp-block-pullquote:not(.has-text-color),
+.wp-block-pullquote:not(.has-text-color) a,
+.wp-block-pullquote:not(.has-text-color) cite {
+	color: var( --color-brandWhite );
+}
+
+
+/* Buttons */
+.editor-styles-wrapper .button,
+.editor-styles-wrapper .wp-element-button,
+.editor-styles-wrapper .entry .entry-content .wp-block-file .wp-block-file__button,
+.editor-styles-wrapper .entry .entry-content .wp-block-button .wp-block-button__link,
+.editor-styles-wrapper input[type="button"],
+.editor-styles-wrapper input[type="reset"],
+.editor-styles-wrapper input[type="submit"],
+.editor-styles-wrapper .wp-block-button:not(.is-style-squared) .wp-block-button__link, 
+.editor-styles-wrapper .wp-block-button:not(.is-style-outline) .wp-block-button__link, 
+.editor-styles-wrapper .wp-block-button:not(.is-style-solid) .wp-block-button__link, 
+.editor-styles-wrapper .wp-block-button:not(.has-background) .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button:not(.has-text-color) .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.is-style-solid .wp-block-button__link {
+		border-radius: 1rem;
+		font-family: var(--font-serif);
+		font-weight: 500;
+		padding: .75rem 1rem;
+		transition: all 50ms ease-in-out;
+		transform: rotate(-2deg);
+		border: 2px solid var(--color-brandRed); 
+		background: var(--color-brandBlue); 
+		color: var(--color-brandBeige);
+	}
+
+/* 
+LINKS 
+*/
+
+a:link, a {
+	color: var( --color-brandRed );
+}
+
+ a:link, a,
+ h1 a:link, h1 a,
+ h2 a:link, h2 a, 
+ h3 a:link, h3 a, 
+ h4 a:link, h4 a, 
+ h5 a:link, h5 a, 
+ h6 a:link, h6 a {
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: 10%; 
+	text-underline-offset: 0.2em;
+	text-decoration-skip-ink: none;
+}
+
+h1 a:hover, 
+h2 a:hover, 
+h3 a:hover, 
+h4 a:hover, 
+h5 a:hover, 
+h6 a:hover,
+a:hover { 
+	text-decoration-style: solid;
+}
+
+.entry .entry-content a:link, .entry .entry-content a {
+	font-weight: inherit; 
+}
+
+.entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
+	font-weight: inherit;
+}
+
+
+/* Utilities from _05-utilities.css */
+
+.no-hyphens * {
+	-webkit-hyphens: manual;
+	-ms-hyphens: manual;
+	hyphens: manual;
+  }
+  
+  .u-display-inline-block {
+	display: inline-block;
+  }
+  
+  .u-display-block {
+	display: block;
+  }
+  
+  .u-text-align-center {
+	text-align: center;
+  }
+  
+  .u-align-items-center {
+	align-items: center;
+  }
+  
+  .u-text-align-right {
+	text-align: right;
+  }
+  
+  /* Viewport Height Utilities */
+  
+  .u-min-height-100vh {
+	min-height: 100vh;
+  }
+  
+  .u-min-height-80vh {
+	min-height: 80vh;
+  }
+  
+  /* Rotation Utilities */
+  
+  .u-rotate-1 {
+	transform: rotate(1deg);
+  }
+  
+  .u-rotate-neg1 {
+	transform: rotate(-1deg);
+  }
+  
+  .u-rotate-2 {
+	transform: rotate(2deg);
+  }
+  
+  .u-rotate-neg2 {
+	transform: rotate(-2deg);
+  }
+  
+  .u-rotate-3 {
+	transform: rotate(3deg);
+  }
+  
+  .u-rotate-neg3 {
+	transform: rotate(-3deg);
+  }
+  
+  .u-multiply {
+	mix-blend-mode: multiply;
+  }
+  
+  .u-darken {
+	mix-blend-mode: darken;
+  }
