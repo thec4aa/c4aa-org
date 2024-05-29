@@ -58,10 +58,7 @@ h6,
 .site-header.featured-image .entry-meta {
 	font-family: var( --font-serif );
 	font-weight: 700;
-	letter-spacing: .14em;
-	text-transform: uppercase;
-
-	
+	letter-spacing: .14em;	
 }
 
 h4, 
@@ -69,13 +66,19 @@ h5 {
 	font-family: var( --font-sans );
 	font-weight: 700;
 	letter-spacing: .14em;
-	text-transform: uppercase;
-	line-height: 1.4;
+}
+
+h4 {
+	font-size: 1.4rem;
 }
 
 h5,
 h6 {
-	font-size: 1em;
+	font-size: 1.25rem;
+}
+
+h1, h2, h3, h4 {
+	text-transform: uppercase;
 }
 
 /* LISTS */
