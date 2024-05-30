@@ -106,7 +106,7 @@ h2:before, .entry .entry-title:before {
 }
 
 .entry .entry-content > h2 {
-	margin-left: -1.5rem;
+	transform: translate(-.5rem, 0)
 	// margin-top: calc( 5vw + 30px );
 	// margin-bottom: calc( 3vw + 30px );
 }
@@ -114,7 +114,7 @@ h2:before, .entry .entry-title:before {
 
 @media only screen and (min-width: 768px) {
 	.entry .entry-content > h2 {
-		margin-left: -1rem;
+		transform: translate(-1.5rem, 0)
 	}
 }
 
@@ -748,11 +748,11 @@ color: var(--color-brandGrey);
 /*****************/
 
 /* Block Image and Paragraph Clearfix */
-.wp-block-image + p::after {
-	content: "";
-	clear: both;
-	display: table;
-}
+// .wp-block-image + p::after {
+// 	content: "";
+// 	clear: both;
+// 	display: table;
+// }
 
 /* turn off duotone on hover */
 .wp-block-image img:hover, figure[class*="wp-duotone"] img:hover {
