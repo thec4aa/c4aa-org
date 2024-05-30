@@ -26,6 +26,44 @@
                     ]
                 }
             },
+            "core/spacer": {
+                "spacing": {
+                    "spacingScale": {
+                        "operator": "*",
+                        "increment": 2,
+                        "steps": 7,
+                        "mediumStep": 2,
+                        "unit": "rem"
+                    },
+                    "spacingSizes": [
+                        {
+                            "size": "2rem",
+                            "slug": "small",
+                            "name": "Small"
+                        },
+                        {
+                            "size": "4rem",
+                            "slug": "medium",
+                            "name": "Medium"
+                        },
+                        {
+                            "size": "6rem",
+                            "slug": "large",
+                            "name": "Large"
+                        },
+                        {
+                            "size": "8rem",
+                            "slug": "x-large",
+                            "name": "Extra Large"
+                        },
+                        {
+                            "size": "10rem",
+                            "slug": "xx-large",
+                            "name": "Extra Extra Large"
+                        }
+                    ]
+                }
+            },
             "core/button": {
                 "color": {
                     "background": true,
@@ -65,7 +103,33 @@
                 "mediumStep": 1.5,
                 "unit": "rem"
             },
-            "spacingSizes": [],
+            "spacingSizes": [
+                {
+                    "size": "2rem",
+                    "slug": "small",
+                    "name": "Small"
+                },
+                {
+                    "size": "4rem",
+                    "slug": "medium",
+                    "name": "Medium"
+                },
+                {
+                    "size": "6rem",
+                    "slug": "large",
+                    "name": "Large"
+                },
+                {
+                    "size": "8rem",
+                    "slug": "x-large",
+                    "name": "Extra Large"
+                },
+                {
+                    "size": "10rem",
+                    "slug": "xx-large",
+                    "name": "Extra Extra Large"
+                }
+            ],
             "units": [
                 "px",
                 "em",
