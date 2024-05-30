@@ -118,18 +118,18 @@ h4.is-style-c4aa-clipPath-heading:not(.has-text-color) a:hover {
 h1.is-style-c4aa-clipPath-heading,
 h3.is-style-c4aa-clipPath-heading {
 	background: var( --color-brandBlack );
-	display: inline-block;
+	display: block;
 }
 
 h5.is-style-c4aa-clipPath-heading,
 h6.is-style-c4aa-clipPath-heading {
 	background: var( --color-brandWhite );
-	display: inline-block;
+	display: block;
 }
 
 h4.is-style-c4aa-clipPath-heading {
 	background: var( --color-brandRed ); 
-	display: inline-block;
+	display: block;
 }
 
 @media only screen and (min-width: 768px) {
@@ -138,7 +138,7 @@ h4.is-style-c4aa-clipPath-heading {
 	.entry h2.entry-title.is-style-c4aa-clipPath-heading,
 	h2.is-style-c4aa-clipPath-heading,
 	h3.is-style-c4aa-clipPath-heading {
-		margin-left: -2rem;
+		transform: translate(-2rem, 0)
 	}
 
 	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
@@ -148,8 +148,8 @@ h4.is-style-c4aa-clipPath-heading {
 
 	.entry .entry-content > h4.is-style-c4aa-clipPath-heading,
 	h4.is-style-c4aa-clipPath-heading {
-		margin-left: -4rem;
 		padding-left: 4rem;
+		transform: translate(-4rem, 0)
 	}
 }
 
