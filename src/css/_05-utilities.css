@@ -42,11 +42,11 @@
 /* Viewport Height Utilities */
 
 .u-min-height-100vh {
-  min-height: 100vh;
+  min-height: 100vh !important;
 }
 
 .u-min-height-80vh {
-  min-height: 80vh;
+  min-height: 80vh !important;
 }
 
 /* Rotation Utilities */
