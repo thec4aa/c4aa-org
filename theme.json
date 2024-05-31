@@ -3,10 +3,56 @@
     "version": 3,
     "settings": {
         "blocks": {
+            "core/button": {
+                "border": {
+                    "color": true,
+                    "radius": false,
+                    "style": true,
+                    "width": false
+                },
+                "color": {
+                    "background": true,
+                    "customGradient": false,
+                    "defaultGradients": false,
+                    "gradients": [],
+                    "text": true
+                },
+                "layout": {
+                    "allowCustomContentAndWideSize": false
+                },
+                "shadow": {
+                    "defaultPresets": false
+                },
+                "spacing": {
+                    "customSpacingSize": true,
+                    "margin": true,
+                    "padding": true,
+                    "spacingScale": {
+                        "increment": 0.25,
+                        "mediumStep": 1,
+                        "operator": "*",
+                        "steps": 7,
+                        "unit": "rem"
+                    }
+                },
+                "typography": {
+                    "fontStyle": false,
+                    "fontWeight": true,
+                    "letterSpacing": true,
+                    "lineHeight": true,
+                    "textDecoration": false,
+                    "textTransform": true
+                }
+            },
+            "core/cover": {
+                "dimensions": {
+                    "minHeight": true
+                }
+            },
             "core/image": {
                 "lightbox": {
-                    "enabled": true,
-                    "allowEditing": true
+                    "allowEditing": true,
+                    "enabled": true
                 }
             },
             "core/separator": {
@@ -14,14 +60,14 @@
                     "defaultPalette": false,
                     "palette": [
                         {
-                            "slug": "grey",
                             "color": "#968c83",
-                            "name": "C4AA Grey"
+                            "name": "C4AA Grey",
+                            "slug": "grey"
                         },
                         {
-                            "slug": "red",
                             "color": "#f5333f",
-                            "name": "C4AA Red"
+                            "name": "C4AA Red",
+                            "slug": "red"
                         }
                     ]
                 }
@@ -29,67 +75,338 @@
             "core/spacer": {
                 "spacing": {
                     "spacingScale": {
-                        "operator": "*",
                         "increment": 2,
-                        "steps": 7,
                         "mediumStep": 2,
+                        "operator": "*",
+                        "steps": 7,
                         "unit": "rem"
                     },
                     "spacingSizes": [
                         {
+                            "name": "Small",
                             "size": "2rem",
-                            "slug": "small",
-                            "name": "Small"
+                            "slug": "small"
                         },
                         {
+                            "name": "Medium",
                             "size": "4rem",
-                            "slug": "medium",
-                            "name": "Medium"
+                            "slug": "medium"
                         },
                         {
+                            "name": "Large",
                             "size": "6rem",
-                            "slug": "large",
-                            "name": "Large"
+                            "slug": "large"
                         },
                         {
+                            "name": "Extra Large",
                             "size": "8rem",
-                            "slug": "x-large",
-                            "name": "Extra Large"
+                            "slug": "x-large"
                         },
                         {
+                            "name": "Extra Extra Large",
                             "size": "10rem",
-                            "slug": "xx-large",
-                            "name": "Extra Extra Large"
+                            "slug": "xx-large"
                         }
                     ]
                 }
-            },
-            "core/button": {
-                "color": {
-                    "background": true,
-                    "text": true,
-                    "gradients": [],
-                    "customGradient": false,
-                    "defaultGradients": false
-                },
-                "typography": {
-                    "lineHeight": true,
-                    "fontWeight": true,
-                    "fontStyle": false,
-                    "textTransform": true,
-                    "textDecoration": false,
-                    "letterSpacing": true
-                },
-                "shadow": {
-                    "defaultPresets": false
-                },
-                "border": {
-                    "radius": true,
-                    "width": true,
-                    "style": true,
-                    "color": true
-                }
             }
+        },
+        "border": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+        },
+        "color": {
+            "background": true,
+            "custom": false,
+            "customDuotone": false,
+            "customGradient": false,
+            "defaultDuotone": false,
+            "defaultGradients": false,
+            "defaultPalette": false,
+            "duotone": [
+                {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)",
+                        "hsla(53, 100%, 98%, 1)"
+                    ],
+                    "name": "Black and White",
+                    "slug": "black-and-white"
+                },
+                {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)",
+                        "hsla(52, 76%, 90%, 1)"
+                    ],
+                    "name": "Black and Paper",
+                    "slug": "black-and-beige"
+                },
+                {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)",
+                        "hsla(356, 91%, 58%, 1)"
+                    ],
+                    "name": "Black and Red",
+                    "slug": "black-and-red"
+                },
+                {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)",
+                        "hsla(356, 91%, 58%, 1)"
+                    ],
+                    "name": "Gray and Red",
+                    "slug": "grey-and-red"
+                },
+                {
+                    "colors": [
+                        "hsla(356, 91%, 58%, 1)",
+                        "hsla(52, 76%, 90%, 1)"
+                    ],
+                    "name": "Red and Paper",
+                    "slug": "red-and-beige"
+                },
+                {
+                    "colors": [
+                        "hsla(356, 91%, 58%, 1)",
+                        "hsla(53, 100%, 98%, 1)"
+                    ],
+                    "name": "Red and White",
+                    "slug": "red-and-white"
+                },
+                {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)",
+                        "hsla(28, 6%, 45%, 1)"
+                    ],
+                    "name": "Black and Grey",
+                    "slug": "black-and-grey"
+                },
+                {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)",
+                        "hsla(53, 100%, 98%, 1)"
+                    ],
+                    "name": "Gray and White",
+                    "slug": "grey-and-white"
+                },
+                {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)",
+                        "hsla(52, 76%, 90%, 1)"
+                    ],
+                    "name": "Grey and Paper",
+                    "slug": "grey-and-beige"
+                },
+                {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)",
+                        "hsla(198, 76%, 52%, 1)"
+                    ],
+                    "name": "Black and Blue",
+                    "slug": "black-and-blue"
+                },
+                {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)",
+                        "hsla(198, 76%, 52%, 1)"
+                    ],
+                    "name": "Grey and Blue",
+                    "slug": "grey-and-blue"
+                },
+                {
+                    "colors": [
+                        "hsla(198, 76%, 52%, 1)",
+                        "hsla(53, 100%, 98%, 1)"
+                    ],
+                    "name": "Blue and White",
+                    "slug": "blue-and-white"
+                },
+                {
+                    "colors": [
+                        "hsla(198, 76%, 52%, 1)",
+                        "hsla(52, 76%, 90%, 1)"
+                    ],
+                    "name": "Blue and Paper",
+                    "slug": "blue-and-beige"
+                },
+                {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)",
+                        "hsla(80, 49%, 48%, 1)"
+                    ],
+                    "name": "Black and Green",
+                    "slug": "black-and-green"
+                },
+                {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)",
+                        "hsla(80, 49%, 48%, 1)"
+                    ],
+                    "name": "Gray and Green",
+                    "slug": "grey-and-green"
+                },
+                {
+                    "colors": [
+                        "hsla(80, 49%, 48%, 1)",
+                        "hsla(53, 100%, 98%, 1)"
+                    ],
+                    "name": "Green and White",
+                    "slug": "green-and-white"
+                },
+                {
+                    "colors": [
+                        "hsla(80, 49%, 48%, 1)",
+                        "hsla(52, 76%, 90%, 1)"
+                    ],
+                    "name": "Green and Paper",
+                    "slug": "green-and-beige"
+                },
+                {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)",
+                        "hsla(303, 45%, 43%, 1)"
+                    ],
+                    "name": "Black and Violet",
+                    "slug": "black-and-purple"
+                },
+                {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)",
+                        "hsla(303, 45%, 43%, 1)"
+                    ],
+                    "name": "Grey and Violet",
+                    "slug": "grey-and-purple"
+                },
+                {
+                    "colors": [
+                        "hsla(303, 45%, 43%, 1)",
+                        "hsla(53, 100%, 98%, 1)"
+                    ],
+                    "name": "Violet and White",
+                    "slug": "purple-and-white"
+                },
+                {
+                    "colors": [
+                        "hsla(303, 45%, 43%, 1)",
+                        "hsla(52, 76%, 90%, 1)"
+                    ],
+                    "name": "Violet and Paper",
+                    "slug": "purple-and-beige"
+                },
+                {
+                    "colors": [
+                        "hsla(36, 6%, 15%, 1)",
+                        "hsla(55, 100%, 44%, 1)"
+                    ],
+                    "name": "Black and Yellow",
+                    "slug": "black-and-yellow"
+                },
+                {
+                    "colors": [
+                        "hsla(28, 6%, 45%, 1)",
+                        "hsla(55, 100%, 44%, 1)"
+                    ],
+                    "name": "Grey and Yellow",
+                    "slug": "grey-and-yellow"
+                },
+                {
+                    "colors": [
+                        "hsla(55, 100%, 44%, 1)",
+                        "hsla(53, 100%, 98%, 1)"
+                    ],
+                    "name": "Yellow and White",
+                    "slug": "yellow-and-white"
+                },
+                {
+                    "colors": [
+                        "hsla(55, 100%, 44%, 1)",
+                        "hsla(52, 76%, 90%, 1)"
+                    ],
+                    "name": "Yellow and Paper",
+                    "slug": "yellow-and-beige"
+                },
+                {
+                    "colors": [
+                        "hsla(356, 91%, 58%, 1)",
+                        "hsla(198, 76%, 52%, 1)"
+                    ],
+                    "name": "Red and Blue",
+                    "slug": "red-and-blue"
+                },
+                {
+                    "colors": [
+                        "hsla(198, 76%, 52%, 1)",
+                        "hsla(356, 91%, 58%, 1)"
+                    ],
+                    "name": "Blue and Red",
+                    "slug": "blue-and-red"
+                }
+            ],
+            "gradients": [],
+            "link": true,
+            "palette": [
+                {
+                    "color": "#fffef6",
+                    "name": "Not White",
+                    "slug": "base"
+                },
+                {
+                    "color": "#292724",
+                    "name": "Not Black",
+                    "slug": "contrast"
+                },
+                {
+                    "color": "#f5333f",
+                    "name": "Red",
+                    "slug": "red"
+                },
+                {
+                    "color": "#f9f4d2",
+                    "name": "Paper",
+                    "slug": "paper"
+                },
+                {
+                    "color": "#968c83",
+                    "name": "Middle Grey",
+                    "slug": "grey"
+                },
+                {
+                    "color": "#27aae1",
+                    "name": "Non-Partisan Blue",
+                    "slug": "Blue"
+                },
+                {
+                    "color": "#8fb73e",
+                    "name": "Community Green",
+                    "slug": "green"
+                },
+                {
+                    "color": "#a03c9b",
+                    "name": "Vibrant Violet",
+                    "slug": "purple"
+                },
+                {
+                    "color": "#decb00",
+                    "name": "Unstoppable Gold",
+                    "slug": "yellow"
+                }
+            ],
+            "text": true
+        },
+        "dimensions": {
+            "minHeight": true
+        },
+        "layout": {
+            "contentSize": "840px",
+            "wideSize": "1100px"
+        },
+        "lightbox": {
+            "allowEditing": true,
+            "enabled": true
+        },
+        "shadow": {
+            "defaultPresets": false
         },
         "spacing": {
             "blockGap": true,
@@ -97,410 +414,206 @@
             "margin": true,
             "padding": true,
             "spacingScale": {
+                "increment": 0.25,
+                "mediumStep": 1,
                 "operator": "*",
-                "increment": 1.5,
                 "steps": 7,
-                "mediumStep": 1.5,
                 "unit": "rem"
             },
             "spacingSizes": [
                 {
+                    "name": "Small",
                     "size": "2rem",
-                    "slug": "small",
-                    "name": "Small"
+                    "slug": "small"
                 },
                 {
+                    "name": "Medium",
                     "size": "4rem",
-                    "slug": "medium",
-                    "name": "Medium"
+                    "slug": "medium"
                 },
                 {
+                    "name": "Large",
                     "size": "6rem",
-                    "slug": "large",
-                    "name": "Large"
+                    "slug": "large"
                 },
                 {
+                    "name": "Extra Large",
                     "size": "8rem",
-                    "slug": "x-large",
-                    "name": "Extra Large"
+                    "slug": "x-large"
                 },
                 {
+                    "name": "Extra Extra Large",
                     "size": "10rem",
-                    "slug": "xx-large",
-                    "name": "Extra Extra Large"
+                    "slug": "xx-large"
                 }
             ],
             "units": [
                 "px",
-                "em",
                 "rem",
                 "vh",
                 "vw",
                 "%"
             ]
         },
-        "dimensions": {
-            "minHeight": true
-        },
-        "lightbox": {
-            "enabled": true,
-            "allowEditing": true
-        },
-        "layout": {
-            "contentSize": "840px",
-            "wideSize": "1100px"
-        },
         "typography": {
             "fluid": true,
-            "fontSizes": [
-                {
-                "size": ".875rem",
-                "fluid": {
-                    "min": "0.875rem",
-                    "max": "1rem"
-                },
-                "slug": "small",
-                "name": "Small"
-                },
-                {
-                "size": "1rem",
-                "fluid": {
-                    "min": "1rem",
-                    "max": "1.5rem"
-                },
-                "slug": "normal",
-                "name": "Normal"
-                },
-                {
-                "size": "1.5rem",
-                "fluid": {
-                    "min": "1.5rem",
-                    "max": "2rem"
-                },
-                "slug": "large",
-                "name": "Large"
-                },
-                {
-                "size": "2.25rem",
-                "fluid": false,
-                "slug": "x-large",
-                "name": "Extra large"
-                }
-            ],
             "fontFamilies": [
                 {
+                    "fontFace": [
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-regular.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-500.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-500italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-600.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-600italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-700.woff2"
+                            ]
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2"
+                            ]
+                        }
+                    ],
                     "fontFamily": "\"Zilla Slab\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
                     "name": "Zilla Slab",
-                    "slug": "zilla-slab",
+                    "slug": "zilla-slab"
+                },
+                {
                     "fontFace": [
                         {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "300",
-                            "fontStyle": "normal",
                             "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2"]
+                            "fontFamily": "Work Sans",
+                            "fontStyle": "normal",
+                            "fontWeight": "100 900",
+                            "src": [
+                                "file:./fonts/WorkSans-VariableFont_wght.woff2"
+                            ]
                         },
                         {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "300",
+                            "fontDisplay": "swap",
+                            "fontFamily": "Work Sans",
                             "fontStyle": "italic",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2"]
-                        },
-                        {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "400",
-                            "fontStyle": "normal",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-regular.woff2"]
-                        },
-                        {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "400",
-                            "fontStyle": "italic",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-italic.woff2"]
-                        }, {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "500",
-                            "fontStyle": "normal",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-500.woff2"]
-                        }, {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "500",
-                            "fontStyle": "italic",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-500italic.woff2"]
-                        }, {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "600",
-                            "fontStyle": "normal",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-600.woff2"]
-                        }, {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "600",
-                            "fontStyle": "italic",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-600italic.woff2"]
-                        }, {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "700",
-                            "fontStyle": "normal",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-700.woff2"]
-                        }, {
-                            "fontFamily": "Zilla Slab",
-                            "fontWeight": "700",
-                            "fontStyle": "italic",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2"]
+                            "fontWeight": "100 900",
+                            "src": [
+                                "file:./fonts/WorkSans-Italic-VariableFont_wght.woff2"
+                            ]
                         }
-                    ]
-                }, {
+                    ],
                     "fontFamily": "\"Work Sans\", Helvetica Neue, Helvetica, Arial, sans-serif",
                     "name": "Work Sans",
-                    "slug": "work-sans",
-                    "fontFace": [
-                        {
-                            "fontFamily": "Work Sans",
-                            "fontWeight": "100 900",
-                            "fontStyle": "normal",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/WorkSans-VariableFont_wght.woff2"]
-                        }, {
-                            "fontFamily": "Work Sans",
-                            "fontWeight": "100 900",
-                            "fontStyle": "italic",
-                            "fontDisplay": "swap",
-                            "src": ["file:./fonts/WorkSans-Italic-VariableFont_wght.woff2"]
-                        }
-
-                    ]
-
-                }
-            ]
-        },
-        "color": {
-            "background": true,
-            "text": true,
-            "link": true,
-            "custom": false,
-            "gradients": [],
-            "defaultGradients": false,
-            "customGradient": false,
-            "defaultPalette": false,
-            "palette": [
-                {
-                    "name": "Not White",
-                    "slug": "base",
-                    "color": "#fffef6"
-                },
-                {
-                    "name": "Not Black",
-                    "slug": "contrast",
-                    "color": "#292724"
-                },
-                {
-                    "name": "Red",
-                    "slug": "red",
-                    "color": "#f5333f"
-                },
-                {
-                    "name": "Paper",
-                    "slug": "paper",
-                    "color": "#f9f4d2"
-                }, {
-                    "name": "Middle Grey",
-                    "slug": "grey",
-                    "color": "#968c83"
-                }, {
-                    "name": "Non-Partisan Blue",
-                    "slug": "Blue",
-                    "color": "#27aae1"
-                }, {
-                    "name": "Community Green",
-                    "slug": "green",
-                    "color": "#8fb73e"
-                }, {
-                    "name": "Vibrant Violet",
-                    "slug": "purple",
-                    "color": "#a03c9b"
-                }, {
-                    "name": "Unstoppable Gold",
-                    "slug": "yellow",
-                    "color": "#decb00"
+                    "slug": "work-sans"
                 }
             ],
-            "customDuotone": false,
-            "defaultDuotone": false,
-            "duotone": [
+            "fontSizes": [
                 {
-                    "colors": [
-                        "hsla(36, 6%, 15%, 1)", "hsla(53, 100%, 98%, 1)"
-                    ],
-                    "slug": "black-and-white",
-                    "name": "Black and White"
+                    "fluid": {
+                        "max": "1rem",
+                        "min": "0.875rem"
+                    },
+                    "name": "Small",
+                    "size": ".875rem",
+                    "slug": "small"
                 },
                 {
-                    "colors": [
-                        "hsla(36, 6%, 15%, 1)", "hsla(52, 76%, 90%, 1)"
-                    ],
-                    "slug": "black-and-beige",
-                    "name": "Black and Paper"
+                    "fluid": {
+                        "max": "1.5rem",
+                        "min": "1rem"
+                    },
+                    "name": "Normal",
+                    "size": "1rem",
+                    "slug": "normal"
                 },
                 {
-                    "colors": [
-                        "hsla(36, 6%, 15%, 1)", "hsla(356, 91%, 58%, 1)"
-                    ],
-                    "slug": "black-and-red",
-                    "name": "Black and Red"
+                    "fluid": {
+                        "max": "2rem",
+                        "min": "1.5rem"
+                    },
+                    "name": "Large",
+                    "size": "1.5rem",
+                    "slug": "large"
                 },
                 {
-                    "colors": [
-                        "hsla(28, 6%, 45%, 1)", "hsla(356, 91%, 58%, 1)"
-                    ],
-                    "slug": "grey-and-red",
-                    "name": "Gray and Red"
-                }, {
-                    "colors": [
-                        "hsla(356, 91%, 58%, 1)", "hsla(52, 76%, 90%, 1)"
-                    ],
-                    "slug": "red-and-beige",
-                    "name": "Red and Paper"
-                }, {
-                    "colors": [
-                        "hsla(356, 91%, 58%, 1)", "hsla(53, 100%, 98%, 1)"
-                    ],
-                    "slug": "red-and-white",
-                    "name": "Red and White"
-                }, {
-                    "colors": [
-                        "hsla(36, 6%, 15%, 1)", "hsla(28, 6%, 45%, 1)"
-                    ],
-                    "slug": "black-and-grey",
-                    "name": "Black and Grey"
-                }, {
-                    "colors": [
-                        "hsla(28, 6%, 45%, 1)", "hsla(53, 100%, 98%, 1)"
-                    ],
-                    "slug": "grey-and-white",
-                    "name": "Gray and White"
-                }, {
-                    "colors": [
-                        "hsla(28, 6%, 45%, 1)", "hsla(52, 76%, 90%, 1)"
-                    ],
-                    "slug": "grey-and-beige",
-                    "name": "Grey and Paper"
-                }, {
-                    "colors": [
-                        "hsla(36, 6%, 15%, 1)", "hsla(198, 76%, 52%, 1)"
-                    ],
-                    "slug": "black-and-blue",
-                    "name": "Black and Blue"
-                }, {
-                    "colors": [
-                        "hsla(28, 6%, 45%, 1)", "hsla(198, 76%, 52%, 1)"
-                    ],
-                    "slug": "grey-and-blue",
-                    "name": "Grey and Blue"
-                }, {
-                    "colors": [
-                        "hsla(198, 76%, 52%, 1)", "hsla(53, 100%, 98%, 1)"
-                    ],
-                    "slug": "blue-and-white",
-                    "name": "Blue and White"
-                }, {
-                    "colors": [
-                        "hsla(198, 76%, 52%, 1)", "hsla(52, 76%, 90%, 1)"
-                    ],
-                    "slug": "blue-and-beige",
-                    "name": "Blue and Paper"
-                }, {
-                    "colors": [
-                        "hsla(36, 6%, 15%, 1)", "hsla(80, 49%, 48%, 1)"
-                    ],
-                    "slug": "black-and-green",
-                    "name": "Black and Green"
-                }, {
-                    "colors": [
-                        "hsla(28, 6%, 45%, 1)", "hsla(80, 49%, 48%, 1)"
-                    ],
-                    "slug": "grey-and-green",
-                    "name": "Gray and Green"
-                }, {
-                    "colors": [
-                        "hsla(80, 49%, 48%, 1)", "hsla(53, 100%, 98%, 1)"
-                    ],
-                    "slug": "green-and-white",
-                    "name": "Green and White"
-                }, {
-                    "colors": [
-                        "hsla(80, 49%, 48%, 1)", "hsla(52, 76%, 90%, 1)"
-                    ],
-                    "slug": "green-and-beige",
-                    "name": "Green and Paper"
-                }, {
-                    "colors": [
-                        "hsla(36, 6%, 15%, 1)", "hsla(303, 45%, 43%, 1)"
-                    ],
-                    "slug": "black-and-purple",
-                    "name": "Black and Violet"
-                }, {
-                    "colors": [
-                        "hsla(28, 6%, 45%, 1)", "hsla(303, 45%, 43%, 1)"
-                    ],
-                    "slug": "grey-and-purple",
-                    "name": "Grey and Violet"
-                }, {
-                    "colors": [
-                        "hsla(303, 45%, 43%, 1)", "hsla(53, 100%, 98%, 1)"
-                    ],
-                    "slug": "purple-and-white",
-                    "name": "Violet and White"
-                }, {
-                    "colors": [
-                        "hsla(303, 45%, 43%, 1)", "hsla(52, 76%, 90%, 1)"
-                    ],
-                    "slug": "purple-and-beige",
-                    "name": "Violet and Paper"
-                }, {
-                    "colors": [
-                        "hsla(36, 6%, 15%, 1)", "hsla(55, 100%, 44%, 1)"
-                    ],
-                    "slug": "black-and-yellow",
-                    "name": "Black and Yellow"
-                }, {
-                    "colors": [
-                        "hsla(28, 6%, 45%, 1)", "hsla(55, 100%, 44%, 1)"
-                    ],
-                    "slug": "grey-and-yellow",
-                    "name": "Grey and Yellow"
-                }, {
-                    "colors": [
-                        "hsla(55, 100%, 44%, 1)", "hsla(53, 100%, 98%, 1)"
-                    ],
-                    "slug": "yellow-and-white",
-                    "name": "Yellow and White"
-                }, {
-                    "colors": [
-                        "hsla(55, 100%, 44%, 1)", "hsla(52, 76%, 90%, 1)"
-                    ],
-                    "slug": "yellow-and-beige",
-                    "name": "Yellow and Paper"
-                }, {
-                    "colors": [
-                        "hsla(356, 91%, 58%, 1)", "hsla(198, 76%, 52%, 1)"
-                    ],
-                    "slug": "red-and-blue",
-                    "name": "Red and Blue"
-                }, {
-                    "colors": [
-                        "hsla(198, 76%, 52%, 1)", "hsla(356, 91%, 58%, 1)"
-                    ],
-                    "slug": "blue-and-red",
-                    "name": "Blue and Red"
+                    "fluid": false,
+                    "name": "Extra large",
+                    "size": "2.25rem",
+                    "slug": "x-large"
                 }
             ]
         }
@@ -510,10 +623,12 @@
             "core/buttons": {
                 "elements": {
                     "button": {
-                            "color": {
-                                "background": "var(--wp--preset--color--blue)",
-                                "text": "var(--wp--preset--color--paper)"
-                            }
+                        "border": {
+                            "color": "var(--wp--preset--color--red)",
+                            "radius": "1rem",
+                            "style": "solid",
+                            "width": "2px"
+                        }
                     }
                 }
             },
@@ -523,39 +638,63 @@
                 }
             },
             "core/pullquote": {
-                "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--work-sans)",
-                    "fontSize": "2rem",
-                    "fontWeight": "400",
-                    "fontStyle": "normal"
-                    },
                 "color": {
                     "background": "var(--wp--preset--color--red)",
                     "text": "var(--wp--preset--color--base)"
                 },
                 "elements": {
                     "cite": {
+                        "color": {
+                            "text": "var(--wp--preset--color--base)"
+                        },
                         "typography": {
                             "fontFamily": "var(--wp--preset--font-family--zilla-slab)",
                             "fontSize": "1.2rem",
                             "fontWeight": "400"
-                        },
-                        "color": {
-                            "text": "var(--wp--preset--color--base)"
                         }
                     }
+                },
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--work-sans)",
+                    "fontSize": "2rem",
+                    "fontStyle": "normal",
+                    "fontWeight": "400"
+                }
+            }
+        },
+        "color": {
+            "background": "var(--wp--preset--color--base)",
+            "text": "var(--wp--preset--color--contrast)"
+        },
+        "elements": {
+            "button": {
+                ":active": {
+                    "color": {
+                        "text": "var(--wp--preset--color--base)"
+                    }
+                },
+                ":hover": {
+                    "color": {
+                        "text": "var(--wp--preset--color--base)"
+                    }
+                },
+                "color": {
+                    "background": "var(--wp--preset--color--blue)",
+                    "text": "var(--wp--preset--color--paper)"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--red)"
                 }
             }
         },
         "spacing": {
             "blockGap": "1.5rem"
         },
-        "elements": {
-            "button": {
-            }
-        },
         "typography": {
-            "fontFamily": "var(--wp--preset--font-family--work-sans)"
+            "fontFamily": "var(--wp--preset--font-family--work-sans)",
+            "fontSize": "18px"
         }
     }
 }
