@@ -76,12 +76,12 @@ function ace_add_external_link_icon(  ) {
 				'</svg>';
 			// Check if content is available
 			if (!document.querySelector('.entry-content')) return;
-				var links = document.querySelector('.entry-content').querySelectorAll('a:not(:has(img)):not(.wp-block-social-link-anchor)');
+				var links = document.querySelector('.entry-content').querySelectorAll('a:not(:has(img)):not(.wp-block-social-links):not(.wp-block-social-link-anchor)');
 				[...links].forEach(function (link) {
-					if (link.host !== window.location.host) {
+					if (link.host !== window.location.host && !link.href.startsWith('mailto:')) {
 						link.innerHTML += ' ' + icon;
 					}
-				});
+			});
 		}
 		window.addEventListener('load', externalLinkIcon, false);
 	" );
@@ -218,21 +218,4 @@ function twentynineteen_post_thumbnail() {
 	endif; // End is_singular().
 }
 
-// Define a function to modify the rendered block output
-// Add c4aa-remove-style class in block if you do not apply this style
-function c4aa_modify_pullquote_block( $block_content, $block ) {
 
-    // Check if the block is a Pullquote block
-    if ( 'core/pullquote' === $block['blockName'] ) {
-        $block_class = isset($block['attrs']['className']) ? $block['attrs']['className'] : '';
-        if(!strpos($block_class, 'c4aa-remove-style')) {
-            $block_content = str_replace( 'wp-block-pullquote', 'wp-block-pullquote has-small-font-size c4aa-pullquote-style', $block_content );
-        }
-        return $block_content;
-    }
-    
-    // If it's not a Pullquote block, return the original content unchanged
-    return $block_content;
-}
-
-add_filter( 'render_block', 'c4aa_modify_pullquote_block', 10, 2 );
