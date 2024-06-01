@@ -29,7 +29,7 @@
         "not_found": "No membership found",
         "no_terms": "No memberships",
         "name_field_description": "",
-        "slug_field_description": "",
+        "slug_field_description": "members-of",
         "desc_field_description": "",
         "items_list_navigation": "Membership list navigation",
         "items_list": "Membership list",
@@ -59,7 +59,7 @@
     "show_admin_column": 1,
     "rewrite": {
         "permalink_rewrite": "custom_permalink",
-        "slug": "member-of",
+        "slug": "members-of",
         "with_front": "1",
         "rewrite_hierarchical": "0"
     },
@@ -72,5 +72,5 @@
     "meta_box": "default",
     "meta_box_cb": "",
     "meta_box_sanitize_cb": "",
-    "modified": 1717171495
+    "modified": 1717271574
 }

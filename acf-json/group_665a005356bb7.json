@@ -1,11 +1,31 @@
 {
     "key": "group_665a005356bb7",
-    "title": "Contact Information",
+    "title": "Personal Details",
     "fields": [
         {
+            "key": "field_665b6c2d4bb72",
+            "label": "Title",
+            "name": "person-title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_665a0053a5b49",
-            "label": "Contact Email",
-            "name": "contact_email",
+            "label": "Contact Email (optional)",
+            "name": "person-email",
             "aria-label": "",
             "type": "email",
             "instructions": "",
@@ -17,6 +37,50 @@
                 "id": ""
             },
             "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_665b710baebb7",
+            "label": "Website URL (optional)",
+            "name": "person-website-url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_665b7154aebb8",
+            "label": "Website Title",
+            "name": "person-website-title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_665b710baebb7",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -36,9 +100,13 @@
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "discussion",
+        "comments",
+        "send-trackbacks"
+    ],
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1717175333
+    "show_in_rest": 1,
+    "modified": 1717274937
 }

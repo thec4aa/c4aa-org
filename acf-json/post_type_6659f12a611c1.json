@@ -67,10 +67,14 @@
     "supports": [
         "title",
         "editor",
+        "revisions",
         "thumbnail",
-        "custom-fields"
+        "custom-fields",
+        "post-formats"
     ],
-    "taxonomies": "",
+    "taxonomies": [
+        "member-of"
+    ],
     "has_archive": false,
     "has_archive_slug": "",
     "rewrite": {
@@ -85,5 +89,5 @@
     "delete_with_user": false,
     "register_meta_box_cb": "",
     "enter_title_here": "Name of Person",
-    "modified": 1717170712
+    "modified": 1717268464
 }
