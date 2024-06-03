@@ -42,50 +42,6 @@
             "append": ""
         },
         {
-            "key": "field_665b710baebb7",
-            "label": "Website URL (optional)",
-            "name": "person-website-url",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_665b7154aebb8",
-            "label": "Website Title",
-            "name": "person-website-title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_665b710baebb7",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_665e0cbf3e75f",
             "label": "Main Portrait",
             "name": "person-main-portrait",
@@ -101,7 +57,7 @@
             },
             "return_format": "array",
             "library": "all",
-            "min_width": 1000,
+            "min_width": 700,
             "min_height": "",
             "min_size": "",
             "max_width": 2000,
@@ -133,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1717442204
+    "modified": 1717446829
 }
