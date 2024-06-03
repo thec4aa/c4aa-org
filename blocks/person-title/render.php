@@ -1,6 +1,4 @@
 <?php
-// Displays the title of the person
-// Information added via custom fields on the Person Post Type
 $align     = isset( $block['align_text'] ) ? $block['align_text'] : 'left';
 $textcolor = isset( $block['textColor'] ) ? $block['textColor'] : 'inherit';
 

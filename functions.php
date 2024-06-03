@@ -220,111 +220,13 @@ function twentynineteen_post_thumbnail() {
 
 /* Register blocks for showing People's info in block editor */
 
-add_action( 'acf/init', 'hfm_acf_init_blocks' );
-function hfm_acf_init_blocks() {
-    if ( function_exists( 'acf_register_block_type' ) ) {
-		// Register Person's Title Block
-        acf_register_block_type(
-            array(
-                'name'            => 'person-title',
-                'title'           => 'Person\'s Title',
-                'description'     => 'Display personalized title',
-                'render_template' => 'template-parts/blocks/person-title.php',
-                'category'        => 'people-category',
-				'icon' 			  => array(
-					'foreground' => '#F5333F',
-					'src' => 'id',
-				),
-                'api_version'     => 2,
-                'keywords'        => array( 'title', 'position', 'people' ),
-                'mode'            => 'preview',
-                'supports'        => array(
-                    'jsx'        => true,
-                    'color'      => true,
-                    'align_text' => true,
-                    'multiple' => false,
-                    'spacing' => array(
-                        'margin' => true,
-                        'padding' => true,
-                        'blockGap' => true,
-                    ),
-                    'typography' => array(
-                        'fontSize' => true,
-                        'lineHeight' => true,
-                        'textAlign' => true,
-                    )
-                )
-            )
-        );
+add_action( 'init', 'register_c4aa_org_blocks' );
 
-        acf_register_block_type(
-			// Register Person's Email Block
-            array(
-                'name'            => 'person-email',
-                'title'           => 'Person\'s Email Address',
-                'description'     => 'Display contact email address',
-                'render_template' => 'template-parts/blocks/person-email.php',
-                'category'        => 'people-category',
-                'icon'            => array(
-					'foreground' => '#F5333F',
-					'src' => 'email'
-				),
-                'api_version'     => 2,
-                'keywords'        => array( 'email', 'contact', 'people' ),
-                'mode'            => 'preview',
-                'supports'        => array(
-                    'jsx'        => true,
-                    'color'      => true,
-                    'align_text' => true,
-                    'multiple' => false,
-                    'spacing' => array(
-                        'margin' => true,
-                        'padding' => true,
-                        'blockGap' => true,
-                    ),
-                    'typography' => array(
-                        'fontSize' => true,
-                        'lineHeight' => true,
-                        'textAlign' => true,
-                    ),
-                ),
-            )
-        );
+function register_c4aa_org_blocks() {
+    register_block_type( __DIR__ . '/blocks/person-title');
+    register_block_type( __DIR__ . '/blocks/person-website' );
+    register_block_type( __DIR__ . '/blocks/person-email' );
 
-		acf_register_block_type(
-			// Register Person's Website block
-            array(
-                'name'            => 'person-website',
-                'title'           => 'Person\'s Website',
-                'description'     => 'Display personalized website',
-                'render_template' => 'template-parts/blocks/person-website.php',
-                'category'        => 'people-category',
-				'icon' 			  => array(
-					'foreground' => '#F5333F',
-					'src' => 'admin-site-alt3',
-				),
-                'api_version'     => 2,
-                'keywords'        => array( 'link', 'website', 'people' ),
-                'mode'            => 'preview',
-                'supports'        => array(
-                    'jsx'        => true,
-                    'color'      => true,
-                    'align_text' => true,
-                    'multiple' => false,
-                    'spacing' => array(
-                        'margin' => true,
-                        'padding' => true,
-                        'blockGap' => true,
-                    ),
-                    'typography' => array(
-                        'fontSize' => true,
-                        'lineHeight' => true,
-                        'textAlign' => true,
-                    )
-                )
-            )
-        );
-    }
 }
 
 /* Register Block Category */
@@ -334,7 +236,7 @@ function example_filter_block_categories_when_post_provided( $block_categories, 
             $block_categories,
             array(
                 'slug'  => 'people-category',
-                'title' => __( 'People', 'c4aa-org-theme' ),
+                'title' => __( 'C4AA People', 'c4aa-org-theme' ),
                 'icon'  => 'group'
             )
         );
@@ -342,3 +244,4 @@ function example_filter_block_categories_when_post_provided( $block_categories, 
     return $block_categories;
 }
 add_filter( 'block_categories_all', 'example_filter_block_categories_when_post_provided', 10, 2 );
+
