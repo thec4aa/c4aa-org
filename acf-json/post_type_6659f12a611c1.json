@@ -56,7 +56,7 @@
     "rest_base": "",
     "rest_namespace": "wp\/v2",
     "rest_controller_class": "WP_REST_Posts_Controller",
-    "menu_position": 20,
+    "menu_position": 23,
     "menu_icon": {
         "type": "dashicons",
         "value": "dashicons-groups"
@@ -88,5 +88,5 @@
     "delete_with_user": false,
     "register_meta_box_cb": "",
     "enter_title_here": "Name of Person",
-    "modified": 1717451529
+    "modified": 1717453239
 }
