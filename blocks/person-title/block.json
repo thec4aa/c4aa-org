@@ -21,6 +21,7 @@
         },
         "align": true,
         "multiple": false,
+        "renaming": true,
         "spacing": {
             "margin": true,
             "padding": true,
