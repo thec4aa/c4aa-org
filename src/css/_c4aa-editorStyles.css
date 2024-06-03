@@ -76,7 +76,6 @@ p {
 /* Post title */
 h1.editor-post-title__input {
 	font-family: var( --font-sans);
-	text-transform: uppercase;
 }
 
 /* Sans */
