@@ -18,7 +18,7 @@
             "duotone": true
         },
         "color": {
-            "background": true,
+            "background": false,
             "text": true,
             "link": true
         },
