@@ -218,6 +218,7 @@ function twentynineteen_post_thumbnail() {
 	endif; // End is_singular().
 }
 
+
 /* Register blocks for showing People's info in block editor */
 
 add_action( 'init', 'register_c4aa_org_blocks' );
@@ -226,6 +227,7 @@ function register_c4aa_org_blocks() {
     register_block_type( __DIR__ . '/blocks/person-title');
     register_block_type( __DIR__ . '/blocks/person-website' );
     register_block_type( __DIR__ . '/blocks/person-email' );
+	register_block_type( __DIR__ . '/blocks/person-main-portrait' );
 
 }
 
