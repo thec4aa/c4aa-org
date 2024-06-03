@@ -238,7 +238,7 @@ function example_filter_block_categories_when_post_provided( $block_categories, 
             array(
                 'slug'  => 'people-category',
                 'title' => __( 'C4AA People', 'c4aa-org-theme' ),
-                'icon'  => 'group'
+                'icon'  => 'groups'
             )
         );
     }

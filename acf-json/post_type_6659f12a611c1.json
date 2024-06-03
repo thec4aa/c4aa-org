@@ -59,7 +59,7 @@
     "menu_position": 20,
     "menu_icon": {
         "type": "dashicons",
-        "value": "dashicons-smiley"
+        "value": "dashicons-groups"
     },
     "rename_capabilities": false,
     "singular_capability_name": "post",
@@ -88,5 +88,5 @@
     "delete_with_user": false,
     "register_meta_box_cb": "",
     "enter_title_here": "Name of Person",
-    "modified": 1717445601
+    "modified": 1717451529
 }
