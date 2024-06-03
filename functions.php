@@ -219,3 +219,30 @@ function twentynineteen_post_thumbnail() {
 }
 
 
+/* Register blocks for showing People's info in block editor */
+
+add_action( 'init', 'register_c4aa_org_blocks' );
+
+function register_c4aa_org_blocks() {
+    register_block_type( __DIR__ . '/blocks/person-title');
+    register_block_type( __DIR__ . '/blocks/person-email' );
+	register_block_type( __DIR__ . '/blocks/person-main-portrait' );
+
+}
+
+/* Register Block Category */
+function example_filter_block_categories_when_post_provided( $block_categories, $editor_context ) {
+    if ( ! empty( $editor_context->post ) ) {
+        array_push(
+            $block_categories,
+            array(
+                'slug'  => 'people-category',
+                'title' => __( 'C4AA People', 'c4aa-org-theme' ),
+                'icon'  => 'groups'
+            )
+        );
+    }
+    return $block_categories;
+}
+add_filter( 'block_categories_all', 'example_filter_block_categories_when_post_provided', 10, 2 );
+

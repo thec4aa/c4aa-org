@@ -1,0 +1,47 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+	"apiVersion": 3,
+	"name": "c4aa-org/person-main-portrait",
+    "version": "0.0.1",
+    "title": "Person's Main Portrait",
+    "description": "Display's a portrait of the person",
+	"category": "people-category",
+    "icon": "format-image",
+    "keywords": [ "person", "photo", "portrait" ],
+    "styles": [],
+    "acf": {
+        "renderTemplate": "render.php",
+        "mode": "preview"
+    },
+    "supports": {
+        "filter": {
+            "duotone": true
+        },
+        "color": {
+            "background": false,
+            "text": true,
+            "link": true
+        },
+        "align": true,
+        "multiple": false,
+        "renaming": true,
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true,
+            "textAlign": true
+        }
+    },
+    "example": {
+        "attributes": {
+            "image": "sample.jpg",
+            "caption": "image caption"
+        }
+    }
+    
+}
+

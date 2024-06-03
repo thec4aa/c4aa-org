@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+	"apiVersion": 3,
+	"name": "c4aa-org/person-title",
+    "version": "0.0.2",
+    "title": "Person's Title",
+    "description": "Display personalized title",
+	"category": "people-category",
+    "icon": "id",
+    "keywords": [ "person", "title", "people" ],
+    "styles": [],
+    "acf": {
+        "renderTemplate": "render.php",
+        "mode": "preview"
+    },
+    "supports": {
+        "color": {
+            "background": false,
+            "text": true,
+            "link": true
+        },
+        "align": true,
+        "multiple": false,
+        "renaming": true,
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true,
+            "textAlign": true
+        }
+    },
+    "example": {
+        "attributes": {
+            "person-title": "Chief Head of the Department of Redundancy Department, Company Co."
+        }
+    }    
+
+}

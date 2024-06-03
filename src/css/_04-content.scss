@@ -20,6 +20,18 @@
 	color: var(--color-brandBlack);
 }
 
+// People Pages
+
+// Hide meta (author, date, etc.) on single people pages
+.single-people .entry-header .entry-meta {
+	display: none;
+}
+
+// select the paragraph tags within any class that starts with people
+.single-people .entry-content [class^="person-"] p {
+	margin-top: 0;
+}	
+
 
 /***********/
 /* Archive */
