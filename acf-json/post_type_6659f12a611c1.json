@@ -68,6 +68,7 @@
         "title",
         "editor",
         "revisions",
+        "thumbnail",
         "custom-fields",
         "post-formats"
     ],
@@ -88,5 +89,5 @@
     "delete_with_user": false,
     "register_meta_box_cb": "",
     "enter_title_here": "Name of Person",
-    "modified": 1717453239
+    "modified": 1717471433
 }
