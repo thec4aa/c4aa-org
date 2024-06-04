@@ -9,6 +9,7 @@
     "icon": "format-image",
     "keywords": [ "person", "photo", "portrait" ],
     "styles": [],
+    "style": "file:./style.css",
     "acf": {
         "renderTemplate": "render.php",
         "mode": "preview"
