@@ -40,31 +40,6 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_665e0cbf3e75f",
-            "label": "Main Portrait",
-            "name": "person-main-portrait",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "1400px-2000px width",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": 2000,
-            "max_height": 2000,
-            "max_size": 3,
-            "mime_types": "jpg, jpeg, png, webp",
-            "preview_size": "medium"
         }
     ],
     "location": [
@@ -89,5 +64,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1717464153
+    "modified": 1717604474
 }
