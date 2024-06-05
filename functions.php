@@ -188,6 +188,21 @@ function c4aa_setup_theme_supported_features() {
 add_action( 'after_setup_theme', 'c4aa_setup_theme_supported_features', 11 );
 
 /**
+ * Filter to disable post thumbnail display for 'people' custom post type.
+ *
+ * @param bool $can_show Whether the post thumbnail can be displayed.
+ * @return bool Modified value for post thumbnail display.
+ */
+function my_child_theme_disable_people_post_thumbnail( $can_show ) {
+    if ( is_singular( 'people' ) ) {	
+        return false;
+    }
+    return $can_show;
+}
+add_filter( 'twentynineteen_can_show_post_thumbnail', 'my_child_theme_disable_people_post_thumbnail', 20 );
+
+
+/**
  * Override default 2019 post thumbnail.
  * Only change is adding the class for the image
  * filter CSS algorithm, a-filter-child-img
@@ -217,6 +232,7 @@ function twentynineteen_post_thumbnail() {
 		<?php
 	endif; // End is_singular().
 }
+
 
 
 /* Register blocks for showing People's info in block editor */
