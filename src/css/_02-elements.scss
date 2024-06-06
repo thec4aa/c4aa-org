@@ -22,8 +22,7 @@ input,
 select, 
 optgroup, 
 textarea,
-blockquote cite,
-.entry .entry-content figcaption {
+blockquote cite {
 	font-family: var( --font-sans );
 	font-weight: 400;
 		
@@ -32,7 +31,6 @@ blockquote cite,
 p strong,
 ol strong,
 ul strong,
-.entry .entry-content figcaption,
 table strong {
 	font-weight: 600;
 }
@@ -45,6 +43,19 @@ table strong {
 .site-branding .main-navigation ul li a {
 	font-family: var( --font-sans );
 	text-transform: uppercase;
+}
+
+// captions
+.entry .entry-content .wp-block-audio figcaption, 
+.entry .entry-content .wp-block-video figcaption, 
+.entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption, 
+.entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption,
+.entry .entry-content .wp-block-image figcaption,
+.entry .entry-content figcaption {
+	font-family: var( --font-serif );
+	font-style: italic;
+	font-size: 0.8rem;
+	padding: .25rem, .5rem;
 }
 
 // --------- //
