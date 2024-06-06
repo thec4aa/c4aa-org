@@ -9,6 +9,9 @@
     "icon": "id",
     "keywords": [ "person", "title", "people" ],
     "styles": [],
+    "editorStyle": "file:./style.css",
+    "style": [ "file:./style.css", "person-title-shared-style" ],
+    "viewStyle": [ "file:./style.css", "person-title-view-style" ],
     "acf": {
         "renderTemplate": "render.php",
         "mode": "preview"
