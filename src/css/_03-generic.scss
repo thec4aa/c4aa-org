@@ -769,12 +769,6 @@ color: var(--color-brandGrey);
 	        filter: unset;
 		}
 
-/* images in advanced columns */
-/* fixes images extending beyond the width of a column */
-.entry .entry-content .wp-block-advanced-columns-columns .wp-block-image:not(.alignwide):not(.alignfull) > img {
-	max-width: 100%;
-}
-
 
 /*****************/
 // ? Updates: October 19, 2023

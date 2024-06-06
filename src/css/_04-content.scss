@@ -33,6 +33,19 @@
 	margin-top: 0;
 }	
 
+// IMAGES
+
+/* images in advanced columns */
+/* fixes images extending beyond the width of a column */
+@media only screen and (min-width: 768px) {
+	.entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > img, 
+	.entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > a > img, 
+	.entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > img + figcaption, 
+	.entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > a + figcaption {
+		max-width: 100%;
+	}
+}
+
 
 /***********/
 /* Archive */
