@@ -34,6 +34,17 @@ table strong {
     font-weight: 600;
 }
 
+// override t19 for .wp-block-* elements
+// more may need to be added to this in the future
+.entry .entry-content {
+	.wp-block-archives li > a,
+	.wp-block-categories li > a,
+	.wp-block-latest-posts li > a,
+	.wp-block-latest-posts .wp-block-latest-posts__post-date {
+	  font-family: var(--font-sans);
+	}
+  }
+
 .site-branding,
 .page-title {
     font-family: var(--font-serif);
