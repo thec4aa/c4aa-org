@@ -11,13 +11,14 @@ wp.domReady( () => {
 
 	wp.blocks.registerBlockStyle('core/button', {
 		name: 'low-emphasis-button',
-		label: 'Low Emphasis'
+		label: 'Low Emphasis',
+		isDefault: false
 	} );
 
 	wp.blocks.registerBlockStyle( 'core/heading', {
 		name: 'c4aa-clipPath-heading',
-		label: 'C4AA Clip Path',
-		isDefault: true,
+		label: 'C4AA Banner',
+		isDefault: false
 	} );
 
 });

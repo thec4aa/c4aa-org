@@ -1,174 +1,845 @@
-
 /* Smaller default font size */
 html {
-	font-size: 18px;
+    font-size: 18px;
 }
 
-body, 
+body,
 input,
 select,
 optgroup,
 textarea {
-	line-height: 1.7;
-	color: var( --color-brandBlack );
+    line-height: 1.7;
+    color: var(--color-brandBlack);
 }
 
 .site-content {
-	background-color: var( --color-brandWhite);
+    background-color: var(--color-brandWhite);
 }
 
 body,
-input, 
-select, 
-optgroup, 
+input,
+select,
+optgroup,
 textarea,
-blockquote cite,
-.entry .entry-content figcaption {
-	font-family: var( --font-sans );
-	font-weight: 400;
-		
+blockquote cite {
+    font-family: var(--font-sans);
+    font-weight: 400;
+
 }
 
 p strong,
 ol strong,
 ul strong,
-.entry .entry-content figcaption,
 table strong {
-	font-weight: 600;
+    font-weight: 600;
 }
+
+// override t19 for .wp-block-* elements
+// more may need to be added to this in the future
+.entry .entry-content {
+	.wp-block-archives li > a,
+	.wp-block-categories li > a,
+	.wp-block-latest-posts li > a,
+	.wp-block-latest-posts .wp-block-latest-posts__post-date {
+	  font-family: var(--font-sans);
+	}
+  }
 
 .site-branding,
 .page-title {
-	font-family: var( --font-serif );
+    font-family: var(--font-serif);
 }
 
 .site-branding .main-navigation ul li a {
-	font-family: var( --font-sans );
-	text-transform: uppercase;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
 }
 
-// --------- //
-//  HEADERS  //
-// --------- //
+/**
+*
+* Main Menu / Branding Container
+*
+*/
 
-h1, 
-h2, 
+/* style containers */
+.featured-image .site-branding-container,
+.site-header:not(.featured-image) {
+    background-color: var(--color-brandWhite);
+    z-index: 10;
+}
+
+.featured-image .site-branding-container,
+.site-header {
+    padding: 1rem;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+}
+
+/* prevent menu items from wrapping mid word */
+.site-branding ul li {
+    white-space: nowrap;
+}
+
+/* style the text-logo image */
+.c4aa-text-logo {
+    display: inline-block;
+    background-size: cover;
+    height: 0;
+    width: 0;
+    margin-right: 10px;
+}
+
+.site-title {
+    margin: 0;
+}
+
+.site-featured-image .post-thumbnail img {
+    max-width: 100%;
+}
+
+/* style text and icon logo hover */
+.site-logo .custom-logo-link:hover,
+.site-logo .custom-logo-link:active,
+.site-logo .custom-logo-link:focus,
+.site-header.featured-image .custom-logo-link:hover,
+.site-header.featured-image .custom-logo-link:active,
+.site-header.featured-image .custom-logo-link:focus,
+.c4aa-text-logo:hover,
+.c4aa-text-logo:active,
+.c4aa-text-logo:hover:focus {
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+/* style menu items text  */
+.site-header.featured-image .main-navigation a,
+.site-header.featured-image .main-navigation a + svg,
+.site-header.featured-image .social-navigation a,
+.site-header.featured-image .site-featured-image a,
+.main-navigation .main-menu > li > a,
+.main-navigation .main-menu > li .svg-icon {
+    color: var(--color-brandBlack);
+}
+
+.site-header.featured-image .main-navigation a:hover,
+.site-header.featured-image .main-navigation a:active,
+.site-header.featured-image .main-navigation a + svg:hover,
+.site-header.featured-image .main-navigation a + svg:active,
+.site-header.featured-image .social-navigation a:hover,
+.site-header.featured-image .social-navigation a:active,
+.site-header.featured-image .site-featured-image a:hover .site-header.featured-image .site-featured-image a:active {
+    color: var(--color-brandRed);
+    opacity: 1;
+}
+
+.main-menu li {
+    font-size: 1rem;
+}
+
+
+/* place navigation at bottom of container*/
+#site-navigation {
+    width: 100%;
+    order: 3;
+    margin-right: auto;
+}
+
+@media(min-width: 768px) {
+    .site-branding {
+        margin: 0;
+    }
+
+    /* override parent theme logo positioning */
+    .site-logo {
+        position: static;
+    }
+}
+
+/* this was 1000px and not sure why. Seems to work at 1260px  #309 */
+@media(min-width: 1260px) {
+    .site-branding {
+        margin: 0 calc(10% + 60px);
+    }
+}
+
+@media(min-width: 1260px) {
+    .site-branding {
+        min-height: 5rem;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    .c4aa-text-logo {
+        height: 44px;
+        width: 210px;
+    }
+
+    /* place navigtation between logos and align vertically */
+    #site-navigation {
+        width: auto;
+        order: 2;
+        // place navigation midway vertically
+
+    }
+
+    /* move logo to the right */
+    .site-logo {
+        display: none;
+        order: 3;
+    }
+}
+
+
+/**
+*
+* CAPTIONS
+*
+*/
+
+
+.entry .entry-content .wp-block-audio figcaption,
+.entry .entry-content .wp-block-video figcaption,
+.entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption,
+.entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption,
+.entry .entry-content .wp-block-image figcaption,
+.entry .entry-content figcaption {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.8rem;
+    padding: 0.25rem, 0.5rem;
+}
+
+/**
+*
+* HEADERS
+*
+*/
+
+
+// Apply styles to headings
+h1,
+h2,
 h3,
 h6,
 .site-header.featured-image .entry-meta {
-	font-family: var( --font-serif );
-	font-weight: 700;
-	letter-spacing: .14em;	
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: 0.14em;
 }
 
-h4, 
+h4,
 h5 {
-	font-family: var( --font-sans );
-	font-weight: 700;
-	letter-spacing: .14em;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.14em;
 }
 
 h3 {
-	font-size: 1.6875em; /* fallback */
-	font-size: clamp(1.5rem, 1.3594rem + 0.7031vw, 1.6875rem);
-
+    font-size: 1.6875em; // fallback
+    font-size: clamp(1.5rem, 1.3594rem + 0.7031vw, 1.6875rem);
 }
 
 h4 {
-	font-size: 1.4rem; /* fallback */
-	font-size: clamp(1.2rem, 1.0500rem + 0.7500vw, 1.4rem);
+    font-size: 1.4rem; // fallback
+    font-size: clamp(1.2rem, 1.0500rem + 0.7500vw, 1.4rem);
 }
 
 h5,
 h6 {
-	font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
-h1, h2, h3, h4 {
-	text-transform: uppercase;
-} 
-
-h1, 
-h2, 
+// Apply text transform and alignfull styles
+h1,
+h2,
 h3,
-h4,
-h5,
-h6 {
-	&.alignfull:not(.is-style-c4aa-clipPath-heading) {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-	&.alignfull.is-style-c4aa-clipPath-heading {
-		margin-left: 2rem;
-		margin-right: 2rem;
-	}
+h4 {
+    text-transform: uppercase;
 
+    &.alignfull:not(.is-style-c4aa-clipPath-heading) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &.alignfull.is-style-c4aa-clipPath-heading {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
-/* LISTS */
+/**
+* 
+* LISTS 
+* 
+*/
 
 .entry .entry-content ol li,
 .entry .entry-content ul li:not(.wp-social-link) {
-	font-family: var( --font-serif );
-	font-weight: 400;
-	line-height: 1.3rem;
-	padding-bottom: 1rem;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 125%; // when size of font is changed in the block, the rem is miscalculated
+    padding-bottom: 1rem;
 }
 
-// ------------ //
-//    LINKS     //
-// ------------ //
+/*
+*
+* LINKS
+*
+*/
 
-.entry .entry-content a:link, .entry .entry-content a,
-.entry .entry-content h1 a:link, .entry .entry-content h1 a,
-.entry .entry-content h2 a:link, .entry .entry-content h2 a, 
-.entry .entry-content h3 a:link, .entry .entry-content h3 a, 
-.entry .entry-content h4 a:link, .entry .entry-content h4 a, 
-.entry .entry-content h5 a:link, .entry .entry-content h5 a, 
-.entry .entry-content h6 a:link, .entry .entry-content h6 a {
-	text-decoration-line: underline;
-	text-decoration-style: dotted;
-	text-decoration-thickness: 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
-	text-underline-offset: 0.2em; // must be set or will show up different on different browsers
-	text-decoration-skip-ink: none;
-	// font-weight: inherit;
+// Mixin for common link styles
+@mixin common-link-styles {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
+    text-underline-offset: 0.2em; // must be set or will show up different on different browsers
+    text-decoration-skip-ink: none;
 }
 
-.entry .entry-content a:link, .entry .entry-content a {
-	font-weight: inherit; // was bolder, trying this for now
+// Mixin for hover styles
+@mixin hover-link-styles {
+    text-decoration-style: solid;
 }
 
-.entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
-	// keep font weight the same as surrounding text
-	font-weight: inherit;
+.entry .entry-content {
+    // Apply common link styles
+    a:link,
+    a,
+    h1 a:link,
+    h1 a,
+    h2 a:link,
+    h2 a,
+    h3 a:link,
+    h3 a,
+    h4 a:link,
+    h4 a,
+    h5 a:link,
+    h5 a,
+    h6 a:link,
+    h6 a {
+        @include common-link-styles;
+        font-weight: inherit;
+    }
+
+    // Apply hover styles
+    a:hover,
+    h1 a:hover,
+    h2 a:hover,
+    h3 a:hover,
+    h4 a:hover,
+    h5 a:hover,
+    h6 a:hover {
+        @include hover-link-styles;
+    }
+
+    // Blockquote link styles
+    blockquote a:link,
+    blockquote a {
+        font-weight: inherit;
+    }
 }
 
-.entry .entry-content h1 a:hover, 
-.entry .entry-content h2 a:hover, 
-.entry .entry-content h3 a:hover, 
-.entry .entry-content h4 a:hover, 
-.entry .entry-content h5 a:hover, 
-.entry .entry-content h6 a:hover,
-.entry .entry-content a:hover { 
-	text-decoration-style: solid;
+/**
+*
+* BUTTONS
+*
+*/
+
+/* Solid part of the button */
+/* note: first line is excluded buttons from other forms, tinymce editor, formiddable forms, etc. */
+button:not(:where(#simple-banner-close-button *, .wp-editor-tools *, .mce-container *, .frm_upload_text *, .frm_upload_text *, .frm_show_password_btn, .lightbox-trigger)),
+.button,
+.entry .button,
+.entry .entry-content .wp-element-button,
+.entry .entry-content .wp-block-file .wp-block-file__button,
+.entry .entry-content .wp-block-button .wp-block-button__link,
+input[type="button"],
+input[type="reset"],
+input[type="submit"], /* catch old styles */
+.entry .entry-content .wp-block-button:not(.is-style-squared) .wp-block-button__link,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link {
+    border-radius: 1rem;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    transition: rotate 50ms ease-in-out, transform 150ms ease-in-out, scale 150ms ease-in-out;
+    transform: rotate(-2deg);
+    border: none;
+
+    &:hover {
+        // rotate the sold part of the button on hover
+        transform: rotate(-1deg);
+        color: var(--color-brandWhite);
+    }
+
+    &:focus {
+        // rotate the sold part of the button on hover
+        transform: rotate(-1deg);
+        color: var(--color-brandWhite);
+    }
+
+    &:active {
+        // move the sold part of the button on click
+        transform: scale(0.8);
+    }
+
+    &::before {
+        // outline part of the button
+        transition: all 50ms ease;
+        content: '';
+        // display:inline-block;
+        position: absolute;
+        top: 0;
+        left: 2px;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        rotate: 1deg;
+        border: 2px solid var(--color-brandRed);
+        border-radius: 1rem;
+        // mix-blend-mode: darken;
+        transform: rotate(1deg);
+        width: 100%;
+        height: 110%;
+    }
 }
 
-// ------------ //
-//  END LINKS   //
-// ------------ //
+// rotate the outline on hover
+button:hover::before,
+.button:hover::before,
+.entry .button:hover::before,
+.entry .entry-content .wp-element-button:hover::before,
+.entry .entry-content .wp-block-file .wp-block-file__button:hover::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:hover::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:hover:not(.has-background):hover::before,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover::before,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:hover::before,
+input[type="button"]:hover::before,
+input[type="reset"]:hover::before,
+input[type="submit"]:hover::before {
+    transform: rotate(-1deg) translateX(-2px) translateY(-5%);
+}
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-	
-	.entry {
-		.entry-content {
-			.wp-block-pullquote {
-				&.about {
-					blockquote {
-						hyphens: none;
-						font-size: 13px;
-					}
-				}
-			}
-		}
-	}
+// rotate the outline on focus
+button:focus::before,
+.button:focus::before,
+.entry .button:focus::before,
+.entry .entry-content .wp-element-button:focus::before,
+.entry .entry-content .wp-block-file .wp-block-file__button:focus::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:focus::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:focus:not(.has-background):focus::before,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus::before,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:focus::before,
+input[type="button"]:focus::before,
+input[type="reset"]:focus::before,
+input[type="submit"]:focus::before {
+    transform: rotate(-1deg) translateX(-2px) translateY(-5%);
+}
+
+// flash to white on active
+button:active::before,
+.button:active::before,
+.entry .button:active::before,
+.entry .entry-content .wp-element-button:active::before,
+.entry .entry-content .wp-block-file .wp-block-file__button:active::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:active::before,
+.entry .entry-content .wp-block-button .wp-block-button__link:active:not(.has-background):active::before,
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active::before,
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:active::before,
+input[type="button"]:active::before,
+input[type="reset"]:active::before,
+input[type="submit"]:active::before {
+    transform: rotate(-1deg) translateX(-2px) translateY(-5%);
+    border: var(--color-brandWhite);
+}
+
+
+// if no text color is specified, use Beige
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-element-button {
+    color: var(--color-brandBeige);
+}
+
+// if no background is specified, use Blue
+input[type="button"].button,
+input[type="reset"].button,
+input[type="submit"].button,
+input[type="submit"],
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background),
+.entry .entry-content .wp-element-button,
+.frm_button_submit {
+    background-color: var(--color-brandBlue);
+}
+
+// form buttons have a border - animation doesn't work, but moving on.
+input[type="button"].button,
+input[type="reset"].button,
+input[type="submit"].button,
+input[type="submit"] {
+    border: 2px solid var(--color-brandRed);
+}
+
+// in T19 and formiddiable unstyled buttons hover/focus black. This is a fix for those
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.entry .entry-content .wp-element-button .wp-block-button__link:not(.has-background):hover,
+.entry .entry-content .wp-element-button .wp-block-button__link:not(.has-background):focus,
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background):hover,
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background):focus,
+.frm_button_submit:hover,
+.frm_button_submit:focus {
+    background-color: var(--color-brandBlue);
+}
+
+// High Emphasis Buttons
+
+/* outline of the high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link::before {
+    border: 2px solid var(--color-brandBlue) !important;
+}
+
+/* default background color of the high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link:not(.has-background) {
+    background-color: var(--color-brandRed) !important;
+}
+
+/* default text color of the high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link:not(.has-text-color) {
+    color: var(--color-brandWhite) !important;
+}
+
+/* increase font weight of high emphasis button */
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link {
+    font-weight: 700;
+}
+
+// Low Emphasis Buttons
+
+/* outline of the low emphasis button */
+.entry .entry-content .is-style-low-emphasis-button .wp-block-button__link::before {
+    border: 2px solid var(--color-brandBlue) !important;
+}
+
+/* default background color of the low emphasis button */
+.entry .entry-content .is-style-low-emphasis-button .wp-block-button__link:not(.has-background) {
+    background-color: var(--color-brandBeige) !important;
+}
+
+/* default text color of the low emphasis button */
+.entry .entry-content .is-style-low-emphasis-button .wp-block-button__link:not(.has-text-color) {
+    color: var(--color-brandBlue) !important;
+}
+
+/* old styles */
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) .entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:focus:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:active:not(.has-text-color),
+.entry .entry-content .wp-block-button.is-style-solid .wp-block-button__link:hover:not(.has-text-color) {
+    color: var(--color-brandBeige);
+    border-color: var(--color-brandBlue);
+}
+
+
+/**
+*
+* Pullquotes & Blockquotes
+*
+*/
+
+/* remove space between block quotes and featured image */
+.entry-content .wp-block-pullquote:first-child {
+    margin-top: 0;
+}
+
+/* Pullquotes */
+
+/* basic styles */
+
+.entry .entry-content .wp-block-pullquote {
+    background-color: var(--color-brandRed);
+    color: var(--color-brandWhite);
+
+    & p {
+        font-size: 2rem; /* fallback */
+        font-size: clamp(1.5rem, 1.1250rem + 1.8750vw, 2rem);
+        font-weight: 400;
+        font-style: normal;
+        hyphens: manual;
+    }
+
+    & cite {
+        font: 400 1.25rem var(--font-serif);
+    }
+}
+
+/* default colors */
+
+.entry .entry-content .wp-block-pullquote:not(.has-text-color),
+.entry .entry-content .wp-block-pullquote:not(.has-text-color) a,
+.entry .entry-content .wp-block-pullquote:not(.has-text-color) cite {
+    color: var(--color-brandWhite);
+}
+
+.entry .entry-content .wp-block-pullquote:not(.has-background) {
+    background-color: var(--color-brandRed);
+}
+
+.entry .entry-content .wp-block-pullquote.has-text-color cite {
+    color: inherit;
+}
+
+
+/* Extra padding to full width pullquote block */
+.entry .entry-content .wp-block-pullquote.alignfull {
+    @media only screen and(min-width: 768px) {
+        padding-left: calc(10% + 58px + (2 * 1rem));
+        padding-right: calc(10% + 58px + (2 * 1rem));
+    }
+}
+
+/* Friendlier mobile styling for floating pullquotes in post */
+.entry .entry-content .wp-block-pullquote.alignright,
+.entry .entry-content .wp-block-pullquote.alignleft {
+    & blockquote {
+        padding: 0 2.5rem;
+    }
+    @media screen and(max-width: 768px) {
+        float: none;
+        max-width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+}
+
+/* Blockquotes */
+
+blockquote.wp-block-quote {
+    background-color: var(--color-brandRed);
+    color: var(--color-brandWhite);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    margin: -2.25em;
+    border: none;
+    transform: rotate(-0.5deg);
+    mix-blend-mode: multiply;
+}
+
+.entry .entry-content .wp-block-quote,
+.entry .entry-content .wp-block-quote:not(.is-large),
+.entry .entry-content .wp-block-quote:not(.is-style-large) {
+    padding: 3em;
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    & p {
+        line-height: 1.2;
+    }
+
+    & cite {
+        font-size: calc(1rem /(1.25 * 1));
+    }
+}
+
+/**
+* 
+* FORMS
+* 
+*/
+
+form label,
+.frm_primary_label {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+/* text based inputs */
+
+input,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+textarea {
+    background-color: var(--color-brandBeige);
+    border: 2px solid #aaa;
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+textarea {
+    margin-top: 0.5rem;
+}
+/* field sets */
+
+fieldset {
+    border: none;
+}
+
+/* contactform7 messages */
+
+.wpcf7-not-valid-tip {
+    font-family: var(--font-serif);
+    color: var(--color-brandRed);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+    font-family: var(--font-serif);
+    border: none;
+    background-color: var(--color-brandYellow);
+    font-weight: 600;
+}
+
+/**
+*
+* COLUMNS
+*
+* Properly aligns collapsed, nested sets of columns 
+* when using the Multi Breakpoint Columns plugin    
+*/
+
+@media only screen and(min-width: 768px) {
+    .entry .entry-content .wp-block-columns .wp-block-column:not(:first-child) {
+        margin-left: 0;
+    }
+}
+
+
+/**
+*
+* FOOTER 
+*
+*/
+
+.cc-logo {
+    width: 0.66rem;
+    margin-right: 0.1rem;
+}
+
+.site-info > * {
+    color: var(--color-brandRed);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    font-family: var(--font-sans);
+}
+
+.c4aa-magic-hand {
+    color: var(--color-brandRed);
+    max-width: 80px;
+}
+
+
+/**
+* 
+* SEPARATOR BLOCK
+*
+*/
+
+
+.entry .entry-content .wp-block-separator,
+.entry .entry-content hr,
+.entry .entry-content hr::before {
+    opacity: 100%;
+}
+
+.entry .entry-content .wp-block-separator,
+.entry .entry-content hr {
+    color: var(--color-brandGrey);
+}
+
+
+// makes the 3-dot gutenburg style more visible
+.entry .entry-content hr::before {
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+// Override media queries from theme
+// makes "Wide Line" gutenberg selected separator full width
+.entry .entry-content .wp-block-separator.alignfull.is-style-wide {
+    width: 100vw;
+    position: relative;
+    right: calc(50vw - 50%);
+    max-width: unset;
+}
+
+// makes "Default" gutenberg selected separator centered and width 50%
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default,
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+    width: 90%;
+    max-width: unset;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/**
+*
+* IMAGE BLOCK 
+*
+*/
+
+/* Block Image and Paragraph Clearfix */
+// .wp-block-image + p::after {
+// content: "";
+// clear: both;
+// display: table;
+// }
+
+/* turn off duotone on hover */
+.wp-block-image img:hover,
+figure[class*="wp-duotone"] img:hover {
+    -webkit-filter: unset;
+    filter: unset;
+}
+
+
+/**
+*
+* MISC
+*
+*/
+
+@media only screen and(min-width: 768px) and(max-width: 1024px) {
+
+    .entry {
+        .entry-content {
+            .wp-block-pullquote {
+                &.about {
+                    blockquote {
+                        hyphens: none;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
 }
