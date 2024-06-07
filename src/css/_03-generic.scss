@@ -262,40 +262,6 @@ header h1.entry-title {
 }*/
 
 
-/********************/
-/* Latests Posts on Homepage */
-/********************/
-
-.entry .entry-content .wp-block-latest-posts.is-grid li {
-    border-top: none;
-    padding-top: 0;
-}
-
-.entry .entry-content .wp-block-latest-posts li {
-    line-height: 1.2;
-    padding-bottom: 0.75rem;
-    font-family: var(--font-sans);
-}
-
-.entry .entry-content .wp-block-latest-posts .wp-block-latest-posts__post-date {
-    border-bottom: 1px solid var(--color-brandGrey);
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-    font-family: Georgia, serif;
-
-    .wf-active & {
-        font-family: 'roboto', Georgia, serif;
-    }
-}
-
-.entry .entry-content .wp-block-latest-posts li > a {
-    font-size: calc(18px * 1.125);
-    text-transform: uppercase;
-    font-family: var(--font-sans);
-    font-weight: 400;
-    letter-spacing: 0.14em;
-}
-
 
 /* Remove top and bottom margins on alignfull */
 .entry .entry-content .alignfull {
