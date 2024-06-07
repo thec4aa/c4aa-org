@@ -130,39 +130,57 @@ h6 {
 //    LINKS     //
 // ------------ //
 
-.entry .entry-content a:link, .entry .entry-content a,
-.entry .entry-content h1 a:link, .entry .entry-content h1 a,
-.entry .entry-content h2 a:link, .entry .entry-content h2 a, 
-.entry .entry-content h3 a:link, .entry .entry-content h3 a, 
-.entry .entry-content h4 a:link, .entry .entry-content h4 a, 
-.entry .entry-content h5 a:link, .entry .entry-content h5 a, 
-.entry .entry-content h6 a:link, .entry .entry-content h6 a {
-	text-decoration-line: underline;
+// Mixin for common link styles
+@mixin common-link-styles {
+	text-decoration: underline;
 	text-decoration-style: dotted;
 	text-decoration-thickness: 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
 	text-underline-offset: 0.2em; // must be set or will show up different on different browsers
 	text-decoration-skip-ink: none;
-	// font-weight: inherit;
-}
-
-.entry .entry-content a:link, .entry .entry-content a {
-	font-weight: inherit; // was bolder, trying this for now
-}
-
-.entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
-	// keep font weight the same as surrounding text
-	font-weight: inherit;
-}
-
-.entry .entry-content h1 a:hover, 
-.entry .entry-content h2 a:hover, 
-.entry .entry-content h3 a:hover, 
-.entry .entry-content h4 a:hover, 
-.entry .entry-content h5 a:hover, 
-.entry .entry-content h6 a:hover,
-.entry .entry-content a:hover { 
+  }
+  
+// Mixin for hover styles
+@mixin hover-link-styles {
 	text-decoration-style: solid;
-}
+  }
+  
+.entry .entry-content {
+// Apply common link styles
+	a:link,
+	a,
+	h1 a:link,
+	h1 a,
+	h2 a:link,
+	h2 a,
+	h3 a:link,
+	h3 a,
+	h4 a:link,
+	h4 a,
+	h5 a:link,
+	h5 a,
+	h6 a:link,
+	h6 a {
+	  @include common-link-styles;
+	  font-weight: inherit;
+	}
+  
+	// Apply hover styles
+	a:hover,
+	h1 a:hover,
+	h2 a:hover,
+	h3 a:hover,
+	h4 a:hover,
+	h5 a:hover,
+	h6 a:hover {
+	  @include hover-link-styles;
+	}
+  
+	// Blockquote link styles
+	blockquote a:link,
+	blockquote a {
+	  font-weight: inherit;
+	}
+  }
 
 // ------------ //
 //  END LINKS   //
