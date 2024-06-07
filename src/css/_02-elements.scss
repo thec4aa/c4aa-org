@@ -1,4 +1,3 @@
-
 /* Smaller default font size */
 html {
 	font-size: 18px;
@@ -46,6 +45,7 @@ table strong {
 }
 
 // captions
+
 .entry .entry-content .wp-block-audio figcaption, 
 .entry .entry-content .wp-block-video figcaption, 
 .entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption, 
@@ -62,58 +62,55 @@ table strong {
 //  HEADERS  //
 // --------- //
 
-h1, 
-h2, 
+// Apply styles to headings
+h1,
+h2,
 h3,
 h6,
 .site-header.featured-image .entry-meta {
-	font-family: var( --font-serif );
-	font-weight: 700;
-	letter-spacing: .14em;	
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: .14em;
 }
 
-h4, 
+h4,
 h5 {
-	font-family: var( --font-sans );
-	font-weight: 700;
-	letter-spacing: .14em;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: .14em;
 }
 
 h3 {
-	font-size: 1.6875em; /* fallback */
-	font-size: clamp(1.5rem, 1.3594rem + 0.7031vw, 1.6875rem);
-
+  font-size: 1.6875em; // fallback
+  font-size: clamp(1.5rem, 1.3594rem + 0.7031vw, 1.6875rem);
 }
 
 h4 {
-	font-size: 1.4rem; /* fallback */
-	font-size: clamp(1.2rem, 1.0500rem + 0.7500vw, 1.4rem);
+  font-size: 1.4rem; // fallback
+  font-size: clamp(1.2rem, 1.0500rem + 0.7500vw, 1.4rem);
 }
 
 h5,
 h6 {
-	font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
-h1, h2, h3, h4 {
-	text-transform: uppercase;
-} 
-
-h1, 
-h2, 
+// Apply text transform and alignfull styles
+h1,
+h2,
 h3,
-h4,
-h5,
-h6 {
-	&.alignfull:not(.is-style-c4aa-clipPath-heading) {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-	&.alignfull.is-style-c4aa-clipPath-heading {
-		margin-left: 2rem;
-		margin-right: 2rem;
-	}
+h4 {
+  text-transform: uppercase;
 
+  &.alignfull:not(.is-style-c4aa-clipPath-heading) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &.alignfull.is-style-c4aa-clipPath-heading {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 /* LISTS */
