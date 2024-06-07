@@ -280,7 +280,7 @@ h4 {
 .entry .entry-content ul li:not(.wp-social-link) {
     font-family: var(--font-serif);
     font-weight: 400;
-    line-height: 1.3rem;
+    line-height: 125%; // when size of font is changed in the block, the rem is miscalculated
     padding-bottom: 1rem;
 }
 
