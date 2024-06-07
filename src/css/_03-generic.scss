@@ -123,19 +123,6 @@ h2:before,
     content: none;
 }
 
-.entry .entry-content > h2 {
-    transform: translate(-0.5rem, 0);
-    // margin-top: calc( 5vw + 30px );
-    // margin-bottom: calc( 3vw + 30px );
-}
-
-
-@media only screen and(min-width: 768px) {
-    .entry .entry-content > h2 {
-        transform: translate(-1.5rem, 0)
-    }
-}
-
 /* prevent words from breaking in columns */
 .wp-block-column h4 {
     word-break: normal;
