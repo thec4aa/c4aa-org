@@ -125,16 +125,6 @@ h2::before {
 	content: none;
 }
 
-/* all headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	text-transform: uppercase;
-}
-
 /* CLIP PATH HEADERS */
 
 /* all clip paths */
@@ -153,14 +143,12 @@ h2.is-style-c4aa-clipPath-heading {
 	background-color: var( --color-brandGrey );
 	font-weight: 900;
 	letter-spacing: .14em;
-	text-transform: uppercase;
 }
 
 h3.is-style-c4aa-clipPath-heading {
     background-color: var( --color-brandBlack );
 	font-weight: 900;
 	letter-spacing: .14em;
-	text-transform: uppercase;
 }
 
 h4.is-style-c4aa-clipPath-heading {
