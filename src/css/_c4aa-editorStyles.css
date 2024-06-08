@@ -232,6 +232,41 @@ ul li{
 	color: var( --color-brandWhite );
 }
 
+/*
+ * SEPARATORS
+ */
+
+ /* makes the 3-dot gutenburg style more visible */
+ .editor-styles-wrapper hr::before {
+	 font-weight: 900;
+	 font-size: 3rem;
+	 letter-spacing: 1.5rem;
+	 padding-left: 1.5rem;
+ }
+ 
+ /* Override media queries from theme */
+ /* makes "Wide Line" gutenberg selected separator full width */
+ .editor-styles-wrapper .wp-block-separator.alignfull.is-style-wide {
+	 width: 100vw;
+	 position: relative;
+	 right: calc(50vw - 50%);
+	 max-width: unset;
+ }
+
+ /* makes "Default" gutenberg selected separator centered and width 90% */
+
+ .wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default,
+ .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	 width: calc(.9 * var(--wp--style--global--content-size));
+	 max-width: var(--wp--style--global--content-size);
+ }
+ 
+ .wp-block-separator.alignwide:not(.is-style-wide):not(.is-style-dots).is-style-default,
+ .wp-block-separator.alignwide:not(.is-style-wide):not(.is-style-dots) {
+		 width: calc(.9 * var(--wp--style--global--wide-size));
+		 max-width: var(--wp--style--global--wide-size);
+	 }
+
 
 /* Buttons */
 .editor-styles-wrapper .button,
