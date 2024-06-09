@@ -25,7 +25,7 @@ header:not(.featured-image) h1.entry-title,
 			calc( 100% - ( var( --bottomLeftY ) * 1px ) )
 		);
 
-	transform: rotate( calc( var( --rotate) * 1deg ) );
+	transform: rotate(calc(var(--rotate) * 1deg)) translate(-2rem, 0);
 }
 
 /* Prevent weird box sizing when quotes are in 
@@ -132,23 +132,27 @@ h4.is-style-c4aa-clipPath-heading {
 }
 
 @media only screen and (min-width: 768px) {
-	.entry .entry-content > h2.is-style-c4aa-clipPath-heading,
-	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
-	.entry h2.entry-title.is-style-c4aa-clipPath-heading,
-	h2.is-style-c4aa-clipPath-heading,
-	h3.is-style-c4aa-clipPath-heading {
-		transform: translate(-2rem, 0)
-	}
-
 	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
 	h3.is-style-c4aa-clipPath-heading {
-
+		transform: rotate(calc(var(--rotate) * 1deg)) translate(-2rem, 0);
 	}
 
 	.entry .entry-content > h4.is-style-c4aa-clipPath-heading,
 	h4.is-style-c4aa-clipPath-heading {
 		padding-left: 4rem;
-		transform: translate(-4rem, 0)
+		transform: rotate(calc(var(--rotate) * 1deg)) translate(-4rem, 0);
 	}
 }
 
+.entry .entry-content > h2 {
+	    transform: rotate(calc(var(--rotate) * 1deg)) translate(-0,5rem, 0);
+	    margin-top: calc( 5vw + 30px );
+	    margin-bottom: calc( 3vw + 30px );
+	}
+	
+	
+@media only screen and(min-width: 768px) {
+	    .entry .entry-content > h2 {
+	        transform: rotate(calc(var(--rotate) * 1deg)) translate(-1.5rem, 0);
+	    }
+	}
