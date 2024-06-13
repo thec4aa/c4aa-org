@@ -17,6 +17,7 @@ Get Clip Path Quote Selectors
 
 const blockquotes = document.querySelectorAll('.wp-block-quote, .wp-block-pullquote');
 
+
 /********************
 Store Clip Path Properties in Array
 *********************/
@@ -33,8 +34,6 @@ addBlockClipPaths(entryTitles);
 addBlockClipPaths(headings);
 addBlockClipPaths(widgetTitles);
 addBlockClipPaths(blockquotes);
-
-
 
 /**************
  Clip Path Helper Function
@@ -61,3 +60,27 @@ function addBlockClipPaths ( selector ) {
 	});
 }
 
+/*
+ * 
+ * Randomly Rotate Elements
+ * 
+ */
+
+// selector for elements
+const randomRotationElements = document.querySelectorAll(
+	'article.type-people .entry-content .wp-block-advanced-columns-column__inner figure img, .u-random-rotate'
+  );
+
+// Apply random rotation to each element
+randomRotationElements.forEach((img) => {
+	img.style.transform = `rotate(${getRandomRotation()}deg)`;
+  });
+
+
+  // Random Rotate Helper Function
+function getRandomRotation() {
+	// Generate a random number between -40 and 40 (-4 to +4 in tenths of a degree)
+	const randomTenthDegree = Math.floor(Math.random() * 80) - 40;
+	// Return the rotation value with one decimal place
+	return randomTenthDegree / 10;
+  }
