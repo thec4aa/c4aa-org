@@ -822,18 +822,38 @@ figure[class*="wp-duotone"] img:hover {
 *
 */
 
-@media only screen and(min-width: 768px) and(max-width: 1024px) {
 
-    .entry {
-        .entry-content {
-            .wp-block-pullquote {
-                &.about {
-                    blockquote {
-                        hyphens: none;
-                        font-size: 13px;
-                    }
-                }
-            }
-        }
+/* Scrollbar */
+
+/* Firefox Custom Scroll Bar */
+@-moz-document url-prefix() {
+    * {
+        scrollbar-color: var(--color-brandRed) var(--color-brandWhite);
+        scrollbar-width: auto;
     }
+}
+
+// Scrollbar for Chrome, Safari, Edge
+/* width */
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    width: 1rem;
+}
+  
+/* Track */
+::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+    background: var(--color-brandWhite);
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+    background: var(--color-brandRed)
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brandGrey);
 }
