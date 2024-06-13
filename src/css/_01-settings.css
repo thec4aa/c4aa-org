@@ -57,7 +57,10 @@
     margin-right: auto;
 }
  
-.entry .entry-content > .alignwide, .entry .entry-summary > .alignwide, .entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > .alignwide, .entry .entry-content > .wp-block-group > .wp-block-group__inner-container > .alignwide {
+.entry .entry-content > .alignwide, 
+.entry .entry-summary > .alignwide, 
+.entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > .alignwide, 
+.entry .entry-content > .wp-block-group > .wp-block-group__inner-container > .alignwide {
     max-width: var( --wp--style--global--wide-size );
 }
 

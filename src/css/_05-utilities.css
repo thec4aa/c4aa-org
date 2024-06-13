@@ -82,3 +82,7 @@
 .u-darken {
   mix-blend-mode: darken;
 }
+
+.u-random-rotate {
+  /* this is handled in clipPaths.js */
+}
