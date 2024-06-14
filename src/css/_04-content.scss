@@ -33,9 +33,13 @@
     margin-top: 0;
 }
 
-article.type-people .entry-content .wp-block-advanced-columns-column__inner figure img {
+article.type-people .entry-content .wp-block-advanced-columns-column__inner figure {
     mix-blend-mode: multiply;
     margin: -.5rem 0px !important; // override's t19 specific selector
+
+        & img {
+        border: 1px solid transparent; // force anti-aliasing in firefox
+        }
 }
 
 // IMAGES
