@@ -68,7 +68,7 @@ function addBlockClipPaths ( selector ) {
 
 // selector for elements
 const randomRotationElements = document.querySelectorAll(
-	'article.type-people .entry-content .wp-block-advanced-columns-column__inner figure img, .u-random-rotate'
+	'article.type-people .entry-content .wp-block-advanced-columns-column__inner figure img, .u-rotate-random'
   );
 
 // Apply random rotation to each element
