@@ -2,5 +2,8 @@
     font-family: var(--font-serif);
     font-style: italic;
     font-size: 1.2rem;
-    color: var(--color-brandRed);
 }
+
+.single-people .person-title p {
+    color: var(--color-brandRed);
+}   
