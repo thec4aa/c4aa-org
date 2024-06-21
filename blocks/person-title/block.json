@@ -23,7 +23,7 @@
             "link": true
         },
         "align": true,
-        "multiple": false,
+        "multiple": true,
         "renaming": true,
         "spacing": {
             "margin": true,
