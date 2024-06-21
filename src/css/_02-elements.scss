@@ -823,6 +823,28 @@ figure[class*="wp-duotone"] img:hover {
 *
 */
 
+/* Lightbox Overlay */
+
+.jp-carousel-close-hint svg {
+    background: var(--color-brandBlue);
+
+    &:hover {
+        background: var(--color-brandRed);
+    }
+}
+
+.jp-carousel-close-hint svg rect {
+    fill: var(--color-brandRed);
+
+    &:hover {
+        fill: var(--color-brandWhite);
+    }
+}
+
+.jp-carousel-photo-caption {
+    font-family: var(--font-serif);
+    color: var(--color-brandBlack);
+}
 
 /* Scrollbar */
 
