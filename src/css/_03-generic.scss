@@ -152,7 +152,7 @@ body.home .entry-header {
 }
 
 .site-header.featured-image {
-    min-height: 80vh;
+    // min-height: 80vh; // this causes the featured image to resize to the height of the viewport, and crops the image.
     padding: 0;
 }
 
