@@ -95,6 +95,10 @@
   transform: rotate(180deg);
 }
 
+.u-flip-horizontal {
+  transform: scaleX(-1);
+}
+
 .u-multiply {
   mix-blend-mode: multiply;
 }
