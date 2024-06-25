@@ -220,6 +220,11 @@ table strong {
 
 
 // Apply styles to headings
+
+h1 {
+    letter-spacing: 0.14em;
+}
+
 h1,
 h2,
 .entry .entry-content .wp-block-cover h2,
@@ -228,14 +233,14 @@ h6,
 .site-header.featured-image .entry-meta {
     font-family: var(--font-serif);
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.1em;
 }
 
 h4,
 h5 {
     font-family: var(--font-sans);
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.1em;
 }
 
 h3 {
@@ -367,7 +372,7 @@ input[type="submit"], /* catch old styles */
     font-family: var(--font-serif);
     font-weight: 500;
     padding: 0.75rem 1rem;
-    transition: rotate 50ms ease-in-out, transform 150ms ease-in-out, scale 150ms ease-in-out;
+    transition: rotate 50ms ease-out, transform 50ms ease-out, scale 50ms ease-out;
     transform: rotate(-2deg);
     border: none;
 
@@ -823,6 +828,28 @@ figure[class*="wp-duotone"] img:hover {
 *
 */
 
+/* Lightbox Overlay */
+
+.jp-carousel-close-hint svg {
+    background: var(--color-brandBlue);
+
+    &:hover {
+        background: var(--color-brandRed);
+    }
+}
+
+.jp-carousel-close-hint svg rect {
+    fill: var(--color-brandRed);
+
+    &:hover {
+        fill: var(--color-brandWhite);
+    }
+}
+
+.jp-carousel-photo-caption {
+    font-family: var(--font-serif);
+    color: var(--color-brandBlack);
+}
 
 /* Scrollbar */
 

@@ -75,6 +75,30 @@
   transform: rotate(-3deg);
 }
 
+.u-rotate-45 {
+  transform: rotate(45deg);
+}
+
+.u-rotate-neg45 {
+  transform: rotate(-45deg);
+}
+
+.u-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.u-rotate-neg90 {
+  transform: rotate(-90deg);
+}
+
+.u-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.u-flip-horizontal {
+  transform: scaleX(-1);
+}
+
 .u-multiply {
   mix-blend-mode: multiply;
 }
