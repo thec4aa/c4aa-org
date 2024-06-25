@@ -821,6 +821,14 @@ figure[class*="wp-duotone"] img:hover {
     filter: unset;
 }
 
+.wp-block-post-featured-image a img {
+    transition: transform 50ms ease-in;
+}
+
+.wp-block-post-featured-image a img:hover {    
+    transform: translateY(-0.5rem);
+    transition: transform 50ms ease-out;
+}
 
 /**
 *
