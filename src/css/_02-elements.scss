@@ -220,6 +220,11 @@ table strong {
 
 
 // Apply styles to headings
+
+h1 {
+    letter-spacing: 0.14em;
+}
+
 h1,
 h2,
 .entry .entry-content .wp-block-cover h2,
@@ -228,14 +233,14 @@ h6,
 .site-header.featured-image .entry-meta {
     font-family: var(--font-serif);
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.1em;
 }
 
 h4,
 h5 {
     font-family: var(--font-sans);
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.1em;
 }
 
 h3 {
