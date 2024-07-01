@@ -142,10 +142,10 @@ table strong {
 
 /* place navigation at bottom of container*/
 #site-navigation {
-    width: 100%;
-    order: 3;
     margin-right: auto;
 }
+
+
 
 @media(min-width: 768px) {
     .site-branding {
@@ -180,18 +180,32 @@ table strong {
     /* place navigtation between logos and align vertically */
     #site-navigation {
         width: auto;
-        order: 2;
-        // place navigation midway vertically
 
     }
 
     /* move logo to the right */
     .site-logo {
         display: none;
-        order: 3;
     }
 }
 
+
+// Social Navigation
+
+.site-header.featured-image .social-navigation svg,
+.social-navigation svg {
+    // filter drop shadow none
+    filter: none;
+    fill: var(--color-brandGrey);
+
+    & :hover {
+        fill: var(--color-brandRed);
+    }
+
+    &:active {
+        fill: var(--color-brandWhite);
+    }
+}
 
 /**
 *
