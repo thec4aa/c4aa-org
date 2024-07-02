@@ -198,13 +198,29 @@ table strong {
     filter: none;
     fill: var(--color-brandGrey);
 
-    & :hover {
+    &:hover {
         fill: var(--color-brandRed);
     }
 
     &:active {
         fill: var(--color-brandWhite);
     }
+}
+
+.social-navigation ul.social-links-menu li a:hover, 
+.social-navigation ul.social-links-menu li a:active {
+    color: var(--color-brandRed);
+    opacity: 1;
+}
+
+/* Hide the menu item initially */
+#menu-item-126895 {
+    visibility: hidden;
+}
+
+/* Show the menu item after the SVG is loaded */
+#menu-item-126895.svg-loaded {
+    visibility: visible;
 }
 
 /**
