@@ -214,12 +214,12 @@ table strong {
 }
 
 /* Hide the menu item initially */
-.social-navigation ul.social-links-menu li:last-child {
+.social-navigation ul.social-links-menu li.menu-search-icon {
     visibility: hidden;
 }
 
 /* Show the menu item after the SVG is loaded */
-.social-navigation ul.social-links-menu li:last-child.svg-loaded {
+.social-navigation ul.social-links-menu li.menu-search-icon.svg-loaded {
     visibility: visible;
 }
 
