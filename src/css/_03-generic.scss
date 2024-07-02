@@ -464,6 +464,10 @@ header h1.entry-title {
         display: none; /* Hide the main navigation menu by default on smaller screens */
     }
 
+    .social-navigation {
+        display: none; /* Hide the social navigation menu by default on smaller screens */
+    }
+
     .menu-toggle.active + .main-navigation {
         display: block; /* Show the main navigation menu when the icon is clicked */
     }
