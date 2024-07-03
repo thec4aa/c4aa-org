@@ -75,6 +75,14 @@
   transform: rotate(-3deg);
 }
 
+.u-rotate-4 {
+  transform: rotate(4deg);
+}
+
+.u-rotate-neg4 {
+  transform: rotate(-4deg);
+}
+
 .u-rotate-45 {
   transform: rotate(45deg);
 }
@@ -109,4 +117,8 @@
 
 .u-rotate-random {
   /* this is handled in clipPaths.js */
+}
+
+.u-duotone-sticky {
+  /* this is handled as a :not for duotone hovers */
 }
