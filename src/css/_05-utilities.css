@@ -115,6 +115,11 @@
   mix-blend-mode: darken;
 }
 
+/* for creating cards with image above text */
+.u-image-text-card .wp-block-image {
+  margin-bottom: 0;
+}
+
 .u-rotate-random {
   /* this is handled in clipPaths.js */
 }
