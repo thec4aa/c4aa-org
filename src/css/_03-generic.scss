@@ -326,6 +326,9 @@ header h1.entry-title {
                 width: 100%;
             }
         }
+        a:hover {
+            background-color: var(--color-brandBlack);
+        }
 
         &:nth-child(odd) a {
             clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
