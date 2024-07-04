@@ -76,6 +76,13 @@
     margin-left: 1.5rem;
 }
 
+@media only screen and (min-width: 768px) {
+	.entry .entry-content .wp-block-cover-image.alignfull, .entry .entry-content .wp-block-cover.alignfull {
+		padding-left: 10%;
+		padding-right: 10%
+	}
+}
+
 /* Allow image blocks to actually be full width */
 
 .entry .entry-content .wp-block-image {

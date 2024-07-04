@@ -214,12 +214,12 @@ table strong {
 }
 
 /* Hide the menu item initially */
-.social-navigation ul.social-links-menu li:last-child {
+.social-navigation ul.social-links-menu li.menu-search-icon {
     visibility: hidden;
 }
 
 /* Show the menu item after the SVG is loaded */
-.social-navigation ul.social-links-menu li:last-child.svg-loaded {
+.social-navigation ul.social-links-menu li.menu-search-icon.svg-loaded {
     visibility: visible;
 }
 
@@ -845,8 +845,9 @@ fieldset {
 // }
 
 /* turn off duotone on hover */
+/* except for anything with the u-duotone-sticky class */
 .wp-block-image img:hover,
-figure[class*="wp-duotone"] img:hover {
+figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
     -webkit-filter: unset;
     filter: unset;
 }
