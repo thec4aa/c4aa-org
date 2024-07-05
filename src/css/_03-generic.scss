@@ -175,12 +175,12 @@ body.home .entry-header {
     & a:active {
         font-weight: 700;
     }
-}
 
-// Remove margins from homepage video block
-.home .entry-content .wp-block-cover:first-child {
-    margin-top: 0;
-    margin-bottom: 0;
+    & h2 {
+        font-size: 2.8125rem;
+    }
+
+
 }
 
 /* Image Filter Setup */
