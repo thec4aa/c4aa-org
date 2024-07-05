@@ -160,10 +160,27 @@ body.home .entry-header {
     color: var(--color-brandWhite);
 }
 
-// Remove margins from homepage video block
-.home .entry-content .wp-block-cover:first-child {
-    margin-top: 0;
-    margin-bottom: 0;
+// HOME PAGE
+
+.entry .entry-content .home-panel-set {
+
+    & a {
+        font-weight: 700;
+    }
+
+    & a:hover {
+        font-weight: 700;
+    }
+
+    & a:active {
+        font-weight: 700;
+    }
+
+    & h2 {
+        font-size: 2.8125rem;
+    }
+
+
 }
 
 /* Image Filter Setup */
