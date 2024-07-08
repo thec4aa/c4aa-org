@@ -93,6 +93,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "whisper"
+            }
         ]
     ],
     "menu_order": 0,
@@ -104,5 +111,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715805082
+    "modified": 1720447084
 }
