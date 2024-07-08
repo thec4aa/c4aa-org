@@ -7,7 +7,7 @@
             "label": "Featured Image Duotone Filter",
             "name": "c4aa_image_filter",
             "aria-label": "",
-            "type": "radio",
+            "type": "select",
             "instructions": "Remember: use only one color from the secondary palette.",
             "required": 0,
             "conditional_logic": 0,
@@ -41,17 +41,18 @@
             },
             "default_value": "beige-and-blue",
             "return_format": "value",
+            "multiple": 0,
             "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5ce021ca5be86",
             "label": "Post Title Banner Color",
             "name": "c4aa_title_effect",
             "aria-label": "",
-            "type": "radio",
+            "type": "select",
             "instructions": "Go for contrast. Avoid the same color banner as the duotone.",
             "required": 0,
             "conditional_logic": 0,
@@ -71,12 +72,13 @@
                 "white-banner": "White Banner",
                 "default": "Default"
             },
-            "default_value": "",
+            "default_value": "black-banner",
             "return_format": "value",
+            "multiple": 0,
             "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -93,6 +95,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "whisper"
+            }
         ]
     ],
     "menu_order": 0,
@@ -104,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715805082
+    "modified": 1720454226
 }
