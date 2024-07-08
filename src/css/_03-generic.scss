@@ -555,15 +555,3 @@ header h1.entry-title {
 .wp-lightbox-overlay .close-button:focus, .wp-lightbox-overlay .close-button:hover, .wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background) {
     background: var(--color-brandBlack);
 }
-
-// Simple Banner fixes
-
-.simple-banner-text a:link {
-    text-decoration: underline !important;
-}
-.simple-banner-text a:visited {
-    text-decoration: underline !important;
-}
-.simple-banner-text a:hover {
-    text-decoration: none !important;
-}

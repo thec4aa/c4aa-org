@@ -121,7 +121,7 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 }
 
-/* Query Loop */
+/* Query Loop Block */
 /* break columns down to 1 on tablet size screens */
 
 @media screen and(max-width: 1024px) {
@@ -229,6 +229,19 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 #post-11514 .entry-content .wp-block-column h5.wp-block-heading + p {
     margin-top: 0.5rem;
     line-height: 1.4rem;
+}
+
+// SIMPLE BANNER
+
+#simple-banner {
+    
+    & a {
+        text-decoration: 2px dotted underline;
+    }
+
+    & a:hover {
+        text-decoration: solid underline;
+    }
 }
 
 /****************/
