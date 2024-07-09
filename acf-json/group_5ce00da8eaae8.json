@@ -1,10 +1,10 @@
 {
     "key": "group_5ce00da8eaae8",
-    "title": "C4AA Options",
+    "title": "Header Options",
     "fields": [
         {
             "key": "field_5ce00db2dcfae",
-            "label": "Featured Image Duotone Filter",
+            "label": "Featured Image Duotone",
             "name": "c4aa_image_filter",
             "aria-label": "",
             "type": "select",
@@ -49,7 +49,7 @@
         },
         {
             "key": "field_5ce021ca5be86",
-            "label": "Post Title Banner Color",
+            "label": "Title Banner Color",
             "name": "c4aa_title_effect",
             "aria-label": "",
             "type": "select",
@@ -113,5 +113,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1720454226
+    "modified": 1720469252
 }
