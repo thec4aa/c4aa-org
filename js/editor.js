@@ -21,4 +21,10 @@ wp.domReady( () => {
 		isDefault: false
 	} );
 
+	wp.blocks.registerBlockStyle('core/group', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
 });
