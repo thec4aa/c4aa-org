@@ -27,4 +27,33 @@ wp.domReady( () => {
 		isDefault: false
 	} );
 
+	wp.blocks.registerBlockStyle('core/query', {
+		name: 'cycle-primary',
+		label: 'Primary Cycle',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/query', {
+		name: 'cycle-primary-plus-blue',
+		label: 'Primary + Blue',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/query', {
+		name: 'cycle-primary-plus-green',
+		label: 'Primary + Green',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/query', {
+		name: 'cycle-primary-plus-purple',
+		label: 'Primary + Purple',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/query', {
+		name: 'cycle-primary-plus-yellow',
+		label: 'Primary + Yellow',
+		isDefault: false
+	} );
 });
