@@ -21,11 +21,65 @@ wp.domReady( () => {
 		isDefault: false
 	} );
 
+	// Adding Random Rotation to Various Blocks
+	
 	wp.blocks.registerBlockStyle('core/group', {
 		name: 'rotate-random',
 		label: 'Random Rotation',
 		isDefault: false
 	} );
+
+	wp.blocks.registerBlockStyle('core/image', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/cover', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/column', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/list', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/media-text', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/paragraph', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/quote', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/separator', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	
+	// Query Loop Block Styles
+	// these cycle through background colors for the group blocks within them.
 
 	wp.blocks.registerBlockStyle('core/query', {
 		name: 'cycle-primary',
