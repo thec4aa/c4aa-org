@@ -37,13 +37,13 @@ table strong {
 // override t19 for .wp-block-* elements
 // more may need to be added to this in the future
 .entry .entry-content {
-	.wp-block-archives li > a,
-	.wp-block-categories li > a,
-	.wp-block-latest-posts li > a,
-	.wp-block-latest-posts .wp-block-latest-posts__post-date {
-	  font-family: var(--font-sans);
-	}
-  }
+    .wp-block-archives li > a,
+    .wp-block-categories li > a,
+    .wp-block-latest-posts li > a,
+    .wp-block-latest-posts .wp-block-latest-posts__post-date {
+        font-family: var(--font-sans);
+    }
+}
 
 .site-branding,
 .page-title {
@@ -146,7 +146,6 @@ table strong {
 }
 
 
-
 @media(min-width: 768px) {
     .site-branding {
         margin: 0;
@@ -159,7 +158,7 @@ table strong {
 
     .entry .entry-content {
         margin: 0 10%;
-        padding: 0 0%;
+        padding: 0;
         max-width: 90%;
     }
 
@@ -216,7 +215,7 @@ table strong {
     }
 }
 
-.social-navigation ul.social-links-menu li a:hover, 
+.social-navigation ul.social-links-menu li a:hover,
 .social-navigation ul.social-links-menu li a:active {
     color: var(--color-brandRed);
     opacity: 1;
@@ -829,15 +828,15 @@ fieldset {
 // makes "Default" gutenberg selected separator centered and width 90%
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default,
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-    width: calc(.9 * var(--wp--style--global--content-size));
+    width: calc(0.9 * var(--wp--style--global--content-size));
     max-width: var(--wp--style--global--content-size);
 }
 
 .wp-block-separator.alignwide:not(.is-style-wide):not(.is-style-dots).is-style-default,
 .wp-block-separator.alignwide:not(.is-style-wide):not(.is-style-dots) {
-        width: calc(.9 * var(--wp--style--global--wide-size));
-        max-width: var(--wp--style--global--wide-size);
-    }
+    width: calc(0.9 * var(--wp--style--global--wide-size));
+    max-width: var(--wp--style--global--wide-size);
+}
 
 
 /**
@@ -865,7 +864,7 @@ figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
     transition: transform 50ms ease-in;
 }
 
-.wp-block-post-featured-image a img:hover {    
+.wp-block-post-featured-image a img:hover {
     transform: translateY(-0.5rem);
     transition: transform 50ms ease-out;
 }
@@ -915,19 +914,19 @@ figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
 *::-webkit-scrollbar {
     width: 1rem;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track,
 *::-webkit-scrollbar-track {
     background: var(--color-brandWhite);
 }
-   
+
 /* Handle */
 ::-webkit-scrollbar-thumb,
 *::-webkit-scrollbar-thumb {
     background: var(--color-brandRed)
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover,
 *::-webkit-scrollbar-thumb:hover {
