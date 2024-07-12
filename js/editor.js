@@ -35,6 +35,12 @@ wp.domReady( () => {
 		isDefault: false
 	} );
 
+	wp.blocks.registerBlockStyle('core/button', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
 	wp.blocks.registerBlockStyle('core/cover', {
 		name: 'rotate-random',
 		label: 'Random Rotation',
@@ -60,6 +66,12 @@ wp.domReady( () => {
 	} );
 
 	wp.blocks.registerBlockStyle('core/paragraph', {
+		name: 'rotate-random',
+		label: 'Random Rotation',
+		isDefault: false
+	} );
+
+	wp.blocks.registerBlockStyle('core/post-featured-image', {
 		name: 'rotate-random',
 		label: 'Random Rotation',
 		isDefault: false
