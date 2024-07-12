@@ -636,7 +636,7 @@ header h1.entry-title {
 }
 
 // Alternating colors from secondary palette
-.wp-block-query.is-style-cycle-primary-plus-blue ul.wp-block-post-template  {
+.wp-block-query.is-style-cycle-primary-plus-blue ul.wp-block-post-template {
 
     & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
         background-color: var(--color-brandBlue) !important;

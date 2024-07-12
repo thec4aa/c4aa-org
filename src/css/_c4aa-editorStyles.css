@@ -197,16 +197,20 @@ ul li{
 	font-size: 1rem;
 }
 
-.wp-block-pullquote.has-small-font-size blockquote {
-	font-size: .75rem;
+.wp-block-pullquote.has-small-font-size blockquote p {
+	font-size: var(--wp--preset--font-size--small);
 }
 
-.wp-block-pullquote.has-large-font-size blockquote {
-	font-size: 2rem;
+.wp-block-pullquote.has-normal-font-size blockquote p {
+	font-size: var(--wp--preset--font-size--normal);
 }
 
-.wp-block-pullquote.has-huge-font-size blockquote {
-	font-size: 3rem;
+.wp-block-pullquote.has-large-font-size blockquote p{
+	font-size: var(--wp--preset--font-size--large);
+}
+
+.wp-block-pullquote.has-huge-font-size blockquote p {
+	font-size: var(--wp--preset--font-size--x-large);
 }
 
 .wp-block-pullquote:not(.has-background),
