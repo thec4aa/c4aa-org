@@ -555,3 +555,127 @@ header h1.entry-title {
 .wp-lightbox-overlay .close-button:focus, .wp-lightbox-overlay .close-button:hover, .wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background) {
     background: var(--color-brandBlack);
 }
+
+/**
+  * Query Block Cycling Backgrounds 
+  * Groups within the query block will cycle through the primary palette colors
+  *
+**/
+
+// Primary Palette
+
+.wp-block-query.is-style-cycle-primary ul.wp-block-post-template  {
+
+    & li.wp-block-post:nth-of-type(4n) div.wp-block-group {
+    background-color: var(--color-brandRed) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+            color: var(--color-brandWhite) !important;
+        }
+    }
+
+    & li.wp-block-post:nth-of-type(4n-3) div.wp-block-group {
+        background-color: var(--color-brandBlack) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+            color: var(--color-brandWhite) !important;
+        }
+    }    
+
+    & li.wp-block-post:nth-of-type(4n-2) div.wp-block-group {
+    background-color: var(--color-brandBeige) !important;
+        
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+            color: var(--color-brandBlack) !important;
+        }
+    }  
+
+    & li.wp-block-post:nth-of-type(4n-1) div.wp-block-group {
+        background-color: var(--color-brandGrey) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+            color: var(--color-brandWhite) !important;
+        }
+    }
+}
+
+// primary minus secondary color (see below)
+.wp-block-query[class*="is-style-cycle-primary-plus"] ul.wp-block-post-template  {
+
+    & li.wp-block-post:nth-of-type(5n) div.wp-block-group {
+    background-color: var(--color-brandRed) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+            color: var(--color-brandWhite) !important;
+        }
+    }
+
+    & li.wp-block-post:nth-of-type(5n-4) div.wp-block-group {
+        background-color: var(--color-brandBlack) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+            color: var(--color-brandWhite) !important;
+        }
+    }     
+
+    & li.wp-block-post:nth-of-type(5n-2) div.wp-block-group {
+    background-color: var(--color-brandBeige) !important;
+        
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+            color: var(--color-brandBlack) !important;
+        }
+    }  
+
+    & li.wp-block-post:nth-of-type(5n-1) div.wp-block-group {
+        background-color: var(--color-brandGrey) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+            color: var(--color-brandWhite) !important;
+        }
+    }
+}
+
+// Alternating colors from secondary palette
+.wp-block-query.is-style-cycle-primary-plus-blue ul.wp-block-post-template  {
+
+    & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
+        background-color: var(--color-brandBlue) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+            color: var(--color-brandWhite) !important;
+        }
+    }    
+}
+
+.wp-block-query.is-style-cycle-primary-plus-green ul.wp-block-post-template  {
+
+    & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
+        background-color: var(--color-brandGreen) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+            color: var(--color-brandWhite) !important;
+        }
+    }    
+}
+
+.wp-block-query.is-style-cycle-primary-plus-purple ul.wp-block-post-template  {
+
+    & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
+        background-color: var(--color-brandPurple) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+            color: var(--color-brandWhite) !important;
+        }
+    }    
+}
+
+.wp-block-query.is-style-cycle-primary-plus-yellow ul.wp-block-post-template  {
+
+    & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
+        background-color: var(--color-brandYellow) !important;
+
+        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+            color: var(--color-brandBlack) !important;
+        }
+    }    
+}

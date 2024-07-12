@@ -156,13 +156,13 @@ table strong {
     .site-logo {
         position: static;
     }
-}
 
-/* this was 1000px and not sure why. Seems to work at 1260px  #309 */
-@media(min-width: 1260px) {
-    .site-branding {
-        margin: 0 calc(10% + 60px);
+    .entry .entry-content {
+        margin: 0 10%;
+        padding: 0 0%;
+        max-width: 90%;
     }
+
 }
 
 @media(min-width: 1260px) {
@@ -170,6 +170,7 @@ table strong {
         min-height: 5rem;
         flex-wrap: nowrap;
         justify-content: space-evenly;
+        margin: 0 calc(10% + 60px);
     }
 
     .c4aa-text-logo {
@@ -187,6 +188,14 @@ table strong {
     .site-logo {
         display: none;
     }
+
+    .entry .entry-content {
+        // default t19 margin/padding
+        max-width: 80%;
+        margin: 0 10%;
+        padding: 0 60px;
+    }
+
 }
 
 
