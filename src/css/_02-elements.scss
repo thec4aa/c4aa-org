@@ -601,9 +601,23 @@ input[type="submit"]:focus,
 *
 */
 
-/* remove space between block quotes and featured image */
-.entry-content .wp-block-pullquote:first-child {
+/* FIRST block quotes under featured image */
+.entry .entry-content > figure:first-child.wp-block-pullquote {
     margin-top: 0;
+
+    & blockquote {
+        margin-top: calc(4 * 1rem);
+        margin-bottom: calc(4.33 * 1rem);
+        padding: 0;
+    }
+
+    & blockquote p {
+        font-family: var(--font-sans);
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: var(--wp--preset--font-size--large);
+        font-weight: 400;
+    }
 }
 
 /* Pullquotes */
@@ -614,18 +628,31 @@ input[type="submit"]:focus,
     background-color: var(--color-brandRed);
     color: var(--color-brandWhite);
 
-    & p {
-        font-size: 2rem; /* fallback */
-        font-size: clamp(1.5rem, 1.1250rem + 1.8750vw, 2rem);
-        font-weight: 400;
+    & blockquote p {
+        font-family: var(--font-serif);
+        font-size: var(--wp--preset--font-size--normal);
+        font-weight: 500;
         font-style: normal;
         hyphens: manual;
+
+        @media screen and(max-width: 768) {
+            font-size: var(--wp--preset--font-size--large);
+        }
     }
 
     & cite {
         font: 400 1.25rem var(--font-serif);
     }
 }
+
+// Basic style adjustments for mobile
+@media only screen and(max-width: 768px) {
+
+    .entry .entry-content .wp-block-pullquote blockquote p {
+        font-size: var(--wp--preset--font-size--large);
+    }
+}
+
 
 /* default colors */
 
@@ -644,24 +671,74 @@ input[type="submit"]:focus,
 }
 
 
-/* Extra padding to full width pullquote block */
-.entry .entry-content .wp-block-pullquote.alignfull {
-    @media only screen and(min-width: 768px) {
-        padding-left: calc(10% + 58px + (2 * 1rem));
-        padding-right: calc(10% + 58px + (2 * 1rem));
+/* Styles for pullquote block */
+.entry .entry-content .wp-block-pullquote {
+
+    & blockquote {
+        padding: 1rem;
+        margin: 0 1rem;
     }
+
+    &.alignright blockquote {
+        padding: 2rem 2.5rem 1.5rem;
+    }
+
+    &.alignleft blockquote {
+        padding: 2rem 2.5rem 1.5rem;
+    }
+
+    &.alignfull {
+        @media only screen and(min-width: 768px) {
+            padding-left: calc(10% + 58px + (2 * 1rem));
+            padding-right: calc(10% + 58px + (2 * 1rem));
+        }
+    }
+
+    &.has-small-font-size blockquote p {
+        font-size: calc(1.2 * var(--wp--preset--font-size--small));
+
+        @media only screen and(max-width: 768px) {
+            font-size: calc(1.1 * var(--wp--preset--font-size--normal));
+
+        }
+    }
+
+    &.has-normal-font-size blockquote p {
+        font-size: var(--wp--preset--font-size--normal);
+
+        @media only screen and(max-width: 768px) {
+            font-size: var(--wp--preset--font-size--large);
+
+        }
+    }
+
+    &.has-large-font-size blockquote p {
+        font-size: var(--wp--preset--font-size--large);
+
+        @media only screen and(max-width: 768px) {
+            font-size: var(--wp--preset--font-size--x-large);
+
+        }
+    }
+
+    &.has-x-large-font-size blockquote p {
+        font-size: var(--wp--preset--font-size--x-large);
+
+        @media only screen and(max-width: 768px) {
+            font-size: var(--wp--preset--font-size--x-large);
+
+        }
+    }
+
 }
 
 /* Friendlier mobile styling for floating pullquotes in post */
 .entry .entry-content .wp-block-pullquote.alignright,
 .entry .entry-content .wp-block-pullquote.alignleft {
-    & blockquote {
-        padding: 0 2.5rem;
-    }
-    @media screen and(max-width: 768px) {
+
+    @media only screen and(max-width: 768px) {
         float: none;
         max-width: 100%;
-        padding: 1rem;
         margin: 0;
     }
 }
