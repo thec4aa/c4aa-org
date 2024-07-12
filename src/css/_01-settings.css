@@ -68,13 +68,21 @@
     max-width: none;
 }
  
-.entry-content > .alignleft {
+.entry .entry-content > .alignleft {
     margin-right: 1.5rem;
 }
  
-.entry-content > .alignright {
-    margin-left: 1.5rem;
+.entry .entry-content > .alignright {
+    margin-left: 2.5rem;
 }
+
+@media only screen and (max-width: 1260px) {}
+
+.entry .entry-content > .alignleft,
+.entry .entry-content > .alignright {
+    width: calc(50% - 1.5rem);
+}
+
 
 @media only screen and (min-width: 768px) {
 	.entry .entry-content .wp-block-cover-image.alignfull, .entry .entry-content .wp-block-cover.alignfull {
