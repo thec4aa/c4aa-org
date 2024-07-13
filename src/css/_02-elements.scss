@@ -975,6 +975,64 @@ figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
     color: var(--color-brandBlack);
 }
 
+/* DETAILS BLOCK */
+.entry .entry-content details.wp-block-details { 
+    // Entire block
+    border-bottom: solid 2px var(--color-brandRed);
+    border-top: solid 2px var(--color-brandRed);
+    transition: all 0.2s ease-in;
+    background-color: var(--color-brandWhite);
+    mix-blend-mode: multiply;
+
+
+    & summary {
+        // summary at top
+        font-family: var(--font-serif);
+        font-size: var(--wp--preset--font-size--normal);
+        font-weight: 400;
+        line-height: 1.5;
+        padding: 1rem;
+        margin: 0;
+        list-style-position: outside;
+        
+        @include common-link-styles;
+
+        &:hover {
+            @include hover-link-styles;
+        }
+
+        & > * {
+            margin: .7rem 1rem;
+            margin-block-start: 1.5rem;
+        }
+
+        &::before {
+            content: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' fill='%23F5333F'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Ctitle%3Eplus-circle%3C/title%3E%3Cdesc%3ECreated with Sketch Beta.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' sketch:type='MSPage'%3E%3Cg id='Icon-Set' sketch:type='MSLayerGroup' transform='translate(-464.000000, -1087.000000)' fill='%23F5333F'%3E%3Cpath d='M480,1117 C472.268,1117 466,1110.73 466,1103 C466,1095.27 472.268,1089 480,1089 C487.732,1089 494,1095.27 494,1103 C494,1110.73 487.732,1117 480,1117 L480,1117 Z M480,1087 C471.163,1087 464,1094.16 464,1103 C464,1111.84 471.163,1119 480,1119 C488.837,1119 496,1111.84 496,1103 C496,1094.16 488.837,1087 480,1087 L480,1087 Z M486,1102 L481,1102 L481,1097 C481,1096.45 480.553,1096 480,1096 C479.447,1096 479,1096.45 479,1097 L479,1102 L474,1102 C473.447,1102 473,1102.45 473,1103 C473,1103.55 473.447,1104 474,1104 L479,1104 L479,1109 C479,1109.55 479.447,1110 480,1110 C480.553,1110 481,1109.55 481,1109 L481,1104 L486,1104 C486.553,1104 487,1103.55 487,1103 C487,1102.45 486.553,1102 486,1102 L486,1102 Z' id='plus-circle' sketch:type='MSShapeGroup'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            display: inline-block;
+            width: 1.2rem;
+            margin-right: 1rem;
+            vertical-align: middle;
+            color: var(--color-brandRed);
+        }
+    }
+
+    & summary::marker {
+        content: '';
+    }
+
+    &[open] summary::before {
+        content: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' fill='%23F5333F'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Ctitle%3Eminus-circle%3C/title%3E%3Cdesc%3ECreated with Sketch Beta.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' sketch:type='MSPage'%3E%3Cg id='Icon-Set' sketch:type='MSLayerGroup' transform='translate(-516.000000, -1087.000000)' fill='%23F5333F'%3E%3Cpath d='M532,1117 C524.268,1117 518,1110.73 518,1103 C518,1095.27 524.268,1089 532,1089 C539.732,1089 546,1095.27 546,1103 C546,1110.73 539.732,1117 532,1117 L532,1117 Z M532,1087 C523.163,1087 516,1094.16 516,1103 C516,1111.84 523.163,1119 532,1119 C540.837,1119 548,1111.84 548,1103 C548,1094.16 540.837,1087 532,1087 L532,1087 Z M538,1102 L526,1102 C525.447,1102 525,1102.45 525,1103 C525,1103.55 525.447,1104 526,1104 L538,1104 C538.553,1104 539,1103.55 539,1103 C539,1102.45 538.553,1102 538,1102 L538,1102 Z' id='minus-circle' sketch:type='MSShapeGroup'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+        color: var(--color-brandRed);
+    }
+
+    & p {
+        padding: 0rem 1rem;
+    }
+
+    & p:last-of-type {
+        padding-bottom: 3rem;
+    }
+}
 /* Scrollbar */
 
 /* Firefox Custom Scroll Bar */
