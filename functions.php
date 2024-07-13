@@ -50,6 +50,15 @@ function wpdocs_add_editor_styles() {
 
 }
 
+// This filter allows emoji to be added to the post content
+// https://stackoverflow.com/questions/63100373/wordpress-unable-to-save-or-update-posts-with-emoji
+add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
+	if ( ! empty( $data['post_content'] ) ) {
+		$data['post_content'] = wp_encode_emoji( $data['post_content'] );
+	}
+	return $data;
+	}, 99, 2 );
+
 // function to add bloomerang tracking script:
 function c4aa_add_bloomerang_tracking_script() {
 	echo '<script src="https://api.bloomerang.co/v1/WebsiteVisit?ApiKey=pub_3cb484db-d146-11ec-b5ee-066e3d38bc77" type="text/javascript"></script>
