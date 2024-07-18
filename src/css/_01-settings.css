@@ -141,9 +141,3 @@
 	  transition-duration: 0.001ms !important;
 	}
   }
-
-
-.classic-desc-wrapper h3 {
- font-family: 'Zilla Slab', 'Courier New', Courier, monospace;
- color: blue;
-  }

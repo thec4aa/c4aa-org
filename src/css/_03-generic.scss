@@ -304,28 +304,6 @@ header h1.entry-title {
 // ? Updates: October 19, 2023
 /*****************/
 
-// No underlines on hover for menu items in general
-#menu-2019menu .menu-item a {
-text-decoration: none;
-}
-
-// If the top line menu item is a link, show an underline on hover
-#menu-2019menu .menu-item-has-children a:hover {
-text-decoration: underline solid;
-}
-
-// indicate the others are links with a dotted underline - except on mobile
-@media only screen and(min-width: 768px) {
-    #menu-2019menu .sub-menu .menu-item a {
-    text-decoration: underline dotted;
-    }
-}
-
-#menu-2019menu .sub-menu .menu-item a:hover {
-text-decoration: underline solid;
-}
-  
-
 .main-navigation {
     margin-top: 0; // reset from parent theme
     margin-left: 2rem;
