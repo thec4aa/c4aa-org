@@ -885,9 +885,18 @@ fieldset {
 .c4aa-magic-hand {
     color: var(--color-brandRed);
     max-width: 80px;
+
+    @media screen and (max-width: 768px) {
+       margin-left: calc(50vw - 60px);
+      }
+      
 }
 
-
+@media screen and (max-width: 768px) {
+    .footer-contact, .footer-menu-column {
+        text-align: center !important;
+    }
+}
 /**
 * 
 * SEPARATOR BLOCK
