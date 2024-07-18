@@ -266,7 +266,6 @@ header h1.entry-title {
 }*/
 
 
-
 /* Remove top and bottom margins on alignfull */
 .entry .entry-content .alignfull {
     margin-top: 0;
@@ -303,6 +302,27 @@ header h1.entry-title {
 /*****************/
 // ? Updates: October 19, 2023
 /*****************/
+
+// No underlines on hover for menu items in general
+#menu-2019menu .menu-item a {
+    text-decoration: none;
+}
+
+// If the top line menu item is a link, show an underline on hover
+#menu-2019menu .menu-item-has-children a:hover {
+    text-decoration: underline solid;
+}
+
+// indicate the others are links with a dotted underline - except on mobile
+@media only screen and(min-width: 768px) {
+    #menu-2019menu .sub-menu .menu-item a {
+        text-decoration: underline dotted;
+    }
+}
+
+#menu-2019menu .sub-menu .menu-item a:hover {
+    text-decoration: underline solid;
+}
 
 .main-navigation {
     margin-top: 0; // reset from parent theme
@@ -552,7 +572,9 @@ header h1.entry-title {
     background-color: var(--color-brandWhite);
 }
 
-.wp-lightbox-overlay .close-button:focus, .wp-lightbox-overlay .close-button:hover, .wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background) {
+.wp-lightbox-overlay .close-button:focus,
+.wp-lightbox-overlay .close-button:hover,
+.wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background) {
     background: var(--color-brandBlack);
 }
 
@@ -564,12 +586,21 @@ header h1.entry-title {
 
 // Primary Palette
 
-.wp-block-query.is-style-cycle-primary ul.wp-block-post-template  {
+.wp-block-query.is-style-cycle-primary ul.wp-block-post-template {
 
     & li.wp-block-post:nth-of-type(4n) div.wp-block-group {
-    background-color: var(--color-brandRed) !important;
+        background-color: var(--color-brandRed) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
     }
@@ -577,35 +608,71 @@ header h1.entry-title {
     & li.wp-block-post:nth-of-type(4n-3) div.wp-block-group {
         background-color: var(--color-brandBlack) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
-    }    
+    }
 
     & li.wp-block-post:nth-of-type(4n-2) div.wp-block-group {
-    background-color: var(--color-brandBeige) !important;
-        
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+        background-color: var(--color-brandBeige) !important;
+
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandBlack) !important;
         }
-    }  
+    }
 
     & li.wp-block-post:nth-of-type(4n-1) div.wp-block-group {
         background-color: var(--color-brandGrey) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
     }
 }
 
 // primary minus secondary color (see below)
-.wp-block-query[class*="is-style-cycle-primary-plus"] ul.wp-block-post-template  {
+.wp-block-query[class*="is-style-cycle-primary-plus"] ul.wp-block-post-template {
 
     & li.wp-block-post:nth-of-type(5n) div.wp-block-group {
-    background-color: var(--color-brandRed) !important;
+        background-color: var(--color-brandRed) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
     }
@@ -613,23 +680,50 @@ header h1.entry-title {
     & li.wp-block-post:nth-of-type(5n-4) div.wp-block-group {
         background-color: var(--color-brandBlack) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
-    }     
+    }
 
     & li.wp-block-post:nth-of-type(5n-2) div.wp-block-group {
-    background-color: var(--color-brandBeige) !important;
-        
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+        background-color: var(--color-brandBeige) !important;
+
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandBlack) !important;
         }
-    }  
+    }
 
     & li.wp-block-post:nth-of-type(5n-1) div.wp-block-group {
         background-color: var(--color-brandGrey) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
     }
@@ -641,41 +735,77 @@ header h1.entry-title {
     & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
         background-color: var(--color-brandBlue) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
-    }    
+    }
 }
 
-.wp-block-query.is-style-cycle-primary-plus-green ul.wp-block-post-template  {
+.wp-block-query.is-style-cycle-primary-plus-green ul.wp-block-post-template {
 
     & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
         background-color: var(--color-brandGreen) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
-    }    
+    }
 }
 
-.wp-block-query.is-style-cycle-primary-plus-purple ul.wp-block-post-template  {
+.wp-block-query.is-style-cycle-primary-plus-purple ul.wp-block-post-template {
 
     & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
         background-color: var(--color-brandPurple) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandWhite) !important;
         }
-    }    
+    }
 }
 
-.wp-block-query.is-style-cycle-primary-plus-yellow ul.wp-block-post-template  {
+.wp-block-query.is-style-cycle-primary-plus-yellow ul.wp-block-post-template {
 
     & li.wp-block-post:nth-of-type(5n-3) div.wp-block-group {
         background-color: var(--color-brandYellow) !important;
 
-        & p, time, h1, h2, h3, h4, h5, h6, a, a:hover  {
+        & p,
+        time,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a,
+        a:hover {
             color: var(--color-brandBlack) !important;
         }
-    }    
+    }
 }
