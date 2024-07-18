@@ -222,6 +222,20 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 /* Donate Page */
 
+// Strip out the header & footer to keep it simple
+
+.page-id-12750 #site-navigation,
+.page-id-12750 .social-navigation,
+.page-id-12750 .entry-title
+ {
+    display: none;
+}
+
+.page-id-12750 .footer-menu-column {
+    display: none;
+}
+
+
 /* Kindful/Bloomerang donate form height */
 
 .kindful-embed-wrapper {
