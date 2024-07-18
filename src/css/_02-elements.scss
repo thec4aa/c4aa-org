@@ -390,6 +390,14 @@ h4 {
     }
 }
 
+#colophon .site-info a {
+    text-decoration: none;
+}
+
+#colophon .site-info a:hover {
+    @include common-link-styles;
+}
+
 /**
 *
 * BUTTONS
@@ -1032,8 +1040,9 @@ details.wp-block-details:first-child, :not(.wp-block-details) + .wp-block-detail
         color: var(--color-brandRed);
     }
 
-    & p {
-        padding: 0rem 1rem;
+    & > * {
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 
     & > *:last-child {
