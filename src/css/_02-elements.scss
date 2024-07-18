@@ -345,7 +345,11 @@ h4 {
 
 // Mixin for hover styles
 @mixin hover-link-styles {
+    text-decoration: underline;
     text-decoration-style: solid;
+    text-decoration-thickness: 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
+    text-underline-offset: 0.2em; // must be set or will show up different on different browsers
+    text-decoration-skip-ink: none;
 }
 
 .entry .entry-content {
@@ -976,26 +980,29 @@ figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
 }
 
 /* DETAILS BLOCK */
+
+details.wp-block-details:first-child, :not(.wp-block-details) + .wp-block-details {
+    border-top: solid 2px var(--color-brandRed);
+}
+
 .entry .entry-content details.wp-block-details { 
     // Entire block
-    border-bottom: solid 2px var(--color-brandRed);
-    border-top: solid 2px var(--color-brandRed);
     transition: all 0.2s ease-in;
     background-color: var(--color-brandWhite);
     mix-blend-mode: multiply;
-
+    margin: 0 auto;
+    border-bottom: solid 2px var(--color-brandRed);
 
     & summary {
         // summary at top
         font-family: var(--font-serif);
-        font-size: var(--wp--preset--font-size--normal);
         font-weight: 400;
         line-height: 1.5;
         padding: 1rem;
         margin: 0;
         list-style-position: outside;
         
-        @include common-link-styles;
+        // @include common-link-styles;
 
         &:hover {
             @include hover-link-styles;
@@ -1029,7 +1036,7 @@ figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
         padding: 0rem 1rem;
     }
 
-    & p:last-of-type {
+    & > *:last-child {
         padding-bottom: 3rem;
     }
 }
