@@ -224,21 +224,29 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 // Strip out the header & footer to keep it simple
 
-.page-id-12750 #site-navigation,
-.page-id-12750 .social-navigation,
-.page-id-12750 .entry-title
- {
-    display: none;
+@media screen and (min-width: 768px) {
+    .page-id-12750 #site-navigation,
+    .page-id-12750 .social-navigation,
+    .page-id-12750 .entry-title
+    {
+        visibility: hidden;
+    }
 }
 
-.page-id-12750 .footer-menu-column {
-    display: none;
+.page-id-12750 .footer-menu-column, .page-id-12750 .footer-contact {
+    visibility: hidden;
 }
 
 .page-id-12750 .digital-payment-methods {
     width: 360px;
     margin: 0px auto 1rem
 }
+
+// Column the kindful donate form is within (othewise it breaks out)
+.wp-block-advanced-columns-column-87c3489bae2ca26ab55c8eb81adda0d3 {
+    min-width: 360px;
+  }
+
 
 
 /* About Page - Temporary until we get People Post Type */
