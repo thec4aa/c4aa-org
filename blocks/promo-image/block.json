@@ -1,0 +1,67 @@
+{
+	"$schema": "https://github.com/AdvancedCustomFields/schemas/blob/main/json/block.json",
+	"apiVersion": 3,
+	"name": "c4aa-org/promo-image",
+    "version": "0.0.1",
+    "title": "Promo image",
+    "description": "Display promotional image",
+	"category": "C4AA",
+    "icon": "cover-image",
+    "keywords": [ "promo", "image", "social" ],
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true }
+    ],
+    "editorStyle": "file:./style.css",
+    "style": [ "file:./style.css", "promo-image-shared-style" ],
+    "viewStyle": [ "file:./style.css", "promo-image-view-style" ],
+    "acf": {
+        "renderTemplate": "render.php",
+        "mode": "preview",
+        "blockVersion": 2
+    },
+    "supports": {
+        "color": {
+            "background": false,
+            "text": false,
+            "link": false
+        },
+        "dimensions": {
+            "aspectRatio": true, 
+            "minHeight": true
+        },
+        "filter": {
+            "duotone": true
+        },
+        "multiple": true,     
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "typography": {
+            "fontSize": false,
+            "lineHeight": false,
+            "textAlign": true
+        }
+    },
+    "selectors": {
+        "filter": {
+            "duotone": ".wp-block-promo-image img"
+        }
+    },
+    "example": {
+        "attributes": {
+            "promo-image": "https://c4aa.local/wp-content/uploads/2024/04/C4AA_Icon_MagicHand-Red.png"
+        }
+    },
+    "attributes": {
+        "style": {
+            "dimensions": {
+                "aspectRatio": {
+                    "default": "1/1"
+                }
+            }
+        }
+    }    
+
+}

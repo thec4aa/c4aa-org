@@ -244,13 +244,14 @@ function twentynineteen_post_thumbnail() {
 
 
 
-/* Register blocks for showing People's info in block editor */
+/* Register themes's custom blocks */
 
 add_action( 'init', 'register_c4aa_org_blocks' );
 
 function register_c4aa_org_blocks() {
     register_block_type( dirname(__FILE__) . '/blocks/person-title');
     register_block_type( dirname(__FILE__) . '/blocks/person-email' );
+	register_block_type( dirname(__FILE__) . '/blocks/promo-image' );
 }
 
 /* Register Block Category */

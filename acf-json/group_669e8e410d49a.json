@@ -1,0 +1,91 @@
+{
+    "key": "group_669e8e410d49a",
+    "title": "Promo Image",
+    "fields": [
+        {
+            "key": "field_669e8e428049a",
+            "label": "Promo Image",
+            "name": "promo-image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Square (1:1) image for promotion, social media, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "promo-image",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": 1000,
+            "min_height": 1000,
+            "min_size": "",
+            "max_width": 4000,
+            "max_height": 4000,
+            "max_size": "",
+            "mime_types": "jpg, png, jpeg, gif",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_669e8f738049e",
+            "label": "Alt Text",
+            "name": "promo-image-alt-text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_669e8e428049a",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Description of the image",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "whisper"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "promo-image",
+    "show_in_rest": 1,
+    "modified": 1721705446
+}
