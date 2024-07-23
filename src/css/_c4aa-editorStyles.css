@@ -103,6 +103,10 @@ h6,
 
 /* Sizes */
 
+.editor-styles-wrapper .wp-block-post-title:not(:first-child) {
+	font-size: inherit;
+}
+
 h3 {
 	font-size: 1.6875em; /* fallback */
 	font-size: clamp(1.5rem, 1.3594rem + 0.7031vw, 1.6875rem);
