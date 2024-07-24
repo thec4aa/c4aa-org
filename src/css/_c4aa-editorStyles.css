@@ -103,7 +103,7 @@ h6,
 
 /* Sizes */
 
-.editor-styles-wrapper .wp-block-post-title {
+.editor-styles-wrapper .wp-block-post-title:not(:first-child) {
 	font-size: inherit;
 }
 
