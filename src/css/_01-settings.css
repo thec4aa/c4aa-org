@@ -67,21 +67,6 @@
 .entry-content > .alignfull {
     max-width: none;
 }
- 
-.entry .entry-content > .alignleft {
-    margin-right: 1.5rem;
-}
- 
-.entry .entry-content > .alignright {
-    margin-left: 2.5rem;
-}
-
-@media only screen and (max-width: 1260px) {}
-
-.entry .entry-content > .alignleft,
-.entry .entry-content > .alignright {
-    width: calc(50% - 1.5rem);
-}
 
 
 @media only screen and (min-width: 768px) {
@@ -97,7 +82,7 @@
 }
 
 /* constrain full size images to the standard content width */
-.entry .entry-content figure.wp-block-image:not(.alignwide):not(.alignfull) {
+.entry .entry-content figure.wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(alignright) {
 	max-width: var(--wp--style--global--content-size);
   }
 
