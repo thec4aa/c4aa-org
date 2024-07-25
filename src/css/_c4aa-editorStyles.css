@@ -239,33 +239,16 @@ ul li{
 	 letter-spacing: 1.5rem;
 	 padding-left: 1.5rem;
  }
- 
- /* Override media queries from theme */
- /* makes "Wide Line" gutenberg selected separator full width */
- .editor-styles-wrapper .wp-block-separator.alignfull.is-style-wide {
-	 width: 100vw;
-	 position: relative;
-	 right: calc(50vw - 50%);
-	 max-width: unset;
+
+ .editor-styles-wrapper .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	width: 90%;
  }
 
- /* makes "Default" gutenberg selected separator centered and width 90% */
+/*
+ * BUTTONS 
+ */
 
- .wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default,
- .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-	 width: calc(.9 * var(--wp--style--global--content-size));
-	 max-width: var(--wp--style--global--content-size);
- }
- 
- .wp-block-separator.alignwide:not(.is-style-wide):not(.is-style-dots).is-style-default,
- .wp-block-separator.alignwide:not(.is-style-wide):not(.is-style-dots) {
-		 width: calc(.9 * var(--wp--style--global--wide-size));
-		 max-width: var(--wp--style--global--wide-size);
-	 }
-
-
-/* Buttons */
-.editor-styles-wrapper .button,
+ .editor-styles-wrapper .button,
 .editor-styles-wrapper .wp-element-button,
 .editor-styles-wrapper .entry .entry-content .wp-block-file .wp-block-file__button,
 .editor-styles-wrapper .entry .entry-content .wp-block-button .wp-block-button__link,
@@ -291,8 +274,8 @@ ul li{
 	}
 
 /* 
-LINKS 
-*/
+ * LINKS 
+ */
 
 a:link, a {
 	color: var( --color-brandRed );
@@ -330,7 +313,9 @@ a:hover {
 	font-weight: inherit;
 }
 
-/* Details Block */
+/* 
+ * DETAILS BLOCK 
+ */
 
 details.wp-block-details { 
     border-bottom: solid 2px var(--color-brandRed);
