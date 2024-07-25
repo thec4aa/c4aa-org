@@ -67,21 +67,6 @@
 .entry-content > .alignfull {
     max-width: none;
 }
- 
-.entry .entry-content > .alignleft {
-    margin-right: 1.5rem;
-}
- 
-.entry .entry-content > .alignright {
-    margin-left: 2.5rem;
-}
-
-@media only screen and (max-width: 1260px) {}
-
-.entry .entry-content > .alignleft,
-.entry .entry-content > .alignright {
-    width: calc(50% - 1.5rem);
-}
 
 
 @media only screen and (min-width: 768px) {
@@ -92,25 +77,30 @@
 }
 
 /* Allow image blocks to actually be full width */
-
 .entry .entry-content .wp-block-image {
-	max-width: 100vw;
+	max-width: 100%;
 }
 
-.entry .entry-content .wp-block-image.alignfull img {
-	width: 100%;
+/* constrain full size images to the standard content width */
+.entry .entry-content figure.wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(alignright) {
+	max-width: var(--wp--style--global--content-size);
+  }
+
+/* Align wide things (not just images) are constrained to the wide size */
+.entry .entry-content > .alignwide {
+	max-width: var(--wp--style--global--wide-size);
 }
 
 /* Align Center Images */
-
-.entry .entry-content .wp-block-image.aligncenter {
+  .entry .entry-content > .aligncenter {
 	margin: auto;
 }
 
 /* center images that are not set to alignwide or aligncenter */
-.entry .entry-content .wp-block-image:not(.alignwide):not(.aligncenter):not(.alignleft):not(.alignright) img {
-		display: block;
-		margin: auto;
+.entry .entry-content figure.wp-block-image:not(.alignwide):not(.aligncenter):not(.alignleft):not(.alignright):not(.alignfull),
+.entry .entry-content figure.wp-block-image:not(.alignwide):not(.aligncenter):not(.alignleft):not(.alignright):not(.alignfull) img {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*
