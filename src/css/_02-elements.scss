@@ -901,11 +901,11 @@ fieldset {
         text-align: center !important;
     }
 }
-/**
-* 
-* SEPARATOR BLOCK
-*
-*/
+/*
+ * 
+ * SEPARATOR BLOCK
+ *
+ */
 
 .entry .entry-content .wp-block-separator,
 .entry .entry-content hr,
@@ -928,16 +928,22 @@ fieldset {
 }
 
 // makes "Default" gutenberg selected separator centered and width 90%
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots).is-style-default,
-.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+.entry .entry-content hr,
+.entry .entry-content .wp-block-separator,
+.entry .entry-content .wp-block-separator:not(.is-style-wide):not(.is-style-dots) hr { // including for legacy
     width: 90%;
-    max-width: 90%;
+    max-width: calc( var( --wp--style--global--content-size ) * .9 );
 }
 
-.wp-block-separator.alignwide:not(.is-style-wide):not(.is-style-dots).is-style-default,
-.wp-block-separator.alignwide:not(.is-style-wide):not(.is-style-dots) {
+.entry .entry-content .wp-block-separator.alignwide {
     width: 90%;
-    max-width: 90%;
+    max-width: calc( var( --wp--style--global--wide-size ) * .9 );
+}
+
+.entry .entry-content .wp-block-separator.aligncenter {
+    width: 90%;
+    max-width: calc( var( --wp--style--global--content-size ) * .9 );
+    margin: auto;
 }
 
 
