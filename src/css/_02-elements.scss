@@ -320,6 +320,11 @@ h4 {
 * 
 */
 
+.entry .entry-content ol.is-style-no-bullets,
+.entry .entry-content ul.is-style-no-bullets {
+  list-style: none;
+}
+
 .entry .entry-content ol li,
 .entry .entry-content ul li:not(.wp-social-link) {
     font-family: var(--font-serif);

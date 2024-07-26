@@ -56,8 +56,7 @@ To-do:
 	--font-sans: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;	
 	--font-serif: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
 }
-
-body {
+.editor-styles-wrapper {
 	font-family: var( --font-sans);
 	background-color: var( --color-brandWhite );
 	color: var( --color-brandBlack );
@@ -366,6 +365,15 @@ a:hover {
 .entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
 	font-weight: inherit;
 }
+
+/* 
+ * LISTS 
+ */
+
+ ol.is-style-no-bullets,
+ ul.is-style-no-bullets {
+   list-style: none;
+ }
 
 /* 
  * DETAILS BLOCK 
