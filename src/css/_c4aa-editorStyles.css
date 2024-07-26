@@ -165,11 +165,16 @@ h4.is-style-c4aa-clipPath-heading a {
 /* LISTS */
 
 ol li,
-ul li{
+ul li {
 	font-family: var( --font-serif );
 	font-weight: 400;
-	line-height: 1.3rem;
+	line-height: 125%;
 	padding-bottom: 1rem;
+}
+
+ol.is-style-no-bullets,
+ul.is-style-no-bullets {
+  list-style: none;
 }
 
 /* BLOCKQUOTES */
@@ -365,15 +370,6 @@ a:hover {
 .entry .entry-content blockquote a:link, .entry .entry-content blockquote a {
 	font-weight: inherit;
 }
-
-/* 
- * LISTS 
- */
-
- ol.is-style-no-bullets,
- ul.is-style-no-bullets {
-   list-style: none;
- }
 
 /* 
  * DETAILS BLOCK 

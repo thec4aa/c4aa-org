@@ -325,10 +325,13 @@ h4 {
   list-style: none;
 }
 
+.entry .entry-content ul:not([class*="font-size"]) {
+    font-size: 1.1rem;
+}
+
 .entry .entry-content ol li,
 .entry .entry-content ul li:not(.wp-social-link) {
     font-family: var(--font-serif);
-    font-size: 1.1rem;
     font-weight: 400;
     line-height: 125%; // when size of font is changed in the block, the rem is miscalculated
     padding-bottom: 1rem;
