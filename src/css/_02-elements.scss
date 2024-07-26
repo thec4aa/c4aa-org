@@ -455,13 +455,45 @@ input[type="submit"], /* catch old styles */
         height: 100%;
         background-color: transparent;
         rotate: 1deg;
-        border: 2px solid var(--color-brandRed);
         border-radius: 1rem;
         // mix-blend-mode: darken;
         transform: rotate(1deg);
         width: 100%;
         height: 110%;
+        border-style: solid;
+        border-width: 2px;
     }
+    &:not(.has-border-color)::before {
+        border-color: var(--color-brandRed);
+    }
+    &.has-contrast-border-color::before {
+        border-color: var(--color-brandBlack);
+    }
+    &.has-base-border-color::before {
+        border-color: var(--color-brandWhite);
+    }
+    &.has-red-border-color::before {
+        border-color: var(--color-brandRed);
+    }
+    &.has-paper-border-color::before {
+        border-color: var(--color-brandBeige);
+    }
+    &.has-grey-border-color::before {
+        border-color: var(--color-brandGrey);
+    }
+    &.has-blue-border-color::before {
+        border-color: var(--color-brandBlue);
+    }
+    &.has-green-border-color::before {
+        border-color: var(--color-brandGreen);
+    }
+    &.has-purple-border-color::before {
+        border-color: var(--color-brandPurple);
+    }
+    &.has-yellow-border-color::before {
+        border-color: var(--color-brandYellow);
+    }
+    
 }
 
 // rotate the outline on hover
@@ -558,7 +590,7 @@ input[type="submit"]:focus,
 // High Emphasis Buttons
 
 /* outline of the high emphasis button */
-.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link::before {
+.entry .entry-content .is-style-high-emphasis-button .wp-block-button__link:not(.has-border-color)::before {
     border: 2px solid var(--color-brandBlue) !important;
 }
 
@@ -580,7 +612,7 @@ input[type="submit"]:focus,
 // Low Emphasis Buttons
 
 /* outline of the low emphasis button */
-.entry .entry-content .is-style-low-emphasis-button .wp-block-button__link::before {
+.entry .entry-content .is-style-low-emphasis-button .wp-block-button__link:not(.has-border-color)::before {
     border: 2px solid var(--color-brandBlue) !important;
 }
 
