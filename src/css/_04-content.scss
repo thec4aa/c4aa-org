@@ -146,12 +146,12 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
  * Jetpack Related Posts
  */
 
-#jp-relatedposts {
+ .entry #jp-relatedposts {
     width: 1100px;
     max-width: 1100px;
     border-top: 2px dotted var(--color-brandGrey);
-    margin-top: 5rem !important;
-    margin: auto;
+    margin: 5rem auto 1rem auto;
+  padding-top: .5rem;
 }
 
 .entry #jp-relatedposts h3.jp-relatedposts-headline::before {
@@ -179,6 +179,11 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
     font-family: var(--font-sans);
+}
+
+#jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post img.jp-relatedposts-post-img {
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
 }
 
 
