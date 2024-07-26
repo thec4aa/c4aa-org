@@ -142,6 +142,45 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
     }
 }
 
+/*
+ * Jetpack Related Posts
+ */
+
+#jp-relatedposts {
+    width: 1100px;
+    max-width: 1100px;
+    border-top: 2px dotted grey;
+    margin-top: 5rem !important;
+    margin: auto;
+}
+
+.entry #jp-relatedposts h3.jp-relatedposts-headline::before {
+    display: none;
+}
+
+.entry #jp-relatedposts h3.jp-relatedposts-headline,
+.entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+    font-family: var(--font-serif);
+    color: white;
+}
+
+.entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a {
+    text-decoration: 2px underline dotted;
+    font-weight: 500;
+
+    &:hover {
+        text-decoration: 2px underline solid;
+    }
+}
+
+.entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a:hover {
+    font-weight: 100px !important;
+}
+
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
+    font-family: var(--font-sans);
+}
+
 
 /* 
  * Block Color Palette Colors
