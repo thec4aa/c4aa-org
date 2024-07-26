@@ -149,7 +149,7 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 #jp-relatedposts {
     width: 1100px;
     max-width: 1100px;
-    border-top: 2px dotted grey;
+    border-top: 2px dotted var(--color-brandGrey);
     margin-top: 5rem !important;
     margin: auto;
 }
@@ -161,7 +161,7 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 .entry #jp-relatedposts h3.jp-relatedposts-headline,
 .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
     font-family: var(--font-serif);
-    color: white;
+    color: var(--color-brandBlack);
 }
 
 .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a {
