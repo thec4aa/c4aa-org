@@ -22,6 +22,12 @@ wp.domReady( () => {
 		isDefault: false
 	} );
 
+	wp.blocks.registerBlockStyle( 'core/list', {
+		name: 'no-bullets',
+		label: 'No Bullets',
+		isDefault: false
+	} );
+
 	// Adding Random Rotation to Various Blocks
 	
 	wp.blocks.registerBlockStyle('core/group', {
