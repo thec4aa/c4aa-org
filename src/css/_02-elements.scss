@@ -872,6 +872,14 @@ fieldset {
 * FOOTER 
 *
 */
+.entry .entry-footer {
+    width: var(--wp--style--global--content-size);
+    max-width: 100%;
+    padding: 1rem;
+    margin: 3rem auto 0rem auto;
+    background-color: var(--color-brandBeige);
+}
+
 
 .cc-logo {
     width: 0.66rem;
@@ -901,6 +909,11 @@ fieldset {
         text-align: center !important;
     }
 }
+
+nav.post-navigation {
+    display: none;
+}
+
 /*
  * 
  * SEPARATOR BLOCK
