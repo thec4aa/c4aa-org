@@ -85,7 +85,7 @@ function ace_add_external_link_icon(  ) {
 				'</svg>';
 			// Check if content is available
 			if (!document.querySelector('.entry-content')) return;
-				var links = document.querySelector('.entry-content').querySelectorAll('a:not(:has(img)):not(.wp-block-social-links):not(.wp-block-social-link-anchor)');
+				var links = document.querySelector('.entry-content').querySelectorAll('a:not(:has(img)):not(.wp-block-social-links):not(.wp-block-social-link-anchor), :not(.wp-block-jetpack-slideshow * a))');
 				[...links].forEach(function (link) {
 					if (link.host !== window.location.host && !link.href.startsWith('mailto:')) {
 						link.innerHTML += ' ' + icon;
