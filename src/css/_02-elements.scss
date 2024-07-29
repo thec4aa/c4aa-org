@@ -1,4 +1,7 @@
 /* Smaller default font size */
+// Note: This no longer works. 
+// The fluid font size in theme.json overrides it and makes it 16px
+// See: https://fullsiteediting.com/lessons/theme-json-font-size/
 html {
     font-size: 18px;
 }
