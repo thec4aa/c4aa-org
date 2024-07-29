@@ -1050,6 +1050,33 @@ figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
     transition: transform 50ms ease-out;
 }
 
+/* CAPTIONS */
+
+.wp-block-image figcaption.wp-element-caption {
+    font-size: 1rem !important;
+    font-weight: 500;
+    background: var(--color-brandBeige);
+    color: var(--color-brandGrey);
+    width: fit-content;
+    margin: auto !important;
+    top: -.8rem;
+    opacity: .95;
+    padding-left: 2.5rem !important;
+    padding-right: 3rem !important;
+  }
+
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+    font-size: .9rem !important;
+    background: var(--color-brandBeige);
+    color: var(--color-brandGrey);
+    padding: .5rem 1rem .5rem 1rem !important;
+    height: fit-content;
+    opacity: .9;
+    top: 90%;
+    width: fit-content;
+    text-align: left;
+  }
+
 /**
 *
 * MISC
