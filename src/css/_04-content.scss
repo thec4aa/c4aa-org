@@ -398,6 +398,15 @@ textarea + .frm_description,
     line-height: 1.2rem;
 }
 
+div.frm_dropzone {
+    max-width: 200px;
+    margin: auto;
+}
+
+div.frm_dropzone + .frm_description {
+    text-align: center;
+}
+
 .frmsvg {
     fill: var(--color-brandBlack);
 }
@@ -409,3 +418,5 @@ textarea + .frm_description,
 .logged-in .frm_grid_container {
     max-width: none;
 }
+
+

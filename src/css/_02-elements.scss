@@ -869,9 +869,14 @@ input[type="datetime-local"],
 textarea {
     background-color: var(--color-brandBeige);
     border: 2px solid #aaa;
-    max-width: 100%;
     font-size: 1rem;
 }
+
+input[type="text"], input[type="email"] {
+    max-width: 100%;
+    width: 100%;
+    }
+    
 
 textarea {
     margin-top: 0.5rem;
