@@ -48,7 +48,7 @@
 
 // Force image caption to display on top of filtered images
 .wp-block-image figcaption {
-	background-color: inherit;
+	// background-color: inherit;
 	z-index: 1;
 	position: relative;
 }
