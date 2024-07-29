@@ -1053,7 +1053,7 @@ figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
 /* CAPTIONS */
 
 .wp-block-image figcaption.wp-element-caption,
-figure[class*="embed"].wp-block-embed figcaption.wp-element-caption,
+figure[class*="embed"].wp-block-embed figcaption,
 .wp-block-video figcaption.wp-element-caption {
     font-size: 1rem !important;
     font-weight: 500;
