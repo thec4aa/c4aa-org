@@ -1,4 +1,7 @@
 /* Smaller default font size */
+// Note: This no longer works. 
+// The fluid font size in theme.json overrides it and makes it 16px
+// See: https://fullsiteediting.com/lessons/theme-json-font-size/
 html {
     font-size: 18px;
 }
@@ -195,6 +198,13 @@ table strong {
         padding: 0 60px;
     }
 
+}
+
+/* Added to allow for longer menus #347 */
+@media(min-width: 1100px) and (max-width: 1400px) {
+    .site-branding {
+      margin: 0 calc(5% + 60px)
+    }
 }
 
 
@@ -866,9 +876,14 @@ input[type="datetime-local"],
 textarea {
     background-color: var(--color-brandBeige);
     border: 2px solid #aaa;
-    max-width: 100%;
     font-size: 1rem;
 }
+
+input[type="text"], input[type="email"] {
+    max-width: 100%;
+    width: 100%;
+    }
+    
 
 textarea {
     margin-top: 0.5rem;
