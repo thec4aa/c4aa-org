@@ -308,6 +308,10 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 #simple-banner {
     
+    .simple-banner-text {
+        text-wrap: balance;
+      }
+    
     & a {
         text-decoration: 2px dotted underline;
     }
