@@ -127,6 +127,30 @@ function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
 }
 add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_page' );
 
+// Adds a search form to the search results page.
+// so if you search for something and don't find it, you can search again!
+
+/**
+ * Setup a custom hook before the second post on the search page
+ */
+add_action( 'the_post', function( $post, \WP_Query $q )
+{
+    if( $q->is_search() && $q->is_main_query() && 0 === $q->current_post )
+    {
+        do_action( 'wpse_before_second_post_in_search' );
+    }
+}, 10, 2 ); 
+
+/**
+ * Inject a Div after the first post on the search page
+ */
+add_action( 'wpse_before_second_post_in_search', function()
+{
+	echo '<article class="entry search-results-search-form
+	"><div class="entry-content"><div class="wp-block-group"><div class="wp-block-group__inner-container search-form-in-results">';
+	echo get_search_form( array('label' => 'Didn\'t find what you\'re looking for?', 'placeholder' => 'Search again...') );
+	echo '</div></div></div></article>';
+} );
 
 // Initialize Duotone on all post-thumbnails on archives. The specific color
 // scheme is set by filtering the post class below, and overriding the
