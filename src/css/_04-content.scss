@@ -317,6 +317,18 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
     }
 }
 
+// Search Results Page
+// search form is inserted at the top of the results. This is the styling for that form.
+
+article entry.search-form-in-results {
+    width: 100%;
+  }
+  
+  article .search-form-in-results form .search-field {
+    width: 70%;
+    margin-right: 1rem;
+  }
+
 // RELATED POSTS
 
 .taxopress-related-posts {
@@ -341,6 +353,10 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 .frm_forms fieldset {
     padding: 0
+}
+
+.frm-star-group .frmsvg {
+    fill: var(--color-brandYellow);
 }
 
 input + .frm_description,
