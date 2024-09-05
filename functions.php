@@ -299,3 +299,74 @@ function example_filter_block_categories_when_post_provided( $block_categories, 
 }
 add_filter( 'block_categories_all', 'example_filter_block_categories_when_post_provided', 10, 2 );
 
+
+/* oEmbeds */
+
+function c4aa_add_custom_styles_to_embeds()
+{
+
+?>
+    <style>
+        .wp-embed {
+			font-family: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif !important;
+			border: 1rem solid #f9f4d2 !important;
+            background-color: #fffef6 !important;
+            color: #292724 !important;
+        }
+
+		.wp-embed .wp-embed-heading, .wp-embed .wp-embed-site-title {
+			font-family: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+		}
+
+		.wp-embed .wp-embed-heading a {
+			text-decoration: underline;
+    		text-decoration-style: dotted;
+    		text-decoration-thickness: 10%;
+			text-underline-offset: 0.2em;
+		}
+
+		.wp-embed .wp-embed-heading a:hover {
+			text-decoration: underline;
+    		text-decoration-style: solid;
+    		text-decoration-thickness: 10%;
+			text-underline-offset: 0.2em;
+			text-decoration-skip-ink: none;
+		}
+
+		.wp-embed .wp-embed-site-title {
+			text-transform: uppercase;
+			font-weight: 400;			
+		}
+
+		.wp-embed .wp-embed-site-title span {
+			color: #292724
+		}	
+
+		.wp-embed a.wp-embed-more {
+			text-decoration: underline;
+    		text-decoration-style: dotted;
+    		text-decoration-thickness: 10%;
+			text-underline-offset: 0.2em;
+			color: #f5333f;
+		}
+
+		.wp-embed a.wp-embed-more:hover {
+			text-decoration: underline;
+    		text-decoration-style: solid;
+    		text-decoration-thickness: 10%;
+			text-underline-offset: 0.2em;
+		}
+
+        .wp-embed .button {
+            color: #7B736c;
+        }
+
+		.wp-embed .button:hover {
+			color: #27aae1;
+		}
+
+    </style>
+
+<?php
+}
+add_action('embed_head', "c4aa_add_custom_styles_to_embeds");
