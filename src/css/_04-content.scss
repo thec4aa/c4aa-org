@@ -381,6 +381,10 @@ textarea + .frm_description,
     margin-left: 0.5rem;
 }
 
+input:checked + .frm_switch .frm_slider {
+    background-color: var(--color-brandBlue); 
+}
+
 .frm_opt_container label {
     font-weight: 400;
 }
@@ -389,9 +393,12 @@ textarea + .frm_description,
     color: var(--color-brandRed);
 }
 
-.frm_slider,
 .frm_range_container input {
     background-color: var(--color-brandBeige);
+}
+
+.frm_slider {
+    background-color: var(--color-brandGrey);
 }
 
 .frm_range_container input {
