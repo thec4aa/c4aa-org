@@ -403,7 +403,11 @@
         },
         "layout": {
             "contentSize": "840px",
-            "wideSize": "1100px"
+            "wideSize": "1100px",
+            "default": {
+                "type": "grid"
+            },
+            "allowSizingOnChildren": true
         },
         "lightbox": {
             "allowEditing": true,
