@@ -285,6 +285,61 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
     margin: 0px auto 1rem
 }
 
+// Styles for the Formidable Donate Form 
+
+#frm_field_2359_container {
+    .frm_opt_container {
+      position: relative;
+      
+      div.frm_radio {
+        label {
+          background: var(--color-brandBlack);
+          color: var(--color-brandWhite);
+          font: 500 1.3rem var(--font-sans);
+          
+          &:has(input:checked) {
+            background: var(--color-brandBlue) !important;
+          }
+        }
+        
+        div.frm_label_button_container {
+          padding: 1rem;
+        }
+        
+        // Checked state
+        input[type="radio"]:checked + div {
+          background: var(--color-brandBlue) !important;
+        }
+      }
+      
+      // Red button specific styles
+      #frm_radio_2359-3 {
+        label:not(:has(input:checked)) {
+          background: var(--color-brandRed);
+        }
+      }
+      
+      // "Other" input field
+      #field_donation-amount2-other_6-otext {
+        padding: 0 .5rem;
+        position: absolute;
+        margin-top: 0.5rem;
+        width: calc(33.33% - 20px);
+        box-sizing: border-box;
+      }
+      
+      // Hover states
+      > div:hover {
+        label, div {
+          background: var(--color-brandBlue) !important;
+        }
+      }
+    }
+  }
+
+  
+  
+
 // Column the kindful donate form is within (othewise it breaks out)
 .wp-block-advanced-columns-column-87c3489bae2ca26ab55c8eb81adda0d3 {
     min-width: 360px;
