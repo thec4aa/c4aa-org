@@ -704,10 +704,7 @@ input[type="submit"]:focus,
     color: var(--color-brandWhite);
 
     & blockquote p {
-        font-family: var(--font-serif);
-        font-size: var(--wp--preset--font-size--normal);
-        font-weight: 500;
-        font-style: normal;
+        // font-style: normal; // this removes the italics. But I think the italics work.
         hyphens: manual;
 
         @media screen and(max-width: 768) {
