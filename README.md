@@ -4,7 +4,7 @@
 
 A child theme of the standard [WordPress Twenty Nineteen](https://wordpress.org/themes/twentynineteen/) theme.
 
-Our aims are:
+Our aims include:
 
 ## 1. Create a site that aligns with the Center for Artistic Activism Design Standards
 
