@@ -30,14 +30,14 @@ jobs:
       run: npm run prod --if-present
 
     - name: Connect to May First Shell Account
-      uses: baisong/mayfirst-shell-action@v0.1.1
+      uses: ashokmladumor/mayfirst-shell-action@v0.1.1
       with:
         comment: ${{ inputs.deploy_comment }}
         user: ${{ secrets.SSH_USER }}
         password: ${{ secrets.SSH_PASS }}
 
     - name: Deploy to Server
-      uses: nogsantos/ssh-scp-deploy@v1.3.0
+      uses: ashokmladumor/ssh-scp-deploy@v1.3.0
       with:
         src: ./
         host: ${{ secrets.SSH_HOST }}
