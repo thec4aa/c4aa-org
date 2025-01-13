@@ -44,4 +44,4 @@ jobs:
         remote: ${{ secrets.REMOTE_TARGET }}
         port: ${{ secrets.SSH_PORT }}
         user: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
