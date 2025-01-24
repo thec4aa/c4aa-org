@@ -39,7 +39,7 @@ jobs:
     - name: Deploy to Server
       uses: nogsantos/ssh-scp-deploy@v1.3.0
       with:
-        src: ./
+        src: ./build/*
         host: ${{ secrets.SSH_HOST }}
         remote: ${{ secrets.REMOTE_TARGET }}
         port: ${{ secrets.SSH_PORT }}
