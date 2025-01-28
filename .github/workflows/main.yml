@@ -49,7 +49,7 @@ jobs:
       with:
         src: ./build/**  # Transfer everything inside the build directory
         host: ${{ secrets.SSH_HOST }}
-        remote: /home/sites/180327/web/wp-content/themes/c4aa-org/build
+        remote: /home/users/c4aa_github_deploy/site/web/wp-content/gitaction
         user: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
