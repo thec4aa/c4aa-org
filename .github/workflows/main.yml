@@ -29,6 +29,13 @@ jobs:
     - name: Run build task
       run: npm run prod --if-present
 
+    - name: Verify Build Output
+      run: |
+        echo "Current directory:"
+        pwd
+        echo "Listing build directory:"
+        ls -la ./build
+
     - name: Connect to May First Shell Account
       uses: baisong/mayfirst-shell-action@v0.1.1
       with:
@@ -36,12 +43,13 @@ jobs:
         user: ${{ secrets.SSH_USER }}
         password: ${{ secrets.SSH_PASS }}
 
-    - name: Deploy to Server
-      uses: nogsantos/ssh-scp-deploy@v1.3.0
+    - name: Deploy to Server using SCP
+      uses: appleboy/scp-action@master
       with:
-        src: ./build/*
+        source: "./build/*"
+        target: "/home/sites/180327/web/wp-content/themes/c4aa-org"
         host: ${{ secrets.SSH_HOST }}
-        remote: /home/sites/180327/web/wp-content/themes/c4aa-org
-        port: ${{ secrets.SSH_PORT }}
-        user: ${{ secrets.SSH_USER }}
+        username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        overwrite: true
