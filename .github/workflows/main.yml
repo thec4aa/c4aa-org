@@ -29,12 +29,6 @@ jobs:
     - name: Run build task
       run: npm run prod --if-present
 
-    - name: Show Current Directory
-      run: pwd
-
-    - name: Check Build Directory
-      run: ls -la ./build
-
     - name: Connect to May First Shell Account
       uses: baisong/mayfirst-shell-action@v0.1.1
       with:
