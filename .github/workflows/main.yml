@@ -35,11 +35,6 @@ jobs:
     - name: Check Build Directory
       run: ls -la ./build
 
-    - name: Log and Debug Remote Target
-      run: |
-            echo "REMOTE_TARGET: ${{ secrets.REMOTE_TARGET }}"
-            echo "SSH_HOST: ${{ secrets.SSH_HOST }}"
-
     - name: Connect to May First Shell Account
       uses: baisong/mayfirst-shell-action@v0.1.1
       with:
@@ -52,7 +47,7 @@ jobs:
       with:
         src: ./build/*
         host: ${{ secrets.SSH_HOST }}
-        remote: ${{ secrets.REMOTE_TARGET }}
+        remote: /home/sites/180327/web/wp-content/themes/c4aa-org
         port: ${{ secrets.SSH_PORT }}
         user: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
