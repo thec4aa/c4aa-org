@@ -288,54 +288,72 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 // Styles for the Formidable Donate Form 
 
 #frm_field_2359_container {
-    .frm_opt_container {
-      position: relative;
+  
+    div.frm_radio {
+      background: var(--color-brandBlack); 
+      border-radius: 1rem;
       
-      div.frm_radio {
-        label {
-          background: var(--color-brandBlack);
-          color: var(--color-brandWhite);
-          font: 500 1.3rem var(--font-sans);
-          
-          &:has(input:checked) {
-            background: var(--color-brandBlue) !important;
-          }
-        }
+      
+      
+      &:has(input[type="radio"]:checked + div) {
+        background: var(--color-brandBlue) !important;
+      }
+      /*  when hovering over the radio button, change the background color to brandBlue */
+      &:hover {
+        background: var(--color-brandBlue);
+      }
+      
+      label {
+        color: var(--color-brandWhite);
+        font: 500 1.3rem var(--font-sans);
         
-        div.frm_label_button_container {
-          padding: 1rem;
-        }
-        
-        // Checked state
-        input[type="radio"]:checked + div {
-          background: var(--color-brandBlue) !important;
-        }
       }
       
-      // Red button specific styles
-      #frm_radio_2359-3 {
-        label:not(:has(input:checked)) {
-          background: var(--color-brandRed);
-        }
+      
+      div.frm_label_button_container {
+        padding: 1rem;
       }
       
-      // "Other" input field
-      #field_donation-amount2-other_6-otext {
-        padding: 0 .5rem;
-        position: absolute;
-        margin-top: 0.5rem;
-        width: calc(33.33% - 20px);
-        box-sizing: border-box;
-      }
-      
-      // Hover states
-      > div:hover {
-        label, div {
-          background: var(--color-brandBlue) !important;
-        }
-      }
     }
+    
+    
+    #frm_radio_2359-3{
+      background: var(--color-brandRed);
+    }
+    
+    /* Other text field */
+    #field_donation-amount2-other_6-otext {
+      padding: 0 .3rem 0 1.2rem;
+      position:absolute;
+      margin-top: 6px;
+      box-sizing: border-box;
+      font-weight:600;
+      width: 6rem;
+    }
+    
   }
+  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child {
+      position: relative;
+  }
+  
+  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child::after {
+      content: '$';
+      position: absolute;
+      left: 0.5rem;
+      bottom: -2.15rem;
+      z-index: 1;
+      color: var(--color-brandGrey);
+      opacity: 0;
+  }
+  
+  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after {
+     opacity: 1;
+  }
+  
+  #field_donation-amount2-other_6-otext {
+      padding-left: 1.5rem;
+  }
+  
 
   
   
