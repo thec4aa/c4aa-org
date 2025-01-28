@@ -47,9 +47,9 @@ jobs:
     - name: Deploy to Server
       uses: nogsantos/ssh-scp-deploy@v1.3.0
       with:
-        src: ./build/**  # Transfer everything inside the build directory
+        src: ./**  # Transfer everything inside the build directory
         host: ${{ secrets.SSH_HOST }}
-        remote: /home/users/c4aa_github_deploy/site/web/wp-content/gitaction
+        remote: ${{ secrets.REMOTE_TARGET }}
         user: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
