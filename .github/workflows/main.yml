@@ -35,6 +35,11 @@ jobs:
     - name: Check Build Directory
       run: ls -la ./build
 
+    - name: Log and Debug Remote Target
+      run: |
+        echo "::add-mask::${{ secrets.REMOTE_TARGET }}"
+        echo "REMOTE_TARGET: ${{ secrets.REMOTE_TARGET }}"
+
     - name: Connect to May First Shell Account
       uses: baisong/mayfirst-shell-action@v0.1.1
       with:
