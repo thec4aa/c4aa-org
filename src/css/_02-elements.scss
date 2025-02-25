@@ -1175,37 +1175,3 @@ details.wp-block-details:first-child, :not(.wp-block-details) + .wp-block-detail
         padding-bottom: 3rem;
     }
 }
-/* Scrollbar */
-
-/* Firefox Custom Scroll Bar */
-@-moz-document url-prefix() {
-    * {
-        scrollbar-color: var(--color-brandRed) var(--color-brandWhite);
-        scrollbar-width: auto;
-    }
-}
-
-// Scrollbar for Chrome, Safari, Edge
-/* width */
-::-webkit-scrollbar,
-*::-webkit-scrollbar {
-    width: 1rem;
-}
-
-/* Track */
-::-webkit-scrollbar-track,
-*::-webkit-scrollbar-track {
-    background: var(--color-brandWhite);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb,
-*::-webkit-scrollbar-thumb {
-    background: var(--color-brandRed)
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover,
-*::-webkit-scrollbar-thumb:hover {
-    background: var(--color-brandGrey);
-}
