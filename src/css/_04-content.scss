@@ -270,13 +270,19 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 @media screen and (min-width: 768px) {
     .page-id-12750 #site-navigation,
     .page-id-12750 .social-navigation,
-    .page-id-12750 .entry-title
+    .page-id-12750 .entry-title,
+    .page-id-10945 #site-navigation,
+    .page-id-10945 .social-navigation,
+    .page-id-10945 .entry-title
     {
         display: none;
     }
 }
 
-.page-id-12750 .footer-menu-column, .page-id-12750 .footer-contact {
+.page-id-12750 .footer-menu-column, 
+.page-id-12750 .footer-contact,
+.page-id-10945 .footer-menu-column, 
+.page-id-10945 .footer-contact {
     visibility: hidden;
 }
 
@@ -527,7 +533,7 @@ div.frm_dropzone + .frm_description {
 }
 
 div#frm_field_2580_container,
-div#frm_field_2373-line2_container,
+div#frm_field_2373-line2_container
  {
     // address field
     margin: 0px;
