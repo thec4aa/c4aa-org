@@ -18,8 +18,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
         }
     });
-  
 
+    jQuery(document).ready(function($){
+        $(document).on('frmPageChanged', function(event, form, response) {
+          var formID = $(form).find('input[name="form_id"]').val();
+          $('#doot').append('<h3>Form ID: ' + formID + '</h3>');
+        });
+      });
 
 
 
