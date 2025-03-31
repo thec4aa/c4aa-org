@@ -293,7 +293,8 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 // Styles for the Formidable Donate Form 
 
-#frm_field_2359_container {
+#frm_field_2359_container,
+#frm_form_146_container {
   
     div.frm_radio {
       background: var(--color-brandBlack); 
@@ -323,7 +324,8 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
     }
     
     
-    #frm_radio_2359-3{
+    #frm_radio_2359-3,
+    #frm_radio_146-3,{
       background: var(--color-brandRed);
     }
     
@@ -338,11 +340,13 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
     }
     
   }
-  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child {
+  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child,
+  #frm_field_146_container .frm_opt_container div.frm_radio:last-child   {
       position: relative;
   }
   
-  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child::after {
+  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child::after, 
+  #frm_field_146_container .frm_opt_container div.frm_radio:last-child::after {
       content: '$';
       position: absolute;
       left: 0.5rem;
@@ -352,7 +356,8 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
       opacity: 0;
   }
   
-  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after {
+  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after,
+  #frm_field_146_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after {
      opacity: 1;
   }
   
