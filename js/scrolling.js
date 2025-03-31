@@ -19,12 +19,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 
-    jQuery(document).ready(function($){
-        $(document).on('frmPageChanged', function(event, form, response) {
-          var formID = $(form).find('input[name="form_id"]').val();
-          $('#doot').append('<h3>Form ID: ' + formID + '</h3>');
-        });
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('form'); // Adjust this selector if needed
+      const submitBtn = form.querySelector('.frm_button_submit');
+      const spinner = form.querySelector('.spinner');
+    
+      form.addEventListener('submit', function () {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+        spinner.style.display = 'inline-block';
       });
+    });
 
 
 
