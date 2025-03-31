@@ -293,14 +293,11 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 // Styles for the Formidable Donate Form 
 
-#frm_field_2359_container,
-#frm_form_146_container {
-  
-    div.frm_radio {
-      background: var(--color-brandBlack); 
-      border-radius: 1rem;
+div.frm_radio #frm_field_2359_container,
+div.frm_radio #frm_radio_2878-0 {
       
-      
+    background: var(--color-brandBlack); 
+    border-radius: 1rem; 
       
       &:has(input[type="radio"]:checked + div) {
         background: var(--color-brandBlue) !important;
@@ -321,11 +318,8 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
         padding: 1rem;
       }
       
-    }
-    
-    
     #frm_radio_2359-3,
-    #frm_radio_146-3,{
+    #frm_radio_2878-3{
       background: var(--color-brandRed);
     }
     
