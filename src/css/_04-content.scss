@@ -268,22 +268,17 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 // Strip out the header & footer to keep it simple
 
 @media screen and (min-width: 768px) {
-    .page-id-12750 #site-navigation,
-    .page-id-12750 .social-navigation,
-    .page-id-12750 .entry-title,
-    .page-id-10945 #site-navigation,
-    .page-id-10945 .social-navigation,
-    .page-id-10945 .entry-title
-    {
-        display: none;
+    .page-id-131055, .page-id-12750, .page-id-10945 {
+        #site-navigation, .social-navigation, .entry-title {
+            display: none;
+        }
     }
 }
 
-.page-id-12750 .footer-menu-column, 
-.page-id-12750 .footer-contact,
-.page-id-10945 .footer-menu-column, 
-.page-id-10945 .footer-contact {
-    visibility: hidden;
+.page-id-131055, .page-id-12750, .page-id-10945 {
+    .footer-menu-column, .footer-contact {
+        visibility: hidden;
+    }
 }
 
 .page-id-12750 .digital-payment-methods {
