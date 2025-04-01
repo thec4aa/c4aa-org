@@ -293,11 +293,14 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 // Styles for the Formidable Donate Form 
 
-div.frm_radio #frm_field_2359_container,
-div.frm_radio #frm_radio_2878-0 {
+form#form_donate-a-tron-3000 .frm_field_container .frm_display_format_buttons,
+form#form_donate-a-tron-3001 .frm_field_container .frm_display_format_buttons{
+  
+    div.frm_radio {
+      background: var(--color-brandBlack); 
+      border-radius: 1rem;
       
-    background: var(--color-brandBlack); 
-    border-radius: 1rem; 
+      
       
       &:has(input[type="radio"]:checked + div) {
         background: var(--color-brandBlue) !important;
@@ -318,8 +321,10 @@ div.frm_radio #frm_radio_2878-0 {
         padding: 1rem;
       }
       
-    #frm_radio_2359-3,
-    #frm_radio_2878-3{
+    }
+    
+    
+    .frm_opt_container .donation-options-wrapper div.frm_radio:nth-child(3){
       background: var(--color-brandRed);
     }
     
@@ -334,13 +339,12 @@ div.frm_radio #frm_radio_2878-0 {
     }
     
   }
-  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child,
-  #frm_field_146_container .frm_opt_container div.frm_radio:last-child   {
+  
+  #frm_field_container .frm_opt_container div.frm_radio:last-child {
       position: relative;
   }
   
-  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child::after, 
-  #frm_field_146_container .frm_opt_container div.frm_radio:last-child::after {
+  #frm_field_container .frm_opt_container div.frm_radio:last-child::after {
       content: '$';
       position: absolute;
       left: 0.5rem;
@@ -350,12 +354,11 @@ div.frm_radio #frm_radio_2878-0 {
       opacity: 0;
   }
   
-  #frm_field_2359_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after,
-  #frm_field_146_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after {
+  #frm_field_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after {
      opacity: 1;
   }
   
-  #field_donation-amount2-other_6-otext {
+  #frm_field_container .frm_opt_container .frm_other_input {
       padding-left: 1.5rem;
   }
   
