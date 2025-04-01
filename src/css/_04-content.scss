@@ -293,8 +293,8 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 // Styles for the Formidable Donate Form 
 
-form#form_donate-a-tron-3000 .frm_field_container .frm_display_format_buttons,
-form#form_donate-a-tron-3001 .frm_field_container .frm_display_format_buttons{
+form#form_donate-a-tron-3000 .frm_fields_container .frm_display_format_buttons,
+form#form_donate-a-tron-3001 .frm_fields_container .frm_display_format_buttons{
   
     div.frm_radio {
       background: var(--color-brandBlack); 
@@ -340,11 +340,11 @@ form#form_donate-a-tron-3001 .frm_field_container .frm_display_format_buttons{
     
   }
   
-  #frm_field_container .frm_opt_container div.frm_radio:last-child {
+  #frm_fields_container .frm_opt_container div.frm_radio:last-child {
       position: relative;
   }
   
-  #frm_field_container .frm_opt_container div.frm_radio:last-child::after {
+  #frm_fields_container .frm_opt_container div.frm_radio:last-child::after {
       content: '$';
       position: absolute;
       left: 0.5rem;
@@ -354,11 +354,11 @@ form#form_donate-a-tron-3001 .frm_field_container .frm_display_format_buttons{
       opacity: 0;
   }
   
-  #frm_field_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after {
+  #frm_fields_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after {
      opacity: 1;
   }
   
-  #frm_field_container .frm_opt_container .frm_other_input {
+  #frm_fields_container .frm_opt_container .frm_other_input {
       padding-left: 1.5rem;
   }
   
