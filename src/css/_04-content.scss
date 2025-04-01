@@ -299,7 +299,7 @@ form#form_donate-a-tron-3001 .frm_fields_container .frm_display_format_buttons{
     div.frm_radio {
       background: var(--color-brandBlack); 
       border-radius: 1rem;
-      
+      height: 3.75rem;      
       
       
       &:has(input[type="radio"]:checked + div) {
@@ -329,7 +329,7 @@ form#form_donate-a-tron-3001 .frm_fields_container .frm_display_format_buttons{
     }
     
     /* Other text field */
-    #field_donation-amount2-other_6-otext {
+    .frm_other_input {
       padding: 0 .3rem 0 1.2rem;
       position:absolute;
       margin-top: 6px;
