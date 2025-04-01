@@ -299,7 +299,8 @@ form#form_donate-a-tron-3001 .frm_fields_container .frm_display_format_buttons{
     div.frm_radio {
       background: var(--color-brandBlack); 
       border-radius: 1rem;
-      height: 3.75rem;      
+      height: 3.75rem;    
+      position: relative; 
       
       
       &:has(input[type="radio"]:checked + div) {
@@ -338,28 +339,20 @@ form#form_donate-a-tron-3001 .frm_fields_container .frm_display_format_buttons{
       width: 6rem;
     }
     
-  }
-  
-  #frm_fields_container .frm_opt_container div.frm_radio:last-child {
-      position: relative;
-  }
-  
-  #frm_fields_container .frm_opt_container div.frm_radio:last-child::after {
-      content: '$';
-      position: absolute;
-      left: 0.5rem;
-      bottom: -2.15rem;
-      z-index: 1;
-      color: var(--color-brandGrey);
-      opacity: 0;
-  }
-  
-  #frm_fields_container .frm_opt_container div.frm_radio:last-child:has(input:checked)::after {
-     opacity: 1;
-  }
-  
-  #frm_fields_container .frm_opt_container .frm_other_input {
-      padding-left: 1.5rem;
+    // Wish there was a better way to do this, but this is the only set of selectors I could find to add a dollar sign to the last radio button
+    div.frm_radio:last-child::after  {
+    content: '$';
+    position: absolute;
+    left: 0.5rem;
+    bottom: -2.15rem;
+    z-index: 1;
+    color: var(--color-brandGrey);
+    opacity: 0;
+    }
+
+    div.frm_radio:last-child:has(input:checked)::after {
+    opacity: 1;
+    }
   }
   
 
