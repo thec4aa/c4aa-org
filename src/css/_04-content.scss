@@ -420,7 +420,7 @@ article entry.search-form-in-results {
 
 /* 
  *
- * FORMIDDABLE FORMS
+ * FORMIDABLE FORMS
  *
  */
 
@@ -492,6 +492,11 @@ input:checked + .frm_switch .frm_slider {
 
 .frm_primary_label {
     display: block;
+}
+
+// inline total for read-only number field
+.frm_inline_total {
+    margin: 0 .5em;
 }
 
 // File upload dropzone
