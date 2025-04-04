@@ -496,7 +496,8 @@ input:checked + .frm_switch .frm_slider {
 
 // inline total for read-only number field
 .frm_inline_total {
-    margin: 0 .5em;
+    margin: 0 .4em;
+    font-weight: 600;
 }
 
 // File upload dropzone
