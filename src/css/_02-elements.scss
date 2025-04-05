@@ -433,7 +433,15 @@ h4 {
 
 /* Solid part of the button */
 /* note: first line is excluded buttons from other forms, tinymce editor, formiddable forms, etc. */
-button:not(:where(#simple-banner-close-button *, #simple-banner-close-button, .wp-editor-tools *, .mce-container *, .frm_upload_text *, .frm_upload_text *, .frm_show_password_btn, .lightbox-trigger, .close-button, .swiper-pagination-bullet)),
+button:not(:where(#simple-banner-close-button *, 
+    #simple-banner-close-button, 
+    .wp-editor-tools *, 
+    .mce-container *, 
+    .frm_upload_text *, 
+    .frm_show_password_btn, 
+    .lightbox-trigger, 
+    .close-button, 
+    .swiper-pagination-bullet)),
 .button,
 .entry .button,
 .entry .entry-content .wp-element-button,
