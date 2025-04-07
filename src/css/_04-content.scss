@@ -483,6 +483,11 @@ input:checked + .frm_switch .frm_slider {
     font-size: 1rem;
 }
 
+.frm_color_block {
+	background-color: var(--color-brandBeige);
+	padding: 2rem;
+}
+
 .frm_error {
     color: var(--color-brandWhite);
     background: var(--color-brandRed);
