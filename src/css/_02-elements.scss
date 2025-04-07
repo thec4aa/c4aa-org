@@ -432,7 +432,7 @@ h4 {
 */
 
 /* Solid part of the button */
-/* note: first line is excluded buttons from other forms, tinymce editor, formiddable forms, etc. */
+/* note: first line is excluded buttons from other forms, tinymce editor, formidable forms, etc. */
 button:not(:where(#simple-banner-close-button *, 
     #simple-banner-close-button, 
     .wp-editor-tools *, 
@@ -606,7 +606,7 @@ input[type="submit"] {
     border: 2px solid var(--color-brandRed);
 }
 
-// in T19 and formiddiable unstyled buttons hover/focus black. This is a fix for those
+// in T19 and formidable unstyled buttons hover/focus black. This is a fix for those
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
