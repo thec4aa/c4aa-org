@@ -10,17 +10,26 @@ function dequeue_priority_menu() {
 add_action( 'wp_enqueue_scripts', 'dequeue_priority_menu', 100 );
 
 function c4aa_enqueue_assets() {
-	$style_path    = get_stylesheet_directory() . '/build/main.css';
-	$style_version = filemtime( $style_path );
-
-	$script_path    = get_stylesheet_directory() . '/js/clipPaths.js';
-	$script_version = filemtime( $script_path );
-
-	wp_enqueue_style( 'twentynineteen-style', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'c4aa-style', get_stylesheet_directory_uri() . '/build/main.css', [], $style_version );
-	wp_enqueue_script( 'c4aa-js-menu', get_stylesheet_directory_uri() . '/js/menu.js', [], $script_version, true );
-	wp_enqueue_script( 'c4aa-js-scrolling', get_stylesheet_directory_uri() . '/js/scrolling.js', [], $script_version, true );
-	wp_enqueue_script( 'c4aa-js-clipPath', get_stylesheet_directory_uri() . '/js/clipPaths.js', [], $script_version, true );
+    // CSS versioning
+    $style_path = get_stylesheet_directory() . '/build/main.css';
+    $style_version = file_exists($style_path) ? filemtime($style_path) : '1.0';
+    
+    // JS versioning - individual for each file
+    $js_base_path = get_stylesheet_directory() . '/js/';
+    $js_files = ['menu.js', 'scrolling.js', 'assorted.js', 'clipPaths.js'];
+    
+    // Enqueue CSS
+    wp_enqueue_style('twentynineteen-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('c4aa-style', get_stylesheet_directory_uri() . '/build/main.css', [], $style_version);
+    
+    // Enqueue JS - with individual versioning
+    foreach ($js_files as $js_file) {
+        $file_path = $js_base_path . $js_file;
+        $file_version = file_exists($file_path) ? filemtime($file_path) : '1.0';
+        $handle = 'c4aa-js-' . pathinfo($js_file, PATHINFO_FILENAME);
+        
+        wp_enqueue_script($handle, get_stylesheet_directory_uri() . '/js/' . $js_file, [], $file_version, true);
+    }
 }
 
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
