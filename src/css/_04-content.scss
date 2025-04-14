@@ -489,15 +489,14 @@ input:checked + .frm_switch .frm_slider {
 }
 
 .frm_error {
-    color: var(--color-brandWhite);
-    background: var(--color-brandRed);
+    color: var(--color-brandRed);
     font-weight: bold;
-    padding: 0.3em;
 }
 
 .frm_primary_label {
     display: block;
 }
+
 
 // inline total for read-only number field
 .frm_inline_total {
