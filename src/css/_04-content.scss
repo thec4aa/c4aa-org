@@ -488,7 +488,8 @@ input:checked + .frm_switch .frm_slider {
 	padding: 2rem;
 }
 
-.frm_error {
+.frm_error,
+.frm_error_style {
     color: var(--color-brandRed);
     font-weight: bold;
 }
