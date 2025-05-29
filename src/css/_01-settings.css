@@ -103,6 +103,11 @@
 	margin-right: auto;
 }
 
+@view-transition {
+	navigation: auto;
+  }  
+
+  
 /*
  * Accessibility Helpers
  *
