@@ -115,6 +115,14 @@
   mix-blend-mode: darken;
 }
 
+.u-no-mix {
+  mix-blend-mode: normal;
+}
+
+.u-opacity-100 {
+  opacity: 1;
+}
+
 .u-opacity-90 {
   opacity: 0.9;
 }
