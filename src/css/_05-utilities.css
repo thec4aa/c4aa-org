@@ -116,11 +116,11 @@
 }
 
 .u-no-mix {
-  mix-blend-mode: normal;
+  mix-blend-mode: normal !important;
 }
 
 .u-opacity-100 {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .u-opacity-90 {
