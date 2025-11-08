@@ -105,9 +105,9 @@ add_action( 'wp_enqueue_scripts', 'ace_add_external_link_icon' );
 // Add Social Link Icons for Bluesky
 
 // Add Bluesky to the social icons map
-function add_bluesky_social_icon( $social_icons ) {
-    $social_icons['bsky.app'] = 'bluesky';
-    return $social_icons;
+function add_bluesky_social_icon( $social_icons_map ) {
+    $social_icons_map['bluesky'] = array('bsky.app');
+    return $social_icons_map;
 }
 add_filter( 'twentynineteen_social_icons_map', 'add_bluesky_social_icon' );
 
