@@ -68,15 +68,6 @@ add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
 	return $data;
 	}, 99, 2 );
 
-// function to add bloomerang tracking script:
-function c4aa_add_bloomerang_tracking_script() {
-	echo '<script src="https://api.bloomerang.co/v1/WebsiteVisit?ApiKey=pub_3cb484db-d146-11ec-b5ee-066e3d38bc77" type="text/javascript"></script>
-	';
-}
-add_action( 'wp_head', 'c4aa_add_bloomerang_tracking_script', 0 );
-
-
-
 /**
  * Add link icons.
  *
