@@ -925,6 +925,111 @@ fieldset {
     font-weight: 600;
 }
 
+/* range slider */
+
+.frm_range_container {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.frm-slider-wrapper {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.frm-slider-track {
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background-color: #aaa;
+    border-radius: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.frm-slider-range {
+    position: absolute;
+    height: 8px;
+    background-color: var(--color-brandBlue);
+    border-radius: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 0.1s ease, left 0.1s ease;
+    pointer-events: none;
+}
+
+.frm-slider-handle {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-brandRed);
+    border: 2px solid var(--color-brandBeige);
+    border-radius: 50%;
+    top: 50%;
+    cursor: grab;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    z-index: 2;
+
+    &.min-handle {
+        transform: translate(-50%, -50%);
+    }
+
+    &.max-handle {
+        transform: translate(50%, -50%);
+    }
+
+    &:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &.min-handle:hover {
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+
+    &.max-handle:hover {
+        transform: translate(50%, -50%) scale(1.15);
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    &.min-handle:active {
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    &.max-handle:active {
+        transform: translate(50%, -50%) scale(0.95);
+    }
+}
+
+.frm_range_container .frm_description {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-brandGrey);
+    margin-top: 0.25rem;
+}
+
+.frm_range_container .range-value {
+    display: block;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-brandBlack);
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-brandBeige);
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /**
 *
 * COLUMNS
