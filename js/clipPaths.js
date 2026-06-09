@@ -53,13 +53,6 @@ function clamp( value, min, max ) {
 	return Math.min( Math.max( value, min ), max );
 }
 
-// smoothstep easing: eases the drift in/out at the viewport edges (zero slope
-// at 0 and 1) so the tilt settles smoothly instead of tracking linearly and
-// kinking where it clamps. Keeps the midpoint at 0.5 so center stays untilted.
-function easeInOut( t ) {
-	return t * t * ( 3 - 2 * t );
-}
-
 // headings: update the variable the clip-path CSS already multiplies by 1deg
 function applyVariableRotation( el, angle ) {
 	el.style.setProperty( '--rotate', angle.toFixed( 3 ) );
@@ -151,9 +144,9 @@ function updateScrollRotation() {
 		// 1 when it reaches the top. Clamped so it holds steady off-screen.
 		const progress = clamp( 1 - center / viewportHeight, 0, 1 );
 
-		// ease the curve, then center it: a -swing/2..+swing/2 drift,
-		// flipped per element so neighbors lean opposite ways
-		const drift = ( easeInOut( progress ) - 0.5 ) * swing * direction;
+		// center it: a -swing/2..+swing/2 drift, flipped per element
+		// so neighbors lean opposite ways
+		const drift = ( progress - 0.5 ) * swing * direction;
 		const angle = clamp( base + drift, -MAX_ROTATION, MAX_ROTATION );
 
 		apply( el, angle );
@@ -163,19 +156,20 @@ function updateScrollRotation() {
 if ( !prefersReducedMotion && scrollRotaters.length ) {
 	let ticking = false;
 
-	window.addEventListener(
-		'scroll',
-		() => {
-			if ( !ticking ) {
-				window.requestAnimationFrame( () => {
-					updateScrollRotation();
-					ticking = false;
-				} );
-				ticking = true;
-			}
-		},
-		{ passive: true }
-	);
+	// throttle to one update per frame, shared by scroll and resize
+	function requestUpdate() {
+		if ( !ticking ) {
+			window.requestAnimationFrame( () => {
+				updateScrollRotation();
+				ticking = false;
+			} );
+			ticking = true;
+		}
+	}
+
+	window.addEventListener( 'scroll', requestUpdate, { passive: true } );
+	// recompute on resize since viewport height (and layout) can change
+	window.addEventListener( 'resize', requestUpdate, { passive: true } );
 
 	// set the tilt for whatever is already on screen at load
 	updateScrollRotation();
