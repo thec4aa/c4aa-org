@@ -39,7 +39,8 @@ Scroll Rotation Setup
  */
 
 const MAX_ROTATION = 4; // hard cap — never tilt past this in either direction
-const SCROLL_SWING = 3; // total degrees of drift across one viewport height
+const SWING_MIN = 2;    // smallest total drift across one viewport height
+const SWING_MAX = 3.5;  // largest — each element picks somewhere in this range
 
 const prefersReducedMotion = window.matchMedia(
 	'(prefers-reduced-motion: reduce)'
@@ -57,16 +58,19 @@ function applyVariableRotation( el, angle ) {
 	el.style.setProperty( '--rotate', angle.toFixed( 3 ) );
 }
 
-// images/figcaptions: set the transform directly
+// images/figcaptions: use the individual `rotate` property so we leave the
+// `transform` free for CSS hover effects (duotone scale, etc.) to compose
 function applyTransformRotation( el, angle ) {
-	el.style.transform = `rotate(${angle.toFixed( 2 )}deg)`;
+	el.style.rotate = `${angle.toFixed( 2 )}deg`;
 }
 
-// give an element a random direction, apply its starting tilt, and register it
+// give an element a random direction and swing, apply its starting tilt, and
+// register it for scroll updates
 function registerRotater( el, base, apply ) {
 	const direction = Math.random() < 0.5 ? -1 : 1; // clockwise or counter
+	const swing = SWING_MIN + Math.random() * ( SWING_MAX - SWING_MIN );
 	apply( el, base );
-	scrollRotaters.push( { el, base, direction, apply } );
+	scrollRotaters.push( { el, base, direction, swing, apply } );
 }
 
 /**************
@@ -132,7 +136,7 @@ randomRotationElements.forEach( ( el ) => {
 function updateScrollRotation() {
 	const viewportHeight = window.innerHeight;
 
-	scrollRotaters.forEach( ( { el, base, direction, apply } ) => {
+	scrollRotaters.forEach( ( { el, base, direction, swing, apply } ) => {
 		const rect = el.getBoundingClientRect();
 		const center = rect.top + rect.height / 2;
 
@@ -140,8 +144,9 @@ function updateScrollRotation() {
 		// 1 when it reaches the top. Clamped so it holds steady off-screen.
 		const progress = clamp( 1 - center / viewportHeight, 0, 1 );
 
-		// progress 0..1 becomes a -1.5..1.5 swing, flipped per element
-		const drift = ( progress - 0.5 ) * SCROLL_SWING * direction;
+		// center it: a -swing/2..+swing/2 drift, flipped per element
+		// so neighbors lean opposite ways
+		const drift = ( progress - 0.5 ) * swing * direction;
 		const angle = clamp( base + drift, -MAX_ROTATION, MAX_ROTATION );
 
 		apply( el, angle );
@@ -151,19 +156,20 @@ function updateScrollRotation() {
 if ( !prefersReducedMotion && scrollRotaters.length ) {
 	let ticking = false;
 
-	window.addEventListener(
-		'scroll',
-		() => {
-			if ( !ticking ) {
-				window.requestAnimationFrame( () => {
-					updateScrollRotation();
-					ticking = false;
-				} );
-				ticking = true;
-			}
-		},
-		{ passive: true }
-	);
+	// throttle to one update per frame, shared by scroll and resize
+	function requestUpdate() {
+		if ( !ticking ) {
+			window.requestAnimationFrame( () => {
+				updateScrollRotation();
+				ticking = false;
+			} );
+			ticking = true;
+		}
+	}
+
+	window.addEventListener( 'scroll', requestUpdate, { passive: true } );
+	// recompute on resize since viewport height (and layout) can change
+	window.addEventListener( 'resize', requestUpdate, { passive: true } );
 
 	// set the tilt for whatever is already on screen at load
 	updateScrollRotation();
