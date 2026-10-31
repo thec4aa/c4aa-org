@@ -1,14 +1,14 @@
 <?php
 // Displays a linked email of the person
 // Information added via custom fields on the Person Post Type
-$align     = isset( $block['align_text'] ) ? $block['align_text'] : 'left';
-$textcolor = isset( $block['textColor'] ) ? $block['textColor'] : 'inherit';
-
-if ( substr( $textcolor, 0, 1 ) !== '#' && substr( $textcolor, 0, 4 ) !== 'rgb(' ) {
-    $textcolor = 'var(--wp--preset--color--' . $textcolor . ')';
-}
+// On the front end, get_block_wrapper_attributes() carries the colour, size,
+// alignment and spacing chosen in the editor. In the editor preview WordPress
+// already wraps the block and applies those itself, so we only add our class.
+$wrapper = ! empty( $is_preview )
+	? 'class="person-email"'
+	: get_block_wrapper_attributes( array( 'class' => 'person-email' ) );
 ?>
-<aside class="person-email" style="color: <?php echo esc_attr( $textcolor ); ?>; text-align: <?php echo esc_attr( $align ); ?>">
+<aside <?php echo $wrapper; ?>>
     <?php $person_email = get_field( 'person-email', get_the_ID() ); ?>
     <?php if ( ! empty( $person_email ) ) { ?>
             <p>
