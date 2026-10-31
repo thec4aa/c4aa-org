@@ -610,15 +610,6 @@
                 },
                 {
                     "fluid": {
-                        "max": "1.5rem",
-                        "min": "1rem"
-                    },
-                    "name": "Medium",
-                    "size": "1rem",
-                    "slug": "medium"
-                },
-                {
-                    "fluid": {
                         "max": "2rem",
                         "min": "1.5rem"
                     },
