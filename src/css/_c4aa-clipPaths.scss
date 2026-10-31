@@ -1,3 +1,5 @@
+// `$content` is the selector that wraps post content: `.entry .entry-content` on the
+// front end, `.is-root-container` in the block editor (set in editor.scss).
 .is-style-c4aa-clipPath-heading,
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
@@ -37,7 +39,7 @@ columns block */
 }
 
 .is-style-c4aa-clipPath-heading, 
-.entry .entry-content .is-style-c4aa-clipPath-heading.has-background,
+#{$content} .is-style-c4aa-clipPath-heading.has-background,
 .archive h2.entry-title,
 header:not(.featured-image) h1.entry-title,
 .widget-title,
@@ -132,27 +134,27 @@ h4.is-style-c4aa-clipPath-heading {
 }
 
 @media only screen and (min-width: 768px) {
-	.entry .entry-content > h3.is-style-c4aa-clipPath-heading,
+	#{$content} > h3.is-style-c4aa-clipPath-heading,
 	h3.is-style-c4aa-clipPath-heading {
 		transform: rotate(calc(var(--rotate) * 1deg)) translate(-2rem, 0);
 	}
 
-	.entry .entry-content > h4.is-style-c4aa-clipPath-heading,
+	#{$content} > h4.is-style-c4aa-clipPath-heading,
 	h4.is-style-c4aa-clipPath-heading {
 		padding-left: 4rem;
 		transform: rotate(calc(var(--rotate) * 1deg)) translate(-4rem, 0);
 	}
 }
 
-.entry .entry-content > h2 {
+#{$content} > h2 {
 	    transform: rotate(calc(var(--rotate) * 1deg)) translate(-0.5rem, 0);
 	    margin-top: calc( 5vw + 30px );
 	    margin-bottom: calc( 3vw + 30px );
 	}
 	
 	
-@media only screen and(min-width: 768px) {
-	    .entry .entry-content > h2 {
+@media only screen and (min-width: 768px) {
+	    #{$content} > h2 {
 	        transform: rotate(calc(var(--rotate) * 1deg)) translate(-1.5rem, 0);
 	    }
 	}

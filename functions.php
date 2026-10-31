@@ -54,7 +54,7 @@ add_action( 'enqueue_block_editor_assets', 'c4aa_gutenberg_scripts' );
 add_action( 'admin_init', 'wpdocs_add_editor_styles' );
 function wpdocs_add_editor_styles() {
   add_theme_support( 'editor-styles' );
-  add_editor_style( '/src/css/_c4aa-editorStyles.css' );
+  add_editor_style( '/build/editor.css' );
 
 }
 

@@ -1,0 +1,46 @@
+// `$content` is the selector that wraps post content: `.entry .entry-content` on the
+// front end, `.is-root-container` in the block editor (set in editor.scss).
+/*
+ * 
+ * SEPARATOR BLOCK
+ *
+ */
+
+#{$content} .wp-block-separator,
+#{$content} hr,
+#{$content} hr::before {
+    opacity: 100%;
+}
+
+#{$content} .wp-block-separator,
+#{$content} hr {
+    color: var(--color-brandGrey);
+}
+
+
+// makes the 3-dot gutenburg style more visible
+#{$content} hr::before {
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+// makes "Default" gutenberg selected separator centered and width 90%
+#{$content} hr,
+#{$content} .wp-block-separator,
+#{$content} .wp-block-separator:not(.is-style-wide):not(.is-style-dots) hr { // including for legacy
+    width: 90%;
+    max-width: calc( var( --wp--style--global--content-size ) * .9 );
+}
+
+#{$content} .wp-block-separator.alignwide {
+    width: 90%;
+    max-width: calc( var( --wp--style--global--wide-size ) * .9 );
+}
+
+#{$content} .wp-block-separator.aligncenter {
+    width: 90%;
+    max-width: calc( var( --wp--style--global--content-size ) * .9 );
+    margin: auto;
+}

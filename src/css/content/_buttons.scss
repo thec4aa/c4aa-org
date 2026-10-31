@@ -1,0 +1,250 @@
+// `$content` is the selector that wraps post content: `.entry .entry-content` on the
+// front end, `.is-root-container` in the block editor (set in editor.scss).
+/**
+*
+* BUTTONS
+*
+*/
+
+/* Solid part of the button */
+/* note: first line is excluded buttons from other forms, tinymce editor, formidable forms, etc. */
+button:not(:where(#simple-banner-close-button *, 
+    #simple-banner-close-button, 
+    .wp-editor-tools *, 
+    .mce-container *, 
+    .frm_upload_text *, 
+    .frm_show_password_btn, 
+    .lightbox-trigger, 
+    .close-button, 
+    .swiper-pagination-bullet,
+    .menu-toggle)),
+.button,
+.entry .button,
+#{$content} .wp-element-button,
+#{$content} .wp-block-file .wp-block-file__button,
+#{$content} .wp-block-button .wp-block-button__link,
+input[type="button"],
+input[type="reset"],
+input[type="submit"], /* catch old styles */
+#{$content} .wp-block-button:not(.is-style-squared) .wp-block-button__link,
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link,
+#{$content} .wp-block-button.is-style-solid .wp-block-button__link {
+    border-radius: 1rem;
+    font-family: var(--font-serif);
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    transition: rotate 50ms ease-out, transform 50ms ease-out, scale 50ms ease-out;
+    transform: rotate(-2deg);
+    border: none;
+
+    &:hover {
+        // rotate the sold part of the button on hover
+        transform: rotate(-1deg);
+        color: var(--color-brandWhite);
+    }
+
+    &:focus {
+        // rotate the sold part of the button on hover
+        transform: rotate(-1deg);
+        color: var(--color-brandWhite);
+    }
+
+    &:active {
+        // move the sold part of the button on click
+        transform: scale(0.8);
+    }
+
+    &::before {
+        // outline part of the button
+        transition: all 50ms ease;
+        content: '';
+        // display:inline-block;
+        position: absolute;
+        top: 0;
+        left: 2px;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        rotate: 1deg;
+        border-radius: 1rem;
+        // mix-blend-mode: darken;
+        transform: rotate(1deg);
+        width: 100%;
+        height: 110%;
+        border-style: solid;
+        border-width: 2px;
+    }
+    &:not(.has-border-color)::before {
+        border-color: var(--color-brandRed);
+    }
+    &.has-contrast-border-color::before {
+        border-color: var(--color-brandBlack);
+    }
+    &.has-base-border-color::before {
+        border-color: var(--color-brandWhite);
+    }
+    &.has-red-border-color::before {
+        border-color: var(--color-brandRed);
+    }
+    &.has-paper-border-color::before {
+        border-color: var(--color-brandBeige);
+    }
+    &.has-grey-border-color::before {
+        border-color: var(--color-brandGrey);
+    }
+    &.has-blue-border-color::before {
+        border-color: var(--color-brandBlue);
+    }
+    &.has-green-border-color::before {
+        border-color: var(--color-brandGreen);
+    }
+    &.has-purple-border-color::before {
+        border-color: var(--color-brandPurple);
+    }
+    &.has-yellow-border-color::before {
+        border-color: var(--color-brandYellow);
+    }
+    
+}
+
+// rotate the outline on hover
+button:hover::before,
+.button:hover::before,
+.entry .button:hover::before,
+#{$content} .wp-element-button:hover::before,
+#{$content} .wp-block-file .wp-block-file__button:hover::before,
+#{$content} .wp-block-button .wp-block-button__link:hover::before,
+#{$content} .wp-block-button .wp-block-button__link:hover:not(.has-background):hover::before,
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link:hover::before,
+#{$content} .wp-block-button.is-style-solid .wp-block-button__link:hover::before,
+input[type="button"]:hover::before,
+input[type="reset"]:hover::before,
+input[type="submit"]:hover::before {
+    transform: rotate(-1deg) translateX(-2px) translateY(-5%);
+}
+
+// rotate the outline on focus
+button:focus::before,
+.button:focus::before,
+.entry .button:focus::before,
+#{$content} .wp-element-button:focus::before,
+#{$content} .wp-block-file .wp-block-file__button:focus::before,
+#{$content} .wp-block-button .wp-block-button__link:focus::before,
+#{$content} .wp-block-button .wp-block-button__link:focus:not(.has-background):focus::before,
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link:focus::before,
+#{$content} .wp-block-button.is-style-solid .wp-block-button__link:focus::before,
+input[type="button"]:focus::before,
+input[type="reset"]:focus::before,
+input[type="submit"]:focus::before {
+    transform: rotate(-1deg) translateX(-2px) translateY(-5%);
+}
+
+// flash to white on active
+button:active::before,
+.button:active::before,
+.entry .button:active::before,
+#{$content} .wp-element-button:active::before,
+#{$content} .wp-block-file .wp-block-file__button:active::before,
+#{$content} .wp-block-button .wp-block-button__link:active::before,
+#{$content} .wp-block-button .wp-block-button__link:active:not(.has-background):active::before,
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link:active::before,
+#{$content} .wp-block-button.is-style-solid .wp-block-button__link:active::before,
+input[type="button"]:active::before,
+input[type="reset"]:active::before,
+input[type="submit"]:active::before {
+    transform: rotate(-1deg) translateX(-2px) translateY(-5%);
+    border: var(--color-brandWhite);
+}
+
+
+// if no text color is specified, use Beige
+#{$content} .wp-block-button .wp-block-button__link:not(.has-text-color),
+#{$content} .wp-element-button {
+    color: var(--color-brandBeige);
+}
+
+// if no background is specified, use Blue
+input[type="button"].button,
+input[type="reset"].button,
+input[type="submit"].button,
+input[type="submit"],
+#{$content} .wp-block-button .wp-block-button__link:not(.has-background),
+#{$content} .wp-element-button,
+.frm_button_submit {
+    background-color: var(--color-brandBlue);
+}
+
+// form buttons have a border - animation doesn't work, but moving on.
+input[type="button"].button,
+input[type="reset"].button,
+input[type="submit"].button,
+input[type="submit"] {
+    border: 2px solid var(--color-brandRed);
+}
+
+// in T19 and formidable unstyled buttons hover/focus black. This is a fix for those
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+#{$content} .wp-element-button .wp-block-button__link:not(.has-background):hover,
+#{$content} .wp-element-button .wp-block-button__link:not(.has-background):focus,
+#{$content} .wp-block-button .wp-block-button__link:not(.has-background):hover,
+#{$content} .wp-block-button .wp-block-button__link:not(.has-background):focus,
+.frm_button_submit:hover,
+.frm_button_submit:focus {
+    background-color: var(--color-brandBlue);
+}
+
+// High Emphasis Buttons
+
+/* outline of the high emphasis button */
+#{$content} .is-style-high-emphasis-button .wp-block-button__link:not(.has-border-color)::before {
+    border: 2px solid var(--color-brandBlue) !important;
+}
+
+/* default background color of the high emphasis button */
+#{$content} .is-style-high-emphasis-button .wp-block-button__link:not(.has-background) {
+    background-color: var(--color-brandRed) !important;
+}
+
+/* default text color of the high emphasis button */
+#{$content} .is-style-high-emphasis-button .wp-block-button__link:not(.has-text-color) {
+    color: var(--color-brandWhite) !important;
+}
+
+/* increase font weight of high emphasis button */
+#{$content} .is-style-high-emphasis-button .wp-block-button__link {
+    font-weight: 700;
+}
+
+// Low Emphasis Buttons
+
+/* outline of the low emphasis button */
+#{$content} .is-style-low-emphasis-button .wp-block-button__link:not(.has-border-color)::before {
+    border: 2px solid var(--color-brandBlue) !important;
+}
+
+/* default background color of the low emphasis button */
+#{$content} .is-style-low-emphasis-button .wp-block-button__link:not(.has-background) {
+    background-color: var(--color-brandBeige) !important;
+}
+
+/* default text color of the low emphasis button */
+#{$content} .is-style-low-emphasis-button .wp-block-button__link:not(.has-text-color) {
+    color: var(--color-brandBlue) !important;
+}
+
+/* old styles */
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color),
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) #{$content} .wp-block-button.is-style-solid .wp-block-button__link:not(.has-text-color),
+#{$content} .wp-block-button.is-style-solid .wp-block-button__link:focus:not(.has-text-color),
+#{$content} .wp-block-button.is-style-solid .wp-block-button__link:active:not(.has-text-color),
+#{$content} .wp-block-button.is-style-solid .wp-block-button__link:hover:not(.has-text-color) {
+    color: var(--color-brandBeige);
+    border-color: var(--color-brandBlue);
+}
