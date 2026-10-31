@@ -1,50 +1,52 @@
-// Hamburger
+// Hamburger (and the mobile logo / header colour swap that goes with it)
 document.addEventListener('DOMContentLoaded', function() {
   var menuToggle = document.querySelector('.menu-toggle');
   var mainNavigation = document.querySelector('.main-navigation');
-  var menuIsActive = false;
-  var widthIsMobile = checkWidth();
-  
-  window.addEventListener('resize', function(){
-    widthIsMobile = checkWidth();
-    menuIsActive = false;
-    menuToggle.classList.remove('active');
-    mainNavigation.style.display = (widthIsMobile) ? 'none' : 'block';
-  });
-  
-  if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-      menuIsActive = !menuIsActive;
-      menuToggle.classList.toggle('active');
-      mainNavigation.style.display = (menuIsActive) ? 'block' : 'none';
-    });
+  if (!menuToggle || !mainNavigation) {
+    return;
   }
-});
-// Toggle red and white logos
-document.addEventListener('DOMContentLoaded', function() {
-  var menuToggle = document.querySelector('.menu-toggle');
+
   var logoC4aaMobileRed = document.querySelector('.logo-c4aa-mobile--red');
   var logoC4aaMobileWhite = document.querySelector('.logo-c4aa-mobile--white');
   var siteHeader = document.querySelector('.site-header');
-  var menuIsActive = false;
   var widthIsMobile = checkWidth();
-  
-  window.addEventListener('resize', function(){
-    widthIsMobile = checkWidth();
-    if(widthIsMobile) {
-      logoC4aaMobileRed.classList.add('active');
-      logoC4aaMobileWhite.classList.remove('active');
-      siteHeader.classList.remove('active');
+
+  function isOpen() {
+    return menuToggle.getAttribute('aria-expanded') === 'true';
+  }
+
+  function setMenu(open) {
+    menuToggle.classList.toggle('active', open);
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mainNavigation.style.display = (open || !widthIsMobile) ? 'block' : 'none';
+    if (logoC4aaMobileRed) logoC4aaMobileRed.classList.toggle('active', !open);
+    if (logoC4aaMobileWhite) logoC4aaMobileWhite.classList.toggle('active', open);
+    if (siteHeader) siteHeader.classList.toggle('active', open);
+  }
+
+  menuToggle.addEventListener('click', function() {
+    setMenu(!isOpen());
+  });
+
+  // Escape closes the menu and puts focus back on the toggle
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && isOpen()) {
+      setMenu(false);
+      menuToggle.focus();
     }
   });
-  
-  if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-      logoC4aaMobileRed.classList.toggle('active');
-      logoC4aaMobileWhite.classList.toggle('active');
-      siteHeader.classList.toggle('active');
-    });
-  }
+
+  // Only react when the viewport crosses the mobile breakpoint. Mobile
+  // browsers fire resize when the URL bar collapses or the keyboard opens,
+  // and that shouldn't snap an open menu shut.
+  window.addEventListener('resize', function() {
+    var nowMobile = checkWidth();
+    if (nowMobile === widthIsMobile) {
+      return;
+    }
+    widthIsMobile = nowMobile;
+    setMenu(false);
+  });
 });
 
 // Check if the screen is mobile

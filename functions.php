@@ -16,7 +16,7 @@ function c4aa_enqueue_assets() {
     
     // JS versioning - individual for each file
     $js_base_path = get_stylesheet_directory() . '/js/';
-    $js_files = ['menu.js', 'scrolling.js', 'assorted.js', 'clipPaths.js'];
+    $js_files = ['menu.js', 'scrolling.js', 'clipPaths.js', 'externalLinks.js'];
     
     // Enqueue CSS
     wp_enqueue_style('twentynineteen-style', get_template_directory_uri() . '/style.css');
@@ -41,11 +41,10 @@ add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
 
 function c4aa_gutenberg_scripts() {
 	// wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/src/css/_c4aa-editorStyles.css' );
-	wp_enqueue_style( 'c4aa-imageFilter', get_stylesheet_directory_uri() . '/src/css/_c4aa-imageFilter.css' );
 	wp_enqueue_script(
 		'be-editor',
 		get_stylesheet_directory_uri() . '/js/editor.js',
-		array( 'wp-blocks', 'wp-dom' ),
+		array( 'wp-blocks', 'wp-dom-ready' ),
 		filemtime( get_stylesheet_directory() . '/js/editor.js' ),
 		true
 	);
@@ -67,40 +66,6 @@ add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
 	}
 	return $data;
 	}, 99, 2 );
-
-/**
- * Add link icons.
- *
- * Adds a external-link icon to external links only.
- * Related post: https://jeroensormani.com/adding-a-icon-to-external-links/
- */
-function ace_add_external_link_icon() {
-    wp_register_script('external-link-icon', false);
-    wp_enqueue_script('external-link-icon');
-
-    wp_add_inline_script('external-link-icon', "
-        function externalLinkIcon() {
-            var icon = '<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" aria-hidden=\"true\" role=\"img\" width=\"1em\" height=\"1em\" preserveAspectRatio=\"xMidYMid meet\" viewBox=\"0 0 20 20\">' +
-                '<path d=\"M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z\" fill=\"currentColor\"/>' +
-                '</svg>';
-            // Check if content is available
-            if (!document.querySelector('.entry-content')) return;
-            var links = document.querySelector('.entry-content').querySelectorAll('a');
-            [...links].forEach(function(link) {
-                if (link.host!== window.location.host 
-				&&!link.href.startsWith('mailto:') 
-				&&!link.querySelector('img') 
-				&&!link.classList.contains('wp-block-social-links') 
-				&&!link.classList.contains('wp-block-social-link-anchor') 
-				&&!link.closest('.wp-block-jetpack-slideshow')) {
-                    link.innerHTML +='' + icon;
-                }
-            });
-        }
-        window.addEventListener('load', externalLinkIcon, false);
-    ");
-}
-add_action( 'wp_enqueue_scripts', 'ace_add_external_link_icon' );
 
 // Add Social Link Icons for Bluesky
 // Directly modify the TwentyNineteen SVG Icons class to add Bluesky support
@@ -152,7 +117,7 @@ add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_pag
  */
 add_action( 'the_post', function( $post, \WP_Query $q )
 {
-    if( $q->is_search() && $q->is_main_query() && 0 === $q->current_post )
+    if( $q->is_search() && $q->is_main_query() && ! $q->is_feed() && 0 === $q->current_post )
     {
         do_action( 'wpse_before_second_post_in_search' );
     }
@@ -163,10 +128,17 @@ add_action( 'the_post', function( $post, \WP_Query $q )
  */
 add_action( 'wpse_before_second_post_in_search', function()
 {
-	echo '<article class="entry search-results-search-form
-	"><div class="entry-content"><div class="wp-block-group"><div class="wp-block-group__inner-container search-form-in-results">';
-	echo get_search_form( array('label' => 'Didn\'t find what you\'re looking for?', 'placeholder' => 'Search again...') );
-	echo '</div></div></div></article>';
+	// get_search_form() only knows about 'echo' and 'aria_label', so the custom
+	// label and placeholder never showed up. Write the form out directly instead.
+	?>
+	<article class="entry search-results-search-form"><div class="entry-content"><div class="wp-block-group"><div class="wp-block-group__inner-container search-form-in-results">
+		<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<label for="search-again" class="search-again-label"><?php esc_html_e( "Didn't find what you're looking for?", 'c4aa-org' ); ?></label>
+			<input type="search" id="search-again" class="search-field" placeholder="<?php esc_attr_e( 'Search again…', 'c4aa-org' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+			<input type="submit" class="search-submit" value="<?php esc_attr_e( 'Search', 'c4aa-org' ); ?>" />
+		</form>
+	</div></div></div></article>
+	<?php
 } );
 
 // Initialize Duotone on all post-thumbnails on archives. The specific color
@@ -303,21 +275,21 @@ function register_c4aa_org_blocks() {
 	register_block_type( dirname(__FILE__) . '/blocks/promo-image' );
 }
 
-/* Register Block Category */
-function example_filter_block_categories_when_post_provided( $block_categories, $editor_context ) {
+/* Register the block category all the theme's blocks sit in */
+function c4aa_register_block_category( $block_categories, $editor_context ) {
     if ( ! empty( $editor_context->post ) ) {
         array_push(
             $block_categories,
             array(
-                'slug'  => 'people-category',
-                'title' => __( 'C4AA People', 'c4aa-org-theme' ),
+                'slug'  => 'c4aa',
+                'title' => __( 'C4AA', 'c4aa-org' ),
                 'icon'  => 'groups'
             )
         );
     }
     return $block_categories;
 }
-add_filter( 'block_categories_all', 'example_filter_block_categories_when_post_provided', 10, 2 );
+add_filter( 'block_categories_all', 'c4aa_register_block_category', 10, 2 );
 
 
 /* oEmbeds */

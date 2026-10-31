@@ -7,6 +7,11 @@
             "backgroundSize": true
         },
         "blocks": {
+            "c4aa-org/promo-image": {
+                "dimensions": {
+                    "aspectRatio": true
+                }
+            },
             "core/button": {
                 "border": {
                     "color": true,
@@ -64,7 +69,7 @@
                     "defaultPalette": false,
                     "palette": [
                         {
-                            "color": "#968c83",
+                            "color": "#7B736c",
                             "name": "C4AA Grey",
                             "slug": "grey"
                         },
@@ -371,7 +376,7 @@
                     "slug": "paper"
                 },
                 {
-                    "color": "#968c83",
+                    "color": "#7B736c",
                     "name": "Middle Grey",
                     "slug": "grey"
                 },
@@ -610,15 +615,6 @@
                 },
                 {
                     "fluid": {
-                        "max": "1.5rem",
-                        "min": "1rem"
-                    },
-                    "name": "Medium",
-                    "size": "1rem",
-                    "slug": "medium"
-                },
-                {
-                    "fluid": {
                         "max": "2rem",
                         "min": "1.5rem"
                     },
@@ -637,6 +633,13 @@
     },
     "styles": {
         "blocks": {
+            "c4aa-org/person-title": {
+                "css": "font-size: 1.2rem;",
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--zilla-slab)",
+                    "fontStyle": "italic"
+                }
+            },
             "core/buttons": {
                 "elements": {
                     "button": {

@@ -103,9 +103,14 @@
 	margin-right: auto;
 }
 
-@view-transition {
-	navigation: auto;
-  }  
+/* Cross-fade between pages, but not for people who asked for less motion.
+   The reduced-motion block below can't reach the view transition pseudo-elements,
+   so the opt-in itself has to be conditional. */
+@media (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
+}
 
   
 /*

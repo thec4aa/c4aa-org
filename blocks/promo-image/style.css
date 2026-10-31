@@ -1,0 +1,28 @@
+/* Loaded in the editor and on the front end (block.json "style").
+
+   On the front end the block wrapper is the div in render.php. In the editor it is
+   WordPress's own wrapper, with an ACF preview div in between, so nothing here may
+   assume the image is a direct child.
+
+   The image never overflows its column. */
+.wp-block-c4aa-org-promo-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* A ratio or min height picked in the sidebar lands on the wrapper as an inline
+   style. Hand it down to everything inside, so the image box takes the same shape
+   and object-fit crops the picture to it. "Original" is aspect-ratio: auto, which
+   inherits as auto and leaves the image alone. */
+.wp-block-c4aa-org-promo-image[style*="aspect-ratio"] *,
+.wp-block-c4aa-org-promo-image[style*="min-height"] * {
+    aspect-ratio: inherit;
+    min-height: inherit;
+}
+
+.wp-block-c4aa-org-promo-image[style*="aspect-ratio"] img,
+.wp-block-c4aa-org-promo-image[style*="min-height"] img {
+    width: 100%;
+    object-fit: cover;
+}

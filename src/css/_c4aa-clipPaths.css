@@ -145,7 +145,7 @@ h4.is-style-c4aa-clipPath-heading {
 }
 
 .entry .entry-content > h2 {
-	    transform: rotate(calc(var(--rotate) * 1deg)) translate(-0,5rem, 0);
+	    transform: rotate(calc(var(--rotate) * 1deg)) translate(-0.5rem, 0);
 	    margin-top: calc( 5vw + 30px );
 	    margin-bottom: calc( 3vw + 30px );
 	}
