@@ -16,7 +16,7 @@ function c4aa_enqueue_assets() {
     
     // JS versioning - individual for each file
     $js_base_path = get_stylesheet_directory() . '/js/';
-    $js_files = ['menu.js', 'scrolling.js', 'assorted.js', 'clipPaths.js'];
+    $js_files = ['menu.js', 'scrolling.js', 'clipPaths.js'];
     
     // Enqueue CSS
     wp_enqueue_style('twentynineteen-style', get_template_directory_uri() . '/style.css');
