@@ -628,6 +628,13 @@
     },
     "styles": {
         "blocks": {
+            "c4aa-org/person-title": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--zilla-slab)",
+                    "fontSize": "1.2rem",
+                    "fontStyle": "italic"
+                }
+            },
             "core/buttons": {
                 "elements": {
                     "button": {
