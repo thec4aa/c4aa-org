@@ -578,7 +578,7 @@ input[type="button"]:active::before,
 input[type="reset"]:active::before,
 input[type="submit"]:active::before {
     transform: rotate(-1deg) translateX(-2px) translateY(-5%);
-    border: var(--color-brandWhite);
+    border-color: var(--color-brandWhite);
 }
 
 
