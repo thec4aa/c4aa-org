@@ -7,11 +7,6 @@
             "backgroundSize": true
         },
         "blocks": {
-            "c4aa-org/person-title": {
-                "typography": {
-                    "fluid": false
-                }
-            },
             "core/button": {
                 "border": {
                     "color": true,
@@ -634,9 +629,9 @@
     "styles": {
         "blocks": {
             "c4aa-org/person-title": {
+                "css": "font-size: 1.2rem;",
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--zilla-slab)",
-                    "fontSize": "1.2rem",
                     "fontStyle": "italic"
                 }
             },
