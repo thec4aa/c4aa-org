@@ -3,6 +3,7 @@
     "apiVersion": 3,
     "name": "c4aa-org/promo-image",
     "version": "0.0.1",
+    "textdomain": "c4aa-org",
     "title": "Promo image",
     "description": "Display promotional image",
     "category": "c4aa",

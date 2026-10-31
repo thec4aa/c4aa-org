@@ -3,6 +3,7 @@
 	"apiVersion": 3,
 	"name": "c4aa-org/person-email",
     "version": "0.0.2",
+    "textdomain": "c4aa-org",
     "title": "Person's Email Address",
     "description": "Display personalized email",
 	"category": "c4aa",

@@ -29,9 +29,9 @@
 					<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				<?php endif; ?>
 				<br />
-				<?php echo esc_html( 'New York, USA  &nbsp;• &nbsp;+1&nbsp;(646)&nbsp;832-2454' ); ?>
+				<?php echo esc_html__( 'New York, USA', 'c4aa-org' ); ?>  &nbsp;• &nbsp;+1&nbsp;(646)&nbsp;832-2454
 				<br>
-				<?php echo esc_html('EIN: 45-3557000'); ?>
+				<?php echo esc_html__( 'EIN:', 'c4aa-org' ); ?> 45-3557000
 			</div>
 				
 			<div class="c4aa-magic-hand u-text-align-center">
