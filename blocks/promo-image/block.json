@@ -5,7 +5,7 @@
     "version": "0.0.1",
     "title": "Promo image",
     "description": "Display promotional image",
-    "category": "C4AA",
+    "category": "c4aa",
     "icon": "cover-image",
     "keywords": [
         "promo",
@@ -18,15 +18,6 @@
             "label": "Default",
             "isDefault": true
         }
-    ],
-    "editorStyle": "file:./style.css",
-    "style": [
-        "file:./style.css",
-        "promo-image-shared-style"
-    ],
-    "viewStyle": [
-        "file:./style.css",
-        "promo-image-view-style"
     ],
     "acf": {
         "renderTemplate": "render.php",
@@ -66,15 +57,6 @@
     "example": {
         "attributes": {
             "promo-image": "https://c4aa.org/wp-content/uploads/2024/07/C4AA_Icon_MagicHand-Red.png"
-        }
-    },
-    "attributes": {
-        "style": {
-            "dimensions": {
-                "aspectRatio": {
-                    "default": "1/1"
-                }
-            }
         }
     }
 }

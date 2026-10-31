@@ -5,7 +5,7 @@
     "version": "0.0.2",
     "title": "Person's Email Address",
     "description": "Display personalized email",
-	"category": "people-category",
+	"category": "c4aa",
     "icon": "email",
     "keywords": [ "person", "email", "people" ],
     "styles": [],
