@@ -40,4 +40,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "/node_modules/, /.git/, /.github/, /.vscode/, /.gitignore, /.nvmrc"
+          EXCLUDE: "/node_modules/, /src/, /.git/, /.github/, /.vscode/, /.gitignore, /.nvmrc"

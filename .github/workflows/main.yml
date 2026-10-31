@@ -43,9 +43,11 @@ jobs:
         ls -la ./build
 
     # The copy step below sends ./** so anything left here ends up on the
-    # server. The dependencies were only needed to build main.css.
-    - name: Drop node_modules before the copy
-      run: rm -rf node_modules
+    # server. The dependencies were only needed to build the stylesheets, and
+    # src/ is the Sass that just got compiled into build/, so neither needs
+    # to go. The scp action has no exclude option, hence the rm.
+    - name: Drop node_modules and src before the copy
+      run: rm -rf node_modules src
 
     - name: Connect to May First Shell Account
       uses: baisong/mayfirst-shell-action@v0.1.1
