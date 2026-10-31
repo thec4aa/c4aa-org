@@ -117,7 +117,7 @@ add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_pag
  */
 add_action( 'the_post', function( $post, \WP_Query $q )
 {
-    if( $q->is_search() && $q->is_main_query() && 0 === $q->current_post )
+    if( $q->is_search() && $q->is_main_query() && ! $q->is_feed() && 0 === $q->current_post )
     {
         do_action( 'wpse_before_second_post_in_search' );
     }

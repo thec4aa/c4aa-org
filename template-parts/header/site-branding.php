@@ -10,8 +10,8 @@
 
 <header class="mobile-header">
 	<a href="/" class="">
-		<img src="/wp-content/themes/c4aa-org/img/logo-c4aa-red.png" alt="" class="logo-c4aa-mobile logo-c4aa-mobile--red active">
-		<img src="/wp-content/themes/c4aa-org/img/logo-c4aa-white.png" alt="" class="logo-c4aa-mobile logo-c4aa-mobile--white">
+		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-red.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-c4aa-mobile logo-c4aa-mobile--red active">
+		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-white.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-c4aa-mobile logo-c4aa-mobile--white">
 	</a><!-- / -->
 	<button type="button" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="<?php esc_attr_e( 'Menu', 'twentynineteen' ); ?>">
 		<span class="bar"></span>
@@ -36,7 +36,7 @@
 				</a>
 			</h1>
 		<?php else : ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<p class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<span class="c4aa-text-logo" style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-red.png' ); ?> ');">
 					</span>
