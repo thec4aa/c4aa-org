@@ -136,7 +136,9 @@ randomRotationElements.forEach( ( el ) => {
 function updateScrollRotation() {
 	const viewportHeight = window.innerHeight;
 
-	scrollRotaters.forEach( ( { el, base, direction, swing, apply } ) => {
+	// read pass: measure every element before touching any styles, so the
+	// writes below don't force a reflow per element
+	const angles = scrollRotaters.map( ( { el, base, direction, swing } ) => {
 		const rect = el.getBoundingClientRect();
 		const center = rect.top + rect.height / 2;
 
@@ -147,9 +149,12 @@ function updateScrollRotation() {
 		// center it: a -swing/2..+swing/2 drift, flipped per element
 		// so neighbors lean opposite ways
 		const drift = ( progress - 0.5 ) * swing * direction;
-		const angle = clamp( base + drift, -MAX_ROTATION, MAX_ROTATION );
+		return clamp( base + drift, -MAX_ROTATION, MAX_ROTATION );
+	} );
 
-		apply( el, angle );
+	// write pass
+	scrollRotaters.forEach( ( { el, apply }, i ) => {
+		apply( el, angles[ i ] );
 	} );
 }
 

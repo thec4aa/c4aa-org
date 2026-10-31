@@ -16,7 +16,7 @@ function c4aa_enqueue_assets() {
     
     // JS versioning - individual for each file
     $js_base_path = get_stylesheet_directory() . '/js/';
-    $js_files = ['menu.js', 'scrolling.js', 'assorted.js', 'clipPaths.js'];
+    $js_files = ['menu.js', 'scrolling.js', 'clipPaths.js', 'externalLinks.js'];
     
     // Enqueue CSS
     wp_enqueue_style('twentynineteen-style', get_template_directory_uri() . '/style.css');
@@ -45,7 +45,7 @@ function c4aa_gutenberg_scripts() {
 	wp_enqueue_script(
 		'be-editor',
 		get_stylesheet_directory_uri() . '/js/editor.js',
-		array( 'wp-blocks', 'wp-dom' ),
+		array( 'wp-blocks', 'wp-dom-ready' ),
 		filemtime( get_stylesheet_directory() . '/js/editor.js' ),
 		true
 	);
@@ -67,40 +67,6 @@ add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
 	}
 	return $data;
 	}, 99, 2 );
-
-/**
- * Add link icons.
- *
- * Adds a external-link icon to external links only.
- * Related post: https://jeroensormani.com/adding-a-icon-to-external-links/
- */
-function ace_add_external_link_icon() {
-    wp_register_script('external-link-icon', false);
-    wp_enqueue_script('external-link-icon');
-
-    wp_add_inline_script('external-link-icon', "
-        function externalLinkIcon() {
-            var icon = '<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" aria-hidden=\"true\" role=\"img\" width=\"1em\" height=\"1em\" preserveAspectRatio=\"xMidYMid meet\" viewBox=\"0 0 20 20\">' +
-                '<path d=\"M9 3h8v8l-2-1V6.92l-5.6 5.59l-1.41-1.41L14.08 5H10zm3 12v-3l2-2v7H3V6h8L9 8H5v7h7z\" fill=\"currentColor\"/>' +
-                '</svg>';
-            // Check if content is available
-            if (!document.querySelector('.entry-content')) return;
-            var links = document.querySelector('.entry-content').querySelectorAll('a');
-            [...links].forEach(function(link) {
-                if (link.host!== window.location.host 
-				&&!link.href.startsWith('mailto:') 
-				&&!link.querySelector('img') 
-				&&!link.classList.contains('wp-block-social-links') 
-				&&!link.classList.contains('wp-block-social-link-anchor') 
-				&&!link.closest('.wp-block-jetpack-slideshow')) {
-                    link.innerHTML +='' + icon;
-                }
-            });
-        }
-        window.addEventListener('load', externalLinkIcon, false);
-    ");
-}
-add_action( 'wp_enqueue_scripts', 'ace_add_external_link_icon' );
 
 // Add Social Link Icons for Bluesky
 // Directly modify the TwentyNineteen SVG Icons class to add Bluesky support
