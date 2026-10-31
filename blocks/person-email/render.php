@@ -8,7 +8,7 @@ if ( substr( $textcolor, 0, 1 ) !== '#' && substr( $textcolor, 0, 4 ) !== 'rgb('
     $textcolor = 'var(--wp--preset--color--' . $textcolor . ')';
 }
 ?>
-<aside class="person-email style="color: <?php echo $textcolor; ?>; text-align: <?php echo $align; ?>">
+<aside class="person-email" style="color: <?php echo esc_attr( $textcolor ); ?>; text-align: <?php echo esc_attr( $align ); ?>">
     <?php $person_email = get_field( 'person-email', get_the_ID() ); ?>
     <?php if ( ! empty( $person_email ) ) { ?>
             <p>

@@ -123,6 +123,10 @@ add_action( 'after_setup_theme', 'c4aa_add_bluesky_icon' );
  */
 
 function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
+	if ( ! function_exists( 'get_field' ) ) {
+		return $classes;
+	}
+
 	$image_filter = get_field( 'c4aa_image_filter' );
 	$title_effect = get_field( 'c4aa_title_effect' );
 
@@ -179,6 +183,9 @@ function c4aa_add_archive_body_class( $classes ) {
 add_filter( 'body_class', 'c4aa_add_archive_body_class' );
 
 function c4aa_add_post_class_from_acf_options( $classes ) {
+	if ( ! function_exists( 'get_field' ) ) {
+		return $classes;
+	}
 
 	$image_filter = get_field( 'c4aa_image_filter', get_the_ID() );
 
