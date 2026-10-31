@@ -56,16 +56,6 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 }
 
 
-/* Promo image block: a ratio or min height picked in the editor lands on the
-   wrapper, so the image has to stretch to fill it. Otherwise it keeps its own size. */
-.wp-block-c4aa-org-promo-image[style*="aspect-ratio"] img,
-.wp-block-c4aa-org-promo-image[style*="min-height"] img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
 /**
  *
  * ARCHIVE PAGE

@@ -1,0 +1,20 @@
+/* Loaded in the editor and on the front end (block.json "style").
+   A ratio or min height picked in the sidebar lands on the block wrapper as an
+   inline style. Pin the image to that box so it fills it instead of keeping its
+   own height. In the editor ACF puts an extra div between wrapper and image,
+   which is why the image is positioned rather than given height: 100%.
+   With nothing picked, the image keeps its own size. */
+.wp-block-c4aa-org-promo-image[style*="aspect-ratio"],
+.wp-block-c4aa-org-promo-image[style*="min-height"] {
+    position: relative;
+    overflow: hidden;
+}
+
+.wp-block-c4aa-org-promo-image[style*="aspect-ratio"] img,
+.wp-block-c4aa-org-promo-image[style*="min-height"] img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
