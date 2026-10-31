@@ -19,6 +19,12 @@ jobs:
       run: npm install
     - name: Run build task
       run: npm run prod --if-present
+    - name: Grant May First shell access
+      uses: baisong/mayfirst-shell-action@v0.1.1
+      with:
+          comment: "staging deploy from GitHub Actions"
+          user: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASS }}
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@main
       with:
