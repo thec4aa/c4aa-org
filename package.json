@@ -1,6 +1,7 @@
 {
   "name": "c4aa-2019",
   "version": "1.0.0",
+  "private": true,
   "description": "[C4AA.org](https://c4aa.org)",
   "main": "index.js",
   "scripts": {
@@ -13,7 +14,7 @@
     "url": "git+https://github.com/thec4aa/c4aa-org.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-2.0-or-later",
   "bugs": {
     "url": "https://github.com/thec4aa/c4aa-org/issues"
   },
