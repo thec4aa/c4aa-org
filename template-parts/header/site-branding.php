@@ -13,11 +13,11 @@
 		<img src="/wp-content/themes/c4aa-org/img/logo-c4aa-red.png" alt="" class="logo-c4aa-mobile logo-c4aa-mobile--red active">
 		<img src="/wp-content/themes/c4aa-org/img/logo-c4aa-white.png" alt="" class="logo-c4aa-mobile logo-c4aa-mobile--white">
 	</a><!-- / -->
-	<div class="menu-toggle" aria-controls="site-navigation" aria-expanded="false">
+	<button type="button" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="<?php esc_attr_e( 'Menu', 'twentynineteen' ); ?>">
 		<span class="bar"></span>
 		<span class="bar"></span>
 		<span class="bar"></span>
-	</div>
+	</button>
 </header><!-- / -->
 
 <div class="site-branding">
