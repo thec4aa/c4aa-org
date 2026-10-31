@@ -527,9 +527,12 @@ header h1.entry-title {
 }
 .mobile-header {
     // margin: 0 -1rem; // Undo the padding on the parent element so we can add a background colour.
+    display: none; /* Desktop: everything inside is hidden anyway, so drop the empty padded box and its focusable logo link */
     padding: 1rem;
-    display: flex;
     align-items: center;
+    @media screen and(max-width: 768px) {
+        display: flex;
+    }
     &.active {
         background-color: #222;
     }
