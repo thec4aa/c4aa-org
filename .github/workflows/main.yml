@@ -10,21 +10,26 @@ on:
         description: "Deploy comment"
         required: true
 
+# One production deploy at a time.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     environment: Production
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Install Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
-        node-version: '16.x'
+        node-version-file: .nvmrc
 
     - name: Install npm dependencies
-      run: npm install
+      run: npm ci
 
     - name: Run build task
       run: npm run prod --if-present
@@ -37,10 +42,15 @@ jobs:
         echo "Checking build directory contents..."
         ls -la ./build
 
+    # The copy step below sends ./** so anything left here ends up on the
+    # server. The dependencies were only needed to build main.css.
+    - name: Drop node_modules before the copy
+      run: rm -rf node_modules
+
     - name: Connect to May First Shell Account
       uses: baisong/mayfirst-shell-action@v0.1.1
       with:
-        comment: ${{ inputs.deploy_comment }}
+        comment: ${{ inputs.deploy_comment || 'production deploy from GitHub Actions' }}
         user: ${{ secrets.SSH_USER }}
         password: ${{ secrets.SSH_PASS }}
 
