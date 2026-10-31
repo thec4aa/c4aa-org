@@ -1,9 +1,7 @@
-.person-title p {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.2rem;
-}
-
-.single-people .person-title p {
+/* The block's default type (Zilla Slab, italic, 1.2rem) lives in theme.json under
+   styles.blocks, so a size picked in the editor can override it. Only the colour is
+   here, because it depends on being on a single people page. It sits on the wrapper,
+   not the <p>, so a colour picked in the editor wins over it. */
+.single-people .person-title {
     color: var(--color-brandRed);
-}   
+}
