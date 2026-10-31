@@ -5,18 +5,24 @@ on:
     branches:
       - develop
 
+# One staging deploy at a time; a second push waits for the first to finish
+# rather than two rsyncs racing into the same directory.
+concurrency:
+  group: staging-deploy
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     environment: Staging
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     - name: Install Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v7
       with:
-        node-version: '16.x'
+        node-version-file: .nvmrc
     - name: Install npm dependencies
-      run: npm install
+      run: npm ci
     - name: Run build task
       run: npm run prod --if-present
     - name: Grant May First shell access
@@ -26,7 +32,8 @@ jobs:
           user: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASS }}
     - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@main
+      # pinned to a commit because this action gets the private key
+      uses: easingthemes/ssh-deploy@2cc5b27bf3029d0455dd5e09fe02633904031447 # v6.0.3
       with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc -i --delete --delete-excluded"
