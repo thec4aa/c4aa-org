@@ -469,6 +469,7 @@
             ]
         },
         "typography": {
+            "defaultFontSizes": false,
             "fluid": true,
             "fontFamilies": [
                 {
