@@ -7,6 +7,11 @@
             "backgroundSize": true
         },
         "blocks": {
+            "c4aa-org/person-title": {
+                "typography": {
+                    "fluid": false
+                }
+            },
             "core/button": {
                 "border": {
                     "color": true,
