@@ -19,6 +19,7 @@
             "isDefault": true
         }
     ],
+    "style": "file:./style.css",
     "acf": {
         "renderTemplate": "render.php",
         "mode": "preview",
@@ -32,7 +33,11 @@
         },
         "dimensions": {
             "aspectRatio": true,
-            "minHeight": true
+            "minHeight": true,
+            "__experimentalDefaultControls": {
+                "aspectRatio": true,
+                "minHeight": true
+            }
         },
         "filter": {
             "duotone": true

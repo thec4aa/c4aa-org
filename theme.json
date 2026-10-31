@@ -7,6 +7,11 @@
             "backgroundSize": true
         },
         "blocks": {
+            "c4aa-org/promo-image": {
+                "dimensions": {
+                    "aspectRatio": true
+                }
+            },
             "core/button": {
                 "border": {
                     "color": true,
