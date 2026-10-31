@@ -1,8 +1,26 @@
 // Rules that only make sense inside the block editor.
 
+// Twenty Nineteen's own editor stylesheet (style-editor.css) sets body and p to a
+// 22px Hoefler/Garamond/Times stack, and it loads alongside ours, so theme.json's
+// root font never wins there. Mirror the body rules from _02-elements on the
+// editor canvas, the same way the old editor stylesheet did.
 .editor-styles-wrapper {
-    // body line-height from _02-elements; font, size and colours come from theme.json
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 18px;
     line-height: 1.7;
+    color: var(--color-brandBlack);
+    background-color: var(--color-brandWhite);
+
+    p {
+        font-size: 18px;
+    }
+}
+
+// the post title is outside the content area; keep it in the sans face too
+.editor-styles-wrapper .editor-post-title__input,
+.editor-styles-wrapper .wp-block-post-title {
+    font-family: var(--font-sans);
 }
 
 // the post title block shouldn't inherit heading sizes when it isn't first
