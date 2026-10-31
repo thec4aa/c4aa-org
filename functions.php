@@ -383,3 +383,13 @@ function c4aa_add_custom_styles_to_embeds()
 <?php
 }
 add_action('embed_head', "c4aa_add_custom_styles_to_embeds");
+
+// remove whisper pages from indexing
+
+add_filter( 'wp_robots', function ( $robots ) {
+    if ( is_singular( 'whisper' ) ) {
+        $robots['noindex']  = true;
+        $robots['nofollow'] = true;
+    }
+    return $robots;
+} );
