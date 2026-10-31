@@ -69,7 +69,7 @@
                     "defaultPalette": false,
                     "palette": [
                         {
-                            "color": "#968c83",
+                            "color": "#7B736c",
                             "name": "C4AA Grey",
                             "slug": "grey"
                         },
@@ -376,7 +376,7 @@
                     "slug": "paper"
                 },
                 {
-                    "color": "#968c83",
+                    "color": "#7B736c",
                     "name": "Middle Grey",
                     "slug": "grey"
                 },
