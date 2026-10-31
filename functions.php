@@ -128,10 +128,17 @@ add_action( 'the_post', function( $post, \WP_Query $q )
  */
 add_action( 'wpse_before_second_post_in_search', function()
 {
-	echo '<article class="entry search-results-search-form
-	"><div class="entry-content"><div class="wp-block-group"><div class="wp-block-group__inner-container search-form-in-results">';
-	echo get_search_form( array('label' => 'Didn\'t find what you\'re looking for?', 'placeholder' => 'Search again...') );
-	echo '</div></div></div></article>';
+	// get_search_form() only knows about 'echo' and 'aria_label', so the custom
+	// label and placeholder never showed up. Write the form out directly instead.
+	?>
+	<article class="entry search-results-search-form"><div class="entry-content"><div class="wp-block-group"><div class="wp-block-group__inner-container search-form-in-results">
+		<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<label for="search-again" class="search-again-label"><?php esc_html_e( "Didn't find what you're looking for?", 'c4aa-org' ); ?></label>
+			<input type="search" id="search-again" class="search-field" placeholder="<?php esc_attr_e( 'Search again…', 'c4aa-org' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+			<input type="submit" class="search-submit" value="<?php esc_attr_e( 'Search', 'c4aa-org' ); ?>" />
+		</form>
+	</div></div></div></article>
+	<?php
 } );
 
 // Initialize Duotone on all post-thumbnails on archives. The specific color
@@ -268,21 +275,21 @@ function register_c4aa_org_blocks() {
 	register_block_type( dirname(__FILE__) . '/blocks/promo-image' );
 }
 
-/* Register Block Category */
-function example_filter_block_categories_when_post_provided( $block_categories, $editor_context ) {
+/* Register the block category all the theme's blocks sit in */
+function c4aa_register_block_category( $block_categories, $editor_context ) {
     if ( ! empty( $editor_context->post ) ) {
         array_push(
             $block_categories,
             array(
-                'slug'  => 'people-category',
-                'title' => __( 'C4AA People', 'c4aa-org-theme' ),
+                'slug'  => 'c4aa',
+                'title' => __( 'C4AA', 'c4aa-org' ),
                 'icon'  => 'groups'
             )
         );
     }
     return $block_categories;
 }
-add_filter( 'block_categories_all', 'example_filter_block_categories_when_post_provided', 10, 2 );
+add_filter( 'block_categories_all', 'c4aa_register_block_category', 10, 2 );
 
 
 /* oEmbeds */
