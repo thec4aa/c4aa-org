@@ -40,7 +40,6 @@ add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
  */
 
 function c4aa_gutenberg_scripts() {
-	// wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/src/css/_c4aa-editorStyles.css' );
 	wp_enqueue_script(
 		'be-editor',
 		get_stylesheet_directory_uri() . '/js/editor.js',
@@ -54,7 +53,7 @@ add_action( 'enqueue_block_editor_assets', 'c4aa_gutenberg_scripts' );
 add_action( 'admin_init', 'wpdocs_add_editor_styles' );
 function wpdocs_add_editor_styles() {
   add_theme_support( 'editor-styles' );
-  add_editor_style( '/src/css/_c4aa-editorStyles.css' );
+  add_editor_style( '/build/editor.css' );
 
 }
 

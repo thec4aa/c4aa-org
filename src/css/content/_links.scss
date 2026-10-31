@@ -1,0 +1,45 @@
+// `$content` is the selector that wraps post content: `.entry .entry-content` on the
+// front end, `.is-root-container` in the block editor (set in editor.scss).
+/*
+*
+* LINKS
+*
+*/
+
+#{$content} {
+    // Apply common link styles
+    a:link,
+    a,
+    h1 a:link,
+    h1 a,
+    h2 a:link,
+    h2 a,
+    h3 a:link,
+    h3 a,
+    h4 a:link,
+    h4 a,
+    h5 a:link,
+    h5 a,
+    h6 a:link,
+    h6 a {
+        @include common-link-styles;
+        font-weight: inherit;
+    }
+
+    // Apply hover styles
+    a:hover,
+    h1 a:hover,
+    h2 a:hover,
+    h3 a:hover,
+    h4 a:hover,
+    h5 a:hover,
+    h6 a:hover {
+        @include hover-link-styles;
+    }
+
+    // Blockquote link styles
+    blockquote a:link,
+    blockquote a {
+        font-weight: inherit;
+    }
+}

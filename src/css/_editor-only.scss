@@ -1,0 +1,22 @@
+// Rules that only make sense inside the block editor.
+
+.editor-styles-wrapper {
+    // body line-height from _02-elements; font, size and colours come from theme.json
+    line-height: 1.7;
+}
+
+// the post title block shouldn't inherit heading sizes when it isn't first
+.editor-styles-wrapper .wp-block-post-title:not(:first-child) {
+    font-size: inherit;
+}
+
+// remove the line the parent theme draws above h1/h2 in the editor
+h1::before,
+h2::before {
+    content: none;
+}
+
+// hint for the pullquote citation line
+.wp-block-pullquote[data-type="core/pullquote"] .wp-block-pullquote__citation span::after {
+    content: "Use this line only if you're citing someone.";
+}

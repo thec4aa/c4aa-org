@@ -1,0 +1,60 @@
+// `$content` is the selector that wraps post content: `.entry .entry-content` on the
+// front end, `.is-root-container` in the block editor (set in editor.scss).
+/**
+*
+* IMAGE BLOCK 
+*
+*/
+
+/* Block Image and Paragraph Clearfix */
+// .wp-block-image + p::after {
+// content: "";
+// clear: both;
+// display: table;
+// }
+
+/* turn off duotone on hover */
+/* except for anything with the u-duotone-sticky class */
+.wp-block-image img:hover,
+figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
+    -webkit-filter: unset;
+    filter: unset;
+}
+
+.wp-block-post-featured-image a img {
+    transition: transform 50ms ease-in;
+}
+
+.wp-block-post-featured-image a img:hover {
+    transform: translateY(-0.5rem);
+    transition: transform 50ms ease-out;
+}
+
+/* CAPTIONS */
+
+.wp-block-image figcaption.wp-element-caption,
+figure[class*="embed"].wp-block-embed figcaption,
+.wp-block-video figcaption.wp-element-caption {
+    font-size: 1rem !important;
+    font-weight: 500;
+    background: var(--color-brandBeige);
+    color: var(--color-brandGrey);
+    width: fit-content;
+    margin: auto !important;
+    top: -.8rem;
+    opacity: .95;
+    padding-left: 2.5rem !important;
+    padding-right: 3rem !important;
+  }
+
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+    font-size: .9rem !important;
+    background: var(--color-brandBeige);
+    color: var(--color-brandGrey);
+    padding: .5rem 1rem .5rem 1rem !important;
+    height: fit-content;
+    opacity: .9;
+    top: 90%;
+    width: fit-content;
+    text-align: left;
+  }
