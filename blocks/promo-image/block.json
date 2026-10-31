@@ -56,7 +56,7 @@
     },
     "selectors": {
         "filter": {
-            "duotone": ".acf-promo-image-container img"
+            "duotone": ".wp-block-c4aa-org-promo-image img"
         }
     },
     "example": {
