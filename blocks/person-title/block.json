@@ -3,6 +3,7 @@
 	"apiVersion": 3,
 	"name": "c4aa-org/person-title",
     "version": "0.0.2",
+    "textdomain": "c4aa-org",
     "title": "Person's Title",
     "description": "Display personalized title",
 	"category": "c4aa",
