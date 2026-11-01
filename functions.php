@@ -35,6 +35,28 @@ function c4aa_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
 
 /**
+ * Preload the two font files every page needs above the fold, so the browser
+ * fetches them alongside the CSS instead of after parsing it. Work Sans is a
+ * variable font (one file covers every weight); Zilla Slab 700 is the heading
+ * face. The other Zilla Slab weights keep loading on demand. The URLs must
+ * match the @font-face sources theme.json generates, or the browser fetches
+ * the file twice.
+ */
+function c4aa_preload_fonts( $resources ) {
+	$dir = get_stylesheet_directory_uri() . '/fonts/';
+	foreach ( array( 'WorkSans-VariableFont_wght.woff2', 'zilla-slab-v11-latin_latin-ext-700.woff2' ) as $file ) {
+		$resources[] = array(
+			'href'        => $dir . $file,
+			'as'          => 'font',
+			'type'        => 'font/woff2',
+			'crossorigin' => 'anonymous',
+		);
+	}
+	return $resources;
+}
+add_filter( 'wp_preload_resources', 'c4aa_preload_fonts' );
+
+/**
  * Gutenberg scripts and styles
  * link https://www.billerickson.net/block-styles-in-gutenberg/
  */
