@@ -40,7 +40,6 @@ add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
  */
 
 function c4aa_gutenberg_scripts() {
-	// wp_enqueue_style( 'c4aa-editorStyles', get_stylesheet_directory_uri() . '/src/css/_c4aa-editorStyles.css' );
 	wp_enqueue_script(
 		'be-editor',
 		get_stylesheet_directory_uri() . '/js/editor.js',
@@ -54,7 +53,7 @@ add_action( 'enqueue_block_editor_assets', 'c4aa_gutenberg_scripts' );
 add_action( 'admin_init', 'wpdocs_add_editor_styles' );
 function wpdocs_add_editor_styles() {
   add_theme_support( 'editor-styles' );
-  add_editor_style( '/src/css/_c4aa-editorStyles.css' );
+  add_editor_style( '/build/editor.css' );
 
 }
 
@@ -179,27 +178,30 @@ add_filter( 'post_class', 'c4aa_add_post_class_from_acf_options' );
 function c4aa_custom_dashboard_widgets() {
 	global $wp_meta_boxes;
 
-	wp_add_dashboard_widget('custom_help_widget', 'C4AA Theme Notes', 'c4aa_custom_dashboard_help');
+	wp_add_dashboard_widget('custom_help_widget', __( 'C4AA Theme Notes', 'c4aa-org' ), 'c4aa_custom_dashboard_help');
 }
 add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
 
 
 function c4aa_custom_dashboard_help() {
-	echo '
-		<h3 id="welcometothenewc4aatheme">Welcome to the new Center for Artistic Activism theme!</h3>
-		<p>The new theme uses Gutenberg Blocks. <a href="https://wordpress.org/gutenberg/">Get an introduction and experiment with it here.</a></p>
-		<p><strong>Good ideas:</strong></p>
+	?>
+		<h3 id="welcometothenewc4aatheme"><?php esc_html_e( 'Welcome to the new Center for Artistic Activism theme!', 'c4aa-org' ); ?></h3>
+		<p><?php esc_html_e( 'The new theme uses Gutenberg Blocks.', 'c4aa-org' ); ?> <a href="https://wordpress.org/gutenberg/"><?php esc_html_e( 'Get an introduction and experiment with it here.', 'c4aa-org' ); ?></a></p>
+		<p><strong><?php esc_html_e( 'Good ideas:', 'c4aa-org' ); ?></strong></p>
 		<ul>
-			<li>➡ upload images at 1400px wide where possible</li>
-			<li>➡ use colors from the color picker</li>
-			<li>➡ If you have questions, ask Steve Lambert.</li>
+			<li>➡ <?php esc_html_e( 'upload images at 1400px wide where possible', 'c4aa-org' ); ?></li>
+			<li>➡ <?php esc_html_e( 'use colors from the color picker', 'c4aa-org' ); ?></li>
+			<li>➡ <?php esc_html_e( 'If you have questions, ask Steve Lambert.', 'c4aa-org' ); ?></li>
 		</ul>
 
-		<p><strong>Advanced Settings:</strong></p>
+		<p><strong><?php esc_html_e( 'Advanced Settings:', 'c4aa-org' ); ?></strong></p>
 			<ul>
-				<li><code>no-hyphens</code> will turn off auto-hyphenating on everything in the block.</li>
+				<li><?php
+					/* translators: %s: the CSS class name no-hyphens, wrapped in a <code> tag */
+					printf( esc_html__( '%s will turn off auto-hyphenating on everything in the block.', 'c4aa-org' ), '<code>no-hyphens</code>' );
+				?></li>
 			</ul>
-	'; // end echo
+	<?php
 }
 
 /**

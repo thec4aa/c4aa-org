@@ -1,0 +1,27 @@
+// Block editor stylesheet, compiled to build/editor.css and loaded with
+// add_editor_style() in functions.php. It shares the content-level partials with
+// main.scss so the editor and the front end can't drift apart again. Page chrome
+// (header, menu, footer, archive layouts) is deliberately left out: those elements
+// don't exist in the editor, and some of the rules would restyle editor UI.
+//
+// Fonts, colours and font sizes come from theme.json and reach the editor on their
+// own. Anything driven by the theme's JavaScript (scroll tilt, random rotation) can
+// only be approximated here; the static --rotate default in _00-tokens does that.
+
+$content: '.is-root-container';
+
+@import 'mixins';
+@import '00-tokens';
+@import 'content/text';
+@import 'content/captions';
+@import 'content/headings';
+@import 'content/lists';
+@import 'content/links';
+@import 'content/buttons';
+@import 'content/quotes';
+@import 'content/separators';
+@import 'content/images';
+@import 'content/details';
+@import 'c4aa-clipPaths';
+@import '05-utilities';
+@import 'editor-only';

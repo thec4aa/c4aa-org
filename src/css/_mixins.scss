@@ -1,0 +1,21 @@
+// Shared by main.scss and editor.scss. Produces no CSS on its own.
+
+$content: '.entry .entry-content' !default;
+
+// Mixin for common link styles
+@mixin common-link-styles {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
+    text-underline-offset: 0.2em; // must be set or will show up different on different browsers
+    text-decoration-skip-ink: none;
+}
+
+// Mixin for hover styles
+@mixin hover-link-styles {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 10%; // em values don't work as well here https://css-tricks.com/almanac/properties/t/text-decoration-thickness/#aa-percentage-and-the-cascade
+    text-underline-offset: 0.2em; // must be set or will show up different on different browsers
+    text-decoration-skip-ink: none;
+}

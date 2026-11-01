@@ -1,0 +1,68 @@
+// `$content` is the selector that wraps post content: `.entry .entry-content` on the
+// front end, `.is-root-container` in the block editor (set in editor.scss).
+/**
+*
+* HEADERS
+*
+*/
+
+h1,h2,h3,h4,h5,h6 {
+    text-wrap: balance;
+}
+
+// Apply styles to headings
+
+h1 {
+    letter-spacing: 0.14em;
+}
+
+h1,
+h2,
+#{$content} .wp-block-cover h2,
+h3,
+h6,
+.site-header.featured-image .entry-meta {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+h4,
+h5 {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+h3 {
+    font-size: 1.6875em; // fallback
+    font-size: clamp(1.5rem, 1.3594rem + 0.7031vw, 1.6875rem);
+}
+
+h4 {
+    font-size: 1.4rem; // fallback
+    font-size: clamp(1.2rem, 1.0500rem + 0.7500vw, 1.4rem);
+}
+
+h5,
+h6 {
+    font-size: 1.25rem;
+}
+
+// Apply text transform and alignfull styles
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+
+    &.alignfull:not(.is-style-c4aa-clipPath-heading) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &.alignfull.is-style-c4aa-clipPath-heading {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
