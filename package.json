@@ -6,8 +6,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "node_modules/.bin/sass --style=compressed src/css/main.scss:build/main.css src/css/editor.scss:build/editor.css",
-    "dev": "node_modules/.bin/sass --watch src/css:build/"
+    "build:css": "sass --style=compressed src/css/main.scss:build/main.css src/css/editor.scss:build/editor.css",
+    "build:js": "esbuild js/main.js --bundle --minify --format=iife --target=es2017 --outfile=build/main.js",
+    "prod": "npm run build:css && npm run build:js",
+    "dev:css": "sass --watch src/css:build/",
+    "dev:js": "npm run build:js -- --watch",
+    "dev": "concurrently -n css,js \"npm:dev:css\" \"npm:dev:js\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,8 @@
   },
   "homepage": "https://github.com/thec4aa/c4aa-org#readme",
   "devDependencies": {
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.28.2",
     "sass": "^1.49.10"
   }
 }
