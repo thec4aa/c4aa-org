@@ -51,7 +51,7 @@
 	opacity: var(--duotone-opacity);
 	position: relative;
 	width: 100%;
-	transition: mix-blend-mode filter opacity 250ms ease-in-out;
+	transition: mix-blend-mode 250ms ease-in-out, filter 250ms ease-in-out, opacity 250ms ease-in-out;
 }
 
 	@mixin a-filter-child-img-img-hover() {

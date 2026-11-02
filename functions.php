@@ -106,17 +106,21 @@ function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
 		return $classes;
 	}
 
+	// Only single posts and pages carry these fields, so don't ask ACF on
+	// archives, search and the front page.
+	if ( ! is_single() && ! is_page() ) {
+		return $classes;
+	}
+
 	$image_filter = get_field( 'c4aa_image_filter' );
 	$title_effect = get_field( 'c4aa_title_effect' );
 
-	if ( is_single() || is_page() ) {
-		if ( ! empty( $image_filter ) ) {
-			$classes[] = "$image_filter";
-		}
+	if ( ! empty( $image_filter ) ) {
+		$classes[] = "$image_filter";
+	}
 
-		if ( ! empty( $title_effect ) ) {
-			$classes[] = "$title_effect";
-		}
+	if ( ! empty( $title_effect ) ) {
+		$classes[] = "$title_effect";
 	}
 
 	return $classes;
@@ -127,15 +131,24 @@ add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_pag
 // so if you search for something and don't find it, you can search again!
 
 /**
- * Setup a custom hook before the second post on the search page
+ * Setup a custom hook before the second post on the search page.
+ * Hooked up from template_redirect so the_post only carries it on search
+ * requests instead of every loop on the site.
  */
-add_action( 'the_post', function( $post, \WP_Query $q )
+add_action( 'template_redirect', function()
 {
-    if( $q->is_search() && $q->is_main_query() && ! $q->is_feed() && 0 === $q->current_post )
-    {
-        do_action( 'wpse_before_second_post_in_search' );
+    if ( ! is_search() ) {
+        return;
     }
-}, 10, 2 ); 
+
+    add_action( 'the_post', function( $post, \WP_Query $q )
+    {
+        if( $q->is_main_query() && ! $q->is_feed() && 0 === $q->current_post )
+        {
+            do_action( 'wpse_before_second_post_in_search' );
+        }
+    }, 10, 2 );
+} );
 
 /**
  * Inject a Div after the first post on the search page

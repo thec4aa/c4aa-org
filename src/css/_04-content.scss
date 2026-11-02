@@ -172,10 +172,6 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
     }
 }
 
-.entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a:hover {
-    font-weight: 100px !important;
-}
-
 .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context {
     font-family: var(--font-sans);
 }
@@ -388,7 +384,7 @@ form#form_donate-a-tron-3001 .frm_fields_container .frm_display_format_buttons{
 // Search Results Page
 // search form is inserted at the top of the results. This is the styling for that form.
 
-article entry.search-form-in-results {
+article .search-form-in-results {
     width: 100%;
   }
   
