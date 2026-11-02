@@ -37,7 +37,7 @@
 			<div class="c4aa-magic-hand u-text-align-center">
 
 				<div class="u-display-block">
-					<?php echo file_get_contents( get_stylesheet_directory() . '/svg/c4aa.magic.hand.svg' ); ?>
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/svg/c4aa.magic.hand.red.optimized.svg' ); ?>" width="80" height="77" alt="" loading="lazy" decoding="async">
 				</div>
 
 			</div>

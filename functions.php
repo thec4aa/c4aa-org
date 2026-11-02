@@ -10,26 +10,19 @@ function dequeue_priority_menu() {
 add_action( 'wp_enqueue_scripts', 'dequeue_priority_menu', 100 );
 
 function c4aa_enqueue_assets() {
-    // CSS versioning
-    $style_path = get_stylesheet_directory() . '/build/main.css';
-    $style_version = file_exists($style_path) ? filemtime($style_path) : '1.0';
-    
-    // JS versioning - individual for each file
-    $js_base_path = get_stylesheet_directory() . '/js/';
-    $js_files = ['menu.js', 'scrolling.js', 'clipPaths.js', 'externalLinks.js'];
-    
-    // Enqueue CSS
+    $build_dir = get_stylesheet_directory() . '/build/';
+    $build_uri = get_stylesheet_directory_uri() . '/build/';
+
+    // Versioned by mtime so a rebuild busts the cache; '1.0' only if build/ is missing
+    $style_version  = file_exists( $build_dir . 'main.css' ) ? filemtime( $build_dir . 'main.css' ) : '1.0';
+    $script_version = file_exists( $build_dir . 'main.js' ) ? filemtime( $build_dir . 'main.js' ) : '1.0';
+
     wp_enqueue_style('twentynineteen-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('c4aa-style', get_stylesheet_directory_uri() . '/build/main.css', [], $style_version);
-    
-    // Enqueue JS - with individual versioning
-    foreach ($js_files as $js_file) {
-        $file_path = $js_base_path . $js_file;
-        $file_version = file_exists($file_path) ? filemtime($file_path) : '1.0';
-        $handle = 'c4aa-js-' . pathinfo($js_file, PATHINFO_FILENAME);
-        
-        wp_enqueue_script($handle, get_stylesheet_directory_uri() . '/js/' . $js_file, [], $file_version, true);
-    }
+    wp_enqueue_style('c4aa-style', $build_uri . 'main.css', [], $style_version);
+
+    // One bundle (esbuild, see package.json) of the js/ front-end files. Deferred
+    // from the head: downloads early, runs after parsing, before DOMContentLoaded.
+    wp_enqueue_script('c4aa-js', $build_uri . 'main.js', [], $script_version, ['strategy' => 'defer', 'in_footer' => false]);
 }
 
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
