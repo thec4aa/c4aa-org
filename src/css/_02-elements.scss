@@ -119,7 +119,8 @@ blockquote cite {
 .site-header.featured-image .main-navigation a + svg:active,
 .site-header.featured-image .social-navigation a:hover,
 .site-header.featured-image .social-navigation a:active,
-.site-header.featured-image .site-featured-image a:hover .site-header.featured-image .site-featured-image a:active {
+.site-header.featured-image .site-featured-image a:hover,
+.site-header.featured-image .site-featured-image a:active {
     color: var(--color-brandRed);
     opacity: 1;
 }
