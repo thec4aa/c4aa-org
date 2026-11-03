@@ -24,8 +24,10 @@
 			opacity: 1;
 		}
 
+		// Fade the overlay rather than removing it, so the image eases back
+		// into the duotone on mouse-out as well as out of it on hover.
 		&:hover::before {
-			display: none;
+			opacity: 0;
 		}
 	}
 
@@ -42,6 +44,7 @@
 	top: 0;
 	width: 100%;
 	z-index: 1;
+	transition: opacity 250ms ease-in-out;
 }
 
 @mixin a-filter-child-img-img {
