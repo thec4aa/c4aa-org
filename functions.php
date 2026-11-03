@@ -72,6 +72,12 @@ function wpdocs_add_editor_styles() {
 
 }
 
+// WordPress prints a 3KB script on every page that checks whether the browser
+// can draw a few recent emoji and swaps in images if it can't. Every current
+// browser can, so skip the script and its inline styles on the front end.
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
+
 // This filter allows emoji to be added to the post content
 // https://stackoverflow.com/questions/63100373/wordpress-unable-to-save-or-update-posts-with-emoji
 add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
