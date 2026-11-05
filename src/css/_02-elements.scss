@@ -107,7 +107,6 @@ blockquote cite {
 .site-header.featured-image .main-navigation a,
 .site-header.featured-image .main-navigation a + svg,
 .site-header.featured-image .social-navigation a,
-.site-header.featured-image .site-featured-image a,
 .main-navigation .main-menu > li > a,
 .main-navigation .main-menu > li .svg-icon {
     color: var(--color-brandBlack);
@@ -118,8 +117,7 @@ blockquote cite {
 .site-header.featured-image .main-navigation a + svg:hover,
 .site-header.featured-image .main-navigation a + svg:active,
 .site-header.featured-image .social-navigation a:hover,
-.site-header.featured-image .social-navigation a:active,
-.site-header.featured-image .site-featured-image a:hover .site-header.featured-image .site-featured-image a:active {
+.site-header.featured-image .social-navigation a:active {
     color: var(--color-brandRed);
     opacity: 1;
 }

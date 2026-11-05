@@ -72,6 +72,16 @@ function wpdocs_add_editor_styles() {
 
 }
 
+// WordPress prints a 3KB script on every page that checks whether the browser
+// can draw a few recent emoji and swaps in images if it can't. Every current
+// browser can, so skip the script and its inline styles on the front end.
+// Core still hooks the deprecated print_emoji_styles() to wp_print_styles for
+// back-compat and relies on wp_enqueue_emoji_styles() to unhook it, so once
+// that is gone the old one has to go too or it fires a deprecation notice.
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
 // This filter allows emoji to be added to the post content
 // https://stackoverflow.com/questions/63100373/wordpress-unable-to-save-or-update-posts-with-emoji
 add_filter( 'wp_insert_post_data', function( $data, $postarr ) {
@@ -106,17 +116,21 @@ function c4aa_add_body_class_from_acf_options_on_single_or_page( $classes ) {
 		return $classes;
 	}
 
+	// Only single posts and pages carry these fields, so don't ask ACF on
+	// archives, search and the front page.
+	if ( ! is_single() && ! is_page() ) {
+		return $classes;
+	}
+
 	$image_filter = get_field( 'c4aa_image_filter' );
 	$title_effect = get_field( 'c4aa_title_effect' );
 
-	if ( is_single() || is_page() ) {
-		if ( ! empty( $image_filter ) ) {
-			$classes[] = "$image_filter";
-		}
+	if ( ! empty( $image_filter ) ) {
+		$classes[] = "$image_filter";
+	}
 
-		if ( ! empty( $title_effect ) ) {
-			$classes[] = "$title_effect";
-		}
+	if ( ! empty( $title_effect ) ) {
+		$classes[] = "$title_effect";
 	}
 
 	return $classes;
@@ -127,15 +141,24 @@ add_filter( 'body_class', 'c4aa_add_body_class_from_acf_options_on_single_or_pag
 // so if you search for something and don't find it, you can search again!
 
 /**
- * Setup a custom hook before the second post on the search page
+ * Setup a custom hook before the second post on the search page.
+ * Hooked up from template_redirect so the_post only carries it on search
+ * requests instead of every loop on the site.
  */
-add_action( 'the_post', function( $post, \WP_Query $q )
+add_action( 'template_redirect', function()
 {
-    if( $q->is_search() && $q->is_main_query() && ! $q->is_feed() && 0 === $q->current_post )
-    {
-        do_action( 'wpse_before_second_post_in_search' );
+    if ( ! is_search() ) {
+        return;
     }
-}, 10, 2 ); 
+
+    add_action( 'the_post', function( $post, \WP_Query $q )
+    {
+        if( $q->is_main_query() && ! $q->is_feed() && 0 === $q->current_post )
+        {
+            do_action( 'wpse_before_second_post_in_search' );
+        }
+    }, 10, 2 );
+} );
 
 /**
  * Inject a Div after the first post on the search page

@@ -32,7 +32,7 @@
 }
 
 /* constrain full size images to the standard content width */
-.entry .entry-content figure.wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(alignright) {
+.entry .entry-content figure.wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
 	max-width: var(--wp--style--global--content-size);
   }
 
