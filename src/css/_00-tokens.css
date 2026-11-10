@@ -30,7 +30,15 @@
 	--color-brandYellow: #decb00; /* Fallback */
 	--color-brandYellow: hsla(55, 100%, 44%, 1);
 
-	
+	/* Role Colors */
+	/* Use these where a colour means "the page" rather than a brand colour, so
+	   _dark.scss can flip them. Brand colours above stay literal in both modes. */
+	--color-page: var(--color-brandWhite);
+	--color-surface: var(--color-brandBeige);
+	--color-ink: var(--color-brandBlack);
+	--color-ink-muted: var(--color-brandGrey);
+
+
 	/* Typography */
 	--font-sans: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;	
 	--font-serif: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;

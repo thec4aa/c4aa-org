@@ -4,7 +4,7 @@
 .error404 .page-header .page-title,
 .archive .page-header .page-title {
     font-family: var(--font-serif);
-    color: var(--color-brandGrey) !important;
+    color: var(--color-ink-muted) !important;
     font-weight: 300;
     font-size: 2rem;
     letter-spacing: 0.14em;
@@ -17,7 +17,7 @@
     font-family: var(--font-sans);
     font-weight: 400;
     font-size: 2rem;
-    color: var(--color-brandBlack);
+    color: var(--color-ink);
 }
 
 // People Pages
@@ -151,7 +151,7 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 /* Beige */
 
 .entry .entry-content *[class*='has-'].has-caa-beige-background-color {
-    background-color: var(--color-brandBeige);
+    background-color: var(--color-surface);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-beige-color {
@@ -201,7 +201,7 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 /* White */
 
 .entry .entry-content *[class*='has-'].has-caa-white-background-color {
-    background-color: var(--color-brandWhite);
+    background-color: var(--color-page);
 }
 
 .entry .entry-content *[class*='has-'].has-caa-white-color {
@@ -360,7 +360,7 @@ article .search-form-in-results {
 // RELATED POSTS
 
 .taxopress-related-posts {
-    background: var(--color-brandBeige);
+    background: var(--color-surface);
     padding: 2em
   }
 
@@ -393,14 +393,14 @@ textarea + .frm_description,
 .frm_opt_container + .frm_description {
     font-family: var(--font-serif);
     font-size: 0.9rem;
-    color: var(--color-brandGrey);
+    color: var(--color-ink-muted);
     font-style: italic;
 }
 
 .frm_range_container .frm_range_value {
     font-family: var(--font-serif);
     font-size: 1.2rem;
-    color: var(--color-brandGrey);
+    color: var(--color-ink-muted);
     font-style: italic;
     margin-left: 0.5rem;
 }
@@ -418,7 +418,7 @@ input:checked + .frm_switch .frm_slider {
 }
 
 .frm_range_container input {
-    background-color: var(--color-brandBeige);
+    background-color: var(--color-surface);
 }
 
 .frm_slider {
@@ -439,7 +439,7 @@ input:checked + .frm_switch .frm_slider {
 }
 
 .frm_color_block {
-	background-color: var(--color-brandBeige);
+	background-color: var(--color-surface);
 	padding: 2rem;
 }
 
@@ -477,7 +477,7 @@ div.frm_dropzone + .frm_description {
 }
 
 .frmsvg {
-    fill: var(--color-brandBlack);
+    fill: var(--color-ink);
 }
 
 .frmsvg:hover {

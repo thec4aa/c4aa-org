@@ -9,7 +9,7 @@ details.wp-block-details:first-child, :not(.wp-block-details) + .wp-block-detail
 #{$content} details.wp-block-details { 
     // Entire block
     transition: all 0.2s ease-in;
-    background-color: var(--color-brandWhite);
+    background-color: var(--color-page);
     mix-blend-mode: multiply;
     margin: 0 auto;
     border-bottom: solid 2px var(--color-brandRed);

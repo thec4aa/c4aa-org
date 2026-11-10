@@ -78,7 +78,7 @@ h3 a,
 h3 a:hover,
 h3 a:active,
 h3 a:visited {
-    color: var(--color-brandBlack);
+    color: var(--color-ink);
 }
 
 h1.is-style-c4aa-clipPath-heading a,
@@ -255,7 +255,7 @@ header h1.entry-title {
 }
 
 .entry .entry-footer {
-    color: var(--color-brandBlack);
+    color: var(--color-ink);
 }
 
 /* Removes icons from entry-meta - keeping them for now */
@@ -579,7 +579,7 @@ header h1.entry-title {
 }
 
 .wp-lightbox-overlay .scrim {
-    background-color: var(--color-brandWhite);
+    background-color: var(--color-page);
 }
 
 .wp-lightbox-overlay .close-button:focus,

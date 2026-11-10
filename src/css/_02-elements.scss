@@ -14,11 +14,11 @@ select,
 optgroup,
 textarea {
     line-height: 1.7;
-    color: var(--color-brandBlack);
+    color: var(--color-ink);
 }
 
 .site-content {
-    background-color: var(--color-brandWhite);
+    background-color: var(--color-page);
 }
 
 body,
@@ -53,7 +53,7 @@ blockquote cite {
 /* style containers */
 .featured-image .site-branding-container,
 .site-header:not(.featured-image) {
-    background-color: var(--color-brandWhite);
+    background-color: var(--color-page);
     z-index: 10;
 }
 
@@ -203,7 +203,7 @@ blockquote cite {
 .social-navigation svg {
     // filter drop shadow none
     filter: none;
-    fill: var(--color-brandGrey);
+    fill: var(--color-ink-muted);
 
     &:hover {
         fill: var(--color-brandRed);
@@ -284,7 +284,7 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 textarea {
-    background-color: var(--color-brandBeige);
+    background-color: var(--color-surface);
     border: 2px solid #aaa;
     font-size: 1rem;
 }
@@ -389,7 +389,7 @@ fieldset {
     justify-content: space-between;
     font-family: var(--font-sans);
     font-size: 0.9rem;
-    color: var(--color-brandGrey);
+    color: var(--color-ink-muted);
     margin-top: 0.25rem;
 }
 
@@ -399,10 +399,10 @@ fieldset {
     font-family: var(--font-serif);
     font-weight: 600;
     font-size: 1.1rem;
-    color: var(--color-brandBlack);
+    color: var(--color-ink);
     margin-top: 0.75rem;
     padding: 0.5rem 1rem;
-    background-color: var(--color-brandBeige);
+    background-color: var(--color-surface);
     border-radius: 0.5rem;
     width: fit-content;
     margin-left: auto;
@@ -434,7 +434,7 @@ fieldset {
     max-width: 100%;
     padding: 1rem;
     margin: 3rem auto 0rem auto;
-    background-color: var(--color-brandBeige);
+    background-color: var(--color-surface);
 }
 
 

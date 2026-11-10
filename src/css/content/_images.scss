@@ -66,8 +66,8 @@ figure[class*="embed"].wp-block-embed figcaption,
 .wp-block-video figcaption.wp-element-caption {
     font-size: 1rem !important;
     font-weight: 500;
-    background: var(--color-brandBeige);
-    color: var(--color-brandGrey);
+    background: var(--color-surface);
+    color: var(--color-ink-muted);
     width: fit-content;
     margin: auto !important;
     top: -.8rem;
@@ -78,8 +78,8 @@ figure[class*="embed"].wp-block-embed figcaption,
 
 .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
     font-size: .9rem !important;
-    background: var(--color-brandBeige);
-    color: var(--color-brandGrey);
+    background: var(--color-surface);
+    color: var(--color-ink-muted);
     padding: .5rem 1rem .5rem 1rem !important;
     height: fit-content;
     opacity: .9;
