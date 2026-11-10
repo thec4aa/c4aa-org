@@ -14,11 +14,40 @@
 // }
 
 /* turn off duotone on hover */
-/* except for anything with the u-duotone-sticky class */
-.wp-block-image img:hover,
-figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
+/* except inside anything with the u-duotone-sticky class (the figure or any
+   block around it, same as js/duotoneFade.js) */
+/* (images js/duotoneFade.js fades are left out, or they'd snap under the fade) */
+figure[class*="wp-duotone"] img:not(.u-duotone-sticky img):not([data-duotone-fade]):hover {
     -webkit-filter: unset;
     filter: unset;
+}
+
+/* Duotone hover fade (#283). On first hover js/duotoneFade.js lays an unfiltered
+   copy over the image, with its box, object-fit and filter set inline; this
+   just fades it in and out. z-index keeps it above images that lift with a
+   transform; captions also sit at z-index 1 but come later, so stay on top. */
+.entry .entry-content img.c4aa-duotone-fade-copy {
+    position: absolute;
+    z-index: 1;
+    max-width: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 50ms ease-out;
+}
+
+.entry .entry-content img.c4aa-duotone-fade-copy.is-on {
+    opacity: 1;
+}
+
+/* rise with the featured image's hover lift below */
+.entry .entry-content .wp-block-post-featured-image a img.c4aa-duotone-fade-copy.is-on {
+    transform: translateY(-0.5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .entry .entry-content img.c4aa-duotone-fade-copy {
+        transition: none;
+    }
 }
 
 .wp-block-post-featured-image a img {

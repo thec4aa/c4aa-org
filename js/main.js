@@ -6,3 +6,4 @@ import './menu.js';
 import './scrolling.js';
 import './clipPaths.js';
 import './externalLinks.js';
+import './duotoneFade.js';
