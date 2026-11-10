@@ -42,16 +42,29 @@
 	}
 
 	// Measured on every hover, so resizes and lazy layout shifts don't matter.
-	// offset/client sizes ignore transforms, so rotated figures are fine, and
-	// client* leaves out any border on the image. Everything that decides the
-	// copy's box goes inline, where theme and core image rules can't reach it.
+	// Neither offset* nor computed sizes see transforms, so rotated figures are
+	// fine. The copy covers the image's content box, which is what object-fit
+	// draws into. Sizes, borders and padding come from the computed style
+	// because it's fractional; clientWidth/clientTop round to whole pixels,
+	// enough to shift a cover crop. offsetTop/Left round too, but nothing
+	// fractional ignores transforms. Everything that decides the copy's box goes
+	// inline, where theme and core image rules can't reach it.
 	function place(img, copy) {
 		const style = window.getComputedStyle(img);
+		const px = function (prop) { return parseFloat(style[prop]) || 0; };
+		const padX = px('paddingLeft') + px('paddingRight');
+		const padY = px('paddingTop') + px('paddingBottom');
+		// Core sets box-sizing: border-box on these images, so width and height
+		// include padding and border there.
+		const borderBox = style.boxSizing === 'border-box';
+		const width = px('width') - (borderBox ? padX + px('borderLeftWidth') + px('borderRightWidth') : 0);
+		const height = px('height') - (borderBox ? padY + px('borderTopWidth') + px('borderBottomWidth') : 0);
+
 		Object.assign(copy.style, {
-			top: img.offsetTop + img.clientTop + 'px',
-			left: img.offsetLeft + img.clientLeft + 'px',
-			width: img.clientWidth + 'px',
-			height: img.clientHeight + 'px',
+			top: img.offsetTop + px('borderTopWidth') + px('paddingTop') + 'px',
+			left: img.offsetLeft + px('borderLeftWidth') + px('paddingLeft') + 'px',
+			width: width + 'px',
+			height: height + 'px',
 			margin: '0',
 			padding: '0',
 			border: '0',
