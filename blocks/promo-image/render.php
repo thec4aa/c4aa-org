@@ -28,8 +28,9 @@ $wrap_in_link = $link && empty( $is_preview ) && ( ! empty( $image ) || has_post
 
     <?php
     if (!empty($image)): ?>
-        <img class="acf-promo-image" src="<?php echo esc_url($image['url']); ?>"
-            alt="<?php echo esc_attr($alt); ?>" />
+        <?php // Same size as the featured image fallback below, with srcset so the
+        // browser can pick a smaller or larger copy instead of the original upload.
+        echo wp_get_attachment_image( $image['ID'], 'medium_large', false, array( 'class' => 'acf-promo-image', 'alt' => $alt ) ); ?>
 
     <?php elseif (has_post_thumbnail()): ?>
         <?php the_post_thumbnail('medium_large', array( 'alt' => $alt )); // add code to display a default image or message when no image is provided ?>
