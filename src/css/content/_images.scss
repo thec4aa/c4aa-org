@@ -15,9 +15,57 @@
 
 /* turn off duotone on hover */
 /* except for anything with the u-duotone-sticky class */
-figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:hover {
+/* (images that get the fade below are left out, or they'd snap mid-fade) */
+figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:not(.c4aa-duotone-fade__duo):hover {
     -webkit-filter: unset;
     filter: unset;
+}
+
+/* Duotone hover fade (#283). functions.php wraps duotone image blocks in post
+   content so the duotoned image sits over an unfiltered copy of itself; on hover
+   the duotoned one fades out. The url() duotone filter itself can't be animated.
+
+   The wrapper is a block on purpose: core's lightbox positions its button from
+   the image's parent element's size, and a full-width block keeps those numbers
+   the same as when the figure was the parent. That's also why the copy is pinned
+   top-left rather than inset: 0, and sizes itself from the same attributes and
+   inline styles as the original. */
+.c4aa-duotone-fade {
+    display: block;
+    position: relative;
+    border-radius: inherit;
+}
+
+.c4aa-duotone-fade__duo {
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+figure .c4aa-duotone-fade img.c4aa-duotone-fade__color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: none;
+    pointer-events: none;
+}
+
+@media (hover: hover) {
+    .entry .entry-content .c4aa-duotone-fade__duo:hover {
+        opacity: 0;
+    }
+
+    /* core reveals the lightbox button with img:hover + button, which the
+       wrapper breaks */
+    .wp-lightbox-container .c4aa-duotone-fade:has(.c4aa-duotone-fade__duo:hover) + button {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .c4aa-duotone-fade__duo {
+        transition: none;
+    }
 }
 
 .wp-block-post-featured-image a img {
