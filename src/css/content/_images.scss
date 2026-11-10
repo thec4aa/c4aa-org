@@ -14,9 +14,10 @@
 // }
 
 /* turn off duotone on hover */
-/* except for anything with the u-duotone-sticky class */
+/* except inside anything with the u-duotone-sticky class (the figure or any
+   block around it, same as js/duotoneFade.js) */
 /* (images js/duotoneFade.js fades are left out, or they'd snap under the fade) */
-figure[class*="wp-duotone"]:not(.u-duotone-sticky) img:not([data-duotone-fade]):hover {
+figure[class*="wp-duotone"] img:not(.u-duotone-sticky img):not([data-duotone-fade]):hover {
     -webkit-filter: unset;
     filter: unset;
 }
