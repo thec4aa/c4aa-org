@@ -303,6 +303,63 @@ function twentynineteen_post_thumbnail() {
 	endif; // End is_singular().
 }
 
+/**
+ * Fade duotone image blocks to full colour on hover (#283).
+ *
+ * Core duotone is `filter: url(#wp-duotone-…)`, and CSS can't interpolate a url()
+ * filter, so on its own it can only snap. Instead, put an unfiltered copy of the
+ * image behind the duotoned one and fade the duotoned one out (see
+ * src/css/content/_images.scss). The copy has the same src/srcset, so it costs no
+ * extra download.
+ *
+ * Only for post/page body content, so not feeds or the REST API, where readers
+ * would just see the picture twice. Priority 20 so it runs after core has put the
+ * lightbox directives on the image; those are stripped from the copy so the
+ * lightbox keeps talking to the real one.
+ */
+function c4aa_duotone_hover_fade( $block_content ) {
+	if ( ! doing_filter( 'the_content' ) || is_feed() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
+		return $block_content;
+	}
+
+	$figure = new WP_HTML_Tag_Processor( $block_content );
+	if ( ! $figure->next_tag( 'figure' ) ) {
+		return $block_content;
+	}
+	$classes = ' ' . $figure->get_attribute( 'class' ) . ' ';
+	if ( false === strpos( $classes, ' wp-duotone-' ) || false !== strpos( $classes, ' u-duotone-sticky ' ) ) {
+		return $block_content;
+	}
+
+	if ( ! preg_match( '/<img\b[^>]*>/i', $block_content, $match, PREG_OFFSET_CAPTURE ) ) {
+		return $block_content;
+	}
+	list( $img, $offset ) = $match[0];
+
+	$duo = new WP_HTML_Tag_Processor( $img );
+	$duo->next_tag();
+	$duo->add_class( 'c4aa-duotone-fade__duo' );
+
+	$color = new WP_HTML_Tag_Processor( $img );
+	$color->next_tag();
+	foreach ( (array) $color->get_attribute_names_with_prefix( 'data-' ) as $name ) {
+		$color->remove_attribute( $name );
+	}
+	foreach ( array( 'id', 'title', 'fetchpriority' ) as $name ) {
+		$color->remove_attribute( $name );
+	}
+	$color->set_attribute( 'alt', '' );
+	$color->set_attribute( 'aria-hidden', 'true' );
+	$color->add_class( 'c4aa-duotone-fade__color' );
+
+	// The copy goes after the real image so the_content's lazy-load and
+	// fetchpriority counting still sees the real one first.
+	$wrapped = '<span class="c4aa-duotone-fade">' . $duo->get_updated_html() . $color->get_updated_html() . '</span>';
+
+	return substr_replace( $block_content, $wrapped, $offset, strlen( $img ) );
+}
+add_filter( 'render_block_core/image', 'c4aa_duotone_hover_fade', 20 );
+
 
 
 /* Register themes's custom blocks */
