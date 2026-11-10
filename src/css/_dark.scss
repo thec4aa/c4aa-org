@@ -1,0 +1,92 @@
+// Dark mode (#377). Front end only: main.scss imports this, editor.scss doesn't,
+// so the block editor stays light.
+//
+// The approach: brand colours stay literal (white on red is still white on red).
+// Only the role colours from _00-tokens flip, plus a few things that can't be
+// expressed as a role: editor-chosen preset colours, the logo images, parent theme
+// greys and blend modes that go muddy on a dark page.
+
+// Brand-coloured backgrounds an editor can pick. Dark "contrast" text on these
+// should stay dark, so the flipped preset gets pinned back inside them.
+$brand-backgrounds: '.has-red-background-color, .has-blue-background-color, .has-green-background-color, .has-yellow-background-color, .has-grey-background-color, .has-purple-background-color, .has-caa-red-background-color, .has-c-4-aa-red-background-color, .has-caa-blue-background-color, .has-caa-green-background-color, .has-caa-yellow-background-color, .has-caa-grey-background-color, .has-caa-purple-background-color';
+
+@media (prefers-color-scheme: dark) {
+
+    // html:root outranks the :root that global styles print, wherever it lands in <head>
+    html:root {
+        color-scheme: dark;
+        --color-page: #1c1b19;
+        --color-surface: #34312c;
+        --color-ink: #f3efe2;
+        --color-ink-muted: #b5ada5;
+
+        // editor presets used as text colours
+        --wp--preset--color--contrast: var(--color-ink);
+        --wp--preset--color--purple: #d27fcc;
+    }
+
+    #{$brand-backgrounds} {
+        --wp--preset--color--contrast: var(--color-brandBlack);
+        --wp--preset--color--purple: var(--color-brandPurple);
+    }
+
+    // The flipped presets above also feed these background classes; keep them literal.
+    html body .has-contrast-background-color {
+        background-color: var(--color-brandBlack) !important;
+    }
+
+    html body .has-purple-background-color {
+        background-color: var(--color-brandPurple) !important;
+    }
+
+    // Light editor backgrounds become the dark page and surface. Clip-path headings
+    // are brand chips with fixed text colours, so they keep theirs.
+    html body .has-base-background-color:not(.is-style-c4aa-clipPath-heading) {
+        background-color: var(--color-page) !important;
+    }
+
+    html body .has-paper-background-color:not(.is-style-c4aa-clipPath-heading) {
+        background-color: var(--color-surface) !important;
+    }
+
+    // Legacy palette black text behaves like contrast text.
+    .entry .entry-content *[class*='has-'].has-caa-black-color {
+        color: var(--wp--preset--color--contrast);
+    }
+
+    // Parent theme hardcodes #fff / #111 / #767676 on these.
+    body {
+        background-color: var(--color-page);
+    }
+
+    .social-navigation ul.social-links-menu li a,
+    .site-title,
+    .site-title a {
+        color: var(--color-ink);
+    }
+
+    .entry .entry-meta,
+    .entry .entry-footer,
+    #colophon .site-info,
+    .wp-caption-text,
+    blockquote cite {
+        color: var(--color-ink-muted);
+    }
+
+    // Logos: the red versions have black lettering. Inverting turns that white,
+    // and the hue rotation brings the red mark back round to (roughly) red.
+    .c4aa-text-logo,
+    .logo-c4aa-mobile.logo-c4aa-mobile--red {
+        filter: invert(1) hue-rotate(180deg);
+    }
+
+    // multiply/darken over a dark page turns red quotes maroon, yellow cards olive
+    // and anything with light text black. These all blend against the page, so
+    // normal is what they look like in light mode anyway.
+    blockquote.wp-block-quote,
+    .entry .entry-content details.wp-block-details,
+    .u-multiply,
+    .u-darken {
+        mix-blend-mode: normal;
+    }
+}
