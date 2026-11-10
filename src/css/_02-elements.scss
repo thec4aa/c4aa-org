@@ -304,24 +304,6 @@ fieldset {
     border: none;
 }
 
-/* contactform7 messages */
-
-.wpcf7-not-valid-tip {
-    font-family: var(--font-serif);
-    color: var(--color-brandRed);
-    font-style: italic;
-    font-weight: 600;
-}
-
-.wpcf7 form.invalid .wpcf7-response-output,
-.wpcf7 form.unaccepted .wpcf7-response-output,
-.wpcf7 form.payment-required .wpcf7-response-output {
-    font-family: var(--font-serif);
-    border: none;
-    background-color: var(--color-brandYellow);
-    font-weight: 600;
-}
-
 /* range slider */
 
 .frm_range_container {
@@ -493,34 +475,5 @@ nav.post-navigation {
 
 
 @import 'content/images';
-
-/**
-*
-* MISC
-*
-*/
-
-/* Lightbox Overlay */
-
-.jp-carousel-close-hint svg {
-    background: var(--color-brandBlue);
-
-    &:hover {
-        background: var(--color-brandRed);
-    }
-}
-
-.jp-carousel-close-hint svg rect {
-    fill: var(--color-brandRed);
-
-    &:hover {
-        fill: var(--color-brandWhite);
-    }
-}
-
-.jp-carousel-photo-caption {
-    font-family: var(--font-serif);
-    color: var(--color-brandBlack);
-}
 
 @import 'content/details';
