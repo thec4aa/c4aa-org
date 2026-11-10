@@ -11,6 +11,12 @@
     height: auto;
 }
 
+/* "Link to post" wraps the image in an anchor. Make it a block so it is the
+   image's size and the focus outline goes around the picture. */
+.wp-block-c4aa-org-promo-image a {
+    display: block;
+}
+
 /* A ratio or min height picked in the sidebar lands on the wrapper as an inline
    style. Hand it down to everything inside, so the image box takes the same shape
    and object-fit crops the picture to it. "Original" is aspect-ratio: auto, which
