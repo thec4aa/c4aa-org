@@ -28,12 +28,13 @@ $wrap_in_link = $link && empty( $is_preview ) && ( ! empty( $image ) || has_post
 
     <?php
     if (!empty($image)): ?>
-        <?php // Same size as the featured image fallback below, with srcset so the
-        // browser can pick a smaller or larger copy instead of the original upload.
-        echo wp_get_attachment_image( $image['ID'], 'medium_large', false, array( 'class' => 'acf-promo-image', 'alt' => $alt ) ); ?>
+        <?php // post-thumbnail is what core's featured image block uses by default
+        // (1568px wide, set by Twenty Nineteen). srcset lets the browser pick a
+        // smaller copy instead of the original upload.
+        echo wp_get_attachment_image( $image['ID'], 'post-thumbnail', false, array( 'class' => 'acf-promo-image', 'alt' => $alt ) ); ?>
 
     <?php elseif (has_post_thumbnail()): ?>
-        <?php the_post_thumbnail('medium_large', array( 'alt' => $alt )); // add code to display a default image or message when no image is provided ?>
+        <?php the_post_thumbnail('post-thumbnail', array( 'alt' => $alt )); // add code to display a default image or message when no image is provided ?>
 
     <?php endif; ?>
 
