@@ -68,13 +68,24 @@ figure .c4aa-duotone-fade img.c4aa-duotone-fade__color {
     }
 }
 
-.wp-block-post-featured-image a img {
+/* Featured images with the duotone fade lift the wrapper instead of the image,
+   so the colour copy moves with it, and the image's own transition is left to
+   the fade. */
+.wp-block-post-featured-image a img:not([class*="c4aa-duotone-fade__"]),
+.wp-block-post-featured-image a .c4aa-duotone-fade {
     transition: transform 50ms ease-in;
 }
 
-.wp-block-post-featured-image a img:hover {
+.wp-block-post-featured-image a img:not([class*="c4aa-duotone-fade__"]):hover,
+.wp-block-post-featured-image a .c4aa-duotone-fade:hover {
     transform: translateY(-0.5rem);
     transition: transform 50ms ease-out;
+}
+
+/* core sizes the image from the link (height: 100%) when the block has a set
+   height, so the wrapper has to pass that through */
+.wp-block-post-featured-image .c4aa-duotone-fade {
+    height: 100%;
 }
 
 /* CAPTIONS */
