@@ -304,7 +304,7 @@ function twentynineteen_post_thumbnail() {
 }
 
 /**
- * Fade duotone image blocks to full colour on hover (#283).
+ * Fade duotone image and featured image blocks to full colour on hover (#283).
  *
  * Core duotone is `filter: url(#wp-duotone-…)`, and CSS can't interpolate a url()
  * filter, so on its own it can only snap. Instead, put an unfiltered copy of the
@@ -359,6 +359,8 @@ function c4aa_duotone_hover_fade( $block_content ) {
 	return substr_replace( $block_content, $wrapped, $offset, strlen( $img ) );
 }
 add_filter( 'render_block_core/image', 'c4aa_duotone_hover_fade', 20 );
+// Featured images in query loops (e.g. the people grids) use the same duotone.
+add_filter( 'render_block_core/post-featured-image', 'c4aa_duotone_hover_fade', 20 );
 
 
 
