@@ -25,7 +25,8 @@ $brand-backgrounds: '.has-red-background-color, .has-blue-background-color, .has
         --wp--preset--color--purple: #d27fcc;
     }
 
-    #{$brand-backgrounds} {
+    #{$brand-backgrounds},
+    .is-style-c4aa-clipPath-heading {
         --wp--preset--color--contrast: var(--color-brandBlack);
         --wp--preset--color--purple: var(--color-brandPurple);
     }
@@ -47,6 +48,26 @@ $brand-backgrounds: '.has-red-background-color, .has-blue-background-color, .has
 
     html body .has-paper-background-color:not(.is-style-c4aa-clipPath-heading) {
         background-color: var(--color-surface) !important;
+    }
+
+    // Black heading chips vanish into the dark page, so they turn white with black
+    // text. Editor-picked white text on them (has-base-color) follows along.
+    header:not(.featured-image) h1.entry-title,
+    h1.is-style-c4aa-clipPath-heading:not(.has-background),
+    h3.is-style-c4aa-clipPath-heading:not(.has-background),
+    .is-style-c4aa-clipPath-heading.has-contrast-background-color,
+    .is-style-c4aa-clipPath-heading.has-caa-black-background-color {
+        --wp--preset--color--base: var(--color-brandBlack);
+        --wp--preset--color--contrast: var(--color-brandBlack);
+        background: var(--color-brandWhite) !important;
+        color: var(--color-brandBlack);
+
+        a,
+        a:hover,
+        a:active,
+        a:visited {
+            color: var(--color-brandBlack);
+        }
     }
 
     // Legacy palette black text behaves like contrast text.
