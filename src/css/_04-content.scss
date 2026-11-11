@@ -20,6 +20,17 @@
     color: var(--color-brandBlack);
 }
 
+// Term description under the archive title (archive.php)
+.archive .page-header .archive-description {
+    margin-top: 1rem;
+    max-width: 40em;
+    color: var(--color-ink);
+}
+
+.archive .page-header .archive-description p:last-child {
+    margin-bottom: 0;
+}
+
 // People Pages
 
 // Hide meta (author, date, etc.) on single people pages
