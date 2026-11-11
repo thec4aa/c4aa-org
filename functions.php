@@ -207,11 +207,39 @@ function c4aa_add_post_class_from_acf_options( $classes ) {
 add_filter( 'post_class', 'c4aa_add_post_class_from_acf_options' );
 
 /**
- * Theme notes for editors: an admin page under Dashboard, plus a dashboard
- * widget linking to it.
+ * Add Dashboard Widget
+ *
+ * A place for specific reference info & instructions about the theme
+ * for users of the site.
  */
-if ( is_admin() ) {
-	require get_stylesheet_directory() . '/inc/theme-notes.php';
+
+function c4aa_custom_dashboard_widgets() {
+	global $wp_meta_boxes;
+
+	wp_add_dashboard_widget('custom_help_widget', __( 'C4AA Theme Notes', 'c4aa-org' ), 'c4aa_custom_dashboard_help');
+}
+add_action('wp_dashboard_setup', 'c4aa_custom_dashboard_widgets');
+
+
+function c4aa_custom_dashboard_help() {
+	?>
+		<h3 id="welcometothenewc4aatheme"><?php esc_html_e( 'Welcome to the new Center for Artistic Activism theme!', 'c4aa-org' ); ?></h3>
+		<p><?php esc_html_e( 'The new theme uses Gutenberg Blocks.', 'c4aa-org' ); ?> <a href="https://wordpress.org/gutenberg/"><?php esc_html_e( 'Get an introduction and experiment with it here.', 'c4aa-org' ); ?></a></p>
+		<p><strong><?php esc_html_e( 'Good ideas:', 'c4aa-org' ); ?></strong></p>
+		<ul>
+			<li>➡ <?php esc_html_e( 'upload images at 1400px wide where possible', 'c4aa-org' ); ?></li>
+			<li>➡ <?php esc_html_e( 'use colors from the color picker', 'c4aa-org' ); ?></li>
+			<li>➡ <?php esc_html_e( 'If you have questions, ask Steve Lambert.', 'c4aa-org' ); ?></li>
+		</ul>
+
+		<p><strong><?php esc_html_e( 'Advanced Settings:', 'c4aa-org' ); ?></strong></p>
+			<ul>
+				<li><?php
+					/* translators: %s: the CSS class name no-hyphens, wrapped in a <code> tag */
+					printf( esc_html__( '%s will turn off auto-hyphenating on everything in the block.', 'c4aa-org' ), '<code>no-hyphens</code>' );
+				?></li>
+			</ul>
+	<?php
 }
 
 /**
