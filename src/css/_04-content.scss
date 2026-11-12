@@ -22,10 +22,14 @@
 
 // Term description under the archive title (archive.php)
 .archive .page-header .archive-description {
-    margin: 1rem 0;
+    margin: 0 0 1rem;
     max-width: 40em;
     font-family: var(--font-serif);
     color: var(--color-ink);
+}
+
+.archive .page-header .archive-description p:first-child {
+    margin-top: 0;
 }
 
 .archive .page-header .archive-description p:last-child {
