@@ -173,6 +173,7 @@ blockquote.wp-block-quote {
     // Inherit so it's white by default and follows a custom text colour.
     & cite {
         font-size: calc(1rem /(1.25 * 1));
+        font-weight: 700;
         color: inherit;
     }
 }
