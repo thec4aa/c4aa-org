@@ -36,13 +36,20 @@
 #{$content} .wp-block-pullquote {
     background-color: var(--color-brandRed);
     color: var(--color-brandWhite);
+    // Twenty Nineteen sets this on the front end, which knocks out theme.json's 2rem
+    // so the text (1.6875em/2.25em) is sized off the body. Its editor stylesheet
+    // doesn't, so without this the editor text compounds to ~60px.
+    font-size: 1em;
 
     & blockquote p {
         // font-style: normal; // this removes the italics. But I think the italics work.
         hyphens: manual;
     }
 
-    & cite {
+    // the editor's citation is cite.wp-block-pullquote__citation, and Twenty
+    // Nineteen's editor stylesheet styles it by that class (small system font)
+    & cite,
+    & .wp-block-pullquote__citation {
         font: 400 1.25rem var(--font-serif);
     }
 }
@@ -173,6 +180,7 @@ blockquote.wp-block-quote {
     // Inherit so it's white by default and follows a custom text colour.
     & cite {
         font-size: calc(1rem /(1.25 * 1));
+        font-family: var(--font-sans); // front end gets this from _02, the editor doesn't
         font-weight: 700;
         color: inherit;
     }

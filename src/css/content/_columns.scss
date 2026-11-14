@@ -1,0 +1,36 @@
+// `$content` is the selector that wraps post content: `.entry .entry-content` on the
+// front end, `.is-root-container` in the block editor (set in editor.scss).
+
+// IMAGES
+
+/* images in advanced columns */
+/* fixes images extending beyond the width of a column */
+@media only screen and(min-width: 768px) {
+    #{$content} .wp-block-image:not(.alignwide):not(.alignfull) > img,
+    #{$content} .wp-block-image:not(.alignwide):not(.alignfull) > a > img,
+    #{$content} .wp-block-image:not(.alignwide):not(.alignfull) > img + figcaption,
+    #{$content} .wp-block-image:not(.alignwide):not(.alignfull) > a + figcaption {
+        max-width: 100%;
+    }
+}
+
+/* Query Loop Block */
+/* break columns down -1 on tablet size screens */
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    ul.columns-2,
+    ul.wp-block-latest-posts.columns2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+
+    ul.columns-3,
+    ul.wp-block-latest-posts.columns3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    ul.columns-4,
+    ul.wp-block-latest-posts.columns4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}

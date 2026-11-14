@@ -34,6 +34,13 @@
     max-width: calc( var( --wp--style--global--content-size ) * .9 );
 }
 
+// Twenty Nineteen's editor stylesheet sets default separators to width: 2.25em
+// with this selector, which beats the rule above in the editor. Width only, so
+// the alignwide max-width below still applies.
+#{$content} .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+    width: 90%;
+}
+
 #{$content} .wp-block-separator.alignwide {
     width: 90%;
     max-width: calc( var( --wp--style--global--wide-size ) * .9 );

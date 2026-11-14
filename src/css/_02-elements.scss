@@ -1,9 +1,7 @@
 @import 'mixins';
 
-/* Smaller default font size */
-// Note: This no longer works. 
-// The fluid font size in theme.json overrides it and makes it 16px
-// See: https://fullsiteediting.com/lessons/theme-json-font-size/
+/* Root font size: sets rem to 18px on the front end. The editor gets the same
+   from c4aa_editor_root_font_size() in functions.php. */
 html {
     font-size: 18px;
 }
