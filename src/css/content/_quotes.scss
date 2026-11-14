@@ -36,6 +36,10 @@
 #{$content} .wp-block-pullquote {
     background-color: var(--color-brandRed);
     color: var(--color-brandWhite);
+    // Twenty Nineteen sets this on the front end, which knocks out theme.json's 2rem
+    // so the text (1.6875em/2.25em) is sized off the body. Its editor stylesheet
+    // doesn't, so without this the editor text compounds to ~60px.
+    font-size: 1em;
 
     & blockquote p {
         // font-style: normal; // this removes the italics. But I think the italics work.

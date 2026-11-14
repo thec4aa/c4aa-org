@@ -12,8 +12,10 @@
     color: var(--color-brandBlack);
     background-color: var(--color-brandWhite);
 
+    // the parent's 22px again; inherit like the front end so paragraphs in quotes
+    // and other sized containers pick up the container's size
     p {
-        font-size: 18px;
+        font-size: inherit;
     }
 }
 
