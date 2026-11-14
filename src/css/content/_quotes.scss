@@ -42,7 +42,10 @@
         hyphens: manual;
     }
 
-    & cite {
+    // the editor's citation is cite.wp-block-pullquote__citation, and Twenty
+    // Nineteen's editor stylesheet styles it by that class (small system font)
+    & cite,
+    & .wp-block-pullquote__citation {
         font: 400 1.25rem var(--font-serif);
     }
 }
@@ -173,6 +176,7 @@ blockquote.wp-block-quote {
     // Inherit so it's white by default and follows a custom text colour.
     & cite {
         font-size: calc(1rem /(1.25 * 1));
+        font-family: var(--font-sans); // front end gets this from _02, the editor doesn't
         font-weight: 700;
         color: inherit;
     }
