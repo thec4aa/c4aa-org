@@ -169,8 +169,12 @@ blockquote.wp-block-quote {
         line-height: 1.2;
     }
 
+    // Twenty Nineteen greys out blockquote cite, which is unreadable on red.
+    // Inherit so it's white by default and follows a custom text colour.
     & cite {
         font-size: calc(1rem /(1.25 * 1));
+        font-weight: 700;
+        color: inherit;
     }
 }
 
