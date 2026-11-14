@@ -58,18 +58,7 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
         }
 }
 
-// IMAGES
-
-/* images in advanced columns */
-/* fixes images extending beyond the width of a column */
-@media only screen and(min-width: 768px) {
-    .entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > img,
-    .entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > a > img,
-    .entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > img + figcaption,
-    .entry .entry-content .wp-block-image:not(.alignwide):not(.alignfull) > a + figcaption {
-        max-width: 100%;
-    }
-}
+@import 'content/columns';
 
 
 /**
@@ -136,103 +125,7 @@ article.type-people .entry-content .wp-block-advanced-columns-column__inner figu
 
 }
 
-/* Query Loop Block */
-/* break columns down -1 on tablet size screens */
-
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-
-    ul.columns-2,
-    ul.wp-block-latest-posts.columns2 {
-        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-    }
-
-    ul.columns-3,
-    ul.wp-block-latest-posts.columns3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-
-    ul.columns-4,
-    ul.wp-block-latest-posts.columns4 {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-}
-
-/* 
- * Block Color Palette Colors
- *
- * Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
- * adds a hypen in front of the 4 in CSS classes, and it is cleaner to omit it.
- */
-
-/* Beige */
-
-.entry .entry-content *[class*='has-'].has-caa-beige-background-color {
-    background-color: var(--color-brandBeige);
-}
-
-.entry .entry-content *[class*='has-'].has-caa-beige-color {
-    color: var(--color-brandBeige);
-}
-
-/* Black */
-
-.entry .entry-content *[class*='has-'].has-caa-black-background-color {
-    background-color: var(--color-brandBlack);
-}
-
-.entry .entry-content *[class*='has-'].has-caa-black-color {
-    color: var(--color-brandBlack);
-}
-
-/* Blue */
-
-.entry .entry-content *[class*='has-'].has-caa-blue-background-color {
-    background-color: var(--color-brandBlue);
-}
-
-.entry .entry-content *[class*='has-'].has-caa-blue-color {
-    color: var(--color-brandBlue);
-}
-
-/* Grey */
-
-.has-caa-grey-background-color {
-    background-color: var(--color-brandGrey);
-}
-
-.entry .entry-content *[class*='has-'].has-caa-grey-color {
-    color: var(--color-brandGrey);
-}
-
-/* Red */
-
-.entry .entry-content *[class*='has-'].has-caa-red-background-color {
-    background-color: var(--color-brandRed);
-}
-
-.entry .entry-content *[class*='has-'].has-caa-red-color {
-    color: var(--color-brandRed);
-}
-
-/* White */
-
-.entry .entry-content *[class*='has-'].has-caa-white-background-color {
-    background-color: var(--color-brandWhite);
-}
-
-.entry .entry-content *[class*='has-'].has-caa-white-color {
-    color: var(--color-brandWhite);
-}
-
-/* Yellow */
-
-.entry .entry-content *[class*='has-'].has-caa-yellow-background-color {
-    background-color: var(--color-brandYellow);
-}
-
-.entry .entry-content *[class*='has-'].has-caa-yellow-color {
-    color: var(--color-brandYellow);
-}
+@import 'content/palette';
 
 /* Donate Page */
 
