@@ -54,7 +54,7 @@ header:not(.featured-image) h1.entry-title,
    and remove the top margin so it is flush with the element above
 */
 
-.entry-content > *:first-child.wp-block-pullquote,
+#{$content} > *:first-child.wp-block-pullquote,
 .home .entry-content > .wp-block-cover:first-child + .wp-block-pullquote {
 	clip-path: polygon( 
 		0 0, 

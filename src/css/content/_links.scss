@@ -43,3 +43,27 @@
         font-weight: inherit;
     }
 }
+
+// Brand-red links vanish on a red background. Every block with a background sets
+// --c4aa-link-on-bg: red ones to white, or to their own text colour if one was
+// picked; any other background resets it to red. Custom properties inherit, so
+// the nearest background wins when blocks are nested. Links with a link colour
+// picked in the editor (.has-link-color) are left alone.
+#{$content} {
+    .has-background {
+        --c4aa-link-on-bg: var(--color-brandRed);
+    }
+
+    .has-caa-red-background-color,
+    .has-red-background-color {
+        --c4aa-link-on-bg: var(--color-brandWhite);
+
+        &.has-text-color {
+            --c4aa-link-on-bg: currentColor;
+        }
+    }
+
+    :is(.has-caa-red-background-color, .has-red-background-color) a:not(.wp-element-button, .wp-block-button__link, .has-link-color a) {
+        color: var(--c4aa-link-on-bg);
+    }
+}

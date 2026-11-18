@@ -1,0 +1,79 @@
+// `$content` is the selector that wraps post content: `.entry .entry-content` on the
+// front end, `.is-root-container` in the block editor (set in editor.scss).
+
+/* 
+ * Block Color Palette Colors
+ *
+ * Note: the namespace for each color is `caa` instead of `c4aa` because Gutenberg
+ * adds a hypen in front of the 4 in CSS classes, and it is cleaner to omit it.
+ */
+
+/* Beige */
+
+#{$content} *[class*='has-'].has-caa-beige-background-color {
+    background-color: var(--color-brandBeige);
+}
+
+#{$content} *[class*='has-'].has-caa-beige-color {
+    color: var(--color-brandBeige);
+}
+
+/* Black */
+
+#{$content} *[class*='has-'].has-caa-black-background-color {
+    background-color: var(--color-brandBlack);
+}
+
+#{$content} *[class*='has-'].has-caa-black-color {
+    color: var(--color-brandBlack);
+}
+
+/* Blue */
+
+#{$content} *[class*='has-'].has-caa-blue-background-color {
+    background-color: var(--color-brandBlue);
+}
+
+#{$content} *[class*='has-'].has-caa-blue-color {
+    color: var(--color-brandBlue);
+}
+
+/* Grey */
+
+.has-caa-grey-background-color {
+    background-color: var(--color-brandGrey);
+}
+
+#{$content} *[class*='has-'].has-caa-grey-color {
+    color: var(--color-brandGrey);
+}
+
+/* Red */
+
+#{$content} *[class*='has-'].has-caa-red-background-color {
+    background-color: var(--color-brandRed);
+}
+
+#{$content} *[class*='has-'].has-caa-red-color {
+    color: var(--color-brandRed);
+}
+
+/* White */
+
+#{$content} *[class*='has-'].has-caa-white-background-color {
+    background-color: var(--color-brandWhite);
+}
+
+#{$content} *[class*='has-'].has-caa-white-color {
+    color: var(--color-brandWhite);
+}
+
+/* Yellow */
+
+#{$content} *[class*='has-'].has-caa-yellow-background-color {
+    background-color: var(--color-brandYellow);
+}
+
+#{$content} *[class*='has-'].has-caa-yellow-color {
+    color: var(--color-brandYellow);
+}

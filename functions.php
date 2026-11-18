@@ -72,6 +72,21 @@ function wpdocs_add_editor_styles() {
 
 }
 
+// The front end sets html { font-size: 18px } (_02-elements), so rem is 18px there.
+// add_editor_style() CSS gets rescoped to .editor-styles-wrapper, which can't change
+// rem, so the editor sat at 16px and everything sized in rem came out ~11% small.
+// enqueue_block_assets styles reach the editor iframe unchanged. The :has() keeps
+// it to the iframe's own <html>, whose body is the .editor-styles-wrapper.
+function c4aa_editor_root_font_size() {
+	if ( ! is_admin() ) {
+		return;
+	}
+	wp_register_style( 'c4aa-editor-root', false );
+	wp_enqueue_style( 'c4aa-editor-root' );
+	wp_add_inline_style( 'c4aa-editor-root', 'html:has(> body.editor-styles-wrapper) { font-size: 18px; }' );
+}
+add_action( 'enqueue_block_assets', 'c4aa_editor_root_font_size' );
+
 // WordPress prints a 3KB script on every page that checks whether the browser
 // can draw a few recent emoji and swaps in images if it can't. Every current
 // browser can, so skip the script and its inline styles on the front end.
