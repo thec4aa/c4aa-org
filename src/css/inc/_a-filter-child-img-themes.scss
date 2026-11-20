@@ -1,10 +1,12 @@
 /*
  * Duotone Themes
  *
- * The variables that change from the defaults are overridden here.
- * These must match 1 to 1 with ACF settings.
+ * The post's ACF image filter lands on <body> as a class with one of these
+ * names, and each one only overrides the variables that differ from the
+ * defaults above. The names must match the ACF field's choices 1 to 1.
  *
- * The first color in the class name is base, the second is the foreground.
+ * The first colour in the name is the base (what the highlights take), the
+ * second the foreground screened over the shadows.
  */
 
 :root {
@@ -24,7 +26,8 @@
 	--duotone-contrast: 1;
 }
 
-*[class*='none'] {
+/* "None" switches the tint off entirely. */
+body.none {
 	--duotone-base: initial;
 	--duotone-foreground: initial;
 	--duotone-bg-blend: initial;
@@ -35,203 +38,105 @@
 	--duotone-contrast: initial;
 }
 
-*[class*='red-and-black'] {
+body.red-and-black {
 	--duotone-base: var(--color-brandRed);
 	--duotone-foreground: var(--color-brandBlack);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
 	--duotone-opacity: 0.96;
 	--duotone-spacing: 20px;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
 }
 
-*[class*='beige-and-black'] {
+body.beige-and-black {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandBlack);
-	--duotone-bg-blend: multiply;
 	--duotone-fg-blend: lighten;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
 }
 
-*[class*='white-and-black'] {
+body.white-and-black {
 	--duotone-base: var(--color-brandWhite);
 	--duotone-foreground: var(--color-brandBlack);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
 }
 
-*[class*='beige-and-red'] {
+body.beige-and-red {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandRed);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
 }
 
-*[class*='white-and-red'] {
+body.white-and-red {
 	--duotone-base: var(--color-brandWhite);
 	--duotone-foreground: var(--color-brandRed);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
 }
 
-*[class*='beige-and-grey'] {
+body.beige-and-grey {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandGrey);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
 }
 
-*[class*='white-and-grey'] {
+body.white-and-grey {
 	--duotone-base: var(--color-brandWhite);
 	--duotone-foreground: var(--color-brandGrey);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
 }
 
-*[class*='beige-and-blue'] {
+body.beige-and-blue {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandBlue);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='white-and-blue'] {
+body.white-and-blue {
 	--duotone-base: var(--color-brandWhite);
 	--duotone-foreground: var(--color-brandBlue);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='blue-and-black'] {
+body.blue-and-black {
 	--duotone-base: var(--color-brandBlue);
 	--duotone-foreground: var(--color-brandBlack);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='beige-and-green'] {
+body.beige-and-green {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandGreen);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='white-and-green'] {
+body.white-and-green {
 	--duotone-base: var(--color-brandWhite);
 	--duotone-foreground: var(--color-brandGreen);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='green-and-black'] {
+body.green-and-black {
 	--duotone-base: var(--color-brandGreen);
 	--duotone-foreground: var(--color-brandBlack);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='beige-and-yellow'] {
+body.beige-and-yellow {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandYellow);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='white-and-yellow'] {
+body.white-and-yellow {
 	--duotone-base: var(--color-brandWhite);
 	--duotone-foreground: var(--color-brandYellow);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='yellow-and-black'] {
+body.yellow-and-black {
 	--duotone-base: var(--color-brandYellow);
 	--duotone-foreground: var(--color-brandBlack);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='beige-and-purple'] {
+body.beige-and-purple {
 	--duotone-base: var(--color-brandBeige);
 	--duotone-foreground: var(--color-brandPurple);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='white-and-purple'] {
+body.white-and-purple {
 	--duotone-base: var(--color-brandWhite);
 	--duotone-foreground: var(--color-brandPurple);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='purple-and-black'] {
+body.purple-and-black {
 	--duotone-base: var(--color-brandPurple);
 	--duotone-foreground: var(--color-brandBlack);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
 
-*[class*='white-and-beige'] {
+body.white-and-beige {
 	--duotone-base: var(--color-brandWhite);
 	--duotone-foreground: var(--color-brandBeige);
-	--duotone-bg-blend: multiply;
-	--duotone-fg-blend: screen;
-	--duotone-opacity: 1;
-	--duotone-grayscale: 100%;
-	--duotone-contrast: 1;
-  }
+}
