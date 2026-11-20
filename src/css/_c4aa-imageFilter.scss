@@ -10,45 +10,40 @@
 /* Duotone Filters */
 /*******************/
 
-*[class*='is-style-c4aa-duotone'] {
-	display: inline-block;
-}
+/* Post thumbnails (single/page headers and archive cards) get the blend-mode
+   tint picked by the post's ACF image filter, which arrives as a body class.
+   Images inside post content use core's duotone presets instead; the old
+   is-style-c4aa-duotone-* block styles were migrated to them in Nov 2026
+   (bin/migrate-duotone-styles.php). */
 
-*[class*='is-style-c4aa-duotone'],
 .a-filter-child-img {
 	@include a-filter-child-img;
 }
 
-.archive .a-filter-child-img,
-*[class*='is-style-c4aa-duotone'] {
+.archive .a-filter-child-img {
 	@include a-filter-child-img-hover;
 }
 
-*[class*='is-style-c4aa-duotone'] img,
 .a-filter-child-img img {
 	@include a-filter-child-img-img;
 }
 
-*[class*='is-style-c4aa-duotone'] img,
 .archive .a-filter-child-img img {
 	@include a-filter-child-img-img-hover;
 }
 
-*[class*='is-style-c4aa-duotone']::before,
 .a-filter-child-img::before {
 	@include a-filter-child-img_before;
 }
 
-// No padding on header images or in image blocks
-.site-featured-image,
-.wp-block-image {
+// No padding around header images
+.site-featured-image {
 	--duotone-spacing: 0;
 }
 
-
-// Force image caption to display on top of filtered images
+// Keep captions above the hover fade copy (content/_images.scss), which is
+// absolutely positioned at z-index 1.
 .wp-block-image figcaption {
-	// background-color: inherit;
 	z-index: 1;
 	position: relative;
 }
