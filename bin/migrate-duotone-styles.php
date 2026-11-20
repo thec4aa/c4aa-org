@@ -116,7 +116,7 @@ function c4aa_duotone_migrate_content( $content, array &$log, $body_filter = '' 
 	// 1. Block comment openers for image and gallery blocks.
 	$content = preg_replace_callback(
 		'/<!-- wp:(image|gallery) (\{.*?\}) -->/',
-		function ( $m ) use ( $map, &$log, &$attr_removed ) {
+		function ( $m ) use ( $map, $body_filter, &$log, &$attr_removed ) {
 			$block = $m[1];
 			$attrs = json_decode( $m[2], true );
 			if ( ! is_array( $attrs ) || empty( $attrs['className'] ) ) {
@@ -134,7 +134,7 @@ function c4aa_duotone_migrate_content( $content, array &$log, $body_filter = '' 
 
 			// Any other c4aa-duotone-ish token we don't know is left in place and flagged.
 			foreach ( $tokens as $t ) {
-				if ( 0 === strpos( $t, 'is-style-c4aa-duotone' ) && ! isset( $map[ $t ] ) ) {
+				if ( 0 === strpos( $t, 'is-style-c4aa-duotone' ) && ! array_key_exists( $t, $map ) ) {
 					$log['warnings'][] = "$block block has unknown style class $t; left as is";
 				}
 			}
