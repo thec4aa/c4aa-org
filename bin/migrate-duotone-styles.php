@@ -43,10 +43,42 @@ function c4aa_duotone_style_map() {
 		// render as beige-and-grey, so that is what it stays.
 		'is-style-c4aa-duotone-beige-and-grey-vintage' => 'grey-and-beige',
 		'is-style-c4aa-duotone-red-and-black'          => 'black-and-red',
-		// The bare class (galleries) fell through to the CSS defaults:
-		// white base, black foreground.
-		'is-style-c4aa-duotone'                        => 'black-and-white',
+		// The bare class (galleries) has no colour of its own; see
+		// c4aa_duotone_bare_preset() for where it gets one.
+		'is-style-c4aa-duotone'                        => null,
 	);
+}
+
+/**
+ * Preset for the bare is-style-c4aa-duotone class.
+ *
+ * With no colour in the class the old CSS fell through to whatever the body
+ * carried from the post's ACF image filter (the same <base>-and-<foreground>
+ * names), and failing that to its defaults, white base and black foreground.
+ * Core names the pair the other way round, so swap the halves.
+ */
+function c4aa_duotone_bare_preset( $body_filter ) {
+	$presets = array(
+		'black-and-white', 'black-and-beige', 'black-and-red', 'grey-and-red', 'red-and-beige',
+		'red-and-white', 'black-and-grey', 'grey-and-white', 'grey-and-beige', 'black-and-blue',
+		'grey-and-blue', 'blue-and-white', 'blue-and-beige', 'black-and-green', 'grey-and-green',
+		'green-and-white', 'green-and-beige', 'black-and-purple', 'grey-and-purple',
+		'purple-and-white', 'purple-and-beige', 'black-and-yellow', 'grey-and-yellow',
+		'yellow-and-white', 'yellow-and-beige', 'red-and-blue', 'blue-and-red',
+	);
+	if ( 'none' === $body_filter ) {
+		// The old CSS reset every variable under a "none" body, so these
+		// galleries showed no tint at all. Nothing sensible to map to.
+		return null;
+	}
+	if ( $body_filter && preg_match( '/^([a-z]+)-and-([a-z]+)$/', $body_filter, $m ) ) {
+		$swapped = $m[2] . '-and-' . $m[1];
+		if ( in_array( $swapped, $presets, true ) ) {
+			return $swapped;
+		}
+		return null;
+	}
+	return 'black-and-white';
 }
 
 /**
@@ -68,13 +100,15 @@ function c4aa_duotone_encode_attrs( array $attrs ) {
 /**
  * Rewrite one post's content.
  *
- * @param string $content Raw post_content.
- * @param array  $log     Filled with 'changes' (one line per block) and
- *                        'warnings' (anything that needs a human).
+ * @param string $content     Raw post_content.
+ * @param array  $log         Filled with 'changes' (one line per block) and
+ *                            'warnings' (anything that needs a human).
+ * @param string $body_filter The post's ACF c4aa_image_filter value, if any.
  * @return string New content; identical to $content when nothing applied.
  */
-function c4aa_duotone_migrate_content( $content, array &$log ) {
+function c4aa_duotone_migrate_content( $content, array &$log, $body_filter = '' ) {
 	$map            = c4aa_duotone_style_map();
+	$map['is-style-c4aa-duotone'] = c4aa_duotone_bare_preset( $body_filter );
 	$log            = array( 'changes' => array(), 'warnings' => array() );
 	$attr_removed   = 0;
 	$class_removed  = 0;
@@ -106,6 +140,10 @@ function c4aa_duotone_migrate_content( $content, array &$log ) {
 			}
 
 			$preset = $map[ $old[0] ];
+			if ( null === $preset ) {
+				$log['warnings'][] = "$block block has the bare duotone class and the post's image filter \"$body_filter\" has no core preset; left as is";
+				return $m[0];
+			}
 			$keep   = array_values( array_diff( $tokens, $old ) );
 			if ( $keep ) {
 				$attrs['className'] = implode( ' ', $keep );
@@ -192,8 +230,9 @@ function c4aa_duotone_migrate_main( array $args ) {
 
 	$sql = "SELECT ID FROM {$wpdb->posts}
 		WHERE post_content LIKE '%is-style-c4aa-duotone%'
-		AND post_type NOT IN ('revision')
+		AND post_type NOT IN ('revision', 'taxopress_logs')
 		AND post_status NOT IN ('auto-draft', 'trash')";
+	// taxopress_logs are TaxoPress's own copies of post content; not ours to edit.
 	if ( $only_ids ) {
 		$sql .= ' AND ID IN (' . implode( ',', $only_ids ) . ')';
 	}
@@ -206,12 +245,13 @@ function c4aa_duotone_migrate_main( array $args ) {
 	$written  = 0;
 
 	foreach ( $ids as $id ) {
-		$post = get_post( $id );
-		$log  = array();
-		$new  = c4aa_duotone_migrate_content( $post->post_content, $log );
+		$post   = get_post( $id );
+		$log    = array();
+		$filter = function_exists( 'get_field' ) ? (string) get_field( 'c4aa_image_filter', $id ) : '';
+		$new    = c4aa_duotone_migrate_content( $post->post_content, $log, $filter );
 
 		WP_CLI::log( '' );
-		WP_CLI::log( sprintf( '#%d %s/%s "%s" %s', $id, $post->post_type, $post->post_status, $post->post_title, get_permalink( $post ) ) );
+		WP_CLI::log( sprintf( '#%d %s/%s "%s" %s%s', $id, $post->post_type, $post->post_status, $post->post_title, get_permalink( $post ), $filter ? " [body filter: $filter]" : '' ) );
 		foreach ( $log['changes'] as $c ) {
 			WP_CLI::log( '  ' . $c );
 			$totals[ $c ] = ( $totals[ $c ] ?? 0 ) + 1;
