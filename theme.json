@@ -480,8 +480,19 @@
                             "fontStyle": "normal",
                             "fontWeight": "300",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-300.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-300-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-300-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -489,8 +500,19 @@
                             "fontStyle": "italic",
                             "fontWeight": "300",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-300italic.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-300italic-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-300italic-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -498,8 +520,19 @@
                             "fontStyle": "normal",
                             "fontWeight": "400",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-regular.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-400-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-400-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -507,8 +540,19 @@
                             "fontStyle": "italic",
                             "fontWeight": "400",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-italic.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-400italic-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-400italic-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -516,8 +560,19 @@
                             "fontStyle": "normal",
                             "fontWeight": "500",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-500.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-500-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-500-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -525,8 +580,19 @@
                             "fontStyle": "italic",
                             "fontWeight": "500",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-500italic.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-500italic-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "500",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-500italic-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -534,8 +600,19 @@
                             "fontStyle": "normal",
                             "fontWeight": "600",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-600.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-600-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-600-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -543,8 +620,19 @@
                             "fontStyle": "italic",
                             "fontWeight": "600",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-600italic.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-600italic-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-600italic-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -552,8 +640,19 @@
                             "fontStyle": "normal",
                             "fontWeight": "700",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-700.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-700-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-700-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -561,8 +660,19 @@
                             "fontStyle": "italic",
                             "fontWeight": "700",
                             "src": [
-                                "file:./fonts/zilla-slab-v11-latin_latin-ext-700italic.woff2"
-                            ]
+                                "file:./fonts/zilla-slab-v12-700italic-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Zilla Slab",
+                            "fontStyle": "italic",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./fonts/zilla-slab-v12-700italic-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         }
                     ],
                     "fontFamily": "\"Zilla Slab\", Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif",
@@ -577,8 +687,19 @@
                             "fontStyle": "normal",
                             "fontWeight": "100 900",
                             "src": [
-                                "file:./fonts/WorkSans-VariableFont_wght.woff2"
-                            ]
+                                "file:./fonts/WorkSans-VariableFont_wght-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Work Sans",
+                            "fontStyle": "normal",
+                            "fontWeight": "100 900",
+                            "src": [
+                                "file:./fonts/WorkSans-VariableFont_wght-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         },
                         {
                             "fontDisplay": "swap",
@@ -586,8 +707,19 @@
                             "fontStyle": "italic",
                             "fontWeight": "100 900",
                             "src": [
-                                "file:./fonts/WorkSans-Italic-VariableFont_wght.woff2"
-                            ]
+                                "file:./fonts/WorkSans-Italic-VariableFont_wght-latin.woff2"
+                            ],
+                            "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+                        },
+                        {
+                            "fontDisplay": "swap",
+                            "fontFamily": "Work Sans",
+                            "fontStyle": "italic",
+                            "fontWeight": "100 900",
+                            "src": [
+                                "file:./fonts/WorkSans-Italic-VariableFont_wght-latin-ext.woff2"
+                            ],
+                            "unicodeRange": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"
                         }
                     ],
                     "fontFamily": "\"Work Sans\", Helvetica Neue, Helvetica, Arial, sans-serif",
