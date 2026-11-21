@@ -1,3 +1,55 @@
+/* Metric-matched stand-ins for the two web fonts. While Work Sans and Zilla
+   Slab download (font-display: swap) text renders in a local font that is
+   scaled with size-adjust and given the web font's ascent and descent, so a
+   line takes up the same space and nothing moves when the real font arrives.
+   Numbers from @capsizecss/metrics via createFontStack(), Nov 2026. A face
+   whose local() font is missing is skipped, so the stacks still end in the
+   plain families. */
+@font-face {
+	font-family: "Zilla Slab Fallback: Georgia";
+	src: local("Georgia");
+	ascent-override: 96.9668%;
+	descent-override: 26.2961%;
+	size-adjust: 97.3529%;
+}
+@font-face {
+	font-family: "Zilla Slab Fallback: Times New Roman";
+	src: local("Times New Roman"), local("TimesNewRomanPSMT");
+	ascent-override: 88.3641%;
+	descent-override: 23.9631%;
+	line-gap-override: 0%;
+	size-adjust: 106.8308%;
+}
+@font-face {
+	font-family: "Zilla Slab Fallback: Noto Serif";
+	src: local("Noto Serif Regular"), local("NotoSerif-Regular");
+	ascent-override: 104.623%;
+	descent-override: 28.3724%;
+	size-adjust: 90.2287%;
+}
+@font-face {
+	font-family: "Work Sans Fallback: Arial";
+	src: local("Arial"), local("ArialMT");
+	ascent-override: 83.0851%;
+	descent-override: 21.7093%;
+	line-gap-override: 0%;
+	size-adjust: 111.9334%;
+}
+@font-face {
+	font-family: "Work Sans Fallback: Helvetica";
+	src: local("Helvetica");
+	ascent-override: 83.0851%;
+	descent-override: 21.7093%;
+	size-adjust: 111.9334%;
+}
+@font-face {
+	font-family: "Work Sans Fallback: Roboto";
+	src: local("Roboto Regular"), local("Roboto-Regular");
+	ascent-override: 82.9031%;
+	descent-override: 21.6618%;
+	size-adjust: 112.1791%;
+}
+
 :root {
 	/* Primary Brand Colors */
 	/* Make sure these mirror the palette and duotone colors in theme.json */
@@ -32,8 +84,8 @@
 
 	
 	/* Typography */
-	--font-sans: "Work Sans", Helvetica Neue, Helvetica, Arial, sans-serif;	
-	--font-serif: "Zilla Slab", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+	--font-sans: "Work Sans", "Work Sans Fallback: Arial", "Work Sans Fallback: Helvetica", "Work Sans Fallback: Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;	
+	--font-serif: "Zilla Slab", "Zilla Slab Fallback: Georgia", "Zilla Slab Fallback: Times New Roman", "Zilla Slab Fallback: Noto Serif", Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
 	
 
 	/* Clip Path Varaibles */
