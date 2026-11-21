@@ -10,8 +10,8 @@
 
 <header class="mobile-header">
 	<a href="/" class="">
-		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-red.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-c4aa-mobile logo-c4aa-mobile--red active">
-		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-white.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-c4aa-mobile logo-c4aa-mobile--white">
+		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-red.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="570" height="120" class="logo-c4aa-mobile logo-c4aa-mobile--red active">
+		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/img/logo-c4aa-white.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="570" height="120" class="logo-c4aa-mobile logo-c4aa-mobile--white">
 	</a><!-- / -->
 	<button type="button" class="menu-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="<?php esc_attr_e( 'Menu', 'twentynineteen' ); ?>">
 		<span class="bar"></span>

@@ -28,6 +28,36 @@ function c4aa_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'c4aa_enqueue_assets' );
 
 /**
+ * Move jQuery and the two plugin scripts that pull it into the head down to
+ * the footer.
+ *
+ * Simple Banner and TaxoPress enqueue jQuery-dependent scripts in the head, so
+ * jquery + migrate (36KB) block rendering on every page for two scripts that
+ * only do their work from jQuery(document).ready. In the footer the page has
+ * already painted before any of this downloads, and the scripts still run
+ * before DOMContentLoaded, so the plugins see no difference.
+ *
+ * Why the footer and not the defer strategy: WordPress decides a head
+ * script's strategy when it prints the head, but Formidable only enqueues its
+ * jQuery-dependent script from wp_footer once a form has rendered. Deferred
+ * jQuery in the head plus a blocking Formidable script in the footer would
+ * throw "jQuery is not defined" on every form page. Group placement is worked
+ * out at print time, so with everything in the footer jQuery always lands
+ * before whatever needs it. If some other plugin still enqueues a jQuery
+ * dependent for the head, WordPress pulls the whole chain back up there.
+ *
+ * The jquery alias handle needs the group too: a dependency only inherits a
+ * dependent's group when it is not lower than its own, and the alias declares
+ * none. Runs late so the plugins have registered their handles.
+ */
+function c4aa_jquery_in_footer() {
+	foreach ( array( 'jquery', 'jquery-core', 'jquery-migrate', 'simple-banner-script', 'taxopress-frontend-js' ) as $handle ) {
+		wp_script_add_data( $handle, 'group', 1 );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'c4aa_jquery_in_footer', 100 );
+
+/**
  * Preload the two font files every page needs above the fold, so the browser
  * fetches them alongside the CSS instead of after parsing it. Work Sans is a
  * variable font split by script; the Latin piece covers every weight and the
