@@ -130,3 +130,76 @@ wp.domReady( () => {
 		isDefault: false
 	} );
 });
+
+// "Stack on tablet" toggle on core Columns, ported from the Multi Breakpoint
+// Columns plugin. It only adds or removes the mbpc-collapse-tablet class; the
+// CSS is in src/css/content/_columns.scss. Written against the wp.* globals
+// because this file is loaded as is, not bundled.
+( function () {
+	const { createHigherOrderComponent } = wp.compose;
+	const { createElement: el, Fragment, useEffect } = wp.element;
+	const { InspectorControls, store: blockEditorStore } = wp.blockEditor;
+	const { PanelBody, ToggleControl } = wp.components;
+	const { useSelect } = wp.data;
+	const STACK_CLASS = 'mbpc-collapse-tablet';
+
+	const classList = ( className ) => ( className || '' ).split( /\s+/ ).filter( Boolean );
+	const hasStackClass = ( className ) => classList( className ).includes( STACK_CLASS );
+	const withStackClass = ( className, on ) => {
+		const list = classList( className ).filter( ( c ) => c !== STACK_CLASS );
+		if ( on ) {
+			list.push( STACK_CLASS );
+		}
+		return list.join( ' ' );
+	};
+
+	const withStackOnTablet = createHigherOrderComponent( ( BlockEdit ) => ( props ) => {
+		const { name, attributes, setAttributes, clientId } = props;
+		const isColumns = 'core/columns' === name;
+		// Like core's own stacking toggle, hidden until a layout has been picked.
+		const hasInnerBlocks = useSelect(
+			( select ) => isColumns && select( blockEditorStore ).getBlocks( clientId ).length > 0,
+			[ isColumns, clientId ]
+		);
+		const enabled = isColumns && hasStackClass( attributes.className );
+
+		// Stacking on tablet but not on mobile makes no sense, so when core's
+		// mobile toggle goes off this one follows.
+		useEffect( () => {
+			if ( enabled && false === attributes.isStackedOnMobile ) {
+				setAttributes( { className: withStackClass( attributes.className, false ) } );
+			}
+		}, [ attributes.isStackedOnMobile ] );
+
+		if ( ! isColumns || ! hasInnerBlocks ) {
+			return el( BlockEdit, props );
+		}
+
+		return el(
+			Fragment,
+			null,
+			el( BlockEdit, props ),
+			el(
+				InspectorControls,
+				null,
+				el(
+					PanelBody,
+					null,
+					el( ToggleControl, {
+						__nextHasNoMarginBottom: true,
+						label: wp.i18n.__( 'Stack on tablet', 'c4aa-org' ),
+						checked: enabled,
+						onChange: ( on ) =>
+							setAttributes(
+								on
+									? { className: withStackClass( attributes.className, true ), isStackedOnMobile: true }
+									: { className: withStackClass( attributes.className, false ) }
+							),
+					} )
+				)
+			)
+		);
+	}, 'withStackOnTablet' );
+
+	wp.hooks.addFilter( 'editor.BlockEdit', 'c4aa/stack-on-tablet', withStackOnTablet );
+} )();
