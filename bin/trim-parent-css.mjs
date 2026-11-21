@@ -28,7 +28,8 @@ const categories = [
   ['comments', /comment|discussion|#respond|pingback|trackback|bypostauthor|\.says(?![\w-])|logged-in-as|post-author-badge/],
   ['widgets', /widget/],
   // Classic (pre-block) galleries and captions. Does not match .wp-block-gallery or .blocks-gallery-*.
-  ['classic gallery/caption', /(?<![\w-])\.gallery(?![\w-])|\.gallery-|\.wp-caption/],
+  // .gallery-caption stays: Jetpack's slideshow block puts that class on its figcaptions.
+  ['classic gallery/caption', /(?<![\w-])\.gallery(?![\w-])|\.gallery-(?!caption)|\.wp-caption/],
 ];
 
 const root = postcss.parse(css);
@@ -70,7 +71,8 @@ const header = `/*
  * Generated file, do not edit by hand.
  * Twenty Nineteen ${version} style.css with these removed: selectors containing :lang(),
  * comments area (comment, discussion, #respond, pingback, trackback, bypostauthor, ...),
- * widgets, and classic gallery/caption (.gallery*, .wp-caption*). Comments are stripped.
+ * widgets, and classic gallery/caption (.gallery, .gallery-item..., .wp-caption*; .gallery-caption
+ * is kept for Jetpack slideshows). Comments are stripped.
  * Regenerate: node bin/trim-parent-css.mjs path/to/twentynineteen/style.css
  */
 `;

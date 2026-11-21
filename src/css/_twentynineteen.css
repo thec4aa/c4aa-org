@@ -2,7 +2,8 @@
  * Generated file, do not edit by hand.
  * Twenty Nineteen 3.4 style.css with these removed: selectors containing :lang(),
  * comments area (comment, discussion, #respond, pingback, trackback, bypostauthor, ...),
- * widgets, and classic gallery/caption (.gallery*, .wp-caption*). Comments are stripped.
+ * widgets, and classic gallery/caption (.gallery, .gallery-item..., .wp-caption*; .gallery-caption
+ * is kept for Jetpack slideshows). Comments are stripped.
  * Regenerate: node bin/trim-parent-css.mjs path/to/twentynineteen/style.css
  */
 @charset "UTF-8";
@@ -3577,4 +3578,13 @@ object {
 svg {
   transition: fill 120ms ease-in-out;
   fill: currentColor;
+}
+
+.gallery-caption {
+  display: block;
+  font-size: 0.71111em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0.5rem;
 }
