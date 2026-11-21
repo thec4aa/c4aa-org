@@ -7,21 +7,10 @@
 */
 
 /* Solid part of the button */
-/* note: first line is excluded buttons from other forms, tinymce editor, formidable forms,
-   core's lightbox overlay (close/prev/next), Gallery Block Lightbox's baguetteBox overlay
-   and WP YouTube Lyte's play button, etc. */
-button:not(:where(#simple-banner-close-button *, 
-    #simple-banner-close-button, 
-    .wp-editor-tools *, 
-    .mce-container *, 
-    .frm_upload_text *, 
-    .frm_show_password_btn, 
-    .lightbox-trigger, 
-    .wp-lightbox-overlay *, 
-    #baguetteBox-overlay *, 
-    .lyte-wrapper *, 
-    .swiper-pagination-bullet,
-    .menu-toggle)),
+/* Opt-in by class, not every <button>: the menu toggle, Twenty Nineteen's submenu
+   buttons, core's lightbox and WP YouTube Lyte's play button are all plain <button>s
+   that must not get this. Core marks anything meant to look like a button with
+   .wp-element-button; Formidable's submit is .frm_button_submit. */
 .button,
 .entry .button,
 #{$content} .wp-element-button,
@@ -30,6 +19,7 @@ button:not(:where(#simple-banner-close-button *,
 input[type="button"],
 input[type="reset"],
 input[type="submit"], /* catch old styles */
+.frm_button_submit,
 #{$content} .wp-block-button:not(.is-style-squared) .wp-block-button__link,
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link {
     border-radius: 1rem;
@@ -111,7 +101,6 @@ input[type="submit"], /* catch old styles */
 }
 
 // rotate the outline on hover
-button:hover::before,
 .button:hover::before,
 .entry .button:hover::before,
 #{$content} .wp-element-button:hover::before,
@@ -121,12 +110,12 @@ button:hover::before,
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:hover::before,
 input[type="button"]:hover::before,
 input[type="reset"]:hover::before,
-input[type="submit"]:hover::before {
+input[type="submit"]:hover::before,
+.frm_button_submit:hover::before {
     transform: rotate(-1deg) translateX(-2px) translateY(-5%);
 }
 
 // rotate the outline on focus
-button:focus::before,
 .button:focus::before,
 .entry .button:focus::before,
 #{$content} .wp-element-button:focus::before,
@@ -136,12 +125,12 @@ button:focus::before,
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:focus::before,
 input[type="button"]:focus::before,
 input[type="reset"]:focus::before,
-input[type="submit"]:focus::before {
+input[type="submit"]:focus::before,
+.frm_button_submit:focus::before {
     transform: rotate(-1deg) translateX(-2px) translateY(-5%);
 }
 
 // flash to white on active
-button:active::before,
 .button:active::before,
 .entry .button:active::before,
 #{$content} .wp-element-button:active::before,
@@ -151,7 +140,8 @@ button:active::before,
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:active::before,
 input[type="button"]:active::before,
 input[type="reset"]:active::before,
-input[type="submit"]:active::before {
+input[type="submit"]:active::before,
+.frm_button_submit:active::before {
     transform: rotate(-1deg) translateX(-2px) translateY(-5%);
     border-color: var(--color-brandGrey);
 }
