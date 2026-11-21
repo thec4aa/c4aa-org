@@ -7,7 +7,9 @@
 */
 
 /* Solid part of the button */
-/* note: first line is excluded buttons from other forms, tinymce editor, formidable forms, etc. */
+/* note: first line is excluded buttons from other forms, tinymce editor, formidable forms,
+   core's lightbox overlay (close/prev/next), Gallery Block Lightbox's baguetteBox overlay
+   and WP YouTube Lyte's play button, etc. */
 button:not(:where(#simple-banner-close-button *, 
     #simple-banner-close-button, 
     .wp-editor-tools *, 
@@ -15,7 +17,9 @@ button:not(:where(#simple-banner-close-button *,
     .frm_upload_text *, 
     .frm_show_password_btn, 
     .lightbox-trigger, 
-    .close-button, 
+    .wp-lightbox-overlay *, 
+    #baguetteBox-overlay *, 
+    .lyte-wrapper *, 
     .swiper-pagination-bullet,
     .menu-toggle)),
 .button,
