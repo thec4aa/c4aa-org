@@ -11,7 +11,8 @@
     "prod": "npm run build:css && npm run build:js",
     "dev:css": "sass --watch src/css:build/",
     "dev:js": "npm run build:js -- --watch",
-    "dev": "concurrently -n css,js \"npm:dev:css\" \"npm:dev:js\""
+    "dev": "concurrently -n css,js \"npm:dev:css\" \"npm:dev:js\"",
+    "trim-parent-css": "node bin/trim-parent-css.mjs"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "concurrently": "^9.2.1",
     "esbuild": "^0.28.2",
+    "postcss": "^8.5.33",
     "sass": "^1.49.10"
   }
 }

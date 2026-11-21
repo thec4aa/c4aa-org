@@ -17,7 +17,10 @@ function c4aa_enqueue_assets() {
     $style_version  = file_exists( $build_dir . 'main.css' ) ? filemtime( $build_dir . 'main.css' ) : '1.0';
     $script_version = file_exists( $build_dir . 'main.js' ) ? filemtime( $build_dir . 'main.js' ) : '1.0';
 
-    wp_enqueue_style('twentynineteen-style', get_template_directory_uri() . '/style.css');
+    // The parent's rules are compiled into build/main.css (src/css/_twentynineteen.css).
+    // Registering the handle without a src makes the parent's own enqueue print nothing,
+    // while inline styles attached to the handle still print.
+    wp_register_style('twentynineteen-style', false);
     wp_enqueue_style('c4aa-style', $build_uri . 'main.css', [], $style_version);
 
     // One bundle (esbuild, see package.json) of the js/ front-end files. Deferred
