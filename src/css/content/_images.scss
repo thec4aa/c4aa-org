@@ -26,6 +26,18 @@ figure[class*="wp-duotone"] img:not(.u-duotone-sticky img):not([data-duotone-fad
    copy over the image, with its box, object-fit and filter set inline; this
    just fades it in and out. z-index keeps it above images that lift with a
    transform; captions also sit at z-index 1 but come later, so stay on top. */
+
+/* The copy is placed with the image's offsets, so the block has to be the
+   offset parent. With no positioned ancestor the offsets are measured from
+   body but the copy is placed against the viewport, and the admin bar's
+   margin on html puts it 32px too high. Core's lightbox and featured image
+   blocks are already positioned; the plain image and promo blocks are not
+   (the retired is-style-c4aa-duotone rules used to do this). */
+.entry .entry-content .wp-block-image,
+.entry .entry-content .wp-block-c4aa-org-promo-image {
+    position: relative;
+}
+
 .entry .entry-content img.c4aa-duotone-fade-copy {
     position: absolute;
     z-index: 1;
