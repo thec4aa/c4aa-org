@@ -14,6 +14,20 @@
     }
 }
 
+/* "Stack on tablet" for core Columns: ported from the Multi Breakpoint Columns
+   plugin (Anton Plauche, GPL-2.0+), whose whole front end was this one rule.
+   Core stacks columns at 781px; the class wraps them from 1000px down. The
+   editor toggle that adds the class lives in js/editor.js. */
+@media (max-width: 1000px) {
+    .wp-block-columns.mbpc-collapse-tablet {
+        flex-wrap: wrap !important;
+
+        > .wp-block-column {
+            flex-basis: 100% !important;
+        }
+    }
+}
+
 /* Query Loop Block */
 /* break columns down -1 on tablet size screens */
 
