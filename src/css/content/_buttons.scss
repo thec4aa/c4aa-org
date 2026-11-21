@@ -27,8 +27,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"], /* catch old styles */
 #{$content} .wp-block-button:not(.is-style-squared) .wp-block-button__link,
-#{$content} .wp-block-button.is-style-outline .wp-block-button__link,
-#{$content} .wp-block-button.is-style-solid .wp-block-button__link {
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link {
     border-radius: 1rem;
     font-family: var(--font-serif);
     font-weight: 500;
@@ -116,7 +115,6 @@ button:hover::before,
 #{$content} .wp-block-button .wp-block-button__link:hover::before,
 #{$content} .wp-block-button .wp-block-button__link:hover:not(.has-background):hover::before,
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:hover::before,
-#{$content} .wp-block-button.is-style-solid .wp-block-button__link:hover::before,
 input[type="button"]:hover::before,
 input[type="reset"]:hover::before,
 input[type="submit"]:hover::before {
@@ -132,7 +130,6 @@ button:focus::before,
 #{$content} .wp-block-button .wp-block-button__link:focus::before,
 #{$content} .wp-block-button .wp-block-button__link:focus:not(.has-background):focus::before,
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:focus::before,
-#{$content} .wp-block-button.is-style-solid .wp-block-button__link:focus::before,
 input[type="button"]:focus::before,
 input[type="reset"]:focus::before,
 input[type="submit"]:focus::before {
@@ -148,7 +145,6 @@ button:active::before,
 #{$content} .wp-block-button .wp-block-button__link:active::before,
 #{$content} .wp-block-button .wp-block-button__link:active:not(.has-background):active::before,
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:active::before,
-#{$content} .wp-block-button.is-style-solid .wp-block-button__link:active::before,
 input[type="button"]:active::before,
 input[type="reset"]:active::before,
 input[type="submit"]:active::before {
@@ -241,11 +237,7 @@ input[type="submit"]:focus,
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:focus:not(.has-text-color),
 #{$content} .wp-block-button.is-style-outline .wp-block-button__link:active:not(.has-text-color),
-#{$content} .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color),
-#{$content} .wp-block-button.is-style-solid .wp-block-button__link:not(.has-text-color),
-#{$content} .wp-block-button.is-style-solid .wp-block-button__link:focus:not(.has-text-color),
-#{$content} .wp-block-button.is-style-solid .wp-block-button__link:active:not(.has-text-color),
-#{$content} .wp-block-button.is-style-solid .wp-block-button__link:hover:not(.has-text-color) {
+#{$content} .wp-block-button.is-style-outline .wp-block-button__link:hover:not(.has-text-color) {
     color: var(--color-brandBeige);
     border-color: var(--color-brandBlue);
 }
